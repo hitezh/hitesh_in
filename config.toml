@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "://hitesh.in/"
+baseURL = "http://hitesh.in/"
 title = "Hitesh Sarda"
 theme = "twenty-twenty-hugo"
 languageName = "En"
