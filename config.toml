@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://hiteshin.netlify.app/"
+baseURL = "https://hitesh.in/"
 title = "Hitesh Sarda"
 theme = "twenty-twenty-hugo"
 languageName = "En"
