@@ -4,7 +4,7 @@ date: "2021-12-23"
 categories: 
   - "banking"
   - "technology"
-image: https://user-images.githubusercontent.com/840667/147200211-64d25a7c-3653-4018-a2ff-3d31382d31fa.jpg
+image: images/piggy-bank.jpg
 ---
 
 Responses to my LinkedIn post on #banking clearly shows that I am not the only one feeling this. Let me add the next chapter to the banking saga.
