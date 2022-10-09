@@ -35,5 +35,5 @@ Although I cannot change the past, here are a few things I would like to do in t
 - Start a company, grow a company
 - Write a book, maybe a few books
 - Sketch
-- Farm
+- ~Farm~
 - Travel the country
