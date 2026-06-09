@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Marketing on Hitesh Sarda</title>
+		<link>http://localhost:1313/tags/marketing/</link>
+		<description>Recent content in Marketing on Hitesh Sarda</description>
+		<generator>Hugo</generator>
+		<language>en-US</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 15 Mar 2024 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/marketing/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Loyalty Beyond Points: Why Your Rewards Program Isn&#39;t Working</title>
+				<link>http://localhost:1313/writing/loyalty-beyond-points/</link>
+				<pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/writing/loyalty-beyond-points/</guid>
+				<description>&lt;p&gt;Every retailer I talk to has the same complaint: &amp;ldquo;We launched a points program, but customers aren&amp;rsquo;t engaged.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;The program works mechanically. Points accumulate. Emails go out. Redemptions happen. The dashboard shows activity. But the numbers that actually matter — repeat visit rate, basket size, net promoter score — barely moved.&lt;/p&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s the uncomfortable truth: a points program isn&amp;rsquo;t a loyalty program. It&amp;rsquo;s a discount program with extra steps.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-loyalty-actually-is&#34;&gt;What Loyalty Actually Is&lt;/h2&gt;&#xA;&lt;p&gt;Loyalty is a behavioral state where customers &lt;em&gt;prefer&lt;/em&gt; you — not because you&amp;rsquo;re cheaper, not because they&amp;rsquo;ve accumulated sunk costs in your program, but because the experience of doing business with you is consistently better than the alternative.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The Data You Collect vs. the Data You Use</title>
+				<link>http://localhost:1313/writing/the-data-you-collect/</link>
+				<pubDate>Mon, 22 Jan 2024 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/writing/the-data-you-collect/</guid>
+				<description>&lt;p&gt;In 2018, I sat in a meeting with a large retailer reviewing their customer data infrastructure. They had years of transaction history. Loyalty program data on millions of customers. Email engagement rates, web analytics, social listening. A data warehouse that cost more per year than most small businesses make in revenue.&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;What do you do with all of it?&amp;rdquo; I asked.&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;Mostly? Quarterly reports for the board.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;This is not unusual. In fact, it&amp;rsquo;s the norm.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

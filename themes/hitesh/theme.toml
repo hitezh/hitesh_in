@@ -1,0 +1,8 @@
+name        = "Hitesh"
+license     = "MIT"
+description = "Personal site theme for Hitesh Sarda — editorial, warm, typographic."
+min_version = "0.100.0"
+
+[author]
+  name     = "Hitesh Sarda"
+  homepage = "https://hitesh.in"

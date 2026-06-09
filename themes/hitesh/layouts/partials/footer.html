@@ -1,0 +1,27 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; {{ now.Year }} {{ .Site.Params.author }}</p>
+      <div class="footer-links">
+        {{ with .Site.Params.github }}
+        <a href="https://github.com/{{ . }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+        {{ end }}
+        {{ with .Site.Params.linkedin }}
+        <a href="https://linkedin.com/in/{{ . }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        {{ end }}
+        {{ with .Site.Params.email }}
+        <a href="mailto:{{ . }}">Email</a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('theme-toggle').addEventListener('click', function() {
+  var html = document.documentElement;
+  var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+});
+</script>

@@ -1,0 +1,51 @@
+{{ define "main" }}
+{{ if eq .Section "writing" }}<div class="progress-bar" id="progress"></div>{{ end }}
+<article class="post">
+  <div class="container">
+    <header class="post-header">
+      {{ if eq .Section "writing" }}
+      <div class="post-meta-top">
+        <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
+          {{ .Date.Format "January 2, 2006" }}
+        </time>
+        {{ with .Params.tags }}
+        <div class="post-tags">
+          {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+      <h1 class="post-title-large">{{ .Title }}</h1>
+      {{ with .Params.description }}
+      <p class="post-subtitle">{{ . }}</p>
+      {{ end }}
+    </header>
+
+    <div class="post-body">
+      {{ .Content }}
+    </div>
+
+    {{ if eq .Section "writing" }}
+    <footer class="post-footer">
+      <a href="/writing/" class="back-link">← All writing</a>
+    </footer>
+    {{ end }}
+  </div>
+</article>
+
+{{ if eq .Section "writing" }}
+<script>
+(function() {
+  var bar = document.getElementById('progress');
+  if (!bar) return;
+  function update() {
+    var scroll = window.scrollY;
+    var height = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (height > 0 ? (scroll / height) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+</script>
+{{ end }}
+{{ end }}

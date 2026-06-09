@@ -1,0 +1,29 @@
+baseURL = 'https://hitesh.in/'
+locale = 'en-US'
+title = 'Hitesh Sarda'
+theme = 'hitesh'
+
+[params]
+  author      = "Hitesh Sarda"
+  description = "Founder & builder. Thinking about marketing tech, customer engagement, and the products we make."
+  tagline     = "Building software that brings customers back."
+  github      = "hiteshsarda"
+  linkedin    = "hiteshsarda"
+  email       = "hitesh@optculture.com"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+
+[menu]
+  [[menu.main]]
+    name   = "Writing"
+    url    = "/writing/"
+    weight = 1
+  [[menu.main]]
+    name   = "About"
+    url    = "/about/"
+    weight = 2

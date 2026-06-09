@@ -1,0 +1,38 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <p class="hero-label">{{ .Site.Params.author }}</p>
+      <h1 class="hero-statement">{{ .Site.Params.tagline }}</h1>
+      {{ with .Content }}
+      <div class="hero-bio">{{ . }}</div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="home-writing">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Writing</span>
+      <a href="/writing/" class="section-more">All posts →</a>
+    </div>
+    <div class="post-list">
+      {{ $posts := where .Site.RegularPages "Section" "writing" }}
+      {{ range first 5 $posts }}
+      <article class="post-item">
+        <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
+          {{ .Date.Format "Jan 2006" }}
+        </time>
+        <div class="post-item-body">
+          <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
+          {{ with .Params.description }}
+          <p class="post-excerpt">{{ . }}</p>
+          {{ end }}
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
