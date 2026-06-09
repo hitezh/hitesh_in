@@ -1,16 +1,16 @@
 {{ define "main" }}
-{{ if eq .Section "writing" }}<div class="progress-bar" id="progress"></div>{{ end }}
+{{ if eq .Section "blog" }}<div class="progress-bar" id="progress"></div>{{ end }}
 <article class="post">
   <div class="container">
     <header class="post-header">
-      {{ if eq .Section "writing" }}
+      {{ if eq .Section "blog" }}
       <div class="post-meta-top">
         <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
           {{ .Date.Format "January 2, 2006" }}
         </time>
-        {{ with .Params.tags }}
+        {{ with .Params.categories }}
         <div class="post-tags">
-          {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+          {{ range . }}<a href="{{ `categories/` | relURL }}{{ . | urlize | lower }}" class="tag">{{ . | humanize }}</a>{{ end }}
         </div>
         {{ end }}
       </div>
@@ -21,27 +21,38 @@
       {{ end }}
     </header>
 
+    {{ $img := .Params.image }}
+    {{ if $img }}
+    <div class="post-image">
+      <img src="{{ $img | relURL }}" alt="{{ .Title }}">
+    </div>
+    {{ end }}
+
     <div class="post-body">
       {{ .Content }}
     </div>
 
-    {{ if eq .Section "writing" }}
+    {{ if eq .Section "blog" }}
     <footer class="post-footer">
-      <a href="/writing/" class="back-link">← All writing</a>
+      {{ with .Params.tags }}
+      <div class="post-footer-tags">
+        {{ range . }}<a href="{{ `tags/` | relURL }}{{ . | urlize | lower }}" class="tag">{{ . }}</a>{{ end }}
+      </div>
+      {{ end }}
+      <a href="/blog/" class="back-link">← All posts</a>
     </footer>
     {{ end }}
   </div>
 </article>
 
-{{ if eq .Section "writing" }}
+{{ if eq .Section "blog" }}
 <script>
 (function() {
   var bar = document.getElementById('progress');
   if (!bar) return;
   function update() {
-    var scroll = window.scrollY;
-    var height = document.documentElement.scrollHeight - window.innerHeight;
-    bar.style.width = (height > 0 ? (scroll / height) * 100 : 0) + '%';
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
   }
   window.addEventListener('scroll', update, { passive: true });
   update();

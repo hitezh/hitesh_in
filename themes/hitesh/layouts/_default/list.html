@@ -19,15 +19,17 @@
           {{ with .Params.description }}
           <p class="post-excerpt">{{ . }}</p>
           {{ end }}
-          {{ with .Params.tags }}
+          {{ with .Params.categories }}
           <div class="post-tags">
-            {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+            {{ range . }}<a href="{{ `categories/` | relURL }}{{ . | urlize | lower }}" class="tag">{{ . | humanize }}</a>{{ end }}
           </div>
           {{ end }}
         </div>
       </article>
       {{ end }}
     </div>
+
+    {{ template "_internal/pagination.html" . }}
   </div>
 </div>
 {{ end }}

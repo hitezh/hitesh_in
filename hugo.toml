@@ -1,15 +1,24 @@
 baseURL = 'https://hitesh.in/'
-locale = 'en-US'
-title = 'Hitesh Sarda'
-theme = 'hitesh'
+locale   = 'en-US'
+title    = 'Hitesh Sarda'
+theme    = 'hitesh'
+paginate = 10
+
+[permalinks]
+  blog = ':year/:slug'
 
 [params]
   author      = "Hitesh Sarda"
-  description = "Founder & builder. Thinking about marketing tech, customer engagement, and the products we make."
+  description = "Thoughts on technology, entrepreneurship, and life."
   tagline     = "Building software that brings customers back."
-  github      = "hiteshsarda"
-  linkedin    = "hiteshsarda"
+  twitter     = "fullstackcto"
+  linkedin    = "hiteshs"
   email       = "hitesh@optculture.com"
+
+[taxonomies]
+  category = "categories"
+  tag      = "tags"
+  author   = "author"
 
 [markup]
   [markup.goldmark]
@@ -20,8 +29,8 @@ theme = 'hitesh'
 
 [menu]
   [[menu.main]]
-    name   = "Writing"
-    url    = "/writing/"
+    name   = "Blog"
+    url    = "/blog/"
     weight = 1
   [[menu.main]]
     name   = "About"

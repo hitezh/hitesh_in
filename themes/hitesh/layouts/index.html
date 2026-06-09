@@ -1,25 +1,86 @@
 {{ define "main" }}
 <section class="hero">
   <div class="container">
-    <div class="hero-inner">
-      <p class="hero-label">{{ .Site.Params.author }}</p>
-      <h1 class="hero-statement">{{ .Site.Params.tagline }}</h1>
-      {{ with .Content }}
-      <div class="hero-bio">{{ . }}</div>
-      {{ end }}
+    <div class="hero-grid">
+
+      <div class="hero-identity">
+        <p class="hero-role">
+          <span class="hero-dot"></span>
+          Fullstack CTO &nbsp;&middot;&nbsp; Founder &nbsp;&middot;&nbsp; Builder
+        </p>
+        <h1 class="hero-name">Hitesh<br>Sarda</h1>
+        <p class="hero-bio">
+          Founder of <a href="https://optculture.com" target="_blank" rel="noopener">OptCulture</a> — loyalty and engagement software for retailers. Writing about technology, entrepreneurship, and the business of building software since 2009.
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-value">{{ len (where .Site.RegularPages "Section" "blog") }}</span>
+            <span class="stat-label">posts</span>
+          </div>
+          <span class="stat-sep"></span>
+          <div class="stat">
+            <span class="stat-value">{{ len .Site.Taxonomies.categories }}</span>
+            <span class="stat-label">topics</span>
+          </div>
+          <span class="stat-sep"></span>
+          <div class="stat">
+            <span class="stat-value">2009</span>
+            <span class="stat-label">since</span>
+          </div>
+        </div>
+        <p class="hero-handle">
+          {{ with .Site.Params.twitter }}<a href="https://twitter.com/{{ . }}" target="_blank" rel="noopener">@{{ . }}</a>{{ end }}
+          {{ with .Site.Params.linkedin }}&nbsp;&middot;&nbsp;<a href="https://linkedin.com/in/{{ . }}" target="_blank" rel="noopener">LinkedIn</a>{{ end }}
+        </p>
+      </div>
+
+      <div class="hero-featured-col">
+        {{ $latest := first 1 (where .Site.RegularPages "Section" "blog") }}
+        {{ range $latest }}
+        <article class="featured-card">
+          <div class="featured-card-top">
+            <p class="featured-label"><span class="featured-dot"></span>Latest post</p>
+            {{ with .Params.categories }}
+            <span class="featured-category">{{ index . 0 | humanize }}</span>
+            {{ end }}
+          </div>
+          <a href="{{ .RelPermalink }}" class="featured-title">{{ .Title }}</a>
+          {{ with .Params.description }}
+          <p class="featured-desc">{{ . }}</p>
+          {{ end }}
+          <div class="featured-footer">
+            <time class="featured-date">{{ .Date.Format "Jan 2, 2006" }}</time>
+            <a href="{{ .RelPermalink }}" class="featured-read">Read →</a>
+          </div>
+        </article>
+        {{ end }}
+      </div>
+
     </div>
   </div>
 </section>
 
-<section class="home-writing">
+<div class="topics-band">
+  <div class="container">
+    <span class="topics-label">Topics</span>
+    {{ range first 8 .Site.Taxonomies.categories.ByCount }}
+    <a href="{{ .Page.RelPermalink }}" class="topic-chip">
+      {{ .Page.Title | humanize }}
+      <span class="topic-count">{{ .Count }}</span>
+    </a>
+    {{ end }}
+  </div>
+</div>
+
+<section class="recent-writing">
   <div class="container">
     <div class="section-header">
-      <span class="section-label">Writing</span>
-      <a href="/writing/" class="section-more">All posts →</a>
+      <span class="section-label">Recent Writing</span>
+      <a href="/blog/" class="section-more">Full archive →</a>
     </div>
     <div class="post-list">
-      {{ $posts := where .Site.RegularPages "Section" "writing" }}
-      {{ range first 5 $posts }}
+      {{ $posts := where .Site.RegularPages "Section" "blog" }}
+      {{ range first 8 $posts }}
       <article class="post-item">
         <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
           {{ .Date.Format "Jan 2006" }}
