@@ -3,6 +3,41 @@
 <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
 
+{{/* Social cards: Open Graph + Twitter */}}
+{{ $title := cond .IsHome .Site.Title .Title }}
+{{ $desc := cond (ne .Description "") .Description .Site.Params.description }}
+{{ $ogimg := "" }}
+{{ with .Params.image }}
+  {{ $img := . }}
+  {{ if strings.HasSuffix $img ".svg" }}
+    {{/* social platforms don't render SVG; prefer a raster sibling of the same name */}}
+    {{ with ($.Resources.GetMatch (replace $img ".svg" ".png")) }}{{ $ogimg = .Permalink }}{{ end }}
+    {{ if not $ogimg }}{{ with ($.Resources.GetMatch (replace $img ".svg" ".jpg")) }}{{ $ogimg = .Permalink }}{{ end }}{{ end }}
+  {{ else }}
+    {{ with ($.Resources.GetMatch $img) }}
+      {{ $ogimg = .Permalink }}
+    {{ else }}
+      {{ if or (hasPrefix $img "http") (hasPrefix $img "/") }}{{ $ogimg = $img | absURL }}{{ else }}{{ $ogimg = (path.Join $.RelPermalink $img) | absURL }}{{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ if not $ogimg }}{{ $ogimg = "images/default.jpg" | absURL }}{{ end }}
+
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:type" content="{{ cond (eq .Kind `page`) `article` `website` }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ $ogimg }}">
+<meta property="og:image:alt" content="{{ $title }}">
+{{ if and (eq .Kind "page") (not .Date.IsZero) }}<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
+
+<meta name="twitter:card" content="summary_large_image">
+{{ with .Site.Params.twitter }}<meta name="twitter:site" content="@{{ . }}"><meta name="twitter:creator" content="@{{ . }}">{{ end }}
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $ogimg }}">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
