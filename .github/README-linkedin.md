@@ -73,6 +73,28 @@ In **Settings → Secrets and variables → Actions**:
   GIT_AFTER=HEAD DRY_RUN=true node .github/scripts/post-to-linkedin.mjs
   ```
 
+## Troubleshooting
+
+**`401 INVALID_ACCESS_TOKEN`** — LinkedIn rejected the token. In order of likelihood:
+
+1. **Wrong value pasted.** Make sure the secret holds the **access token** returned
+   by the token exchange — not the OAuth *authorization code* from the redirect URL,
+   and not the app's client secret.
+2. **Stray whitespace.** A trailing newline pasted into the secret box corrupts the
+   `Authorization` header. The script now trims the value, but re-paste cleanly if in
+   doubt.
+3. **Expired token.** Member tokens last ~60 days. Mint a fresh one.
+4. **Wrong scope/flow.** It must be a 3-legged member token with `w_member_social`.
+
+Verify a token in one command:
+
+```sh
+curl -H "Authorization: Bearer $TOKEN" https://api.linkedin.com/v2/userinfo
+```
+
+A `200` with a `sub` field means the token is good (and `urn:li:person:<sub>` is your
+author URN — the workflow derives this automatically if `LINKEDIN_AUTHOR_URN` is unset).
+
 ## Notes & limits
 
 - LinkedIn deprecates API versions over time. If you see a version error, bump
