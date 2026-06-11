@@ -34,6 +34,7 @@ Use YAML front matter delimited by `---`. Follow the established format:
 ```yaml
 ---
 title: "A concise, human title"
+slug: "matches-the-directory-name"
 date: "YYYY-MM-DD"
 categories:
   - "technology"
@@ -48,6 +49,7 @@ Rules:
 
 - `title`, `date`, and at least one `categories` entry are required.
 - Quote the title and ISO date for consistency with existing posts.
+- Set `slug` to the post's directory name. Hugo derives the URL from the *title* otherwise, so any `:`, `.`, or `?` in the title leaks into the URL (a two-sentence title becomes `.../my-post.-second-part.`). The LinkedIn announcer also builds the link from the directory name, so `slug` and the directory must match or the announced URL 404s.
 - Choose one or, when genuinely useful, two existing categories: `banking`, `education`, `entrepreneurship`, `life`, `others`, `sketches`, or `technology`. Do not create a near-duplicate category.
 - `tags` are optional. Use them for specific subjects a reader may want to find again. Keep them lowercase and hyphen-separated; reuse an existing tag where possible.
 - `image` is optional but recommended. Use the bundle-relative form `images/<filename>` and ensure the file exists. Use a descriptive filename, not `image1.jpg`.
