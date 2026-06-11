@@ -159,7 +159,7 @@ function composeCommentary(fm, url) {
   lines.push("", `Read more: ${url}`);
   if (INCLUDE_HASHTAGS && fm.tags?.length) {
     const tags = fm.tags.slice(0, 3).map(toHashtag).filter(Boolean).join(" ");
-    if (tags) lines.push("", tags);
+    if (tags) lines.push("#Blog ", tags);
   }
   return lines.join("\n");
 }
