@@ -1,0 +1,45 @@
+name: Announce new posts on LinkedIn
+
+# Fires when a blog post is added or changed on master, then shares a blurb of any
+# newly published post to LinkedIn. Drafts and ordinary edits are ignored by the
+# script. With no LinkedIn secrets configured it runs as a harmless dry-run.
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "content/blog/**/index.md"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Print the blurb without posting"
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  announce:
+    # Don't let forks post to the real account.
+    if: github.repository == 'hitezh/hitesh_in'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history so we can diff the push range
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Announce newly published posts
+        env:
+          GIT_BEFORE: ${{ github.event.before }}
+          GIT_AFTER: ${{ github.sha }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || '' }}
+          SITE_BASE_URL: https://hitesh.in
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
+          LINKEDIN_API_VERSION: ${{ vars.LINKEDIN_API_VERSION || '202506' }}
+        run: node .github/scripts/post-to-linkedin.mjs
