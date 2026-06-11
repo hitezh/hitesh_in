@@ -14,6 +14,8 @@ tags:
   - "vibe-coding"
 ---
 
+![Editorial line chart: a rising "Capability" curve and a falling, dotted "Understanding" curve crossing each other, with a marker on the capability line labelled "today."](images/capability-vs-understanding.svg)
+
 For a couple of years we lived comfortably in what I'd call the quaint-dismissal phase. We laughed at the mangled six-fingered hands in image generators. We collected screenshots of confident nonsense from early chatbots. We repeated "[stochastic parrot](https://dl.acm.org/doi/10.1145/3442188.3445922)" at conferences and went back to work, reassured that our professional moats — built on decades of hard-won, specialised knowledge — were safe from a glorified autocomplete.
 
 That phase is over. Not because of a single model release, but because the kind of story people tell about these tools has changed. A year ago the stories were "look at the silly mistake it made." Now they're "I did a thing in one evening that I had assumed was impossible for someone like me." The tone in the room has shifted from amused to a quiet *oh.*
