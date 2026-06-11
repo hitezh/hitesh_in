@@ -1,5 +1,6 @@
 ---
 title: "We Stopped Laughing at GenAI"
+slug: "we-stopped-laughing-at-genai"
 date: "2026-06-11"
 draft: false
 description: "For a while we treated generative AI as a parlour trick with bad hands and a habit of making things up. Five kinds of story ended that phase for me, and raised a harder question than 'will it take my job?'"

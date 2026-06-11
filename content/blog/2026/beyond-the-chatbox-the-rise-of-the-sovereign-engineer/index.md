@@ -1,5 +1,6 @@
 ---
 title: "Beyond the Chatbox: The Rise of the Sovereign Engineer"
+slug: "beyond-the-chatbox-the-rise-of-the-sovereign-engineer"
 date: "2026-06-08"
 draft: false
 description: "Working code is becoming cheap. What stays scarce is judgment about what to build and whether it was worth building. That is the engineer worth becoming."

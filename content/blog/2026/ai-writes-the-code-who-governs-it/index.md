@@ -1,5 +1,6 @@
 ---
 title: "AI Writes the Code. Who Governs It?"
+slug: "ai-writes-the-code-who-governs-it"
 date: "2026-06-11"
 draft: false
 description: "Almost every team now codes with AI; only a third governs it. The teams pulling ahead review AI's output as seriously as they once reviewed their own code."
