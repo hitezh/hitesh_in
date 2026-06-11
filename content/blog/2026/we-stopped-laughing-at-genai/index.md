@@ -3,6 +3,7 @@ title: "We Stopped Laughing at GenAI"
 date: "2026-06-11"
 draft: false
 description: "For a while we treated generative AI as a parlor trick with bad hands and a habit of making things up. Five kinds of story I keep seeing have quietly ended that phase — and left me with a more uncomfortable question than 'will it take my job?'"
+image: images/capability-vs-understanding.svg
 categories:
   - "technology"
   - "entrepreneurship"
@@ -13,8 +14,6 @@ tags:
   - "software-engineering"
   - "vibe-coding"
 ---
-
-![Editorial line chart: a rising "Capability" curve and a falling, dotted "Understanding" curve crossing each other, with a marker on the capability line labelled "today."](images/capability-vs-understanding.svg)
 
 For a couple of years we lived comfortably in what I'd call the quaint-dismissal phase. We laughed at the mangled six-fingered hands in image generators. We collected screenshots of confident nonsense from early chatbots. We repeated "[stochastic parrot](https://dl.acm.org/doi/10.1145/3442188.3445922)" at conferences and went back to work, reassured that our professional moats — built on decades of hard-won, specialised knowledge — were safe from a glorified autocomplete.
 
