@@ -20,6 +20,7 @@
 // trailing newline that would otherwise corrupt the Authorization header.
 
 import { execSync } from "node:child_process";
+import { readFileSync } from "node:fs";
 
 const SITE = (process.env.SITE_BASE_URL || "https://hitesh.in").trim().replace(/\/$/, "");
 const TOKEN = (process.env.LINKEDIN_ACCESS_TOKEN || "").trim();
@@ -59,6 +60,35 @@ function changedPosts() {
     });
 }
 
+// Newest published post in the working tree — used to give dry-runs something
+// concrete to preview when no posts changed in the commit range.
+function latestPublishedPost() {
+  let files = [];
+  try {
+    files = git(`ls-files "content/blog/**/index.md"`)
+      .split("\n")
+      .map((s) => s.trim())
+      .filter(Boolean);
+  } catch {
+    return null;
+  }
+  let best = null;
+  for (const path of files) {
+    let text;
+    try {
+      text = readFileSync(path, "utf8");
+    } catch {
+      continue;
+    }
+    const fm = parseFrontMatter(text);
+    if (!fm || !fm.title || fm.draft || !fm.date) continue;
+    const t = Date.parse(fm.date);
+    if (Number.isNaN(t)) continue;
+    if (!best || t > best.t) best = { path, fm, t };
+  }
+  return best;
+}
+
 // Minimal front-matter reader for the handful of fields we need.
 function parseFrontMatter(text) {
   const m = text.match(/^---\s*\n([\s\S]*?)\n---/);
@@ -92,6 +122,7 @@ function parseFrontMatter(text) {
   return {
     title: scalar("title"),
     description: scalar("description"),
+    date: scalar("date"),
     draft: (scalar("draft") || "false").toLowerCase() === "true",
     tags: list("tags"),
   };
@@ -227,12 +258,21 @@ async function preflight() {
 }
 
 async function main() {
-  const changes = changedPosts();
-  if (changes.length === 0) {
-    console.log("No added or modified blog posts in this range. Nothing to announce.");
-    return;
+  // Validate the token against the LinkedIn API up front whenever one is present.
+  // This is a read-only call (/v2/userinfo) — it never posts — so it also runs in
+  // dry-run, letting you exercise the API path safely.
+  if (TOKEN) {
+    try {
+      await preflight();
+    } catch (err) {
+      console.error(err.message);
+      process.exit(1);
+    }
+  } else {
+    console.log("No LINKEDIN_ACCESS_TOKEN set — running fully offline (no API calls, no posting).");
   }
 
+  const changes = changedPosts();
   const toAnnounce = [];
   for (const { status, path } of changes) {
     const current = fileAt(AFTER, path);
@@ -263,16 +303,18 @@ async function main() {
   }
 
   if (toAnnounce.length === 0) {
-    console.log("No newly published posts to announce.");
-    return;
-  }
-
-  if (!DRY_RUN) {
-    try {
-      await preflight();
-    } catch (err) {
-      console.error(err.message);
-      process.exit(1);
+    if (DRY_RUN) {
+      const latest = latestPublishedPost();
+      if (latest) {
+        console.log("\nNo posts changed in this range; previewing the latest published post:");
+        toAnnounce.push({ path: latest.path, fm: latest.fm });
+      } else {
+        console.log("No posts changed and no published post found to preview.");
+        return;
+      }
+    } else {
+      console.log("No newly published posts to announce.");
+      return;
     }
   }
 
@@ -282,7 +324,7 @@ async function main() {
     const commentary = composeCommentary(fm, url);
     console.log("\n--- Post ---\n" + commentary + "\n------------");
     if (DRY_RUN) {
-      console.log(`[dry-run] Would announce ${url} (set LINKEDIN_ACCESS_TOKEN + LINKEDIN_AUTHOR_URN to go live).`);
+      console.log(`[dry-run] Would announce ${url} — not posting.`);
       continue;
     }
     try {
