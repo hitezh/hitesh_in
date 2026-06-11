@@ -77,7 +77,13 @@ Always write meaningful alt text. Credit the creator and link to the source when
 
 ### Typical shape of a post
 
-There is no mandatory length. Existing posts range from a single image and sentence to detailed explainers. Let the idea determine the length. For a normal essay or explainer, use this shape:
+There is no mandatory length, and the idea sets the length, not the other way round. But the blog has a house rhythm worth matching: most posts run **300–700 words**, the median is around 400, and almost nothing exceeds ~1,200. Use these as targets, not rules:
+
+- **Short take or sketch:** 150–400 words. One observation and its implication; an image post with just enough context.
+- **Standard essay or explainer:** 500–900 words. The sweet spot — long enough to make and ground one argument, short enough to stay sharp.
+- **Deep dive:** up to ~1,200 words, and only when the subject genuinely earns it. If a draft pushes past that, the usual cause is one-point dilution (see the AI tells) — cut, don't pad. A long post is a series of tight sections, never a long one.
+
+For a normal essay or explainer, use this shape:
 
 1. **Open with the point.** In one or two short paragraphs, state the observation, tension, or personal context. Avoid a generic scene-setting introduction.
 2. **Develop it in clear sections.** Use descriptive `##` headings. Each section should advance one part of the argument.
@@ -91,6 +97,18 @@ Other formats that fit the blog include:
 - A practical guide organized into steps or considerations.
 - A technical or industry explainer that translates a complex subject into plain language.
 - A sketch, comic, or image post with only the context it needs.
+
+### Make it engaging
+
+Engagement here comes from substance and specificity, not tricks. The anti-AI rules above already rule out the cheap moves (manufactured suspense, fake hooks, stakes inflation); these are the honest ones:
+
+- **Earn the first line.** Open with a concrete claim, a number, or something you actually saw — not a windup. "A survey of 831 engineers found 97% use AI to code and 30% govern it" beats "AI is changing everything." The reader should know within two sentences why this is worth their time.
+- **Have a stake in the ground.** A clear, mildly contrarian opinion is more engaging than a balanced survey. Say what you think and why; then deal fairly with the best objection.
+- **Front-load, don't bury.** Put the point up top. Use the body to earn it, not to delay it.
+- **Make headings carry the argument.** A reader skimming only the `##` headings should still get the through-line.
+- **Trade abstraction for specifics.** One real example, named company, dated event, or hard number does more work than a paragraph of generalities.
+- **Keep momentum.** Short opening paragraph. Vary sentence length. Cut any sentence that doesn't advance the idea — tightening is the highest-leverage edit.
+- **Close with something to chew on.** An implication, a prediction you'd stake, a question you actually want answered, or what you'd do differently. Not a summary.
 
 ### Style details to preserve
 
