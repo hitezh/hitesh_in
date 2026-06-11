@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An editorial diagram: as AI capability rises, human understanding falls, and the two lines cross. Today's model is marked as the worst it will ever be.">
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans  { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- card -->
+  <rect x="0" y="0" width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- left: text block -->
+  <text x="92" y="170" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">ON&#160;&#160;GENERATIVE&#160;&#160;AI</text>
+
+  <text x="88" y="280" class="serif" font-size="82" fill="#1A1816">We stopped</text>
+  <text x="88" y="364" class="serif" font-size="82" fill="#1A1816">laughing<tspan fill="#BF4B1A">.</tspan></text>
+
+  <rect x="92" y="398" width="68" height="5" rx="2.5" fill="#BF4B1A"/>
+
+  <text x="92" y="452" class="sans" font-size="22" fill="#7B746E">Five moments — and the model in front of you</text>
+  <text x="92" y="484" class="sans" font-size="22" fill="#7B746E">today is the worst it will ever be.</text>
+
+  <!-- right: chart -->
+  <!-- axes -->
+  <line x1="700" y1="150" x2="700" y2="470" stroke="#E8DDD0" stroke-width="2"/>
+  <line x1="700" y1="470" x2="1140" y2="470" stroke="#E8DDD0" stroke-width="2"/>
+  <text x="700" y="498" class="sans" font-size="15" fill="#B5AFA9">past</text>
+  <text x="1140" y="498" class="sans" font-size="15" fill="#B5AFA9" text-anchor="end">future</text>
+
+  <!-- understanding: falling, dotted, muted -->
+  <path d="M720,250 C 840,295 960,355 1120,405" fill="none" stroke="#7B746E" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 10"/>
+  <text x="1118" y="432" class="sans" font-size="20" fill="#7B746E" text-anchor="end">Understanding &#8595;</text>
+
+  <!-- capability: rising, solid, accent -->
+  <path d="M720,440 C 860,430 980,300 1120,170" fill="none" stroke="#BF4B1A" stroke-width="4.5" stroke-linecap="round"/>
+  <text x="1118" y="152" class="sans" font-size="22" fill="#BF4B1A" text-anchor="end">Capability &#8593;</text>
+
+  <!-- today marker on the capability line -->
+  <circle cx="998" cy="284" r="7.5" fill="#BF4B1A" stroke="#FAF7F2" stroke-width="3"/>
+  <line x1="998" y1="291" x2="998" y2="318" stroke="#B5AFA9" stroke-width="1.5"/>
+  <text x="998" y="338" class="sans" font-size="17" fill="#1A1816" text-anchor="middle">today</text>
+</svg>

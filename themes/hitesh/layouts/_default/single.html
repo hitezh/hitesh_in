@@ -21,10 +21,20 @@
       {{ end }}
     </header>
 
-    {{ $img := .Params.image }}
-    {{ if $img }}
+    {{ with .Params.image }}
+    {{ $img := . }}
+    {{ $src := "" }}
+    {{ with $.Resources.GetMatch $img }}
+      {{ $src = .RelPermalink }}
+    {{ else }}
+      {{ if or (hasPrefix $img "http") (hasPrefix $img "/") }}
+        {{ $src = $img | relURL }}
+      {{ else }}
+        {{ $src = path.Join $.RelPermalink $img }}
+      {{ end }}
+    {{ end }}
     <div class="post-image">
-      <img src="{{ $img | relURL }}" alt="{{ .Title }}">
+      <img src="{{ $src }}" alt="{{ $.Title }}" loading="lazy">
     </div>
     {{ end }}
 
