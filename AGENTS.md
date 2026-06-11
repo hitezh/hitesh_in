@@ -104,16 +104,62 @@ Other formats that fit the blog include:
 - Link to sources for statistics, laws, standards, quotations, and claims that may have changed. For time-sensitive topics, verify facts immediately before publishing.
 - Preserve intentional personality, but fix spelling, punctuation, broken links, and unclear sentences. The voice comes from the perspective and rhythm, not from errors.
 
-### Avoid
+### Sound like Hitesh, not an AI
 
-- Generic openings such as “In today's fast-paced world” or “Technology is constantly evolving.”
-- Corporate filler such as “leverage synergies,” “game-changing,” “unlock value,” or “delve into,” unless critiquing that language.
-- A detached, encyclopedia-like voice when a clear personal perspective would be stronger.
-- Unsupported certainty, invented anecdotes, invented professional experience, or claims presented as facts without verification.
-- Excessive hedging, throat-clearing, or explaining that the post is about to explain something.
-- Repeating the same point in the introduction, body, and conclusion.
-- Long walls of text, excessive heading levels, decorative emoji, and clickbait titles.
-- Forcing every post into a long-form template. A small idea should remain a small post.
+Most "AI-sounding" writing isn't factually wrong, it's textured wrong: the same handful of rhetorical reflexes, repeated until the rhythm gives the machine away. Any one of these used once can be fine. The tell is **density and repetition** — three negated reframes in one post, an em dash in every paragraph, a metaphor flogged ten times. Aim for prose that is varied, specific, and a little imperfect, the way a person actually writes. When in doubt, read it aloud: if it sounds like a confident stranger performing insight, rewrite it; if it sounds like Hitesh explaining something to a sharp colleague over coffee, keep it.
+
+#### Don't — the AI tells
+
+Sentence reflexes:
+
+- **Negative parallelism** — "It's not X, it's Y", "not because X, but because Y", "The question isn't X. The question is Y." This is the single biggest tell. Cut it almost everywhere and just say the thing.
+- **The countdown** — "Not a bug. Not a feature. A design flaw." Don't negate two things to unveil a third.
+- **Self-answered questions** — "The result? Devastating." Don't pose a question nobody asked so you can answer it dramatically.
+- **Anaphora and stacked tricolons** — repeating the same sentence opener, or rule-of-three after rule-of-three ("Products solve problems; platforms create worlds…"). One tricolon can be elegant; three in a row is a pattern.
+- **Tacked-on "-ing" analysis** — "…, highlighting its importance", "…, reflecting broader trends", "…, underscoring its role." Delete these; they assert significance instead of earning it.
+- **False ranges** — "from innovation to cultural transformation." Only use "from X to Y" when there's a real spectrum with a middle.
+- **Fragments for drama** — "He published this. Openly. In a book." Write the sentence.
+
+Tone reflexes:
+
+- **Manufactured suspense** — "Here's the kicker", "Here's the thing", "Here's where it gets interesting."
+- **Teacher mode** — "Let's break this down", "Let's unpack this", "Think of it as…". You're writing for peers, not a classroom.
+- **"Imagine a world where…" futurism** and **stakes inflation** — "this will reshape everything", "define the next era of computing."
+- **Performative honesty** — "Let's be honest…", "this isn't a rant, it's a diagnosis." Real candour is specific and slightly uncomfortable, not a flourish.
+- **Asserting clarity instead of showing it** — "the truth is simple", "history is unambiguous." If it were obvious you wouldn't need to say so.
+
+Vocabulary:
+
+- **Magic adverbs** — quietly, deeply, fundamentally, remarkably, arguably.
+- **AI house vocab** — delve, leverage (as a verb), utilize, robust, streamline, harness, seamless, ecosystem, paradigm, tapestry, landscape, synergy.
+- **Pompous copulas** — "serves as", "stands as", "represents", "marks." Usually the word you want is "is".
+- **Vague authorities** — "experts say", "industry reports suggest", "observers note." Name the person and link the source, or drop the claim.
+- **Invented concept labels** — coining "the supervision paradox" or "the acceleration trap" and using them as if they're established terms. Make the argument; don't name a thing to skip it.
+- **Fabrication** — never invent anecdotes, professional experience, quotes, statistics, or sources to fill a gap. If it didn't happen or you can't cite it, leave it out.
+
+Structure and formatting:
+
+- **One point, ten ways** — don't pad a single idea to feel comprehensive. Make the argument once.
+- **Listicle in a trench coat** — "The first… The second… The third…" prose, and **fractal summaries** where every section recaps itself.
+- **Signposted conclusions** — "In conclusion", "To sum up." End on the implication and stop.
+- **"Despite its challenges…"** — naming a problem only to wave it away.
+- **A single metaphor flogged** across the whole piece, or **historical-analogy stacking** ("Apple didn't build Uber. Stripe didn't build Shopify…").
+- **Em-dash addiction** — a couple per piece, used naturally, not one in every paragraph.
+- **Bold-lead bullets on every item**, decorative emoji, clickbait titles, and excessive heading levels.
+- **Smart quotes and unicode arrows** (→, "curly quotes"). Type straight quotes and a plain `->`.
+
+#### Do — Hitesh's fingerprints
+
+- **Open from something real** — something you noticed, tried, got wrong, or argued about at OptCulture or across banking, retail, and loyalty work. Lead with the observation, not a scene-setting intro.
+- **Use plain verbs and plain copulas** — "is", "does", "breaks". Let the idea carry the weight.
+- **Vary the rhythm** — mix short and long sentences; let paragraphs run one to four sentences as the thought needs. Don't flatten every line into one-thought-per-sentence "readability".
+- **Be concrete, and Indian-specific where it fits** — a real bank, a real founder, a UPI quirk, a hiring story, a number you can cite. Specifics beat abstractions every time.
+- **Make one argument, then trust the reader** to follow it. Engage the strongest opposing view honestly, in your own words.
+- **Keep the wit dry and occasional** — one good aside or an italicised half-joke, then back to the point.
+- **Use a metaphor once** if it clarifies, then move on.
+- **Link real sources** for stats, laws, standards, and claims, and name names. Verify anything time-sensitive right before publishing.
+- **End on the implication, the next question, or what you'd do differently** — never a recap.
+- **Let a small idea stay a small post.** Don't force every piece into a long-form template.
 
 ## Drafting checklist
 
@@ -129,5 +175,7 @@ Before considering a post complete, confirm:
 - [ ] The directory year matches the publication date's year.
 - [ ] Images exist in the page bundle, render correctly, have useful alt text, and include credit where needed.
 - [ ] The post has been proofread aloud for Hitesh's conversational rhythm.
+- [ ] Scanned against "Sound like Hitesh, not an AI" — no negative parallelism, self-answered questions, "Here's the…" suspense, "-ing" analysis tails, em-dash overuse, bold-lead bullets, or the AI house vocab; any single trope that remains is deliberate and isolated.
+- [ ] Straight quotes and plain ASCII throughout (no smart quotes, no `→` arrows).
 - [ ] `hugo server -D` shows a good home-page card and post page.
 - [ ] `hugo --minify` completes without errors before publication.
