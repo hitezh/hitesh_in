@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: "Print the blurb without posting"
+        description: "Validate the LinkedIn token and preview the blurb, without posting"
         type: boolean
         default: true
 

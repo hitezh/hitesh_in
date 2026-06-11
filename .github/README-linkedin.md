@@ -65,13 +65,29 @@ In **Settings → Secrets and variables → Actions**:
 
 ## Testing
 
-- Use the **Run workflow** button (workflow_dispatch) on the Actions tab. It
-  defaults to `dry_run: true`, so it parses the latest commit's posts and prints
-  the blurb without posting.
-- Locally:
-  ```sh
-  GIT_AFTER=HEAD DRY_RUN=true node .github/scripts/post-to-linkedin.mjs
-  ```
+**From GitHub (recommended): Actions tab → _Announce new posts on LinkedIn_ →
+Run workflow.** Leave the *dry_run* box checked (the default) and pick the branch.
+
+In dry-run the workflow:
+
+- **calls the LinkedIn API** (`/v2/userinfo`) to validate the token and confirm/derive
+  the author URN — a read-only call that **never posts**, and
+- **previews the exact blurb** it would publish (the changed post, or the latest
+  published post if nothing changed).
+
+A successful run logs `Token valid; author URN confirmed.` Untick *dry_run* only when
+you actually want it to post.
+
+Locally:
+
+```sh
+# Offline preview (no API, no posting):
+GIT_AFTER=HEAD DRY_RUN=true node .github/scripts/post-to-linkedin.mjs
+
+# Validate the token against the API without posting:
+LINKEDIN_ACCESS_TOKEN="<token>" DRY_RUN=true GIT_AFTER=HEAD \
+  node .github/scripts/post-to-linkedin.mjs
+```
 
 ## Troubleshooting
 
