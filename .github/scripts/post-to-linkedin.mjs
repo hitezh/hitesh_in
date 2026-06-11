@@ -12,20 +12,24 @@
 //
 // Requires no npm dependencies — relies on Node 20+ global fetch and git.
 //
-// Behaviour without credentials: if LINKEDIN_ACCESS_TOKEN / LINKEDIN_AUTHOR_URN
-// are absent (or DRY_RUN=true), it prints what it *would* post and exits 0.
+// Behaviour without credentials: if LINKEDIN_ACCESS_TOKEN is absent (or
+// DRY_RUN=true), it prints what it *would* post and exits 0. The author URN is
+// derived from the token when LINKEDIN_AUTHOR_URN is not set.
+//
+// Env values are trimmed, since secrets pasted into a CI UI commonly pick up a
+// trailing newline that would otherwise corrupt the Authorization header.
 
 import { execSync } from "node:child_process";
 
-const SITE = (process.env.SITE_BASE_URL || "https://hitesh.in").replace(/\/$/, "");
-const TOKEN = process.env.LINKEDIN_ACCESS_TOKEN;
-const AUTHOR = process.env.LINKEDIN_AUTHOR_URN; // e.g. urn:li:person:abc123
-const API_VERSION = process.env.LINKEDIN_API_VERSION || "202506"; // YYYYMM, bump as LinkedIn deprecates
+const SITE = (process.env.SITE_BASE_URL || "https://hitesh.in").trim().replace(/\/$/, "");
+const TOKEN = (process.env.LINKEDIN_ACCESS_TOKEN || "").trim();
+let AUTHOR = (process.env.LINKEDIN_AUTHOR_URN || "").trim(); // e.g. urn:li:person:abc123
+const API_VERSION = (process.env.LINKEDIN_API_VERSION || "202506").trim(); // YYYYMM, bump as LinkedIn deprecates
 const INCLUDE_HASHTAGS = process.env.INCLUDE_HASHTAGS !== "false";
-const BEFORE = process.env.GIT_BEFORE || "";
-const AFTER = process.env.GIT_AFTER || "HEAD";
+const BEFORE = (process.env.GIT_BEFORE || "").trim();
+const AFTER = (process.env.GIT_AFTER || "HEAD").trim();
 const ZERO = "0000000000000000000000000000000000000000";
-const DRY_RUN = process.env.DRY_RUN === "true" || !TOKEN || !AUTHOR;
+const DRY_RUN = process.env.DRY_RUN === "true" || !TOKEN;
 
 function git(args) {
   return execSync(`git ${args}`, { encoding: "utf8" });
@@ -156,9 +160,70 @@ async function postToLinkedIn(commentary) {
 
   if (!res.ok) {
     const detail = await res.text();
-    throw new Error(`LinkedIn API ${res.status}: ${detail}`);
+    let hint = "";
+    if (res.status === 401) {
+      hint =
+        "\n  → The access token is invalid, expired, or not a w_member_social member token. " +
+        "Re-mint it and update the LINKEDIN_ACCESS_TOKEN secret (no trailing spaces/newline). " +
+        "A common mistake is pasting the OAuth authorization code instead of the exchanged access token. " +
+        'Verify with: curl -H "Authorization: Bearer $TOKEN" https://api.linkedin.com/v2/userinfo';
+    } else if (res.status === 403) {
+      hint =
+        "\n  → The token lacks the w_member_social scope, or the author URN is not this token's member.";
+    }
+    throw new Error(`LinkedIn API ${res.status}: ${detail}${hint}`);
   }
   return res.headers.get("x-restli-id") || "(posted)";
+}
+
+// Validate the token before attempting to post, and derive the author URN when
+// possible. Throws (fail fast) only when the token is definitively invalid.
+async function preflight() {
+  console.log(`Access token present (${TOKEN.length} chars); author URN: ${AUTHOR || "(to be derived)"}.`);
+
+  let res;
+  try {
+    res = await fetch("https://api.linkedin.com/v2/userinfo", {
+      headers: { Authorization: `Bearer ${TOKEN}` },
+    });
+  } catch (err) {
+    console.warn(`Could not reach LinkedIn userinfo (${err.message}); proceeding to post anyway.`);
+    return;
+  }
+
+  if (res.status === 401) {
+    throw new Error(
+      "LinkedIn rejected the access token (401 INVALID_ACCESS_TOKEN). It is invalid, expired, or " +
+        "not a member token. Mint a fresh token with the w_member_social scope and update the " +
+        "LINKEDIN_ACCESS_TOKEN secret (paste it with no trailing spaces/newline). Verify locally with:\n" +
+        '  curl -H "Authorization: Bearer $TOKEN" https://api.linkedin.com/v2/userinfo',
+    );
+  }
+
+  if (res.ok) {
+    const me = await res.json();
+    const derived = me.sub ? `urn:li:person:${me.sub}` : "";
+    if (derived && !AUTHOR) {
+      AUTHOR = derived;
+      console.log(`Token valid. Derived author URN: ${AUTHOR}`);
+    } else if (derived && AUTHOR !== derived) {
+      console.warn(`Provided LINKEDIN_AUTHOR_URN (${AUTHOR}) does not match the token's member (${derived}); using the token's member.`);
+      AUTHOR = derived;
+    } else {
+      console.log("Token valid; author URN confirmed.");
+    }
+    return;
+  }
+
+  // Other statuses (e.g. 403 when the openid/profile scope is absent): we cannot
+  // validate here, but the token may still be usable for posting.
+  console.warn(`userinfo returned ${res.status}; skipping validation.`);
+  if (!AUTHOR) {
+    throw new Error(
+      "Could not derive the author URN and LINKEDIN_AUTHOR_URN is not set. " +
+        "Set it to urn:li:person:<your-id>.",
+    );
+  }
 }
 
 async function main() {
@@ -200,6 +265,15 @@ async function main() {
   if (toAnnounce.length === 0) {
     console.log("No newly published posts to announce.");
     return;
+  }
+
+  if (!DRY_RUN) {
+    try {
+      await preflight();
+    } catch (err) {
+      console.error(err.message);
+      process.exit(1);
+    }
   }
 
   let failures = 0;
