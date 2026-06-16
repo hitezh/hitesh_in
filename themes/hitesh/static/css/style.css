@@ -997,7 +997,7 @@ a.tag:hover { color: var(--accent); }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--sp-6);
   margin-top: var(--sp-8);
 }
@@ -1086,6 +1086,10 @@ a.tag:hover { color: var(--accent); }
 .cta-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 @media (max-width: 860px) {
-  .services-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .services { padding: var(--sp-12) 0; }
+}
+
+@media (max-width: 560px) {
+  .services-grid { grid-template-columns: 1fr; }
 }
