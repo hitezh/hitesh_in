@@ -2,7 +2,7 @@
 title: "The real cost of running AI locally for coding"
 slug: "local-ai-coding-cost"
 date: "2026-06-16"
-description: "Local models have gotten good enough that developers are replacing paid AI subscriptions. But 'free' is doing a lot of work in that sentence."
+description: "Serious developers are dropping paid AI subscriptions for local models and reporting it actually works. The 'it's free' pitch is real - but it obscures a different set of costs."
 categories:
   - "technology"
 tags:
@@ -12,7 +12,7 @@ tags:
 draft: false
 ---
 
-About a year ago I'd have quietly dismissed the idea of replacing Claude with a locally-run model for serious coding work. Then the hardware got more accessible, the models improved, and a large, opinionated group of developers started reporting that they'd actually done it - with results good enough to stick with.
+About a year ago I'd have quietly dismissed the idea of replacing Claude with a locally-run model for serious coding work. Then the hardware got more accessible, the models improved, and a large, opinionated group of developers started reporting that they'd actually done it - for free - with results good enough to stick with.
 
 The catch: "free" is doing a lot of work in that sentence.
 
