@@ -13,7 +13,7 @@ Use this guide whenever creating or substantially editing a post under `content/
 - `layouts/index.html` renders recent-post cards and uses the front-matter `image` when present; otherwise it uses the first resource under `images/`, then the site default.
 - `layouts/_default/single.html` renders an individual post.
 - `static/images/` is for site-wide assets, not images belonging only to one post.
-- `themes/twenty-twenty-hugo/` is a Git submodule. Do not edit it merely to add a post.
+- `themes/hitesh/` is the active theme (layouts and `static/css/style.css`). Do not edit the theme merely to add a post.
 
 ## Creating a post
 
@@ -57,6 +57,7 @@ Rules:
 - Do not add `author`; the site is Hitesh's personal blog and existing posts omit it.
 - Keep `draft: true` while drafting. Published posts in the repository normally omit `draft`.
 - The directory year and the year in `date` must match.
+- `date` must be the real current date, never in the future. Hugo does not build future-dated posts by default, so a post dated ahead of the deploy clock silently fails to appear on the published site (the build still succeeds, the post just goes missing).
 
 If the featured image is also essential to understanding the body—such as a comic, sketch, or diagram—include it in the Markdown body too:
 
@@ -207,6 +208,7 @@ Before considering a post complete, confirm:
 - [ ] Claims, numbers, and references a reader would want to verify are linked inline where they appear, not collected at the end.
 - [ ] Front matter uses the correct date, existing categories, focused tags, and `image` syntax.
 - [ ] The directory year matches the publication date's year.
+- [ ] The `date` is today or earlier, never in the future, or Hugo will drop the post from the deployed site.
 - [ ] Images exist in the page bundle, render correctly, have useful alt text, and include credit where needed.
 - [ ] The post has been proofread aloud for Hitesh's conversational rhythm.
 - [ ] Scanned against "Sound like Hitesh, not an AI" — no negative parallelism, self-answered questions, "Here's the…" suspense, "-ing" analysis tails, em-dash overuse, bold-lead bullets, or the AI house vocab; any single trope that remains is deliberate and isolated.

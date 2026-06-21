@@ -38,14 +38,14 @@ content/
       images/          post-specific images (referenced bundle-relative)
 static/images/         site-wide assets (e.g. default.jpg, the OG fallback)
 themes/hitesh/         ACTIVE custom theme (layouts + static/css/style.css)
-themes/twenty-twenty-hugo/  old theme submodule — unused
 .github/workflows/     CI, incl. the LinkedIn auto-announce workflow
 ```
 
 - Blog permalink rule: `/:year/:slug`. The directory year must match the
   post's `date`.
 - Hugo loads `hugo.toml` in preference to `config.toml`, so the **hitesh** theme
-  is what renders; `config.toml` and the twenty-twenty submodule are dead.
+  is what renders; the legacy `config.toml` is dead. (The old `twenty-twenty-hugo`
+  submodule it referenced has been removed.)
 
 ## Commands
 
