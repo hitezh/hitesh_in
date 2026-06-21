@@ -1,5 +1,5 @@
 ---
-title: "Apple's Inference Chip Is the Boring Part"
+title: "Will Apple Pull a SpaceX?"
 slug: "apple-ai-inference-silicon"
 date: "2026-06-16"
 draft: false
