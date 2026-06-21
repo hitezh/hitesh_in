@@ -112,6 +112,19 @@ Engagement here comes from substance and specificity, not tricks. The anti-AI ru
 - **Keep momentum.** Short opening paragraph. Vary sentence length. Cut any sentence that doesn't advance the idea — tightening is the highest-leverage edit.
 - **Close with something to chew on.** An implication, a prediction you'd stake, a question you actually want answered, or what you'd do differently. Not a summary.
 
+### Flowy, conversational, link-dense
+
+For technology and industry analysis, lean into a flowing, link-dense register, the kind good commentary blogs use. It is still Hitesh writing in the first person, just with more momentum and more receipts. The habits that make it work:
+
+- **Write a moving argument, not a list of statements.** Let each sentence hand off to the next so the reasoning builds. Short paragraphs are good; staccato one-line fragments stacked for drama are not. Favor connected prose over bullets and tables in this mode.
+- **Link generously, inline, as you write.** When you cite a number, a report, a product, or someone else's take, link it right there in the sentence, not in a footnote or a dump at the end. A reader should be able to chase any claim in one click. High link density is a feature: it shows the work and earns trust.
+- **React and rebut.** Summarize the prevailing take, link it, then say where it is right and where it is wrong. Correcting a popular framing, or tightening a sloppy one, is more interesting than a neutral survey.
+- **Be confident, then handle the objection.** State the claim plainly and answer the strongest counter-argument in your own words. Earned skepticism reads as authority; reflexive hedging reads as filler.
+- **Conversational connective tissue is welcome when it does real work.** Short directional turns ("Look at Dell." "Start with what is known.") move the reader along. This is not license for manufactured suspense: still no "here's the kicker," no windup that promises a reveal.
+- **Still no em dashes.** This register is flowy, not punctuation-heavy. Use commas, colons, full stops, and the occasional parenthesis for the pause an em dash would have taken.
+
+This is a register, not a costume. Keep the first-person, experience-led core: ground the analysis in what you have seen, advised on, or built, and say "I" where you have a view. Borrow the flow and the links from commentary writing; do not slide into anonymous third-person punditry.
+
 ### Style details to preserve
 
 - Keep paragraphs compact—usually one to four sentences.
@@ -191,6 +204,7 @@ Before considering a post complete, confirm:
 - [ ] Every section, example, and list earns its place.
 - [ ] Technical terms are explained at the right level for the intended reader.
 - [ ] Factual and time-sensitive claims have been checked and linked to reliable sources.
+- [ ] Claims, numbers, and references a reader would want to verify are linked inline where they appear, not collected at the end.
 - [ ] Front matter uses the correct date, existing categories, focused tags, and `image` syntax.
 - [ ] The directory year matches the publication date's year.
 - [ ] Images exist in the page bundle, render correctly, have useful alt text, and include credit where needed.
