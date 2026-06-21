@@ -1,5 +1,5 @@
 ---
-title: "Baltra Is the Boring Part"
+title: "Apple's Inference Chip Is the Boring Part"
 slug: "apple-ai-inference-silicon"
 date: "2026-06-16"
 draft: false
