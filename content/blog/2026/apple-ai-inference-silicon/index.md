@@ -1,7 +1,7 @@
 ---
 title: "Will Apple Pull a SpaceX?"
 slug: "apple-ai-inference-silicon"
-date: "2026-06-16"
+date: "2026-06-20"
 draft: false
 description: "The companies building giant AI compute for themselves have started renting it out: SpaceX leased all of Colossus to Anthropic, and Meta says a cloud business is on the table. Apple is about to have the most efficient, most private inference fleet on earth. Can it keep that to itself?"
 categories:
