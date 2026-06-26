@@ -38,4 +38,18 @@ The loop Ronacher describes is genuinely useful for bounded tasks: porting code,
 
 Write those yourself. Then let the agent audit, test, and hunt edge cases. The code you write is code you can explain, defend, and fix when something breaks at 2 AM.
 
-Staying in ownership of what you ship is the thing your sprint metrics will not measure. It will show up eventually.
+## What I do with clients
+
+At OptCulture and across the advisory work I do with banks and retail teams, I've been watching this play out up close. The teams that are getting it right have settled on a few practices.
+
+Before any agent generates a line of code, I ask for a written plan: what is being built, how it fits the existing architecture, what the approach will be. The agent can produce the plan; a human reviews and approves it before coding starts. This is just the spec work made explicit, and it slows down the first five minutes to save hours later.
+
+Tasks stay small enough to be reviewable in one sitting. A 400-line PR touching seven files is difficult for anyone to genuinely own, regardless of how it was written. If you cannot summarise a PR in two sentences, it needs to be split.
+
+Validation happens at every commit, not just CI. A human reads the diff with one question: does this do what the plan said, and does anything here surprise me? If the answer is yes, stop and ask before merging.
+
+Reviews are not sign-offs. A reviewer who finds something they cannot explain sends it back rather than approving it with a comment. The loop continues until the reviewer can genuinely describe what they are merging. This takes longer than a one-pass approval workflow, and that is the point.
+
+I also run automated code review as a first pass before any human reviewer touches a diff: linters, static analysis, and increasingly an AI reviewer checking for common patterns. This filters the surface noise and lets the human reviewer focus on what actually requires judgment.
+
+None of this is complicated. The hard part is holding the line when the team is moving fast and the output looks polished.
