@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="The numbers your favourite finfluencer keeps getting wrong.">
+  <defs><style>
+    .serif{font-family:Georgia,'Times New Roman',serif;}
+    .sans{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;}
+  </style></defs>
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- faint struck-through big number motif -->
+  <text x="1150" y="250" class="serif" font-size="200" font-weight="800" fill="#BF4B1A" opacity="0.07" text-anchor="end">10x</text>
+  <line x1="700" y1="200" x2="1140" y2="150" stroke="#BF4B1A" stroke-width="6" opacity="0.10"/>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">MONEY MYTHS,&#160;&#160;DECODED</text>
+
+  <text x="80" y="270" class="serif" font-size="74" font-weight="800" fill="#1A1816">The numbers your</text>
+  <text x="80" y="350" class="serif" font-size="74" font-weight="800" fill="#1A1816">favourite finfluencer</text>
+  <text x="80" y="430" class="serif" font-size="74" font-weight="800" fill="#1A1816">keeps getting <tspan fill="#BF4B1A">wrong</tspan>.</text>
+
+  <rect x="84" y="468" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="520" class="sans" font-size="22" fill="#7B746E">Confident takes, built on a handful of simple mix-ups.</text>
+</svg>
