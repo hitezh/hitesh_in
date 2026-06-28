@@ -33,10 +33,14 @@ paginate = 10
     url    = "/blog/"
     weight = 1
   [[menu.main]]
+    name   = "Book"
+    url    = "/book/"
+    weight = 2
+  [[menu.main]]
     name   = "About"
     url    = "/about/"
-    weight = 2
+    weight = 3
   [[menu.main]]
     name   = "Work with me"
     url    = "/work-with-me/"
-    weight = 3
+    weight = 4

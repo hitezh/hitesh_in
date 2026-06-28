@@ -64,6 +64,33 @@
   </div>
 </section>
 
+{{ with .Site.GetPage "/book" }}
+<section class="book-feature" id="book">
+  <div class="container">
+    <div class="book-feature-grid">
+      <div class="book-feature-cover">
+        <a href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
+          <img src="{{ .Params.cover | relURL }}" alt="Cover of {{ .Title }} by {{ .Params.author_name }}" width="848" height="1272" loading="lazy">
+        </a>
+      </div>
+      <div class="book-feature-body">
+        <p class="book-feature-eyebrow"><span class="hero-dot"></span>New book &middot; Free PDF</p>
+        <h2 class="book-feature-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ with .Params.subtitle }}<p class="book-feature-sub">{{ . }}</p>{{ end }}
+        {{ with .Params.blurb }}<p class="book-feature-desc">{{ . }}</p>{{ end }}
+        <div class="book-feature-cta">
+          <a href="{{ .RelPermalink }}#get-the-book" class="btn-primary book-download">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            {{ .Params.download_label | default "Get the free PDF" }}
+          </a>
+          <a href="{{ .RelPermalink }}" class="btn-secondary">About the book</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
 <section class="services" id="services">
   <div class="container">
     <div class="section-header">
