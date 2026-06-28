@@ -7,7 +7,7 @@ image: /images/book-cover.jpg
 blurb: "A practical, hype-free playbook for the managers and operators who have to turn AI agents into real business outcomes. Read it free, no signup."
 cover: /images/book-cover.jpg
 download: /downloads/implementing-ai-agents-in-your-company.pdf
-download_label: "Download the free PDF"
+download_label: "Get the free PDF"
 format: "PDF"
 chapters_total: 11
 parts_total: 3

@@ -1425,29 +1425,27 @@ a.tag:hover { color: var(--accent); }
 .book-author-card a { color: var(--text); border-bottom: 1px solid var(--accent); transition: color var(--t-fast); }
 .book-author-card a:hover { color: var(--accent); }
 
-/* Final CTA band */
-.book-final-cta {
+/* Gated download form */
+.book-getbook {
   padding: var(--sp-16) 0;
   border-top: 1px solid var(--border);
   background: var(--bg-alt);
+  scroll-margin-top: calc(var(--header-h) + var(--sp-4));
 }
-.book-final-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--sp-8);
-  flex-wrap: wrap;
+.book-getbook-inner { max-width: var(--reading); margin: 0 auto; }
+.book-getbook-lead {
+  font-size: var(--size-lg);
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: var(--sp-3);
+  max-width: 56ch;
 }
-.book-final-title {
-  font-family: var(--font-display);
-  font-size: var(--size-2xl);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: var(--text);
-  margin-bottom: var(--sp-2);
-  font-variation-settings: 'opsz' 36;
+.book-getbook .cta-form { margin-top: var(--sp-8); }
+.book-getbook-fine {
+  font-size: var(--size-sm);
+  color: var(--text-faint);
+  margin-top: var(--sp-5);
 }
-.book-final-desc { font-size: var(--size-md); color: var(--text-muted); }
 
 /* ---- Book responsive ---- */
 @media (max-width: 860px) {
@@ -1465,6 +1463,3 @@ a.tag:hover { color: var(--accent); }
   .book-feature-cover { max-width: 180px; }
 }
 
-@media (max-width: 560px) {
-  .book-final-inner { flex-direction: column; align-items: flex-start; }
-}

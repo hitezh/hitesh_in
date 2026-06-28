@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $dl := .Params.download | relURL }}
 {{ $cover := .Params.cover | relURL }}
-{{ $label := .Params.download_label | default "Download the PDF" }}
+{{ $label := .Params.download_label | default "Get the free PDF" }}
 <article class="book-page">
 
   <section class="book-hero">
@@ -9,7 +9,7 @@
       <div class="book-hero-grid">
         <div class="book-cover-wrap">
           {{ with $cover }}
-          <a href="{{ $dl }}" download class="book-cover-link" aria-label="Download {{ $.Title }}">
+          <a href="#get-the-book" class="book-cover-link" aria-label="Get {{ $.Title }}">
             <img class="book-cover-img" src="{{ . }}" alt="Cover of {{ $.Title }} by {{ $.Params.author_name }}" width="848" height="1272" loading="eager">
           </a>
           {{ end }}
@@ -22,7 +22,7 @@
           {{ with .Params.blurb }}<p class="book-blurb">{{ . }}</p>{{ end }}
 
           <div class="book-cta">
-            <a href="{{ $dl }}" download class="btn-primary book-download">
+            <a href="#get-the-book" class="btn-primary book-download">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               {{ $label }}
             </a>
@@ -66,7 +66,7 @@
     <div class="container">
       <div class="section-header">
         <span class="section-label">What's inside</span>
-        <a href="{{ $dl }}" download class="section-more">Get the full book &rarr;</a>
+        <a href="#get-the-book" class="section-more">Get the full book &rarr;</a>
       </div>
       <div class="book-parts">
         {{ range . }}
@@ -95,17 +95,32 @@
     </div>
   </section>
 
-  <section class="book-final-cta">
+  <section class="book-getbook" id="get-the-book">
     <div class="container">
-      <div class="book-final-inner">
-        <div class="book-final-text">
-          <h2 class="book-final-title">Start reading today</h2>
-          <p class="book-final-desc">The full book, free as a {{ .Params.format | default "PDF" }}. No signup, no paywall.</p>
-        </div>
-        <a href="{{ $dl }}" download class="btn-primary book-download book-download--lg">
-          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          {{ $label }}
-        </a>
+      <div class="book-getbook-inner">
+        <span class="section-label">Get the book</span>
+        <p class="book-getbook-lead">Tell me where to send it and the {{ .Params.format | default "PDF" }} is yours, free. Fill this in and your download starts as soon as you submit.</p>
+        <form name="book-download" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="{{ $dl }}" class="cta-form book-getbook-form">
+          <input type="hidden" name="form-name" value="book-download">
+          <p class="cta-hp"><label>Do not fill this out if you are human: <input name="bot-field"></label></p>
+          <div class="cta-field">
+            <label for="bd-name">Name</label>
+            <input id="bd-name" type="text" name="name" required>
+          </div>
+          <div class="cta-field">
+            <label for="bd-email">Work email</label>
+            <input id="bd-email" type="email" name="email" required>
+          </div>
+          <div class="cta-field">
+            <label for="bd-company">Company <span>(optional)</span></label>
+            <input id="bd-company" type="text" name="company">
+          </div>
+          <button type="submit" class="btn-primary cta-submit book-download">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download the PDF
+          </button>
+        </form>
+        <p class="book-getbook-fine">No spam. I send the occasional note about new writing, and you can unsubscribe anytime.</p>
       </div>
     </div>
   </section>
