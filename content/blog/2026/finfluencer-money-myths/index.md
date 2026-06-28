@@ -1,7 +1,7 @@
 ---
 title: "The Money Myths Your Favourite Finfluencer Keeps Repeating"
 slug: "finfluencer-money-myths"
-date: "2026-06-20"
+date: "2026-06-28"
 draft: false
 description: "Almost every viral money take is built on one of four simple mix-ups: a total confused with a yearly rate, the headline number confused with earnings, how tax slabs work, and a multiple confused with a real return. Here's how to spot all four."
 image: images/cover.svg
