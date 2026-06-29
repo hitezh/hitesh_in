@@ -100,7 +100,7 @@
       <div class="book-getbook-inner">
         <span class="section-label">Get the book</span>
         <p class="book-getbook-lead">Tell me where to send it and the {{ .Params.format | default "PDF" }} is yours, free. Fill this in and your download starts as soon as you submit.</p>
-        <form name="book-download" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="{{ $dl }}" class="cta-form book-getbook-form">
+        <form name="book-download" id="book-download-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="{{ $dl }}" data-pdf="{{ $dl }}" class="cta-form book-getbook-form">
           <input type="hidden" name="form-name" value="book-download">
           <p class="cta-hp"><label>Do not fill this out if you are human: <input name="bot-field"></label></p>
           <div class="cta-field">
@@ -124,6 +124,33 @@
       </div>
     </div>
   </section>
+
+  <script>
+  (function () {
+    var form = document.getElementById('book-download-form');
+    if (!form) return;
+    var pdfUrl = form.getAttribute('data-pdf');
+    form.addEventListener('submit', function (e) {
+      // Progressive enhancement: record the lead with Netlify (AJAX), then send
+      // the visitor to the PDF with a plain GET. The download works even if the
+      // form post is rejected, so a capture hiccup never blocks the reader.
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      if (btn) { btn.disabled = true; btn.setAttribute('aria-busy', 'true'); }
+      var toPdf = function () { window.location.href = pdfUrl; };
+      try {
+        var body = new URLSearchParams(new FormData(form)).toString();
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: body
+        }).then(toPdf, toPdf);
+      } catch (err) {
+        toPdf();
+      }
+    });
+  })();
+  </script>
 
 </article>
 {{ end }}
