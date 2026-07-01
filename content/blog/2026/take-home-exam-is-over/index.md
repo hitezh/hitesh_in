@@ -1,7 +1,7 @@
 ---
 title: "The take-home exam is over"
 slug: "take-home-exam-is-over"
-date: "2026-06-29"
+date: "2026-07-01"
 description: "A professor at Brown denounced mass AI cheating on a take-home exam. The outrage landed on the students. The design problem deserves more attention."
 categories:
   - "education"
