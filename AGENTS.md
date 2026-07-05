@@ -4,6 +4,22 @@
 
 Use this guide whenever creating or substantially editing a post under `content/blog/`. The site is Hitesh Sarda's personal Hugo blog about life, technology, education, entrepreneurship, and, more recently, banking. A post should read like Hitesh sharing a useful observation or an opinion earned through experience—not like generic content marketing or an AI-generated essay.
 
+## Why this blog exists
+
+This blog is not a technology news site.
+It is a public record of how Hitesh thinks about technology, software, AI, products, and business.
+Every article should help readers make better decisions rather than simply understand new technology.
+The intended audience is founders, CTOs, product leaders, executives, and entrepreneurs responsible for making strategic technology decisions.
+The long-term objective is to build trust.
+A successful article should make readers think:
+
+> "I'd like Hitesh to help us think through this problem."
+
+The blog is therefore a form of public advisory rather than content marketing.
+Lead generation is a consequence of demonstrating sound judgment, not the primary objective.
+
+
+
 ## Project structure relevant to posts
 
 - `config.toml` contains the Hugo configuration, taxonomies, and permalink rule. Blog URLs use `/:year/:slug`.
@@ -26,6 +42,31 @@ Use this guide whenever creating or substantially editing a post under `content/
 7. Before publishing, remove `draft: true` or change it to `draft: false`, verify links and images, and run `hugo --minify`.
 
 `hugo new blog/YYYY/<slug>/index.md` may be used to create the initial file, but the generated front matter must be completed before publication.
+
+## Long-term positioning
+
+Across many articles, reinforce recurring ideas where appropriate.
+
+These are not slogans.
+
+They are beliefs readers should gradually associate with Hitesh.
+
+Examples include:
+
+- AI changes business models before it changes technology.
+- Software is becoming probabilistic rather than deterministic.
+- AI should improve decision making before automation.
+- Companies compete on execution rather than model selection.
+- Product thinking matters more than prompt engineering.
+- AI adoption is primarily an organizational challenge.
+- Most companies should buy before they build.
+- AI MVPs exist to reduce business uncertainty.
+- The best AI products disappear into existing workflows.
+- Enterprise AI succeeds through incremental adoption rather than big-bang transformation.
+
+Do not force these themes into every article.
+
+Over time they should naturally emerge across the body of work.
 
 ## Front matter
 
@@ -213,5 +254,30 @@ Before considering a post complete, confirm:
 - [ ] The post has been proofread aloud for Hitesh's conversational rhythm.
 - [ ] Scanned against "Sound like Hitesh, not an AI" — no negative parallelism, self-answered questions, "Here's the…" suspense, "-ing" analysis tails, em-dash overuse, bold-lead bullets, or the AI house vocab; any single trope that remains is deliberate and isolated.
 - [ ] Straight quotes and plain ASCII throughout (no smart quotes, no `→` arrows).
+
+# Editorial philosophy
+
+Every article should do at least one of the following:
+
+- challenge conventional wisdom
+- connect ideas from different disciplines
+- introduce a useful mental model
+- explain second-order effects
+- improve how leaders make decisions
+- simplify a complex topic without oversimplifying it
+
+Avoid writing articles whose only purpose is explaining what happened.
+
+Technology is only interesting because it changes business decisions.
+
+Always ask:
+
+Why should a CEO care?
+
+Why should a CTO care?
+
+Why should a product leader care?
+
+Why should an investor care?
 - [ ] `hugo server -D` shows a good home-page card and post page.
 - [ ] `hugo --minify` completes without errors before publication.
