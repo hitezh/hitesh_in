@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A government ID card.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+    .mono{font-family:'Consolas', 'Courier New', monospace;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <g>
+    <rect x="844" y="238" width="248" height="164" rx="12" fill="none" stroke="#7B746E" stroke-width="4"/>
+    <rect x="870" y="268" width="64" height="74" rx="4" fill="none" stroke="#BF4B1A" stroke-width="4"/>
+    <circle cx="902" cy="292" r="13" fill="#BF4B1A"/>
+    <path d="M882 336 a20 16 0 0 1 40 0 z" fill="#BF4B1A"/>
+    <g stroke="#B5AFA9" stroke-width="6" stroke-linecap="round">
+      <line x1="962" y1="278" x2="1064" y2="278"/><line x1="962" y1="304" x2="1064" y2="304"/>
+      <line x1="962" y1="330" x2="1040" y2="330"/>
+    </g>
+    <rect x="962" y="360" width="102" height="14" rx="4" fill="#7B746E"/>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  REGULATION</text>
+
+  <text x="84" y="252" class="serif" font-size="56" font-weight="800" fill="#1A1816">When your AI asks</text>
+  <text x="84" y="316" class="serif" font-size="56" font-weight="800" fill="#BF4B1A">for a government ID.</text>
+
+  <rect x="84" y="350" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="400" class="sans" font-size="21" fill="#7B746E">It looks like safety. It works like export control,</text>
+  <text x="84" y="430" class="sans" font-size="21" fill="#7B746E">and it nudges developers toward Chinese models.</text>
+</svg>

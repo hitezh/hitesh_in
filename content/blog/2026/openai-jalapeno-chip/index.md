@@ -11,6 +11,7 @@ tags:
   - "openai"
   - "inference"
 draft: false
+image: images/cover.svg
 ---
 
 OpenAI [announced its first custom chip](https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/) on Tuesday. It is called Jalapeño, it is built by Broadcom, and it is optimized for inference (specifically the real-time coding models that now account for a meaningful share of their traffic). Custom inference silicon is [not a differentiator anymore](/2026/apple-ai-inference-silicon/); it is the minimum, the thing every serious AI company builds once inference cost becomes the line item that actually hurts. Google has TPUs. Amazon has [Inferentia](https://aws.amazon.com/ai/machine-learning/inferentia/). Apple is working on Baltra, also with Broadcom. Welcome to the club.

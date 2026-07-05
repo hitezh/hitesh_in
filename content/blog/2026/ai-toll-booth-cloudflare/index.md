@@ -11,6 +11,7 @@ tags:
   - "payments"
   - "infrastructure"
 draft: false
+image: images/cover.svg
 ---
 
 Cloudflare turned on a toll booth on the open web this week, and it isn't built for you.

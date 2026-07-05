@@ -2,7 +2,9 @@ baseURL = 'https://hitesh.in/'
 locale   = 'en-US'
 title    = 'Hitesh Sarda'
 theme    = 'hitesh'
-paginate = 10
+
+[pagination]
+  pagerSize = 10
 
 [permalinks]
   blog = ':year/:slug'

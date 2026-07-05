@@ -12,6 +12,7 @@ tags:
   - "software-engineering"
   - "productivity"
   - "opinion"
+image: images/cover.svg
 ---
 
 In early March 2026, Amazon's retail site fell over repeatedly, and [internal documents tied the outages to AI-assisted code changes](https://oecd.ai/en/incidents/2026-03-10-01aa). The worst, on March 5, took the site down for about six hours and dropped orders by roughly 99%, an estimated 6.3 million that never happened. A few days earlier, a separate AI-assisted change had quietly started showing customers the wrong delivery dates. That code compiled. It passed review. It shipped.

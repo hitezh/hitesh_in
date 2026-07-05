@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A speed gauge reading 30 tokens per second.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+    .mono{font-family:'Consolas', 'Courier New', monospace;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <g fill="none">
+    <path d="M836 400 a130 130 0 0 1 260 0" stroke="#B5AFA9" stroke-width="14" stroke-linecap="round"/>
+    <path d="M836 400 a130 130 0 0 1 226 -113" stroke="#BF4B1A" stroke-width="14" stroke-linecap="round"/>
+    <line x1="966" y1="400" x2="1052" y2="318" stroke="#1A1816" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="966" cy="400" r="12" fill="#1A1816"/>
+    <text x="966" y="452" class="sans" font-size="34" font-weight="800" fill="#1A1816" text-anchor="middle">30</text>
+    <text x="966" y="474" class="sans" font-size="15" fill="#7B746E" text-anchor="middle">tok / s</text>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">LOCAL  LLM</text>
+
+  <text x="84" y="252" class="serif" font-size="60" font-weight="800" fill="#1A1816">Local models</text>
+  <text x="84" y="320" class="serif" font-size="60" font-weight="800" fill="#BF4B1A">stopped being toys.</text>
+
+  <rect x="84" y="354" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="404" class="sans" font-size="21" fill="#7B746E">30 tokens a second on consumer hardware, doing</text>
+  <text x="84" y="434" class="sans" font-size="21" fill="#7B746E">real work. The question is when, not whether.</text>
+</svg>

@@ -10,6 +10,7 @@ tags:
   - "developer-tools"
   - "local-llm"
 draft: false
+image: images/cover.svg
 ---
 
 For two years my default advice to anyone asking about AI tools for development has been: pick a cloud API, learn to use it well, and don't overthink the hosting question. The local-model path (downloading weights, fiddling with quantization levels, doing the RAM math) looked like a distraction from the actual work.

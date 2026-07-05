@@ -8,6 +8,7 @@ tags:
   - "ai"
   - "regulation"
 draft: false
+image: images/cover.svg
 ---
 
 The US government banned an AI model on June 12 for being able to read code and fix bugs.

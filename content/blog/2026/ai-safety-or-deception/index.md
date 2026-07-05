@@ -11,6 +11,7 @@ tags:
   - "safety"
   - "trust"
   - "llm"
+image: images/cover.svg
 ---
 
 You build a particular kind of trust with a good tool. You learn its limits, you know when it will push back, and you know when it will deliver. A hammer doesn't drive a nail halfway and call it done. A linter doesn't decide which rules it feels like enforcing today. You get what you asked for, or you get an error. That is the deal.

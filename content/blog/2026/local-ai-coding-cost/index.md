@@ -10,6 +10,7 @@ tags:
   - "developer-tools"
   - "local-llm"
 draft: false
+image: images/cover.svg
 ---
 
 About a year ago I'd have quietly dismissed the idea of replacing Claude with a locally-run model for serious coding work. Then the hardware got more accessible, the models improved, and a large, opinionated group of developers started reporting that they'd actually done it - for free - with results good enough to stick with.

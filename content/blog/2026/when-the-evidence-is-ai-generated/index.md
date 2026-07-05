@@ -9,6 +9,7 @@ tags:
   - "accountability"
   - "law"
 draft: false
+image: images/cover.svg
 ---
 
 A police officer in Derbyshire, England, is under [investigation](https://news.sky.com/story/derbyshire-police-officer-investigated-for-using-ai-to-create-evidence-in-multiple-cases-13553661) for using AI to create or alter evidence across multiple criminal cases. The investigation is ongoing and details are still emerging, but the core claim is stark: some of what appeared in those case files, apparently, was generated.

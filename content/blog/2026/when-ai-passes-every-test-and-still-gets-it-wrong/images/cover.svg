@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Three passing test checks above a warning triangle.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+    .mono{font-family:'Consolas', 'Courier New', monospace;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <g>
+    <circle cx="852" cy="214" r="16" fill="none" stroke="#7B746E" stroke-width="4"/><path d="M844 214 l6 7 l12 -14" fill="none" stroke="#7B746E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="884" y="208" width="150" height="12" rx="6" fill="#B5AFA9"/><circle cx="852" cy="268" r="16" fill="none" stroke="#7B746E" stroke-width="4"/><path d="M844 268 l6 7 l12 -14" fill="none" stroke="#7B746E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="884" y="262" width="150" height="12" rx="6" fill="#B5AFA9"/><circle cx="852" cy="322" r="16" fill="none" stroke="#7B746E" stroke-width="4"/><path d="M844 322 l6 7 l12 -14" fill="none" stroke="#7B746E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="884" y="316" width="150" height="12" rx="6" fill="#B5AFA9"/>
+    <path d="M852 384 l22 44 l-44 0 z" fill="none" stroke="#BF4B1A" stroke-width="4" stroke-linejoin="round"/>
+    <line x1="852" y1="398" x2="852" y2="412" stroke="#BF4B1A" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="852" cy="421" r="2.6" fill="#BF4B1A"/>
+    <rect x="884" y="398" width="150" height="12" rx="6" fill="#BF4B1A" opacity="0.5"/>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">SOFTWARE  ENGINEERING</text>
+
+  <text x="84" y="252" class="serif" font-size="60" font-weight="800" fill="#1A1816">Passes every test.</text>
+  <text x="84" y="320" class="serif" font-size="60" font-weight="800" fill="#BF4B1A">Still wrong.</text>
+
+  <rect x="84" y="354" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="404" class="sans" font-size="21" fill="#7B746E">The new failure compiles and passes the tests.</text>
+  <text x="84" y="434" class="sans" font-size="21" fill="#7B746E">Our review was built for the old kind of mistake.</text>
+</svg>

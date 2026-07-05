@@ -10,6 +10,7 @@ tags:
   - "llm"
   - "regulation"
 draft: false
+image: images/cover.svg
 ---
 
 Anthropic now asks for a government-issued photo ID and a live selfie before it will give you access to its most capable models. The verification runs through a third-party vendor called Persona. The official framing: ["Being responsible with powerful technology starts with knowing who is using it."](https://support.claude.com/en/articles/14328960-identity-verification-on-claude)

@@ -10,6 +10,7 @@ tags:
   - "regulation"
   - "llm"
 draft: false
+image: images/cover.svg
 ---
 
 Commerce Secretary Howard Lutnick [published a letter](https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies) that resolved two weeks of waiting: Anthropic can release Claude Mythos 5 to "more than 100 US institutions" listed in a document called Annex A, along with their foreign national employees. His stated determination: "I have determined that appropriate safeguards are in place to permit certain trusted partners to access the Claude Mythos 5 Model."

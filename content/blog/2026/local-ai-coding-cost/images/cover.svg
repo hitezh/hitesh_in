@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An iceberg: a small free tip above water, costs below.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+    .mono{font-family:'Consolas', 'Courier New', monospace;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <g>
+    <line x1="800" y1="300" x2="1132" y2="300" stroke="#B5AFA9" stroke-width="3" stroke-dasharray="6 8"/>
+    <path d="M940 300 l32 -52 l30 52 z" fill="#BF4B1A"/>
+    <text x="1000" y="278" class="sans" font-size="16" fill="#BF4B1A">"free"</text>
+    <path d="M904 300 l160 0 l-26 118 l-108 0 z" fill="none" stroke="#7B746E" stroke-width="4" stroke-linejoin="round"/>
+    <text x="984" y="342" class="sans" font-size="16" fill="#7B746E" text-anchor="middle">power</text>
+    <text x="984" y="368" class="sans" font-size="16" fill="#7B746E" text-anchor="middle">setup</text>
+    <text x="984" y="394" class="sans" font-size="16" fill="#7B746E" text-anchor="middle">your time</text>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">LOCAL  LLM</text>
+
+  <text x="84" y="252" class="serif" font-size="66" font-weight="800" fill="#1A1816">The real cost of</text>
+  <text x="84" y="327" class="serif" font-size="66" font-weight="800" fill="#BF4B1A">local AI.</text>
+
+  <rect x="84" y="361" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="411" class="sans" font-size="21" fill="#7B746E">The 'it's free' pitch is real. It also hides a</text>
+  <text x="84" y="441" class="sans" font-size="21" fill="#7B746E">different set of costs.</text>
+</svg>

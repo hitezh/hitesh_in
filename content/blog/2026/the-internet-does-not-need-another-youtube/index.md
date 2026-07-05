@@ -11,6 +11,7 @@ tags:
   - "creator-economy"
   - "decentralization"
   - "business-models"
+image: images/cover.svg
 ---
 
 I have spent a good part of my career on two very different kinds of software: products built to reach millions, and internal tools built for a few hundred people who could not do their jobs without them. Only one of those gets called a success story. The other gets called "niche," usually by someone who has never had to actually use the alternative.

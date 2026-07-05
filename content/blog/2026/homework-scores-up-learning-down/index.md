@@ -10,6 +10,7 @@ tags:
   - "ai"
   - "education"
 draft: false
+image: images/cover.svg
 ---
 
 Norway [announced last week](https://www.reuters.com/technology/norway-imposes-near-ban-ai-elementary-school-2026-06-19/) that students in grades 1 through 7 should, as a general rule, not use AI tools in school. Older students in lower secondary can use them cautiously, under teacher supervision. The intent, according to the government, is to study how to improve outcomes rather than to permanently prohibit anything.

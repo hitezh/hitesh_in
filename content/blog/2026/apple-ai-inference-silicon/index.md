@@ -12,6 +12,7 @@ tags:
   - "silicon"
   - "inference"
   - "hardware"
+image: images/cover.svg
 ---
 
 The safe way to read Apple's server-chip plans is that Apple is building silicon to run Apple Intelligence on its own hardware instead of Nvidia's. True, and boring. Every company at Apple's scale now builds its own inference chip. Google has TPUs, AWS has [Inferentia](https://aws.amazon.com/ai/machine-learning/inferentia/), Microsoft has Maia, Meta has MTIA. [Mark Gurman reports](https://www.tomshardware.com/pc-components/cpus/apple-reportedly-readies-baltra-processors-for-ai-servers) Apple's entry, codenamed Baltra, is being built with Broadcom on TSMC's 3nm process for 2027, tuned for inference rather than training. Welcome to the club. The chip is table stakes.

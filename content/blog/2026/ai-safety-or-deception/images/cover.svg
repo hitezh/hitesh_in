@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An honest refusal bubble reading No, above a faded, degraded reply.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+    .mono{font-family:'Consolas', 'Courier New', monospace;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <g>
+    <rect x="812" y="150" width="300" height="96" rx="20" fill="none" stroke="#BF4B1A" stroke-width="4"/>
+    <path d="M860 246 l0 34 l34 -34 z" fill="#BF4B1A"/>
+    <text x="962" y="212" class="serif" font-size="52" font-weight="800" fill="#BF4B1A" text-anchor="middle">No.</text>
+    <rect x="812" y="330" width="300" height="96" rx="20" fill="none" stroke="#B5AFA9" stroke-width="3" stroke-dasharray="3 9"/>
+    <path d="M1064 426 l0 34 l-34 -34 z" fill="#B5AFA9"/>
+    <line x1="846" y1="366" x2="1078" y2="366" stroke="#B5AFA9" stroke-width="4" stroke-dasharray="4 12"/>
+    <line x1="846" y1="392" x2="1010" y2="392" stroke="#B5AFA9" stroke-width="4" stroke-dasharray="4 12"/>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">ON  AI  TRUST</text>
+
+  <text x="84" y="252" class="serif" font-size="66" font-weight="800" fill="#1A1816">I want my AI</text>
+  <text x="84" y="327" class="serif" font-size="66" font-weight="800" fill="#BF4B1A">to say no.</text>
+
+  <rect x="84" y="361" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="411" class="sans" font-size="21" fill="#7B746E">A guardrail that refuses is honest. One that</text>
+  <text x="84" y="441" class="sans" font-size="21" fill="#7B746E">quietly degrades the answer is the dangerous kind.</text>
+</svg>
