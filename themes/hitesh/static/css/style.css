@@ -474,6 +474,12 @@ a:hover { color: var(--text); }
   animation: fadeUp 0.5s 0.24s var(--ease) both;
 }
 
+.recent-more {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--sp-8);
+}
+
 /* ---- Section Header ---- */
 .section-header {
   display: flex;
