@@ -942,6 +942,7 @@ a.tag:hover { color: var(--accent); }
 /* ---- Pagination ---- */
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: var(--sp-3);
@@ -949,7 +950,13 @@ a.tag:hover { color: var(--accent); }
   padding-top: var(--sp-8);
   border-top: 1px solid var(--border);
   font-size: var(--size-sm);
+  list-style: none;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 100%;
 }
+
+.pagination .page-item { display: inline-flex; }
 
 .pagination a, .pagination span {
   padding: var(--sp-2) var(--sp-4);
@@ -966,10 +973,16 @@ a.tag:hover { color: var(--accent); }
   background: var(--bg-alt);
 }
 
-.pagination .active span {
+.pagination .active span,
+.pagination .page-item.active .page-link {
   background: var(--accent);
   border-color: var(--accent);
   color: var(--bg);
+}
+
+.pagination .disabled .page-link {
+  opacity: 0.4;
+  pointer-events: none;
 }
 
 /* ---- Reading progress bar (posts only) ---- */
