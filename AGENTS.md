@@ -52,7 +52,7 @@ Rules:
 - Set `slug` to the post's directory name. Hugo derives the URL from the *title* otherwise, so any `:`, `.`, or `?` in the title leaks into the URL (a two-sentence title becomes `.../my-post.-second-part.`). The LinkedIn announcer also builds the link from the directory name, so `slug` and the directory must match or the announced URL 404s.
 - Choose one or, when genuinely useful, two existing categories: `banking`, `education`, `entrepreneurship`, `life`, `others`, `sketches`, or `technology`. Do not create a near-duplicate category.
 - `tags` are optional. Use them for specific subjects a reader may want to find again. Keep them lowercase and hyphen-separated; reuse an existing tag where possible.
-- `image` is optional but recommended. Use the bundle-relative form `images/<filename>` and ensure the file exists. Use a descriptive filename, not `image1.jpg`.
+- `image` is optional but recommended. Use the bundle-relative form `images/<filename>` and ensure the file exists. Use a descriptive filename, not `image1.jpg`. See "Feature images" below for how to generate one in the site's style when a post doesn't already have art to use.
 - Prefer `image`; do not add the legacy `coverImage` field to new posts.
 - Do not add `author`; the site is Hitesh's personal blog and existing posts omit it.
 - Keep `draft: true` while drafting. Published posts in the repository normally omit `draft`.
@@ -66,6 +66,31 @@ If the featured image is also essential to understanding the body—such as a co
 ```
 
 Always write meaningful alt text. Credit the creator and link to the source when using an image or other work that is not Hitesh's.
+
+## Feature images
+
+When a post calls for a feature image, generate one in the site's own editorial style instead of sourcing a stock photo or icon. This keeps home-page cards and link previews (LinkedIn, Twitter/X, etc.) visually consistent across posts. `archetypes/cover-template.svg` is a copy-paste starting point; the spec below is the source of truth.
+
+**Canvas**: 1200x630 (standard Open Graph size), built as an SVG at `content/blog/YYYY/<slug>/images/cover.svg`, `viewBox="0 0 1200 630"`.
+
+**Palette**, taken from `themes/hitesh/static/css/style.css` `:root` (always the light values, even though the site has a dark mode, since social platforms render a single static image):
+
+- Background `#FAF7F2`; card border `#E8DDD0`, 2px stroke, `rx="10"`, inset 14px on all four sides.
+- Headline text `#1A1816`. Kicker and subtitle text `#7B746E`.
+- Accent `#BF4B1A` — used for exactly one thing per image plus the underline bar: the single emphasized word or phrase in the headline, and, if present, the decorative motif.
+
+**Fonts**: `Georgia, 'Times New Roman', serif` for the headline (reads close enough to the site's Fraunces display face without needing a webfont at render time); `-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif` for the kicker and subtitle.
+
+**Layout**, left-aligned starting around x=80-84:
+
+1. Kicker: one short label in caps, size 19, `letter-spacing="4"`, muted color (e.g. "PROMPT INJECTION", "MONEY MYTHS, DECODED").
+2. Headline: the post's title, or a tight paraphrase, bold serif, size 68-74, broken by hand into 2-3 short lines (don't rely on auto-wrap), dark color, with the single most important word or phrase recolored to the accent.
+3. A short accent-colored underline bar (72x5, `rx="2.5"`) as a divider.
+4. Subtitle: one or two lines, sans, size 22, muted color, restating the hook or the front-matter description.
+
+**Decorative motif** (optional, at most one per image): a single faint accent-colored element in the upper right that echoes the post's core idea, opacity 0.12-0.18, so it never competes with the headline. Precedents: a giant struck-through number for a post about bad statistics, a rotated "rejection stamp" for a post about a dismissed bug report. Pick one idea and stop; don't stack multiple motifs or decorate every corner.
+
+**Rendering the PNG sibling**: social platforms don't render SVG, so also produce `images/cover.png` at the same 1200x630 next to the SVG — Hugo's `head.html` automatically prefers the raster for `og:image`/`twitter:image` when front matter has `image: images/cover.svg`. Render with headless Chromium (available in the Claude Code sandbox at `/opt/pw-browsers/chromium`): wrap the SVG in a minimal HTML file (`html,body{margin:0;width:1200px;height:630px}`), then screenshot with `--window-size=1200,717` — headless Chromium's viewport reserves roughly 87px it never paints into, so request that much extra height — and crop the output down to the top-left 1200x630 before saving. Check the cropped PNG's bottom rows aren't blank/white before committing; that gap is the sign the crop step was skipped or the extra-height workaround wasn't applied.
 
 ## Hitesh's voice
 
