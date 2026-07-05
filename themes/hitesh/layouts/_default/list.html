@@ -10,19 +10,27 @@
 
     <div class="post-list post-list--full">
       {{ range .Pages }}
-      <article class="post-item">
+      {{ $thumb := partial "post-thumb.html" . }}
+      <article class="post-item{{ with $thumb }} post-item--has-thumb{{ end }}">
         <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
           {{ .Date.Format "Jan 2, 2006" }}
         </time>
-        <div class="post-item-body">
-          <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
-          {{ with .Params.description }}
-          <p class="post-excerpt">{{ . }}</p>
-          {{ end }}
-          {{ with .Params.categories }}
-          <div class="post-tags">
-            {{ range . }}<a href="{{ `categories/` | relURL }}{{ . | urlize | lower }}" class="tag">{{ . | humanize }}</a>{{ end }}
+        <div class="post-item-main">
+          <div class="post-item-body">
+            <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
+            {{ with .Params.description }}
+            <p class="post-excerpt">{{ . }}</p>
+            {{ end }}
+            {{ with .Params.categories }}
+            <div class="post-tags">
+              {{ range . }}<a href="{{ `categories/` | relURL }}{{ . | urlize | lower }}" class="tag">{{ . | humanize }}</a>{{ end }}
+            </div>
+            {{ end }}
           </div>
+          {{ with $thumb }}
+          <a class="post-thumb" href="{{ $.RelPermalink }}" aria-hidden="true" tabindex="-1">
+            <img src="{{ . }}" alt="" loading="lazy">
+          </a>
           {{ end }}
         </div>
       </article>
