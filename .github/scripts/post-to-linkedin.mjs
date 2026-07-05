@@ -300,8 +300,10 @@ async function commentWithLink(postUrn, actor, url) {
   }
   const hint =
     lastStatus === 403
-      ? "\n  → Commenting may need the w_member_social_feed scope. The post published; only the " +
-        "link-comment was skipped. Add the scope, re-mint the token, and future runs will comment."
+      ? "\n  → Creating comments via the API requires LinkedIn's Community Management API, which is " +
+        "partner-gated (w_member_social alone cannot create comments). The post and image still " +
+        "published. Either request Community Management API access for the app, or set " +
+        "LINK_IN_COMMENT=false to put the link in the post body instead."
       : "";
   console.warn(`Could not add the link comment (${lastStatus}): ${lastDetail}${hint}`);
   return false;

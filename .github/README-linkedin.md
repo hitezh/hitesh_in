@@ -20,21 +20,24 @@ The post is built from the post's front matter:
   accepts JPG/PNG/GIF, so an SVG `image:` is swapped for its `.png` (then `.jpg`)
   page-bundle sibling, falling back to `static/images/default.jpg` — the same
   rule `head.html` uses for OG images.
-- **Body:** title, description, and up to three hashtags — deliberately with **no
-  link**, so LinkedIn doesn't dampen the post's reach.
-- **First comment:** `Read more: https://hitesh.in/<year>/<slug>/` is posted as
-  the first comment immediately after the post is created.
+- **Body:** title, description, `Read more: <url>`, and up to three hashtags.
+- **Link placement:** by default the link sits in the **body**, which works with
+  the `w_member_social` token. Posting it as the **first comment** instead — which
+  reads better and dodges LinkedIn's reach penalty on in-body links — needs the
+  Community Management API (see [Notes & limits](#notes--limits)); once the app
+  has that access, set the repo Variable `LINK_IN_COMMENT=true`.
 
 ```
 <title>
 
 <description>
 
+Read more: https://hitesh.in/<year>/<slug>/
+
 #Blog #Tag1 #Tag2 #Tag3   (first three tags, optional)
 ```
 
-(Set `LINK_IN_COMMENT=false` to keep the link in the body instead, or
-`POST_IMAGE=false` to skip the image.)
+(Set `POST_IMAGE=false` to skip the image.)
 
 ## One-time setup
 
@@ -126,14 +129,17 @@ author URN — the workflow derives this automatically if `LINKEDIN_AUTHOR_URN` 
 
 - LinkedIn deprecates API versions over time. If you see a version error, bump
   the `LINKEDIN_API_VERSION` variable to a current `YYYYMM`.
-- **The image and the first-comment link both use the existing `w_member_social`
-  token** — no new scope. One caveat: LinkedIn's Comments API docs list a
-  `w_member_social_feed` scope. If the link-comment ever returns `403`, the post
-  and image still publish; add `w_member_social_feed` to the OAuth scopes,
-  re-mint the token, and future runs will comment. Image and comment failures are
-  logged and never abort the announcement.
+- **Posting and the image use `w_member_social`; commenting does not.** Creating
+  a comment through the API requires LinkedIn's **Community Management API**, which
+  is partner-gated (a separate product + access request under *My Apps*, subject to
+  LinkedIn approval). Without it the comment returns
+  `403 ACCESS_DENIED` (`partnerApiSocialActions.CREATE`), so the workflow defaults
+  to `LINK_IN_COMMENT=false` and puts the link in the post body. The post and image
+  always publish; image/comment failures are logged and never abort the run. Once
+  the app is approved, set the repo Variable `LINK_IN_COMMENT=true` to switch to a
+  first-comment link.
 - **No newsletters or long-form articles.** LinkedIn exposes no API to publish a
   newsletter or an article — those are UI-only. The Posts API "article" type is
   only a link-preview card, not a newsletter, so the workflow posts a normal
-  image post with the link in the first comment.
+  image post with the link.
 - The job is pinned to the `hitezh/hitesh_in` repo so forks can't post.
