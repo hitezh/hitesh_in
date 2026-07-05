@@ -577,6 +577,37 @@ a:hover { color: var(--text); }
   text-transform: lowercase;
 }
 
+/* ---- Post List: featured thumbnail (shown only where a post has an image) ---- */
+.post-item-main {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-6);
+  min-width: 0;
+}
+
+.post-item-body { flex: 1 1 auto; min-width: 0; }
+
+.post-thumb {
+  flex: 0 0 auto;
+  width: 180px;
+  aspect-ratio: 1200 / 630;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  align-self: flex-start;
+}
+
+.post-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--t-med) var(--ease);
+}
+
+.post-item:hover .post-thumb img { transform: scale(1.04); }
+
 /* ---- List Page ---- */
 .list-page { padding: var(--sp-16) 0 var(--sp-24); }
 
@@ -849,6 +880,11 @@ a:hover { color: var(--text); }
     grid-template-columns: 1fr;
     gap: var(--sp-2);
   }
+
+  /* Stack the thumbnail on top, full-width, on small screens */
+  .post-item-main { flex-direction: column; gap: var(--sp-3); }
+  .post-item--has-thumb .post-item-body { margin-top: var(--sp-1); }
+  .post-thumb { width: 100%; order: -1; }
 
   .post-date { font-size: var(--size-xs); padding-top: 0; }
 
