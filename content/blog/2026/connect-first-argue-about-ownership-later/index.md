@@ -9,6 +9,7 @@ tags:
   - "starlink"
   - "infrastructure"
   - "regulation"
+image: images/connect-first-cover.jpg
 draft: false
 ---
 
