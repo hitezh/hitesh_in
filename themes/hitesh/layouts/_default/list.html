@@ -9,7 +9,8 @@
     </header>
 
     <div class="post-list post-list--full">
-      {{ range .Pages }}
+      {{ $paginator := .Paginate .Pages }}
+      {{ range $paginator.Pages }}
       {{ $thumb := partial "post-thumb.html" . }}
       <article class="post-item{{ with $thumb }} post-item--has-thumb{{ end }}">
         <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
