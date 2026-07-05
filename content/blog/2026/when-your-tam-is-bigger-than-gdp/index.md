@@ -10,6 +10,7 @@ tags:
   - "startups"
   - "software-engineering"
 draft: false
+image: images/cover.svg
 ---
 
 SpaceX is [buying Cursor for $60 billion](https://www.reuters.com/legal/transactional/spacex-buy-anysphere-60-billion-2026-06-16/). The price alone would fill a week of tech news, but the detail that has stayed with me is the addressable market figure reportedly used to justify it: $26 trillion. Roughly the size of US GDP.

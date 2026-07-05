@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An evidence document with a pixelated, AI-generated image.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+    .mono{font-family:'Consolas', 'Courier New', monospace;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <g>
+    <rect x="852" y="196" width="196" height="250" rx="6" fill="none" stroke="#7B746E" stroke-width="4"/>
+    <g stroke="#B5AFA9" stroke-width="4" stroke-linecap="round">
+      <line x1="882" y1="240" x2="1018" y2="240"/><line x1="882" y1="272" x2="1018" y2="272"/><line x1="882" y1="304" x2="982" y2="304"/>
+    </g>
+    <g>
+      <rect x="946" y="336" width="86" height="86" fill="none" stroke="#BF4B1A" stroke-width="3"/>
+      <rect x="946" y="336" width="21" height="21" fill="#BF4B1A" opacity="0.7"/>
+      <rect x="988" y="357" width="21" height="21" fill="#BF4B1A" opacity="0.45"/>
+      <rect x="967" y="378" width="21" height="21" fill="#BF4B1A" opacity="0.6"/>
+      <rect x="1009" y="399" width="21" height="21" fill="#BF4B1A" opacity="0.35"/>
+    </g>
+    <circle cx="892" cy="392" r="26" fill="none" stroke="#1A1816" stroke-width="4"/>
+    <line x1="910" y1="410" x2="936" y2="436" stroke="#1A1816" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  &amp;  LAW</text>
+
+  <text x="84" y="252" class="serif" font-size="66" font-weight="800" fill="#1A1816">When the evidence</text>
+  <text x="84" y="327" class="serif" font-size="66" font-weight="800" fill="#BF4B1A">is AI-generated.</text>
+
+  <rect x="84" y="361" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="411" class="sans" font-size="21" fill="#7B746E">Faking evidence used to take skill, and skill left</text>
+  <text x="84" y="441" class="sans" font-size="21" fill="#7B746E">traces. AI erased the difficulty and the traces.</text>
+</svg>

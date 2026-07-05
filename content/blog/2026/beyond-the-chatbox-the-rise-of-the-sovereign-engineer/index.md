@@ -13,6 +13,7 @@ tags:
   - "leadership"
   - "product-development"
   - "future-of-work"
+image: images/cover.svg
 ---
 
 For most of my career, engineers were measured by how fast and how well they could implement. Know the framework. Optimise the query. Debug the production incident. Architect the system. Those skills still matter, but they have stopped being where the value sits.

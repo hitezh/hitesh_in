@@ -9,6 +9,7 @@ tags:
   - "teams"
   - "productivity"
 draft: false
+image: images/cover.svg
 ---
 
 When AI tools landed in most teams, so did a pattern nobody quite had words for: a colleague sends AI-generated output without reviewing it, expecting the group to do the evaluation they skipped. The frustration is real. But the usual framing, "show effort when asking for attention," puts the weight on the wrong thing.

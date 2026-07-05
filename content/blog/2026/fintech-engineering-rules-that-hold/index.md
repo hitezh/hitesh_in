@@ -12,6 +12,7 @@ tags:
   - "banking"
   - "engineering"
 draft: false
+image: images/cover.svg
 ---
 
 Three separate people sent me the [Fintech Engineering Handbook](https://w.pitula.me/fintech-engineering-handbook/) this week, which is usually a sign the document is answering a frustration engineers already had. It covers the fundamentals of building payment systems: represent money as integers, implement double-entry bookkeeping, make operations idempotent, treat external webhooks as unreliable hints. Solid, clearly written, and worth circulating.

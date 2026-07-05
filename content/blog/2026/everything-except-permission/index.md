@@ -9,6 +9,7 @@ tags:
   - "ai"
   - "organizations"
 draft: false
+image: images/cover.svg
 ---
 
 Noam Shazeer co-authored "Attention Is All You Need" at Google in 2017 -- the paper that ended the era of recurrent neural networks and made every large language model that exists today possible. He left Google to found Character.ai. Google paid roughly $2.7 billion to get him back in 2023. This week, he [announced he's joining OpenAI](https://twitter.com/NoamShazeer/status/2067400851438932297).

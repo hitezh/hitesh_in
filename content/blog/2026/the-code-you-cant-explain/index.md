@@ -10,6 +10,7 @@ tags:
   - "ai"
   - "software-engineering"
   - "opinion"
+image: images/cover.svg
 ---
 
 Velocity is up, defects are stable, deployments are more frequent. Ask who in the team could refactor the payment module from scratch, and the room goes quiet. The understanding that used to build up through the act of writing has been offloaded somewhere faster and less visible.

@@ -13,6 +13,7 @@ tags:
   - "security"
   - "governance"
   - "engineering-leadership"
+image: images/cover.svg
 ---
 
 A new survey of 831 engineers found that 97% of teams now use AI coding assistants. Only 30% have a fully governed way of overseeing what those assistants produce, and a quarter have no AI coding policy at all.

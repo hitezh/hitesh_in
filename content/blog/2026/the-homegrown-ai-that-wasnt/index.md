@@ -9,6 +9,7 @@ tags:
   - "llm"
   - "government"
 draft: false
+image: images/cover.svg
 ---
 
 Rio de Janeiro's planning agency released a 397-billion-parameter language model this month and called it homegrown. The framing was clear: a municipal government had built something of its own, a city-specific AI that demonstrated sovereign capability.

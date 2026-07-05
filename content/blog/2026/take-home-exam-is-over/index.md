@@ -10,6 +10,7 @@ tags:
   - "ai"
   - "education"
 draft: false
+image: images/cover.svg
 ---
 
 A professor at Brown University [went public last week](https://english.elpais.com/education/2026-06-28/ai-fraud-at-brown-university-academic-integrity-is-at-risk.html) describing what they called mass AI fraud on a take-home exam. By their account, almost the entire class had used AI tools to complete it. The professor was furious. The students, apparently, were not.

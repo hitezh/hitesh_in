@@ -10,6 +10,7 @@ tags:
   - "entrepreneurship"
   - "software"
 draft: false
+image: images/cover.svg
 ---
 
 Mitchell Hashimoto just pledged $400,000 to the Zig Software Foundation. That brings his personal total to $700,000 across two donations. If you haven't heard of Zig, it's a systems programming language, a modern alternative to C that has been gaining real traction over the last few years. Hashimoto is the founder of HashiCorp (Terraform, Vault, Consul) and has, since leaving that company, been building Ghostty, a terminal emulator written largely in Zig.
