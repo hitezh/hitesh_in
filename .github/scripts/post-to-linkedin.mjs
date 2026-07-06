@@ -123,6 +123,7 @@ function parseFrontMatter(text) {
     title: scalar("title"),
     description: scalar("description"),
     date: scalar("date"),
+    slug: scalar("slug"),
     draft: (scalar("draft") || "false").toLowerCase() === "true",
     tags: list("tags"),
   };
@@ -136,11 +137,13 @@ function fileAt(rev, path) {
   }
 }
 
-// content/blog/2026/<slug>/index.md -> https://site/2026/<slug>/  (permalink :year/:slug)
-function urlForPost(path) {
+// content/blog/2026/<dir>/index.md -> https://site/2026/<slug>/  (permalink :year/:slug)
+// Prefer the front-matter `slug`, since that is what Hugo uses for the URL when
+// it is set; fall back to the directory name only when no slug is declared.
+function urlForPost(path, fm) {
   const parts = path.split("/");
   const year = parts[2];
-  const slug = parts[3];
+  const slug = fm && fm.slug ? fm.slug : parts[3];
   return `${SITE}/${year}/${slug}/`;
 }
 
@@ -320,7 +323,7 @@ async function main() {
 
   let failures = 0;
   for (const { path, fm } of toAnnounce) {
-    const url = urlForPost(path);
+    const url = urlForPost(path, fm);
     const commentary = composeCommentary(fm, url);
     console.log("\n--- Post ---\n" + commentary + "\n------------");
     if (DRY_RUN) {
