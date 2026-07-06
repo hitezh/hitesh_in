@@ -26,4 +26,14 @@ document.getElementById('theme-toggle').addEventListener('click', function() {
   html.setAttribute('data-theme', next);
   localStorage.setItem('theme', next);
 });
+
+(function() {
+  var navToggle = document.getElementById('nav-toggle');
+  var nav = document.getElementById('site-nav');
+  if (!navToggle || !nav) return;
+  navToggle.addEventListener('click', function() {
+    var open = nav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+})();
 </script>
