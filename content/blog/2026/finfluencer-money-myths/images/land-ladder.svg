@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" width="1000" height="540" role="img" aria-label="A 10x land gain over 25 years is about 9.7% a year, roughly 3.5% after inflation, and often near zero after costs.">
+  <defs><style>
+    .serif{font-family:Georgia,'Times New Roman',serif;}
+    .sans{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;}
+  </style></defs>
+  <rect width="1000" height="540" fill="#FAF7F2"/>
+  <rect x="10" y="10" width="980" height="520" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <text x="500" y="58" text-anchor="middle" class="serif" font-size="33" font-weight="700" fill="#1A1816">"My land gave 10x!"</text>
+  <text x="500" y="88" text-anchor="middle" class="sans" font-size="16" fill="#7B746E">Same deal (&#8377;10L &#8594; &#8377;1Cr over 25 years), four very different numbers.</text>
+
+  <!-- descending bars: how good it actually looks -->
+  <!-- bar1 -->
+  <rect x="70" y="120" width="820" height="56" rx="5" fill="#BF4B1A"/>
+  <text x="86" y="155" class="sans" font-size="20" font-weight="700" fill="#FAF7F2">Sounds like: +900%  (10x)</text>
+  <!-- bar2 -->
+  <rect x="70" y="200" width="430" height="56" rx="5" fill="#D9885A"/>
+  <text x="86" y="235" class="sans" font-size="19" font-weight="700" fill="#FAF7F2">Per year (XIRR): ~9.7%</text>
+  <!-- bar3 -->
+  <rect x="70" y="280" width="200" height="56" rx="5" fill="#F0C9A8"/>
+  <text x="286" y="315" class="sans" font-size="18" font-weight="700" fill="#7A2400">After ~6% inflation: ~3.5% real</text>
+  <!-- bar4 -->
+  <rect x="70" y="360" width="70" height="56" rx="5" fill="#EADfd2" stroke="#E8DDD0"/>
+  <text x="156" y="395" class="sans" font-size="18" font-weight="700" fill="#1A1816">After tax, property tax, upkeep, brokerage: often near zero</text>
+
+  <text x="70" y="470" class="sans" font-size="13" letter-spacing="2" fill="#B5AFA9">HOW GOOD THE RETURN ACTUALLY IS  &#8595;</text>
+  <text x="500" y="505" text-anchor="middle" class="sans" font-size="18" fill="#1A1816">Ask for the XIRR, after inflation, after costs. Not the multiple.</text>
+</svg>

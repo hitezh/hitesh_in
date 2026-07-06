@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A silicon chip with a jalapeno pepper at its center.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+    .mono{font-family:'Consolas', 'Courier New', monospace;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <g>
+    <rect x="820" y="240" width="170" height="170" rx="10" fill="none" stroke="#7B746E" stroke-width="4"/>
+    <g stroke="#7B746E" stroke-width="4" stroke-linecap="round">
+      <line x1="855" y1="240" x2="855" y2="218"/><line x1="905" y1="240" x2="905" y2="218"/><line x1="955" y1="240" x2="955" y2="218"/>
+      <line x1="855" y1="410" x2="855" y2="432"/><line x1="905" y1="410" x2="905" y2="432"/><line x1="955" y1="410" x2="955" y2="432"/>
+      <line x1="820" y1="278" x2="798" y2="278"/><line x1="820" y1="325" x2="798" y2="325"/><line x1="820" y1="372" x2="798" y2="372"/>
+      <line x1="990" y1="278" x2="1012" y2="278"/><line x1="990" y1="325" x2="1012" y2="325"/><line x1="990" y1="372" x2="1012" y2="372"/>
+    </g>
+    <path d="M905 292 q40 4 44 52 q2 40 -34 54 q-30 12 -44 -8 q18 6 34 -8 q22 -18 8 -50 q-10 -24 -8 -40 z" fill="#BF4B1A"/>
+    <path d="M905 292 q-6 -18 12 -26" fill="none" stroke="#4E7A34" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  HARDWARE</text>
+
+  <text x="84" y="252" class="serif" font-size="66" font-weight="800" fill="#1A1816">OpenAI's chip is</text>
+  <text x="84" y="327" class="serif" font-size="66" font-weight="800" fill="#BF4B1A">also a test.</text>
+
+  <rect x="84" y="361" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="411" class="sans" font-size="21" fill="#7B746E">Jalapeno is a Broadcom inference chip OpenAI says</text>
+  <text x="84" y="441" class="sans" font-size="21" fill="#7B746E">its own AI helped design. Real, or IPO marketing?</text>
+</svg>

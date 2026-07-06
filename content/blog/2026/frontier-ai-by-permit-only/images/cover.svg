@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A document with a permit-only stamp.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+    .mono{font-family:'Consolas', 'Courier New', monospace;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <g>
+    <rect x="836" y="196" width="220" height="248" rx="8" fill="none" stroke="#7B746E" stroke-width="4"/>
+    <g stroke="#B5AFA9" stroke-width="4" stroke-linecap="round">
+      <line x1="866" y1="244" x2="1026" y2="244"/><line x1="866" y1="284" x2="1026" y2="284"/>
+      <line x1="866" y1="324" x2="1026" y2="324"/><line x1="866" y1="364" x2="966" y2="364"/>
+    </g>
+    <g transform="rotate(-12 1010 400)" opacity="0.9">
+      <circle cx="1010" cy="400" r="58" fill="none" stroke="#BF4B1A" stroke-width="6"/>
+      <text x="1010" y="393" class="sans" font-size="20" font-weight="800" letter-spacing="2" fill="#BF4B1A" text-anchor="middle">PERMIT</text>
+      <text x="1010" y="418" class="sans" font-size="20" font-weight="800" letter-spacing="2" fill="#BF4B1A" text-anchor="middle">ONLY</text>
+    </g>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  REGULATION</text>
+
+  <text x="84" y="252" class="serif" font-size="66" font-weight="800" fill="#1A1816">Frontier AI,</text>
+  <text x="84" y="327" class="serif" font-size="66" font-weight="800" fill="#BF4B1A">by permit only.</text>
+
+  <rect x="84" y="361" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="411" class="sans" font-size="21" fill="#7B746E">Washington moved from checking who uses frontier</text>
+  <text x="84" y="441" class="sans" font-size="21" fill="#7B746E">AI to deciding which institutions may at all.</text>
+</svg>

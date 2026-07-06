@@ -42,4 +42,10 @@ jobs:
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
           LINKEDIN_API_VERSION: ${{ vars.LINKEDIN_API_VERSION || '202506' }}
+          # Posting a comment needs LinkedIn's partner-gated Community Management API,
+          # so the link goes in the post body by default (works with w_member_social).
+          # Once the app is approved for that API, set a repo Variable
+          # LINK_IN_COMMENT=true to put the link in the first comment instead.
+          LINK_IN_COMMENT: ${{ vars.LINK_IN_COMMENT || 'false' }}
+          POST_IMAGE: ${{ vars.POST_IMAGE || 'true' }}
         run: node .github/scripts/post-to-linkedin.mjs

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="1000" height="500" role="img" aria-label="GMV is the money passing through a platform; revenue is the small take-rate slice the company keeps; profit is what's left.">
+  <defs><style>
+    .serif{font-family:Georgia,'Times New Roman',serif;}
+    .sans{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;}
+  </style></defs>
+  <rect width="1000" height="500" fill="#FAF7F2"/>
+  <rect x="10" y="10" width="980" height="480" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <text x="500" y="60" text-anchor="middle" class="serif" font-size="32" font-weight="700" fill="#1A1816">The big number isn't the company's money</text>
+  <text x="500" y="90" text-anchor="middle" class="sans" font-size="16" fill="#7B746E">"This startup did &#8377;1,000 crore" usually means sales on the platform, not earnings.</text>
+
+  <!-- GMV bar -->
+  <rect x="70" y="135" width="820" height="64" rx="5" fill="#F2ECE3" stroke="#E8DDD0"/>
+  <text x="86" y="166" class="sans" font-size="18" font-weight="700" fill="#1A1816">GMV (sales on the app)</text>
+  <text x="874" y="176" text-anchor="end" class="serif" font-size="26" font-weight="800" fill="#1A1816">&#8377;1,000 Cr</text>
+
+  <!-- revenue bar (~5% take rate) -->
+  <rect x="70" y="225" width="160" height="64" rx="5" fill="#BF4B1A"/>
+  <text x="86" y="256" class="sans" font-size="16" font-weight="700" fill="#FAF7F2">Revenue</text>
+  <text x="86" y="276" class="sans" font-size="12" fill="#FAF7F2">~5% take rate</text>
+  <text x="246" y="266" class="serif" font-size="24" font-weight="800" fill="#BF4B1A">&#8377;50 Cr</text>
+
+  <!-- profit sliver -->
+  <rect x="70" y="315" width="42" height="64" rx="5" fill="#EADfd2" stroke="#E8DDD0"/>
+  <text x="128" y="354" class="sans" font-size="18" font-weight="700" fill="#1A1816">Profit:  often &#8377;0, or a loss</text>
+
+  <text x="500" y="445" text-anchor="middle" class="sans" font-size="18" fill="#1A1816">GMV is money passing through. Revenue is the slice kept. Profit is what's left.</text>
+</svg>

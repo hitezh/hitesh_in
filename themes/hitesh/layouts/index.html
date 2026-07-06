@@ -6,12 +6,16 @@
       <div class="hero-identity">
         <p class="hero-role">
           <span class="hero-dot"></span>
-          AI Advisor &nbsp;&middot;&nbsp; CTO &nbsp;&middot;&nbsp; Builder
+          AI Advisor &nbsp;&middot;&nbsp; Founder, 256 Technologies
         </p>
         <h1 class="hero-name">Hitesh<br>Sarda</h1>
         <p class="hero-bio">
-          AI advisory at the intersection of research, engineering, and business outcomes — helping leadership teams in Retail, Loyalty, and Industrial domains make evidence-based decisions. Based in Hyderabad. Writing since 2009.
+          I help leadership teams cut through AI hype and make evidence-based decisions: what is feasible, what the ROI really is, and the smallest pilot that proves it. 25+ years building production systems, including work at Citi, Virtusa, Yash, and ValueLabs. Today I run 256 Technologies, an applied AI lab in Hyderabad, and I have been writing here since 2009.
         </p>
+        <div class="hero-cta">
+          <a href="/work-with-me/" class="btn-primary">Book an AI advisory hour</a>
+          <a href="#services" class="btn-secondary">What I do</a>
+        </div>
         <div class="hero-stats">
           <div class="stat">
             <span class="stat-value">{{ len (where .Site.RegularPages "Section" "blog") }}</span>
@@ -60,6 +64,56 @@
   </div>
 </section>
 
+{{ with .Site.GetPage "/book" }}
+<section class="book-feature" id="book">
+  <div class="container">
+    <div class="book-feature-grid">
+      <div class="book-feature-cover">
+        <a href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
+          <img src="{{ .Params.cover | relURL }}" alt="Cover of {{ .Title }} by {{ .Params.author_name }}" width="848" height="1272" loading="lazy">
+        </a>
+      </div>
+      <div class="book-feature-body">
+        <p class="book-feature-eyebrow"><span class="hero-dot"></span>New book &middot; Free PDF</p>
+        <h2 class="book-feature-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ with .Params.subtitle }}<p class="book-feature-sub">{{ . }}</p>{{ end }}
+        {{ with .Params.blurb }}<p class="book-feature-desc">{{ . }}</p>{{ end }}
+        <div class="book-feature-cta">
+          <a href="{{ .RelPermalink }}#get-the-book" class="btn-primary book-download">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            {{ .Params.download_label | default "Get the free PDF" }}
+          </a>
+          <a href="{{ .RelPermalink }}" class="btn-secondary">About the book</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">What I do</span>
+      <a href="/work-with-me/" class="section-more">Book an advisory hour →</a>
+    </div>
+    <div class="services-grid">
+      <article class="service-card">
+        <h3 class="service-title">AI Advisory</h3>
+        <p class="service-desc">Acting as your fractional Head of AI: strategy, feasibility, ROI modeling, vendor assessment, and roadmaps grounded in real engineering constraints. No hype, no vendor lock-in.</p>
+      </article>
+      <article class="service-card">
+        <h3 class="service-title">AI Executive Training</h3>
+        <p class="service-desc">A six-week program that builds an AI-native leadership team: hands-on executive workflows, governance and risk, and a 90-day adoption roadmap that moves leaders from watching to leading.</p>
+      </article>
+      <article class="service-card">
+        <h3 class="service-title">MVP Development</h3>
+        <p class="service-desc">Tangible code beats theoretical roadmaps. I build the smallest prototype that answers the key technical and business questions, across agents, computer vision, and ML, before you commit to a full build.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
 <div class="topics-band">
   <div class="container">
     <span class="topics-label">Topics</span>
@@ -81,18 +135,29 @@
     <div class="post-list">
       {{ $posts := where .Site.RegularPages "Section" "blog" }}
       {{ range first 8 $posts }}
-      <article class="post-item">
+      {{ $thumb := partial "post-thumb.html" . }}
+      <article class="post-item{{ with $thumb }} post-item--has-thumb{{ end }}">
         <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
           {{ .Date.Format "Jan 2006" }}
         </time>
-        <div class="post-item-body">
-          <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
-          {{ with .Params.description }}
-          <p class="post-excerpt">{{ . }}</p>
+        <div class="post-item-main">
+          <div class="post-item-body">
+            <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
+            {{ with .Params.description }}
+            <p class="post-excerpt">{{ . }}</p>
+            {{ end }}
+          </div>
+          {{ with $thumb }}
+          <a class="post-thumb" href="{{ $.RelPermalink }}" aria-hidden="true" tabindex="-1">
+            <img src="{{ . }}" alt="" loading="lazy">
+          </a>
           {{ end }}
         </div>
       </article>
       {{ end }}
+    </div>
+    <div class="recent-more">
+      <a href="/blog/" class="btn-secondary">View all posts &rarr;</a>
     </div>
   </div>
 </section>

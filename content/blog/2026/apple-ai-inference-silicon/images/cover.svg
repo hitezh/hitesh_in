@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An inference chip with an arrow out to a cloud.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+    .mono{font-family:'Consolas', 'Courier New', monospace;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <g>
+    <rect x="820" y="250" width="150" height="150" rx="10" fill="none" stroke="#7B746E" stroke-width="4"/>
+    <rect x="856" y="286" width="78" height="78" rx="4" fill="none" stroke="#BF4B1A" stroke-width="4"/>
+    <g stroke="#7B746E" stroke-width="4" stroke-linecap="round">
+      <line x1="850" y1="250" x2="850" y2="230"/><line x1="895" y1="250" x2="895" y2="230"/><line x1="940" y1="250" x2="940" y2="230"/>
+      <line x1="850" y1="400" x2="850" y2="420"/><line x1="895" y1="400" x2="895" y2="420"/><line x1="940" y1="400" x2="940" y2="420"/>
+      <line x1="820" y1="290" x2="800" y2="290"/><line x1="820" y1="325" x2="800" y2="325"/><line x1="820" y1="360" x2="800" y2="360"/>
+    </g>
+    <path d="M994 300 h96" stroke="#BF4B1A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M1078 288 l14 12 l-14 12" fill="none" stroke="#BF4B1A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1030 360 a26 26 0 0 1 6 -51 a34 34 0 0 1 66 8 a22 22 0 0 1 -6 43 z" fill="none" stroke="#7B746E" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">SILICON</text>
+
+  <text x="84" y="252" class="serif" font-size="66" font-weight="800" fill="#1A1816">Will Apple</text>
+  <text x="84" y="327" class="serif" font-size="66" font-weight="800" fill="#BF4B1A">pull a SpaceX?</text>
+
+  <rect x="84" y="361" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="411" class="sans" font-size="21" fill="#7B746E">The most efficient, most private inference fleet</text>
+  <text x="84" y="441" class="sans" font-size="21" fill="#7B746E">on earth. Can Apple keep it to itself?</text>
+</svg>

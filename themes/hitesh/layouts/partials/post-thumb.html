@@ -1,0 +1,20 @@
+{{- /*
+  Returns a post's featured-image URL for listing thumbnails, or "" when the
+  post has no image. Mirrors the resolution in _default/single.html so the
+  thumbnail matches the image shown on the post page (SVG included). No
+  default.jpg fallback: listings show a thumbnail only where one exists.
+*/ -}}
+{{- $src := "" -}}
+{{- with .Params.image -}}
+  {{- $img := . -}}
+  {{- with $.Resources.GetMatch $img -}}
+    {{- $src = .RelPermalink -}}
+  {{- else -}}
+    {{- if or (hasPrefix $img "http") (hasPrefix $img "/") -}}
+      {{- $src = $img | relURL -}}
+    {{- else -}}
+      {{- $src = path.Join $.RelPermalink $img -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $src -}}

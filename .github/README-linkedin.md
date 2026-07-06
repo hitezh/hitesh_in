@@ -14,7 +14,18 @@ The script announces a post when:
 Ordinary edits to an already-published post are **not** re-announced, so fix-up
 commits are safe. Drafts are skipped.
 
-The blurb is built from the post's front matter:
+The post is built from the post's front matter:
+
+- **Image:** the post's featured image is attached to the post. LinkedIn only
+  accepts JPG/PNG/GIF, so an SVG `image:` is swapped for its `.png` (then `.jpg`)
+  page-bundle sibling, falling back to `static/images/default.jpg` — the same
+  rule `head.html` uses for OG images.
+- **Body:** title, description, `Read more: <url>`, and up to three hashtags.
+- **Link placement:** by default the link sits in the **body**, which works with
+  the `w_member_social` token. Posting it as the **first comment** instead — which
+  reads better and dodges LinkedIn's reach penalty on in-body links — needs the
+  Community Management API (see [Notes & limits](#notes--limits)); once the app
+  has that access, set the repo Variable `LINK_IN_COMMENT=true`.
 
 ```
 <title>
@@ -23,8 +34,10 @@ The blurb is built from the post's front matter:
 
 Read more: https://hitesh.in/<year>/<slug>/
 
-#Tag1 #Tag2 #Tag3   (first three tags, optional)
+#Blog #Tag1 #Tag2 #Tag3   (first three tags, optional)
 ```
+
+(Set `POST_IMAGE=false` to skip the image.)
 
 ## One-time setup
 
@@ -72,7 +85,8 @@ In dry-run the workflow:
 
 - **calls the LinkedIn API** (`/v2/userinfo`) to validate the token and confirm/derive
   the author URN — a read-only call that **never posts**, and
-- **previews the exact blurb** it would publish (the changed post, or the latest
+- **previews the exact post** it would publish — the commentary, the resolved
+  image file, and the first-comment link (the changed post, or the latest
   published post if nothing changed).
 
 A successful run logs `Token valid; author URN confirmed.` Untick *dry_run* only when
@@ -115,6 +129,17 @@ author URN — the workflow derives this automatically if `LINKEDIN_AUTHOR_URN` 
 
 - LinkedIn deprecates API versions over time. If you see a version error, bump
   the `LINKEDIN_API_VERSION` variable to a current `YYYYMM`.
-- The post is plain commentary with the URL; LinkedIn usually renders a link
-  preview automatically. Rich article cards would need an extra media upload step.
+- **Posting and the image use `w_member_social`; commenting does not.** Creating
+  a comment through the API requires LinkedIn's **Community Management API**, which
+  is partner-gated (a separate product + access request under *My Apps*, subject to
+  LinkedIn approval). Without it the comment returns
+  `403 ACCESS_DENIED` (`partnerApiSocialActions.CREATE`), so the workflow defaults
+  to `LINK_IN_COMMENT=false` and puts the link in the post body. The post and image
+  always publish; image/comment failures are logged and never abort the run. Once
+  the app is approved, set the repo Variable `LINK_IN_COMMENT=true` to switch to a
+  first-comment link.
+- **No newsletters or long-form articles.** LinkedIn exposes no API to publish a
+  newsletter or an article — those are UI-only. The Posts API "article" type is
+  only a link-preview card, not a newsletter, so the workflow posts a normal
+  image post with the link.
 - The job is pinned to the `hitezh/hitesh_in` repo so forks can't post.

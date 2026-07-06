@@ -2,7 +2,10 @@
 //
 // Invoked by .github/workflows/linkedin-announce.yml. Given a git commit range,
 // it finds blog posts that were newly published in that range, composes a short
-// blurb from each post's front matter, and shares it via the LinkedIn Posts API.
+// blurb from each post's front matter, and shares it via the LinkedIn Posts API:
+// the post carries the article's featured image, and the link to the article is
+// posted as the first comment (keeping the post body link-free, which reads
+// better and avoids LinkedIn's reach penalty on in-body outbound links).
 //
 // "Newly published" means either:
 //   - a brand-new content/blog/**/index.md that is not a draft, or
@@ -20,13 +23,20 @@
 // trailing newline that would otherwise corrupt the Authorization header.
 
 import { execSync } from "node:child_process";
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
+import { basename, dirname, extname, join } from "node:path";
 
 const SITE = (process.env.SITE_BASE_URL || "https://hitesh.in").trim().replace(/\/$/, "");
 const TOKEN = (process.env.LINKEDIN_ACCESS_TOKEN || "").trim();
 let AUTHOR = (process.env.LINKEDIN_AUTHOR_URN || "").trim(); // e.g. urn:li:person:abc123
 const API_VERSION = (process.env.LINKEDIN_API_VERSION || "202506").trim(); // YYYYMM, bump as LinkedIn deprecates
 const INCLUDE_HASHTAGS = process.env.INCLUDE_HASHTAGS !== "false";
+// Attach the post's featured image, and move the article link into the first
+// comment (keeps the post body link-free). Both default on; set either env var
+// to "false" to opt out (e.g. LINK_IN_COMMENT=false keeps the link in the body).
+const POST_IMAGE = process.env.POST_IMAGE !== "false";
+const LINK_IN_COMMENT = process.env.LINK_IN_COMMENT !== "false";
+const DEFAULT_IMAGE = "static/images/default.jpg"; // raster fallback, mirrors head.html
 const BEFORE = (process.env.GIT_BEFORE || "").trim();
 const AFTER = (process.env.GIT_AFTER || "HEAD").trim();
 const ZERO = "0000000000000000000000000000000000000000";
@@ -126,6 +136,7 @@ function parseFrontMatter(text) {
     slug: scalar("slug"),
     draft: (scalar("draft") || "false").toLowerCase() === "true",
     tags: list("tags"),
+    image: scalar("image"),
   };
 }
 
@@ -156,18 +167,152 @@ function toHashtag(tag) {
   return pascal ? `#${pascal}` : "";
 }
 
-function composeCommentary(fm, url) {
+function composeCommentary(fm) {
   const lines = [fm.title];
   if (fm.description) lines.push("", fm.description);
-  lines.push("", `Read more: ${url}`);
   if (INCLUDE_HASHTAGS && fm.tags?.length) {
     const tags = fm.tags.slice(0, 3).map(toHashtag).filter(Boolean).join(" ");
-    if (tags) lines.push("", tags);
+    if (tags) lines.push("", `#Blog ${tags}`);
   }
   return lines.join("\n");
 }
 
-async function postToLinkedIn(commentary) {
+// Common headers for the versioned (/rest) LinkedIn API.
+function restliHeaders() {
+  return {
+    Authorization: `Bearer ${TOKEN}`,
+    "X-Restli-Protocol-Version": "2.0.0",
+    "LinkedIn-Version": API_VERSION,
+  };
+}
+
+const RASTER_EXT = new Set([".jpg", ".jpeg", ".png", ".gif"]);
+
+function mimeForImage(p) {
+  const e = extname(p).toLowerCase();
+  if (e === ".png") return "image/png";
+  if (e === ".gif") return "image/gif";
+  return "image/jpeg";
+}
+
+// Resolve a post's featured image to a raster file LinkedIn will accept
+// (JPG/PNG/GIF). Mirrors the OG-image rule in
+// themes/hitesh/layouts/partials/head.html: an SVG is swapped for its .png
+// (then .jpg) sibling, and anything unresolved falls back to
+// static/images/default.jpg. Paths are relative to the repo root, which is the
+// CI working directory. Returns a path or null.
+function resolveRasterImage(postPath, imageField) {
+  const bundleDir = dirname(postPath);
+  const candidates = [];
+  if (imageField) {
+    const img = imageField.trim();
+    if (/\.svg$/i.test(img)) {
+      candidates.push(img.replace(/\.svg$/i, ".png"), img.replace(/\.svg$/i, ".jpg"));
+    } else {
+      candidates.push(img);
+    }
+  }
+  for (const rel of candidates) {
+    // Bundle-relative (images/x.png) or site-absolute (/images/x.png -> static/).
+    const abs = rel.startsWith("/") ? join("static", rel.slice(1)) : join(bundleDir, rel);
+    if (RASTER_EXT.has(extname(abs).toLowerCase()) && existsSync(abs)) return abs;
+  }
+  return existsSync(DEFAULT_IMAGE) ? DEFAULT_IMAGE : null;
+}
+
+// Upload an image via the Images API (initializeUpload -> upload the bytes) and
+// return its urn:li:image URN, or null on any failure — in which case the post
+// still goes out, just without an image.
+async function uploadImage(absPath, owner) {
+  let initRes;
+  try {
+    initRes = await fetch("https://api.linkedin.com/rest/images?action=initializeUpload", {
+      method: "POST",
+      headers: { ...restliHeaders(), "Content-Type": "application/json" },
+      body: JSON.stringify({ initializeUploadRequest: { owner } }),
+    });
+  } catch (err) {
+    console.warn(`Image initializeUpload could not be reached (${err.message}); posting without an image.`);
+    return null;
+  }
+  if (!initRes.ok) {
+    console.warn(`Image initializeUpload failed (${initRes.status}): ${await initRes.text()}`);
+    return null;
+  }
+  const init = await initRes.json();
+  const uploadUrl = init?.value?.uploadUrl;
+  const imageUrn = init?.value?.image;
+  if (!uploadUrl || !imageUrn) {
+    console.warn("Image initializeUpload returned no uploadUrl/urn; posting without an image.");
+    return null;
+  }
+
+  const bytes = readFileSync(absPath);
+  const contentType = mimeForImage(absPath);
+  // The upload endpoint has accepted both PUT and POST across API versions; try
+  // PUT, then fall back to POST before giving up.
+  for (const method of ["PUT", "POST"]) {
+    let up;
+    try {
+      up = await fetch(uploadUrl, {
+        method,
+        headers: { Authorization: `Bearer ${TOKEN}`, "Content-Type": contentType },
+        body: bytes,
+      });
+    } catch (err) {
+      console.warn(`Image byte upload (${method}) errored: ${err.message}`);
+      continue;
+    }
+    if (up.ok) {
+      console.log(`Uploaded image ${basename(absPath)} -> ${imageUrn}`);
+      return imageUrn;
+    }
+    console.warn(`Image byte upload (${method}) failed (${up.status}): ${await up.text()}`);
+  }
+  return null;
+}
+
+// Post the article link as the first comment on the freshly created post. Never
+// throws: a comment failure (e.g. a scope gap) is logged but does not fail the
+// run, since the post itself already published. Tries the raw post URN in the
+// path first, then a URL-encoded form if that looks like a path-parse error.
+async function commentWithLink(postUrn, actor, url) {
+  const body = JSON.stringify({ actor, object: postUrn, message: { text: `Read more: ${url}` } });
+  let lastStatus = 0;
+  let lastDetail = "";
+  for (const target of [postUrn, encodeURIComponent(postUrn)]) {
+    let res;
+    try {
+      res = await fetch(`https://api.linkedin.com/rest/socialActions/${target}/comments`, {
+        method: "POST",
+        headers: { ...restliHeaders(), "Content-Type": "application/json" },
+        body,
+      });
+    } catch (err) {
+      console.warn(`Could not reach the comments endpoint (${err.message}); the post published fine.`);
+      return false;
+    }
+    if (res.ok) {
+      console.log(`Added link comment on ${postUrn}`);
+      return true;
+    }
+    lastStatus = res.status;
+    lastDetail = await res.text();
+    // Only a path-parse-type failure is worth retrying with a different encoding.
+    if (res.status !== 400 && res.status !== 404) break;
+  }
+  const hint =
+    lastStatus === 403
+      ? "\n  → Creating comments via the API requires LinkedIn's Community Management API, which is " +
+        "partner-gated (w_member_social alone cannot create comments). The post and image still " +
+        "published. Either request Community Management API access for the app, or set " +
+        "LINK_IN_COMMENT=false to put the link in the post body instead."
+      : "";
+  console.warn(`Could not add the link comment (${lastStatus}): ${lastDetail}${hint}`);
+  return false;
+}
+
+async function postToLinkedIn(commentary, media) {
   const body = {
     author: AUTHOR,
     commentary,
@@ -180,15 +325,15 @@ async function postToLinkedIn(commentary) {
     lifecycleState: "PUBLISHED",
     isReshareDisabledByAuthor: false,
   };
+  if (media && media.id) {
+    body.content = {
+      media: { id: media.id, ...(media.altText ? { altText: media.altText } : {}) },
+    };
+  }
 
   const res = await fetch("https://api.linkedin.com/rest/posts", {
     method: "POST",
-    headers: {
-      Authorization: `Bearer ${TOKEN}`,
-      "Content-Type": "application/json",
-      "X-Restli-Protocol-Version": "2.0.0",
-      "LinkedIn-Version": API_VERSION,
-    },
+    headers: { ...restliHeaders(), "Content-Type": "application/json" },
     body: JSON.stringify(body),
   });
 
@@ -207,7 +352,7 @@ async function postToLinkedIn(commentary) {
     }
     throw new Error(`LinkedIn API ${res.status}: ${detail}${hint}`);
   }
-  return res.headers.get("x-restli-id") || "(posted)";
+  return res.headers.get("x-restli-id") || "";
 }
 
 // Validate the token before attempting to post, and derive the author URN when
@@ -324,15 +469,31 @@ async function main() {
   let failures = 0;
   for (const { path, fm } of toAnnounce) {
     const url = urlForPost(path, fm);
-    const commentary = composeCommentary(fm, url);
+    const commentary = composeCommentary(fm);
+    const imagePath = POST_IMAGE ? resolveRasterImage(path, fm.image) : null;
+
     console.log("\n--- Post ---\n" + commentary + "\n------------");
+    if (POST_IMAGE) console.log(`Image: ${imagePath || "(none resolved — will post text-only)"}`);
+    console.log(LINK_IN_COMMENT ? `First comment: Read more: ${url}` : `Link (in body): ${url}`);
+
     if (DRY_RUN) {
       console.log(`[dry-run] Would announce ${url} — not posting.`);
       continue;
     }
+
     try {
-      const id = await postToLinkedIn(commentary);
-      console.log(`Announced ${url} -> ${id}`);
+      const imageUrn = imagePath ? await uploadImage(imagePath, AUTHOR) : null;
+      const media = imageUrn ? { id: imageUrn, altText: fm.title } : null;
+      const commentaryToPost = LINK_IN_COMMENT ? commentary : `${commentary}\n\nRead more: ${url}`;
+      const postUrn = await postToLinkedIn(commentaryToPost, media);
+      console.log(`Announced ${url} -> ${postUrn || "(posted)"}`);
+      if (LINK_IN_COMMENT) {
+        if (/^urn:li:(share|ugcPost):/.test(postUrn)) {
+          await commentWithLink(postUrn, AUTHOR, url);
+        } else {
+          console.warn(`Skipping link comment: no usable post URN returned (got "${postUrn}").`);
+        }
+      }
     } catch (err) {
       failures += 1;
       console.error(`Failed to announce ${url}: ${err.message}`);

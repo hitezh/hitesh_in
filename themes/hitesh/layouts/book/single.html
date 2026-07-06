@@ -1,0 +1,156 @@
+{{ define "main" }}
+{{ $dl := .Params.download | relURL }}
+{{ $cover := .Params.cover | relURL }}
+{{ $label := .Params.download_label | default "Get the free PDF" }}
+<article class="book-page">
+
+  <section class="book-hero">
+    <div class="container">
+      <div class="book-hero-grid">
+        <div class="book-cover-wrap">
+          {{ with $cover }}
+          <a href="#get-the-book" class="book-cover-link" aria-label="Get {{ $.Title }}">
+            <img class="book-cover-img" src="{{ . }}" alt="Cover of {{ $.Title }} by {{ $.Params.author_name }}" width="848" height="1272" loading="eager">
+          </a>
+          {{ end }}
+        </div>
+
+        <div class="book-hero-body">
+          <p class="book-eyebrow"><span class="hero-dot"></span>Free book</p>
+          <h1 class="book-title">{{ .Title }}</h1>
+          {{ with .Params.subtitle }}<p class="book-subtitle">{{ . }}</p>{{ end }}
+          {{ with .Params.blurb }}<p class="book-blurb">{{ . }}</p>{{ end }}
+
+          <div class="book-cta">
+            <a href="#get-the-book" class="btn-primary book-download">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              {{ $label }}
+            </a>
+            <a href="/work-with-me/" class="btn-secondary">Talk to me about AI</a>
+          </div>
+
+          <p class="book-meta">
+            {{ with .Params.format }}<span class="book-meta-item">{{ . }}</span>{{ end }}
+            {{ with .Params.chapters_total }}<span class="book-meta-item">{{ . }} chapters</span>{{ end }}
+            {{ with .Params.parts_total }}<span class="book-meta-item">{{ . }} parts</span>{{ end }}
+            <span class="book-meta-item">By {{ .Params.author_name }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{ with .Content }}
+  <section class="book-section">
+    <div class="container">
+      <div class="book-prose">
+        {{ . }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  {{ with .Params.endorsement }}
+  <section class="book-endorse">
+    <div class="container">
+      <blockquote class="book-quote">
+        <p>&ldquo;{{ . }}&rdquo;</p>
+        <cite>{{ $.Params.endorser }}{{ with $.Params.endorser_title }}, {{ . }}{{ end }}</cite>
+      </blockquote>
+    </div>
+  </section>
+  {{ end }}
+
+  {{ with .Params.parts }}
+  <section class="book-section book-inside">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What's inside</span>
+        <a href="#get-the-book" class="section-more">Get the full book &rarr;</a>
+      </div>
+      <div class="book-parts">
+        {{ range . }}
+        <article class="book-part">
+          <h3 class="book-part-name">{{ .name }}</h3>
+          {{ with .summary }}<p class="book-part-summary">{{ . }}</p>{{ end }}
+          {{ with .chapters }}
+          <ol class="book-chapters">
+            {{ range . }}<li>{{ . }}</li>{{ end }}
+          </ol>
+          {{ end }}
+        </article>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <section class="book-section book-author">
+    <div class="container">
+      <div class="book-author-card">
+        <h2 class="book-author-title">About the author</h2>
+        <p>Hitesh Sarda is an AI advisor and the founder of 256 Technologies, an applied AI lab in Hyderabad. He has spent 25+ years building production systems, including work at Citi, Virtusa, Yash, and ValueLabs, and has been writing here since 2009.</p>
+        <p><a href="/about/">More about Hitesh</a> &middot; <a href="/work-with-me/">Book an advisory hour</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="book-getbook" id="get-the-book">
+    <div class="container">
+      <div class="book-getbook-inner">
+        <span class="section-label">Get the book</span>
+        <p class="book-getbook-lead">Tell me where to send it and the {{ .Params.format | default "PDF" }} is yours, free. Fill this in and your download starts as soon as you submit.</p>
+        <form name="book-download" id="book-download-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="{{ $dl }}" data-pdf="{{ $dl }}" class="cta-form book-getbook-form">
+          <input type="hidden" name="form-name" value="book-download">
+          <p class="cta-hp"><label>Do not fill this out if you are human: <input name="bot-field"></label></p>
+          <div class="cta-field">
+            <label for="bd-name">Name</label>
+            <input id="bd-name" type="text" name="name" required>
+          </div>
+          <div class="cta-field">
+            <label for="bd-email">Work email</label>
+            <input id="bd-email" type="email" name="email" required>
+          </div>
+          <div class="cta-field">
+            <label for="bd-company">Company <span>(optional)</span></label>
+            <input id="bd-company" type="text" name="company">
+          </div>
+          <button type="submit" class="btn-primary cta-submit book-download">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download the PDF
+          </button>
+        </form>
+        <p class="book-getbook-fine">No spam. I send the occasional note about new writing, and you can unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+  (function () {
+    var form = document.getElementById('book-download-form');
+    if (!form) return;
+    var pdfUrl = form.getAttribute('data-pdf');
+    form.addEventListener('submit', function (e) {
+      // Progressive enhancement: record the lead with Netlify (AJAX), then send
+      // the visitor to the PDF with a plain GET. The download works even if the
+      // form post is rejected, so a capture hiccup never blocks the reader.
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      if (btn) { btn.disabled = true; btn.setAttribute('aria-busy', 'true'); }
+      var toPdf = function () { window.location.href = pdfUrl; };
+      try {
+        var body = new URLSearchParams(new FormData(form)).toString();
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: body
+        }).then(toPdf, toPdf);
+      } catch (err) {
+        toPdf();
+      }
+    });
+  })();
+  </script>
+
+</article>
+{{ end }}
