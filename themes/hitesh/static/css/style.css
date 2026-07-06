@@ -737,11 +737,11 @@ a:hover { color: var(--text); }
 .post-body em { font-style: italic; }
 
 .post-body a {
-  color: var(--text);
-  border-bottom: 1px solid var(--border);
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
   transition: color var(--t-fast), border-color var(--t-fast);
 }
-.post-body a:hover { color: var(--accent); border-color: var(--accent); }
+.post-body a:hover { color: var(--text); border-color: var(--text); }
 
 .post-body blockquote {
   border-left: 3px solid var(--accent);

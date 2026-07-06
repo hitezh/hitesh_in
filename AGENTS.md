@@ -236,6 +236,12 @@ Structure and formatting:
 - **End on the implication, the next question, or what you'd do differently** — never a recap.
 - **Let a small idea stay a small post.** Don't force every piece into a long-form template.
 
+## Internal links and calls to action
+
+- Link to two or three related existing posts where they genuinely strengthen the argument. Do not force links or add a "related posts" list for its own sake.
+- Internal post URLs follow `/:year/:slug`. Verify each link against the target's *actual* permalink, not its directory name. If the target post has no `slug` field, its URL is derived from the slugified title and may contain punctuation such as a period. The safest habit is to give every post an explicit `slug` and link to that.
+- Where the subject naturally invites it, close with one soft, non-salesy call to action linking to the [AI advisory hour](/work-with-me/) (`/work-with-me/`) or the [AI training page](/ai-training/) (`/ai-training/`). Tie it to the specific problem the post explored, keep it to a single sentence, and never make it read like a brochure. Omit it entirely when it would feel bolted on.
+
 ## Drafting checklist
 
 Before considering a post complete, confirm:
@@ -247,7 +253,8 @@ Before considering a post complete, confirm:
 - [ ] Technical terms are explained at the right level for the intended reader.
 - [ ] Factual and time-sensitive claims have been checked and linked to reliable sources.
 - [ ] Claims, numbers, and references a reader would want to verify are linked inline where they appear, not collected at the end.
-- [ ] Front matter uses the correct date, existing categories, focused tags, and `image` syntax.
+- [ ] Front matter uses the correct date, an explicit `slug`, existing categories, focused tags, and `image` syntax.
+- [ ] Internal links resolve to the target posts' real permalinks, and any advisory/training call to action is natural and singular.
 - [ ] The directory year matches the publication date's year.
 - [ ] The `date` is today or earlier, never in the future, or Hugo will drop the post from the deployed site.
 - [ ] Images exist in the page bundle, render correctly, have useful alt text, and include credit where needed.
