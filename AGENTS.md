@@ -50,6 +50,7 @@ Rules:
 - Quote the title and ISO date for consistency with existing posts.
 - Choose one or, when genuinely useful, two existing categories: `banking`, `education`, `entrepreneurship`, `life`, `others`, `sketches`, or `technology`. Do not create a near-duplicate category.
 - `tags` are optional. Use them for specific subjects a reader may want to find again. Keep them lowercase and hyphen-separated; reuse an existing tag where possible.
+- `slug` should be set explicitly to a short, hyphenated value that matches the page-bundle directory name. Blog URLs use `/:year/:slug`, and if `slug` is omitted Hugo derives it from the *title*—including punctuation such as the period in "AI Writes the Code. Who Governs It?"—producing long or surprising URLs like `/2026/ai-writes-the-code.-who-governs-it/`. Setting `slug` keeps the URL clean and predictable.
 - `image` is optional but recommended. Use the bundle-relative form `images/<filename>` and ensure the file exists. Use a descriptive filename, not `image1.jpg`.
 - Prefer `image`; do not add the legacy `coverImage` field to new posts.
 - Do not add `author`; the site is Hitesh's personal blog and existing posts omit it.
@@ -102,6 +103,7 @@ Other formats that fit the blog include:
 - Explain acronyms on first use unless the intended audience certainly knows them.
 - Use examples relevant to work, technology, entrepreneurship, banking, family, or everyday Indian life when they arise naturally.
 - Link to sources for statistics, laws, standards, quotations, and claims that may have changed. For time-sensitive topics, verify facts immediately before publishing.
+- Use em-dashes (—) sparingly. A page peppered with them reads as AI-generated. Aim for at most one or two per post, and reach first for a period, comma, colon, or parentheses. When two clauses can be two sentences, make them two sentences.
 - Preserve intentional personality, but fix spelling, punctuation, broken links, and unclear sentences. The voice comes from the perspective and rhythm, not from errors.
 
 ### Avoid
@@ -115,6 +117,12 @@ Other formats that fit the blog include:
 - Long walls of text, excessive heading levels, decorative emoji, and clickbait titles.
 - Forcing every post into a long-form template. A small idea should remain a small post.
 
+## Internal links and calls to action
+
+- Link to two or three related existing posts where they genuinely strengthen the argument. Do not force links or add a "related posts" list for its own sake.
+- Internal post URLs follow `/:year/:slug`. Verify each link against the target's *actual* permalink, not its directory name. If the target post has no `slug` field, its URL is derived from the slugified title and may contain punctuation such as a period. The safest habit is to give every post an explicit `slug` and link to that.
+- Where the subject naturally invites it, close with one soft, non-salesy call to action linking to the [AI advisory hour](/work-with-me/) (`/work-with-me/`) or the [AI training page](/ai-training/) (`/ai-training/`). Tie it to the specific problem the post explored, keep it to a single sentence, and never make it read like a brochure. Omit it entirely when it would feel bolted on.
+
 ## Drafting checklist
 
 Before considering a post complete, confirm:
@@ -125,7 +133,9 @@ Before considering a post complete, confirm:
 - [ ] Every section, example, and list earns its place.
 - [ ] Technical terms are explained at the right level for the intended reader.
 - [ ] Factual and time-sensitive claims have been checked and linked to reliable sources.
-- [ ] Front matter uses the correct date, existing categories, focused tags, and `image` syntax.
+- [ ] Front matter uses the correct date, an explicit `slug`, existing categories, focused tags, and `image` syntax.
+- [ ] Em-dashes are rare (one or two at most); other punctuation carries the rhythm.
+- [ ] Internal links resolve to the target posts' real permalinks, and any advisory/training call to action is natural and singular.
 - [ ] The directory year matches the publication date's year.
 - [ ] Images exist in the page bundle, render correctly, have useful alt text, and include credit where needed.
 - [ ] The post has been proofread aloud for Hitesh's conversational rhythm.
