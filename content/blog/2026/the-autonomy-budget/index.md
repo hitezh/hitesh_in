@@ -1,6 +1,7 @@
 ---
 title: "The Autonomy Budget: Deploying AI Agents Before They're Reliable"
 date: "2026-07-06"
+slug: "the-autonomy-budget"
 draft: false
 description: "Meta is spending $145B on AI while admitting agents stalled. The cause isn't model quality but compounding math — and it changes where you should deploy autonomy first."
 image: images/autonomy-budget.svg
@@ -65,7 +66,7 @@ The tell in Zuckerberg's remarks is what he blamed. The slowdown, he suggested, 
 
 I've watched this reflex up close, and it's a recurring mistake: when a capability underdelivers, leadership teams reach for the org chart before they've diagnosed whether the ceiling is organisational or physical. A new reporting line feels like progress. It's visible, it's decisive, it photographs well in a strategy update. But if the real constraint is that ten-step tasks succeed 35% of the time, no reporting structure changes that number. You can restructure your way past a coordination problem. You cannot restructure your way past 0.9ⁿ.
 
-Before you reorganise around a disappointing AI capability, it's worth asking a blunt question: if this were purely an execution problem, what evidence would I expect to see, and do I see it? Often the honest answer is that the technology simply hasn't matured to the reliability the plan assumed — and the fix is to narrow the scope and cheapen verification, not to move boxes on a chart. This is the same discipline I argued for in [AI Writes the Code. Who Governs It?](/2026/ai-writes-the-code-who-governs-it/): the speed is real, but it's only worth having if you've built the review and control to trust it.
+Before you reorganise around a disappointing AI capability, it's worth asking a blunt question: if this were purely an execution problem, what evidence would I expect to see, and do I see it? Often the honest answer is that the technology simply hasn't matured to the reliability the plan assumed — and the fix is to narrow the scope and cheapen verification, not to move boxes on a chart. This is the same discipline I argued for in [AI Writes the Code. Who Governs It?](/2026/ai-writes-the-code.-who-governs-it/): the speed is real, but it's only worth having if you've built the review and control to trust it.
 
 ## What I'd actually do
 
