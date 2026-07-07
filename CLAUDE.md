@@ -60,9 +60,16 @@ CI uses Hugo `0.162.0` (pinned in `netlify.toml`). `public/` is gitignored.
 ## Conventions
 
 - Featured images use the front-matter `image: images/<file>` field; the theme
-  resolves it as a page-bundle resource (`single.html`). For social previews,
-  provide a raster (PNG/JPG) sibling — `head.html` prefers it over an SVG and
-  falls back to `static/images/default.jpg`.
+  resolves it as a page-bundle resource (`single.html`). Social previews need a
+  raster: `head.html` points the OG/Twitter card at a PNG/JPG sibling of the
+  cover, and the LinkedIn announcer does the same. When the cover is an SVG, the
+  matching `cover.png` is generated automatically in CI by
+  `.github/workflows/cover-image.yml` (which runs
+  `.github/scripts/rasterize-cover.mjs` under headless Chromium) and committed
+  back to the branch, so **commit only the `cover.svg`** and let CI produce the
+  PNG; do not hand-make it. To preview the raster locally, run
+  `node .github/scripts/rasterize-cover.mjs`. If no raster resolves at all,
+  `head.html` falls back to `static/images/default.jpg`.
 - Develop on a feature branch and open a pull request; Netlify deploys on merge
   to `master`, and the LinkedIn workflow announces newly published posts. See
   `.github/README-linkedin.md` for that pipeline.

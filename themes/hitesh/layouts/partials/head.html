@@ -10,9 +10,14 @@
 {{ with .Params.image }}
   {{ $img := . }}
   {{ if strings.HasSuffix $img ".svg" }}
-    {{/* social platforms don't render SVG; prefer a raster sibling of the same name */}}
+    {{/* Social platforms don't render SVG, so the card must point at a raster. A
+         cover.png sibling is generated from every cover.svg (see
+         .github/scripts/rasterize-cover.mjs), so prefer it, then a .jpg sibling.
+         If neither resource resolves at build time, still emit the png sibling's
+         URL rather than the generic default: the raster is guaranteed to exist. */}}
     {{ with ($.Resources.GetMatch (replace $img ".svg" ".png")) }}{{ $ogimg = .Permalink }}{{ end }}
     {{ if not $ogimg }}{{ with ($.Resources.GetMatch (replace $img ".svg" ".jpg")) }}{{ $ogimg = .Permalink }}{{ end }}{{ end }}
+    {{ if not $ogimg }}{{ $ogimg = (path.Join $.RelPermalink (replace $img ".svg" ".png")) | absURL }}{{ end }}
   {{ else }}
     {{ with ($.Resources.GetMatch $img) }}
       {{ $ogimg = .Permalink }}

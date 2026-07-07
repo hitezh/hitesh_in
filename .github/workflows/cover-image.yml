@@ -1,0 +1,88 @@
+name: Generate cover PNGs
+
+# Social platforms can't render SVG, so every blog cover.svg needs a raster
+# cover.png sibling (used by the Open Graph card in head.html and by the LinkedIn
+# announcer). Authors commit only the SVG; this workflow renders the PNG from it
+# with headless Chromium and commits the result back to the branch, so a missing
+# raster can never reach master again.
+#
+# It runs on branch pushes (before a post is merged), so the PNG lands on the
+# feature branch and is already present when the post reaches master.
+
+on:
+  push:
+    paths:
+      - "content/blog/**/images/cover.svg"
+      - ".github/scripts/rasterize-cover.mjs"
+      - ".github/workflows/cover-image.yml"
+  workflow_dispatch:
+    inputs:
+      all:
+        description: "Re-render every cover, not just missing/stale ones"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  covers:
+    # Don't run on forks: they lack the secrets and shouldn't push commits.
+    if: github.repository == 'hitezh/hitesh_in'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history so we can diff the push range for changed covers
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Chromium (Playwright)
+        run: npx --yes playwright@1.55.0 install --with-deps chromium
+
+      - name: Render cover PNGs
+        env:
+          EVENT: ${{ github.event_name }}
+          FORCE_ALL: ${{ github.event_name == 'workflow_dispatch' && inputs.all }}
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          if [ "$EVENT" = "workflow_dispatch" ]; then
+            # Manual run: --all when asked, otherwise fill in any missing PNGs.
+            [ "$FORCE_ALL" = "true" ] && node .github/scripts/rasterize-cover.mjs --all || node .github/scripts/rasterize-cover.mjs
+            exit 0
+          fi
+          # Push: re-render exactly the cover.svg files changed in this range,
+          # plus (via the no-arg pass below) any cover still missing its PNG.
+          RANGE="${BEFORE}..${AFTER}"
+          if [ -z "${BEFORE}" ] || [ "${BEFORE}" = "0000000000000000000000000000000000000000" ]; then
+            RANGE="${AFTER}"
+            CHANGED=$(git show --name-only --diff-filter=AM --format= "$AFTER" -- 'content/blog/**/images/cover.svg' | grep -E 'cover\.svg$' || true)
+          else
+            CHANGED=$(git diff --name-only --diff-filter=AM "$RANGE" -- 'content/blog/**/images/cover.svg' | grep -E 'cover\.svg$' || true)
+          fi
+          if [ -n "$CHANGED" ]; then
+            echo "Changed covers:"; echo "$CHANGED"
+            # shellcheck disable=SC2086
+            node .github/scripts/rasterize-cover.mjs $CHANGED
+          fi
+          node .github/scripts/rasterize-cover.mjs
+
+      - name: Commit any generated PNGs
+        run: |
+          set -euo pipefail
+          # Quote the git pathspec and use :(glob) so git (not the shell) expands
+          # it: ** must cross the <year>/<slug> directories to match the cover.
+          PATHSPEC=':(glob)content/blog/**/images/cover.png'
+          if [ -z "$(git status --porcelain -- "$PATHSPEC")" ]; then
+            echo "No cover PNGs changed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "$PATHSPEC"
+          git commit -m "Generate cover PNG(s) from SVG"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
