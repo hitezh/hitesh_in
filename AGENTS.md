@@ -95,6 +95,7 @@ Rules:
 - `tags` are optional. Use them for specific subjects a reader may want to find again. Keep them lowercase and hyphen-separated; reuse an existing tag where possible.
 - `image` is optional but recommended. Use the bundle-relative form `images/<filename>` and ensure the file exists. Use a descriptive filename, not `image1.jpg`.
 - Prefer `image`; do not add the legacy `coverImage` field to new posts.
+- Cover images are usually authored as an SVG (`images/cover.svg`). Social platforms cannot render SVG, so a raster `cover.png` sibling is required for the Open Graph card and the LinkedIn announcement. **You only commit the SVG.** CI (`.github/workflows/cover-image.yml`) renders `cover.png` from it with headless Chromium and commits it back to the branch. To generate or preview it locally, run `node .github/scripts/rasterize-cover.mjs`. Do not hand-edit the generated PNG.
 - Do not add `author`; the site is Hitesh's personal blog and existing posts omit it.
 - Keep `draft: true` while drafting. Published posts in the repository normally omit `draft`.
 - The directory year and the year in `date` must match.
@@ -257,7 +258,7 @@ Before considering a post complete, confirm:
 - [ ] Internal links resolve to the target posts' real permalinks, and any advisory/training call to action is natural and singular.
 - [ ] The directory year matches the publication date's year.
 - [ ] The `date` is today or earlier, never in the future, or Hugo will drop the post from the deployed site.
-- [ ] Images exist in the page bundle, render correctly, have useful alt text, and include credit where needed.
+- [ ] Images exist in the page bundle, render correctly, have useful alt text, and include credit where needed. For an SVG cover, commit only `cover.svg`; CI generates the `cover.png` social raster (run `node .github/scripts/rasterize-cover.mjs` to preview it locally).
 - [ ] The post has been proofread aloud for Hitesh's conversational rhythm.
 - [ ] Scanned against "Sound like Hitesh, not an AI" — no negative parallelism, self-answered questions, "Here's the…" suspense, "-ing" analysis tails, em-dash overuse, bold-lead bullets, or the AI house vocab; any single trope that remains is deliberate and isolated.
 - [ ] Straight quotes and plain ASCII throughout (no smart quotes, no `→` arrows).
