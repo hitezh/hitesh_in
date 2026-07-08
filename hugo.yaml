@@ -1,0 +1,15 @@
+baseURL: "https://example.com/"
+languageCode: "en-us"
+title: "Hitesh In"
+outputs:
+  home:
+    - HTML
+    - RSS
+  section:
+    - HTML
+    - RSS
+params:
+  newsletter:
+    title: "Weekly AI Brief"
+    description: "Every Sunday I connect the week's ideas into a practical briefing for founders, CTOs, and technology leaders. Includes exclusive insights not published on the blog."
+    subscribeURL: "#subscribe"
