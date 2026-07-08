@@ -1,0 +1,19 @@
+{{- $week := .Get "week" -}}
+{{- $pages := where site.RegularPages "Section" "blog" -}}
+{{- $pages = where $pages "Params.newsletter" true -}}
+{{- if $week -}}
+  {{- $pages = where $pages "Params.newsletter_week" $week -}}
+{{- end -}}
+{{- $priority := dict "high" 0 "normal" 1 "low" 2 -}}
+<ul class="newsletter-articles">
+{{- range sort $pages "Date" "desc" -}}
+  {{- $p := .Params.newsletter_priority | default "normal" -}}
+  <li data-priority="{{ index $priority $p | default 1 }}">
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{- with .Params.newsletter_summary }}<p>{{ . }}</p>{{ end -}}
+    {{- with .Params.hero }}<img src="{{ . | relURL }}" alt="">{{ end -}}
+  </li>
+{{- else -}}
+  <li>No newsletter articles are marked for this issue yet.</li>
+{{- end -}}
+</ul>

@@ -1,0 +1,5 @@
+<section class="subscribe" id="subscribe" aria-labelledby="subscribe-title">
+  <h2 id="subscribe-title">{{ .Site.Params.newsletter.title | default "Weekly AI Brief" }}</h2>
+  <p>{{ .Site.Params.newsletter.description | default "Every Sunday I connect the week's ideas into a practical briefing for founders, CTOs, and technology leaders. Includes exclusive insights not published on the blog." }}</p>
+  <p><a href="{{ .Site.Params.newsletter.subscribeURL | default "#subscribe" }}">Subscribe to the Weekly AI Brief</a></p>
+</section>

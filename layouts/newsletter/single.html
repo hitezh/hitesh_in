@@ -1,0 +1,22 @@
+{{ define "main" }}
+<article>
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.subject }}<p><strong>Subject:</strong> {{ . }}</p>{{ end }}
+  {{ .Content }}
+  {{ with .Params.featured_articles }}
+    <section>
+      <h2>Featured articles</h2>
+      <ul>
+        {{ range . }}
+          {{ with $.Site.GetPage . }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Params.newsletter_summary }} — {{ . }}{{ end }}</li>
+          {{ else }}
+            <li><a href="{{ . }}">{{ . }}</a></li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    </section>
+  {{ end }}
+  {{ partial "subscribe.html" . }}
+</article>
+{{ end }}

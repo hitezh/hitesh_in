@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section>
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  {{ if .IsHome }}
+    {{ partial "subscribe.html" . }}
+  {{ end }}
+  <ul>
+    {{ range .Pages.ByDate.Reverse }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Date }} <time datetime="{{ .Format "2006-01-02" }}">{{ .Format "Jan 2, 2006" }}</time>{{ end }}</li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
