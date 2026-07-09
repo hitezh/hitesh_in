@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A faded public leaderboard crossed out on the right, with an arrow pointing to a highlighted box labelled your merged PRs as the real benchmark.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- right side: the faded public leaderboard being set aside -->
+  <g>
+    <text x="962" y="150" class="sans" font-size="13" letter-spacing="2" fill="#B7AEA4" text-anchor="middle">PUBLIC LEADERBOARD</text>
+
+    <g opacity="0.55">
+      <rect x="832" y="168" width="260" height="34" rx="5" fill="#EADFD1"/>
+      <rect x="832" y="208" width="260" height="34" rx="5" fill="#EADFD1"/>
+      <rect x="832" y="248" width="260" height="34" rx="5" fill="#EADFD1"/>
+      <text x="848" y="191" class="sans" font-size="15" fill="#A79E95">1.  model-a   72.4</text>
+      <text x="848" y="231" class="sans" font-size="15" fill="#A79E95">2.  model-b   71.9</text>
+      <text x="848" y="271" class="sans" font-size="15" fill="#A79E95">3.  model-c   70.1</text>
+    </g>
+    <!-- struck through -->
+    <line x1="820" y1="270" x2="1104" y2="158" stroke="#BF4B1A" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- the real benchmark, highlighted -->
+    <rect x="832" y="360" width="260" height="72" rx="8" fill="#BF4B1A"/>
+    <text x="962" y="396" class="sans" font-size="19" font-weight="800" fill="#FAF7F2" text-anchor="middle">YOUR MERGED PRs</text>
+    <text x="962" y="420" class="sans" font-size="13" letter-spacing="1" fill="#F4E4D9" text-anchor="middle">THE REAL BENCHMARK</text>
+
+    <!-- arrow from set-aside leaderboard down to the real benchmark -->
+    <g stroke="#C9BEB0" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="962" y1="300" x2="962" y2="350"/>
+      <path d="M948 330 L962 354 L976 330"/>
+    </g>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  STRATEGY</text>
+
+  <text x="84" y="252" class="serif" font-size="54" font-weight="800" fill="#1A1816">Your backlog is the</text>
+  <text x="84" y="316" class="serif" font-size="54" font-weight="800" fill="#BF4B1A">only benchmark</text>
+  <text x="84" y="380" class="serif" font-size="54" font-weight="800" fill="#1A1816">that matters.</text>
+
+  <rect x="84" y="414" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="464" class="sans" font-size="21" fill="#7B746E">Stop buying AI coding tools by the leaderboard.</text>
+  <text x="84" y="494" class="sans" font-size="21" fill="#7B746E">Measure the work in front of you instead.</text>
+</svg>
