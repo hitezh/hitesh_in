@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A stopwatch reading just under one second, with a faded, de-emphasised benchmark score below it.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- stopwatch: the number that matters -->
+  <g>
+    <!-- top button and stem -->
+    <rect x="926" y="164" width="28" height="20" rx="4" fill="#BF4B1A"/>
+    <line x1="940" y1="184" x2="940" y2="200" stroke="#BF4B1A" stroke-width="6" stroke-linecap="round"/>
+
+    <circle cx="940" cy="300" r="112" fill="#FFFDFA" stroke="#BF4B1A" stroke-width="6"/>
+
+    <!-- tick ring -->
+    <g stroke="#C9BEB0" stroke-width="3" stroke-linecap="round">
+      <line x1="940" y1="188" x2="940" y2="200"/>
+      <line x1="996" y1="203" x2="990" y2="213"/>
+      <line x1="1037" y1="244" x2="1027" y2="250"/>
+      <line x1="1052" y1="300" x2="1040" y2="300"/>
+      <line x1="1037" y1="356" x2="1027" y2="350"/>
+      <line x1="996" y1="397" x2="990" y2="387"/>
+      <line x1="940" y1="412" x2="940" y2="400"/>
+      <line x1="884" y1="397" x2="890" y2="387"/>
+      <line x1="843" y1="356" x2="853" y2="350"/>
+      <line x1="828" y1="300" x2="840" y2="300"/>
+      <line x1="843" y1="244" x2="853" y2="250"/>
+      <line x1="884" y1="203" x2="890" y2="213"/>
+    </g>
+
+    <!-- hand, barely past the top: one second -->
+    <line x1="940" y1="300" x2="949" y2="214" stroke="#1A1816" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="940" cy="300" r="7" fill="#BF4B1A"/>
+
+    <text x="940" y="470" class="sans" font-size="18" font-weight="700" letter-spacing="3" fill="#BF4B1A" text-anchor="middle">UNDER 1,000 MS</text>
+
+    <!-- the impressive score, deliberately faded -->
+    <rect x="828" y="500" width="224" height="52" rx="8" fill="none" stroke="#D6CBBC" stroke-width="2" stroke-dasharray="6 6"/>
+    <text x="940" y="532" class="sans" font-size="17" font-weight="700" letter-spacing="1.5" fill="#B7AEA4" text-anchor="middle">BENCHMARK  91.9%</text>
+  </g>
+
+  <!-- headline -->
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  PRODUCT  STRATEGY</text>
+
+  <text x="84" y="262" class="serif" font-size="60" font-weight="800" fill="#1A1816">Speed beats</text>
+  <text x="84" y="330" class="serif" font-size="60" font-weight="800" fill="#BF4B1A">the benchmark.</text>
+
+  <rect x="84" y="366" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+
+  <text x="84" y="418" class="sans" font-size="21" fill="#7B746E">For real-time AI, the second your user waits</text>
+  <text x="84" y="448" class="sans" font-size="21" fill="#7B746E">matters more than the model's score.</text>
+</svg>
