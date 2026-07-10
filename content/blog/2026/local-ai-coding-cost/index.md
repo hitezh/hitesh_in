@@ -11,6 +11,10 @@ tags:
   - "local-llm"
 draft: false
 image: images/cover.svg
+newsletter: true
+newsletter_priority: normal
+newsletter_summary: >
+  Local AI coding looks free only if hardware, maintenance, and model judgment are invisible. The useful question for teams is where local control is worth the operational cost.
 ---
 
 About a year ago I'd have quietly dismissed the idea of replacing Claude with a locally-run model for serious coding work. Then the hardware got more accessible, the models improved, and a large, opinionated group of developers started reporting that they'd actually done it - for free - with results good enough to stick with.

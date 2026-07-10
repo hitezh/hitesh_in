@@ -1,0 +1,25 @@
+{{- $page := .Page -}}
+{{- with $page.Params.featured_articles -}}
+<div class="newsletter-articles">
+  <h2>Featured writing</h2>
+  {{- range . -}}
+    {{- $url := . -}}
+    {{- $matches := where site.RegularPages "RelPermalink" $url -}}
+    {{- with index $matches 0 -}}
+    <article class="newsletter-article-card">
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      {{- with .Params.newsletter_summary -}}
+      <p>{{ . }}</p>
+      {{- else with .Params.description -}}
+      <p>{{ . }}</p>
+      {{- else -}}
+      <p>{{ .Summary | plainify | truncate 180 }}</p>
+      {{- end -}}
+      <a class="newsletter-article-link" href="{{ .RelPermalink }}">Read the article</a>
+    </article>
+    {{- else -}}
+    <p><a href="{{ $url }}">{{ $url }}</a></p>
+    {{- end -}}
+  {{- end -}}
+</div>
+{{- end -}}

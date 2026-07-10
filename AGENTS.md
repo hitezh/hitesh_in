@@ -82,6 +82,10 @@ categories:
 tags:
   - "specific-topic"
 image: images/descriptive-image-name.jpg
+newsletter: true
+newsletter_priority: normal
+newsletter_summary: >
+  One or two sentences explaining why this article matters.
 draft: true
 ---
 ```
@@ -93,6 +97,7 @@ Rules:
 - Set `slug` to the post's directory name. Hugo derives the URL from the *title* otherwise, so any `:`, `.`, or `?` in the title leaks into the URL (a two-sentence title becomes `.../my-post.-second-part.`). The LinkedIn announcer also builds the link from the directory name, so `slug` and the directory must match or the announced URL 404s.
 - Choose one or, when genuinely useful, two existing categories: `banking`, `education`, `entrepreneurship`, `life`, `others`, `sketches`, or `technology`. Do not create a near-duplicate category.
 - `tags` are optional. Use them for specific subjects a reader may want to find again. Keep them lowercase and hyphen-separated; reuse an existing tag where possible.
+- `newsletter`, `newsletter_priority`, and `newsletter_summary` are optional. Use them when a post should be considered for the weekly newsletter. `newsletter_priority` must be `low`, `normal`, or `high`; the summary should explain why the article matters in one or two sentences.
 - `image` is optional but recommended. Use the bundle-relative form `images/<filename>` and ensure the file exists. Use a descriptive filename, not `image1.jpg`.
 - Prefer `image`; do not add the legacy `coverImage` field to new posts.
 - Cover images are usually authored as an SVG (`images/cover.svg`). Social platforms cannot render SVG, so a raster `cover.png` sibling is required for the Open Graph card and the LinkedIn announcement. **You only commit the SVG.** CI (`.github/workflows/cover-image.yml`) renders `cover.png` from it with headless Chromium and commits it back to the branch. To generate or preview it locally, run `node .github/scripts/rasterize-cover.mjs`. Do not hand-edit the generated PNG.
