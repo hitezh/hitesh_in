@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A quadrant chart plotting work by difficulty against verifiability. A math proof sits high on both and is where AI excels; messy Monday operations sit low on verifiability and are where AI struggles. The dividing line is verifiability, not difficulty.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- quadrant chart, right side -->
+  <g>
+    <!-- verifiable region shading -->
+    <rect x="948" y="176" width="176" height="290" fill="#BF4B1A" opacity="0.06"/>
+
+    <!-- axes -->
+    <g stroke="#C9BEB0" stroke-width="2.5" stroke-linecap="round">
+      <line x1="772" y1="176" x2="772" y2="466"/>
+      <line x1="772" y1="466" x2="1124" y2="466"/>
+    </g>
+
+    <!-- the real frontier: verifiability -->
+    <line x1="948" y1="182" x2="948" y2="466" stroke="#BF4B1A" stroke-width="2.5" stroke-dasharray="7 7"/>
+
+    <!-- axis labels -->
+    <text x="948" y="498" class="sans" font-size="16" font-weight="700" letter-spacing="2" fill="#7B746E" text-anchor="middle">VERIFIABLE  &#8594;</text>
+    <text x="756" y="321" class="sans" font-size="16" font-weight="700" letter-spacing="2" fill="#7B746E" text-anchor="middle" transform="rotate(-90 756 321)">DIFFICULT  &#8593;</text>
+
+    <!-- region hints -->
+    <text x="860" y="200" class="sans" font-size="13.5" letter-spacing="1" fill="#B7AEA4" text-anchor="middle">AI STRUGGLES</text>
+    <text x="1036" y="200" class="sans" font-size="13.5" letter-spacing="1" fill="#BF4B1A" text-anchor="middle" opacity="0.85">AI EXCELS</text>
+
+    <!-- math proof: hard + verifiable -->
+    <circle cx="1052" cy="238" r="13" fill="#BF4B1A"/>
+    <text x="1052" y="228" class="sans" font-size="16.5" font-weight="700" fill="#1A1816" text-anchor="middle">math proof</text>
+
+    <!-- monday ops: not-that-hard + unverifiable -->
+    <circle cx="846" cy="424" r="13" fill="none" stroke="#A79E95" stroke-width="2.5"/>
+    <text x="846" y="414" class="sans" font-size="16.5" font-weight="700" fill="#7B746E" text-anchor="middle">Monday ops</text>
+  </g>
+
+  <!-- text, left side -->
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  STRATEGY</text>
+
+  <text x="84" y="248" class="serif" font-size="54" font-weight="800" fill="#1A1816">AI does your</text>
+  <text x="84" y="312" class="serif" font-size="54" font-weight="800" fill="#1A1816">hardest work,</text>
+  <text x="84" y="376" class="serif" font-size="54" font-weight="800" fill="#BF4B1A">not your messiest.</text>
+
+  <rect x="84" y="410" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="460" class="sans" font-size="21" fill="#7B746E">The line AI can't cross is verifiability,</text>
+  <text x="84" y="490" class="sans" font-size="21" fill="#7B746E">not difficulty. Map your work by the right axis.</text>
+</svg>
