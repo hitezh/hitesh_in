@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A closed loop of arrows connecting a chipmaker, a cloud provider, and a hyperscaler, with money circling back to where it started.">
+  <defs>
+    <style>
+      .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+      .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#BF4B1A"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- circular loop, right side -->
+  <g transform="translate(955 315)">
+    <!-- the ring arrows -->
+    <g fill="none" stroke="#BF4B1A" stroke-width="4" marker-end="url(#arrow)">
+      <path d="M -8 -132 A 132 132 0 0 1 118 62"/>
+      <path d="M 118 62 A 132 132 0 0 1 -114 62"/>
+      <path d="M -114 62 A 132 132 0 0 1 -8 -132"/>
+    </g>
+
+    <!-- $ in the middle -->
+    <circle cx="0" cy="-8" r="34" fill="#EADFD1" stroke="#E0D3C2" stroke-width="1.5"/>
+    <text x="0" y="7" class="serif" font-size="42" font-weight="800" fill="#BF4B1A" text-anchor="middle">$</text>
+
+    <!-- nodes -->
+    <g class="sans" text-anchor="middle">
+      <circle cx="0" cy="-150" r="52" fill="#BF4B1A"/>
+      <text x="0" y="-155" font-size="15" font-weight="800" fill="#FAF7F2">CHIP</text>
+      <text x="0" y="-137" font-size="15" font-weight="800" fill="#FAF7F2">MAKER</text>
+
+      <circle cx="140" cy="92" r="52" fill="#1A1816"/>
+      <text x="140" y="87" font-size="15" font-weight="800" fill="#FAF7F2">GPU</text>
+      <text x="140" y="105" font-size="15" font-weight="800" fill="#FAF7F2">CLOUD</text>
+
+      <circle cx="-140" cy="92" r="52" fill="#7B746E"/>
+      <text x="-140" y="87" font-size="14" font-weight="800" fill="#FAF7F2">HYPER-</text>
+      <text x="-140" y="105" font-size="14" font-weight="800" fill="#FAF7F2">SCALER</text>
+    </g>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  STRATEGY</text>
+
+  <text x="84" y="250" class="serif" font-size="55" font-weight="800" fill="#1A1816">Someone is</text>
+  <text x="84" y="316" class="serif" font-size="55" font-weight="800" fill="#1A1816">subsidizing your</text>
+  <text x="84" y="382" class="serif" font-size="55" font-weight="800" fill="#BF4B1A">AI compute.</text>
+
+  <rect x="84" y="416" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="466" class="sans" font-size="21" fill="#7B746E">The boom is lending to itself. The cost curve</text>
+  <text x="84" y="496" class="sans" font-size="21" fill="#7B746E">you're planning around has a thumb on it.</text>
+</svg>
