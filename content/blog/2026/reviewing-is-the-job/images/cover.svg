@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An editorial diagram: cheaply generated blocks of code pour in from the left and pile up at a narrow gate labelled review before a thin trickle passes through to shipped. The bottleneck moved from writing to review.">
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans  { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- card -->
+  <rect x="0" y="0" width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- left: text block -->
+  <text x="92" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">ON&#160;&#160;AI&#160;&#160;STRATEGY</text>
+
+  <text x="88" y="262" class="serif" font-size="76" fill="#1A1816">Writing code</text>
+  <text x="88" y="342" class="serif" font-size="76" fill="#1A1816">got free<tspan fill="#BF4B1A">.</tspan></text>
+
+  <rect x="92" y="376" width="68" height="5" rx="2.5" fill="#BF4B1A"/>
+
+  <text x="92" y="432" class="sans" font-size="22" fill="#7B746E">The work moved to the step that was</text>
+  <text x="92" y="464" class="sans" font-size="22" fill="#7B746E">always the bottleneck: review.</text>
+
+  <!-- right: bottleneck diagram -->
+  <!-- funnel body, wide mouth narrowing to a neck -->
+  <path d="M716,196 L1004,296 L1004,334 L716,434 Z" fill="#BF4B1A" fill-opacity="0.07" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- generated blocks piling at the mouth -->
+  <g fill="#7B746E">
+    <rect x="724" y="214" width="26" height="26" rx="3"/>
+    <rect x="756" y="214" width="26" height="26" rx="3"/>
+    <rect x="724" y="246" width="26" height="26" rx="3"/>
+    <rect x="756" y="246" width="26" height="26" rx="3" fill="#1A1816"/>
+    <rect x="724" y="278" width="26" height="26" rx="3"/>
+    <rect x="756" y="278" width="26" height="26" rx="3"/>
+    <rect x="724" y="310" width="26" height="26" rx="3" fill="#1A1816"/>
+    <rect x="756" y="310" width="26" height="26" rx="3"/>
+    <rect x="724" y="342" width="26" height="26" rx="3"/>
+    <rect x="756" y="342" width="26" height="26" rx="3"/>
+    <rect x="724" y="374" width="26" height="26" rx="3"/>
+    <rect x="792" y="246" width="26" height="26" rx="3"/>
+    <rect x="792" y="278" width="26" height="26" rx="3" fill="#1A1816"/>
+    <rect x="792" y="310" width="26" height="26" rx="3"/>
+  </g>
+
+  <!-- the narrow review gate -->
+  <rect x="1000" y="296" width="10" height="38" rx="2" fill="#BF4B1A"/>
+  <text x="1004" y="360" class="sans" font-size="17" fill="#BF4B1A" text-anchor="middle">review</text>
+
+  <!-- thin trickle past the gate -->
+  <line x1="1014" y1="315" x2="1120" y2="315" stroke="#E8DDD0" stroke-width="2"/>
+  <rect x="1086" y="302" width="26" height="26" rx="3" fill="#BF4B1A"/>
+
+  <!-- labels -->
+  <text x="754" y="200" class="sans" font-size="17" fill="#B5AFA9" text-anchor="middle">generated</text>
+  <text x="1099" y="358" class="sans" font-size="17" fill="#B5AFA9" text-anchor="middle">shipped</text>
+</svg>
