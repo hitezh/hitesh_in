@@ -29,7 +29,7 @@ import { basename, dirname, extname, join } from "node:path";
 const SITE = (process.env.SITE_BASE_URL || "https://hitesh.in").trim().replace(/\/$/, "");
 const TOKEN = (process.env.LINKEDIN_ACCESS_TOKEN || "").trim();
 let AUTHOR = (process.env.LINKEDIN_AUTHOR_URN || "").trim(); // e.g. urn:li:person:abc123
-const API_VERSION = (process.env.LINKEDIN_API_VERSION || "202506").trim(); // YYYYMM, bump as LinkedIn deprecates
+const API_VERSION = (process.env.LINKEDIN_API_VERSION || "202605").trim(); // YYYYMM, bump as LinkedIn deprecates
 const INCLUDE_HASHTAGS = process.env.INCLUDE_HASHTAGS !== "false";
 // Attach the post's featured image, and move the article link into the first
 // comment (keeps the post body link-free). Both default on; set either env var

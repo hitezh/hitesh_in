@@ -41,7 +41,7 @@ jobs:
           SITE_BASE_URL: https://hitesh.in
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
-          LINKEDIN_API_VERSION: ${{ vars.LINKEDIN_API_VERSION || '202506' }}
+          LINKEDIN_API_VERSION: ${{ vars.LINKEDIN_API_VERSION || '202605' }}
           # Posting a comment needs LinkedIn's partner-gated Community Management API,
           # so the link goes in the post body by default (works with w_member_social).
           # Once the app is approved for that API, set a repo Variable
