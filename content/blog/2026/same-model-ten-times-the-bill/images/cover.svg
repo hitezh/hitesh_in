@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A bar chart contrasting a tall $3.00 cache-miss token against a short $0.30 cache-hit token, a tenfold difference in the price of the same model.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- bar chart, right side -->
+  <g>
+    <!-- baseline -->
+    <line x1="800" y1="520" x2="1160" y2="520" stroke="#D8CBB9" stroke-width="2"/>
+
+    <!-- cache-miss bar (tall, dark) -->
+    <rect x="840" y="210" width="120" height="310" rx="4" fill="#2A2622"/>
+    <text x="900" y="196" class="sans" font-size="26" font-weight="800" fill="#2A2622" text-anchor="middle">$3.00</text>
+    <text x="900" y="548" class="sans" font-size="15" letter-spacing="1.5" fill="#7B746E" text-anchor="middle">CACHE MISS</text>
+
+    <!-- cache-hit bar (short, orange) -->
+    <rect x="1020" y="490" width="120" height="30" rx="4" fill="#BF4B1A"/>
+    <text x="1080" y="476" class="sans" font-size="26" font-weight="800" fill="#BF4B1A" text-anchor="middle">$0.30</text>
+    <text x="1080" y="548" class="sans" font-size="15" letter-spacing="1.5" fill="#7B746E" text-anchor="middle">CACHE HIT</text>
+
+    <!-- 10x badge floating above the short bar -->
+    <circle cx="1080" cy="322" r="48" fill="#BF4B1A"/>
+    <text x="1080" y="334" class="sans" font-size="32" font-weight="800" fill="#FAF7F2" text-anchor="middle">10x</text>
+    <text x="1080" y="392" class="sans" font-size="15" letter-spacing="1" fill="#7B746E" text-anchor="middle">cheaper</text>
+  </g>
+
+  <!-- headline block, left side -->
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  ECONOMICS</text>
+
+  <text x="84" y="250" class="serif" font-size="58" font-weight="800" fill="#1A1816">Same model,</text>
+  <text x="84" y="316" class="serif" font-size="58" font-weight="800" fill="#BF4B1A">ten times</text>
+  <text x="84" y="382" class="serif" font-size="58" font-weight="800" fill="#1A1816">the bill.</text>
+
+  <rect x="84" y="416" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="466" class="sans" font-size="21" fill="#7B746E">A cached token costs a tenth of a fresh one.</text>
+  <text x="84" y="496" class="sans" font-size="21" fill="#7B746E">Your AI margin is an architecture decision.</text>
+</svg>
