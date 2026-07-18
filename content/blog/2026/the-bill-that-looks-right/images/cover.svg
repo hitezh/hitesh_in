@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An invoice panel showing a struck-out $502,000,000,000 estimate labelled 'flagged in an afternoon' above a plausible $611,842 charge labelled 'looks right, gets paid.'">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- headline block, left side -->
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">CLOUD  ECONOMICS</text>
+
+  <text x="84" y="248" class="serif" font-size="56" font-weight="800" fill="#1A1816">The scariest bill</text>
+  <text x="84" y="312" class="serif" font-size="56" font-weight="800" fill="#1A1816">is the one that</text>
+  <text x="84" y="376" class="serif" font-size="56" font-weight="800" fill="#BF4B1A">looks right.</text>
+
+  <rect x="84" y="410" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="460" class="sans" font-size="21" fill="#7B746E">A metered cost you can't audit is a P&amp;L</text>
+  <text x="84" y="490" class="sans" font-size="21" fill="#7B746E">input you took on faith.</text>
+
+  <!-- invoice card, right side -->
+  <g>
+    <rect x="770" y="150" width="356" height="330" rx="14" fill="#FDFBF8" stroke="#E8DDD0" stroke-width="2"/>
+
+    <text x="800" y="200" class="sans" font-size="14" letter-spacing="2.5" fill="#7B746E">ESTIMATED CHARGES</text>
+
+    <!-- absurd, caught -->
+    <text x="800" y="248" class="sans" font-size="28" font-weight="800" fill="#B8ADA0">$502,000,000,000</text>
+    <line x1="798" y1="239" x2="1096" y2="239" stroke="#B8ADA0" stroke-width="3"/>
+    <text x="800" y="276" class="sans" font-size="14" fill="#9A9086">flagged in an afternoon</text>
+
+    <line x1="800" y1="306" x2="1096" y2="306" stroke="#E8DDD0" stroke-width="1.5"/>
+
+    <!-- plausible, paid -->
+    <text x="800" y="378" class="sans" font-size="52" font-weight="800" fill="#BF4B1A">$611,842</text>
+    <text x="800" y="418" class="sans" font-size="15" fill="#7B746E">looks right. gets paid.</text>
+  </g>
+</svg>
