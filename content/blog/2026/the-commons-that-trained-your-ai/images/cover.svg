@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A bar chart of monthly questions collapsing from a tall column in 2014 to almost nothing in 2025, beside the title 'Your AI only knows what was written down.'">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- collapsing bar chart, right side -->
+  <g>
+    <!-- baseline -->
+    <line x1="770" y1="486" x2="1128" y2="486" stroke="#D9CDBC" stroke-width="2"/>
+
+    <!-- bars: tall 2014 corpus falling to near-zero 2025 -->
+    <rect x="778"  y="196" width="34" height="290" rx="3" fill="#BF4B1A"/>
+    <rect x="828"  y="250" width="34" height="236" rx="3" fill="#CC6A3F"/>
+    <rect x="878"  y="316" width="34" height="170" rx="3" fill="#D98A66"/>
+    <rect x="928"  y="378" width="34" height="108" rx="3" fill="#E0A488"/>
+    <rect x="978"  y="430" width="34" height="56"  rx="3" fill="#E7BFAB"/>
+    <rect x="1028" y="462" width="34" height="24"  rx="3" fill="#EAD2C3"/>
+    <rect x="1078" y="478" width="34" height="8"   rx="3" fill="#E4D6C6"/>
+
+    <text x="795"  y="516" class="sans" font-size="15" fill="#9A9188" text-anchor="middle">2014</text>
+    <text x="1095" y="516" class="sans" font-size="15" fill="#9A9188" text-anchor="middle">2025</text>
+    <text x="949"  y="560" class="sans" font-size="15" letter-spacing="2" fill="#B0A79C" text-anchor="middle">MONTHLY QUESTIONS ASKED</text>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  STRATEGY</text>
+
+  <text x="84" y="232" class="serif" font-size="52" font-weight="800" fill="#1A1816">Your AI only knows</text>
+  <text x="84" y="292" class="serif" font-size="52" font-weight="800" fill="#1A1816">what someone</text>
+  <text x="84" y="352" class="serif" font-size="52" font-weight="800" fill="#BF4B1A">bothered to write down.</text>
+
+  <rect x="84" y="386" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="436" class="sans" font-size="21" fill="#7B746E">The commons that trained the models is freezing.</text>
+  <text x="84" y="466" class="sans" font-size="21" fill="#7B746E">Advantage moves to the knowledge you still capture.</text>
+</svg>
