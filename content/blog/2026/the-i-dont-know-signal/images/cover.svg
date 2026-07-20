@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="One line labelled confidence rising while a line labelled I don't know collapses.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+    .mono{font-family:'Consolas', 'Courier New', monospace;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <g>
+    <line x1="792" y1="150" x2="792" y2="470" stroke="#D9CFC2" stroke-width="2"/>
+    <line x1="792" y1="470" x2="1096" y2="470" stroke="#D9CFC2" stroke-width="2"/>
+
+    <polyline points="808,392 900,330 992,244 1084,182" fill="none" stroke="#BF4B1A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="1084" cy="182" r="9" fill="#BF4B1A"/>
+    <text x="1074" y="160" text-anchor="end" class="sans" font-size="20" fill="#BF4B1A" font-weight="700">Confidence 76%</text>
+
+    <polyline points="808,232 900,300 992,392 1084,438" fill="none" stroke="#8A8079" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 12"/>
+    <circle cx="1084" cy="438" r="9" fill="#8A8079"/>
+    <text x="1074" y="462" text-anchor="end" class="sans" font-size="20" fill="#8A8079" font-weight="700">"I don't know" 3%</text>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">DECISIONS</text>
+
+  <text x="84" y="252" class="serif" font-size="60" font-weight="800" fill="#1A1816">Your team just</text>
+  <text x="84" y="318" class="serif" font-size="60" font-weight="800" fill="#1A1816">stopped saying</text>
+  <text x="84" y="384" class="serif" font-size="60" font-weight="800" fill="#BF4B1A">"I don't know."</text>
+
+  <rect x="84" y="418" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="468" class="sans" font-size="21" fill="#7B746E">AI didn't make your people wrong. It made</text>
+  <text x="84" y="498" class="sans" font-size="21" fill="#7B746E">them sure, and that is the harder problem.</text>
+</svg>
