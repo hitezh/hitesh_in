@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A cluster of connected database nodes struck through and erased, with one node sitting apart and disconnected, still intact: the offline copy the attacker could not reach.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- right side: the connected, wiped cluster -->
+  <g>
+    <!-- connection lines within the cluster -->
+    <g stroke="#D8CBB9" stroke-width="2">
+      <line x1="900" y1="150" x2="1010" y2="230"/>
+      <line x1="1010" y1="230" x2="905" y2="320"/>
+      <line x1="900" y1="150" x2="905" y2="320"/>
+      <line x1="905" y1="320" x2="1015" y2="400"/>
+      <line x1="1010" y1="230" x2="1015" y2="400"/>
+    </g>
+
+    <!-- wiped nodes (dark, struck through) -->
+    <g>
+      <rect x="862" y="118" width="76" height="64" rx="8" fill="#2A2622"/>
+      <rect x="972" y="198" width="76" height="64" rx="8" fill="#2A2622"/>
+      <rect x="867" y="288" width="76" height="64" rx="8" fill="#2A2622"/>
+      <rect x="977" y="368" width="76" height="64" rx="8" fill="#2A2622"/>
+    </g>
+    <!-- X marks over the wiped nodes -->
+    <g stroke="#BF4B1A" stroke-width="6" stroke-linecap="round">
+      <line x1="880" y1="136" x2="920" y2="164"/><line x1="920" y1="136" x2="880" y2="164"/>
+      <line x1="990" y1="216" x2="1030" y2="244"/><line x1="1030" y1="216" x2="990" y2="244"/>
+      <line x1="885" y1="306" x2="925" y2="334"/><line x1="925" y1="306" x2="885" y2="334"/>
+      <line x1="995" y1="386" x2="1035" y2="414"/><line x1="1035" y1="386" x2="995" y2="414"/>
+    </g>
+
+    <!-- the isolated, intact copy: sitting apart, no line to the cluster -->
+    <rect x="1012" y="482" width="92" height="76" rx="9" fill="none" stroke="#1A7A4C" stroke-width="3.5"/>
+    <!-- checkmark -->
+    <polyline points="1035,522 1052,540 1082,502" fill="none" stroke="#1A7A4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1058" y="582" class="sans" font-size="14" letter-spacing="1.5" fill="#7B746E" text-anchor="middle">OFFLINE</text>
+  </g>
+
+  <!-- headline block, left side -->
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">SYSTEMS OF RECORD</text>
+
+  <text x="84" y="252" class="serif" font-size="56" font-weight="800" fill="#1A1816">The backup</text>
+  <text x="84" y="316" class="serif" font-size="56" font-weight="800" fill="#BF4B1A">you can reach</text>
+  <text x="84" y="380" class="serif" font-size="56" font-weight="800" fill="#1A1816">is the one you lose.</text>
+
+  <rect x="84" y="414" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="464" class="sans" font-size="21" fill="#7B746E">Romania's registry survived on the one copy</text>
+  <text x="84" y="494" class="sans" font-size="21" fill="#7B746E">no credential could touch.</text>
+</svg>
