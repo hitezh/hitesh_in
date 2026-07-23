@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A stack of GPU server units labeled seizable hardware, with an arrow of value leaving through a door labeled the team, showing the going-concern value walking out on default.">
+  <defs>
+    <style>
+      .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+      .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#BF4B1A"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- right-side visual: seizable rack vs the value leaving through a door -->
+  <g class="sans">
+    <!-- the GPU rack (seizable) -->
+    <text x="720" y="196" font-size="14" letter-spacing="1" fill="#7B746E">SEIZABLE: THE HARDWARE</text>
+    <g>
+      <rect x="720" y="208" width="150" height="40" rx="5" fill="#1A1816"/>
+      <rect x="720" y="256" width="150" height="40" rx="5" fill="#1A1816"/>
+      <rect x="720" y="304" width="150" height="40" rx="5" fill="#1A1816"/>
+      <g fill="#BF4B1A">
+        <circle cx="738" cy="228" r="4"/><circle cx="738" cy="276" r="4"/><circle cx="738" cy="324" r="4"/>
+      </g>
+      <g stroke="#4A443F" stroke-width="3">
+        <line x1="760" y1="228" x2="852" y2="228"/>
+        <line x1="760" y1="276" x2="852" y2="276"/>
+        <line x1="760" y1="324" x2="852" y2="324"/>
+      </g>
+    </g>
+
+    <!-- the door the value leaves through -->
+    <rect x="1010" y="220" width="86" height="150" rx="4" fill="none" stroke="#1A1816" stroke-width="3"/>
+    <rect x="1024" y="234" width="58" height="122" rx="3" fill="#EFE7DB"/>
+    <circle cx="1070" cy="298" r="4" fill="#1A1816"/>
+    <text x="1053" y="392" font-size="14" letter-spacing="1" fill="#7B746E" text-anchor="middle">THE TEAM</text>
+
+    <!-- value walking out -->
+    <path d="M885 288 C 935 288, 965 292, 1002 293" fill="none" stroke="#BF4B1A" stroke-width="3.5" marker-end="url(#arrow)"/>
+    <text x="945" y="273" font-size="15" font-weight="700" fill="#BF4B1A" text-anchor="middle">going-concern</text>
+    <text x="945" y="330" font-size="15" font-weight="700" fill="#BF4B1A" text-anchor="middle">value</text>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  STRATEGY</text>
+
+  <text x="84" y="418" class="serif" font-size="54" font-weight="800" fill="#1A1816">The collateral</text>
+  <text x="84" y="484" class="serif" font-size="54" font-weight="800" fill="#1A1816">that walks</text>
+  <text x="84" y="550" class="serif" font-size="54" font-weight="800" fill="#BF4B1A">out the door.</text>
+
+  <text x="720" y="470" class="sans" font-size="20" fill="#7B746E">Tens of billions in AI debt is secured</text>
+  <text x="720" y="498" class="sans" font-size="20" fill="#7B746E">by GPU clusters. The value backing</text>
+  <text x="720" y="526" class="sans" font-size="20" fill="#7B746E">the loan leaves with the people.</text>
+</svg>
