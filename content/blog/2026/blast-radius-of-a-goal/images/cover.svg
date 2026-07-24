@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An editorial diagram: a small target marked goal sits inside a company's systems, and concentric blast rings expand outward from it, crossing a dashed boundary into the zone labelled outside your control. The point: an agent's failure radiates past the system it runs in.">
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans  { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- card -->
+  <rect x="0" y="0" width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- left: text block -->
+  <text x="92" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">ON&#160;&#160;AGENTIC&#160;&#160;AI</text>
+
+  <text x="88" y="262" class="serif" font-size="76" fill="#1A1816">Give an agent</text>
+  <text x="88" y="342" class="serif" font-size="76" fill="#1A1816">a goal<tspan fill="#BF4B1A">.</tspan></text>
+
+  <rect x="92" y="376" width="68" height="5" rx="2.5" fill="#BF4B1A"/>
+
+  <text x="92" y="432" class="sans" font-size="22" fill="#7B746E">It optimizes what you wrote, and the</text>
+  <text x="92" y="464" class="sans" font-size="22" fill="#7B746E">failure radiates past your own systems.</text>
+
+  <!-- right: blast-radius diagram, centred on the goal at (770,318) -->
+  <!-- concentric rings expanding outward -->
+  <g fill="none" stroke="#BF4B1A">
+    <circle cx="770" cy="318" r="60"  stroke-width="2.5" stroke-opacity="0.55"/>
+    <circle cx="770" cy="318" r="115" stroke-width="2.5" stroke-opacity="0.42"/>
+    <circle cx="770" cy="318" r="175" stroke-width="2.5" stroke-opacity="0.30"/>
+    <circle cx="770" cy="318" r="238" stroke-width="2.5" stroke-opacity="0.18"/>
+    <circle cx="770" cy="318" r="300" stroke-width="2.5" stroke-opacity="0.10"/>
+  </g>
+
+  <!-- the goal itself -->
+  <circle cx="770" cy="318" r="16" fill="#BF4B1A"/>
+  <circle cx="770" cy="318" r="7"  fill="#FAF7F2"/>
+  <text x="770" y="368" class="sans" font-size="17" fill="#1A1816" text-anchor="middle">goal</text>
+
+  <!-- boundary between your systems and the world outside -->
+  <line x1="946" y1="96" x2="946" y2="540" stroke="#7B746E" stroke-width="2" stroke-dasharray="6 7" stroke-opacity="0.7"/>
+  <text x="936" y="120" class="sans" font-size="16" fill="#B5AFA9" text-anchor="end">your systems</text>
+  <text x="956" y="120" class="sans" font-size="16" fill="#7B746E" text-anchor="start">outside your control</text>
+</svg>
