@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An editorial diagram comparing the same model under two regimes. On the left, an over-constrained model sits beneath a tall stack of grey instruction bars and produces a single block of useful output. On the right, a trusted model carries only two instruction bars and produces four blocks of output. Fewer rules, more output.">
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans  { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- card -->
+  <rect x="0" y="0" width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- left: text block -->
+  <text x="92" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">ON&#160;&#160;AI&#160;&#160;STRATEGY</text>
+
+  <text x="88" y="252" class="serif" font-size="72" fill="#1A1816">Your rules are</text>
+  <text x="88" y="330" class="serif" font-size="72" fill="#1A1816">the throttle<tspan fill="#BF4B1A">.</tspan></text>
+
+  <rect x="92" y="364" width="68" height="5" rx="2.5" fill="#BF4B1A"/>
+
+  <text x="92" y="420" class="sans" font-size="22" fill="#7B746E">A capable model needs fewer</text>
+  <text x="92" y="452" class="sans" font-size="22" fill="#7B746E">instructions, not more.</text>
+
+  <!-- right: two-regime diagram -->
+
+  <!-- Column A: over-constrained -->
+  <g fill="#CFC7BD">
+    <rect x="736" y="196" width="128" height="9" rx="2"/>
+    <rect x="736" y="211" width="128" height="9" rx="2"/>
+    <rect x="736" y="226" width="128" height="9" rx="2" fill="#7B746E"/>
+    <rect x="736" y="241" width="128" height="9" rx="2"/>
+    <rect x="736" y="256" width="128" height="9" rx="2"/>
+    <rect x="736" y="271" width="128" height="9" rx="2" fill="#7B746E"/>
+    <rect x="736" y="286" width="128" height="9" rx="2"/>
+    <rect x="736" y="301" width="128" height="9" rx="2"/>
+  </g>
+  <rect x="736" y="334" width="128" height="14" rx="3" fill="#1A1816"/>
+  <line x1="800" y1="352" x2="800" y2="364" stroke="#B5AFA9" stroke-width="2"/>
+  <rect x="785" y="366" width="30" height="30" rx="3" fill="#BF4B1A"/>
+  <text x="800" y="432" class="sans" font-size="17" fill="#7B746E" text-anchor="middle">over-constrained</text>
+
+  <!-- Column B: trusted -->
+  <g fill="#CFC7BD">
+    <rect x="936" y="304" width="128" height="9" rx="2"/>
+    <rect x="936" y="319" width="128" height="9" rx="2" fill="#7B746E"/>
+  </g>
+  <rect x="936" y="334" width="128" height="14" rx="3" fill="#1A1816"/>
+  <line x1="1000" y1="352" x2="1000" y2="364" stroke="#B5AFA9" stroke-width="2"/>
+  <g fill="#BF4B1A">
+    <rect x="936" y="366" width="26" height="30" rx="3"/>
+    <rect x="970" y="366" width="26" height="30" rx="3"/>
+    <rect x="1004" y="366" width="26" height="30" rx="3"/>
+    <rect x="1038" y="366" width="26" height="30" rx="3"/>
+  </g>
+  <text x="1000" y="432" class="sans" font-size="17" fill="#BF4B1A" text-anchor="middle">trusted</text>
+
+  <!-- legend -->
+  <rect x="734" y="470" width="16" height="16" rx="2" fill="#CFC7BD"/>
+  <text x="758" y="483" class="sans" font-size="16" fill="#B5AFA9">instruction</text>
+  <rect x="884" y="470" width="16" height="16" rx="2" fill="#BF4B1A"/>
+  <text x="908" y="483" class="sans" font-size="16" fill="#B5AFA9">useful output</text>
+</svg>
