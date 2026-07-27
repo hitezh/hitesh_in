@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A mock cookie consent dialog with a large highlighted Accept All button and a tiny faint Reject link, a cursor pointing at Accept.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- Mock consent dialog -->
+  <g>
+    <rect x="742" y="196" width="366" height="238" rx="14" fill="#FFFFFF" stroke="#E8DDD0" stroke-width="2"/>
+    <text x="772" y="248" class="sans" font-size="20" font-weight="700" fill="#1A1816">We value your privacy</text>
+    <rect x="772" y="268" width="306" height="7" rx="3.5" fill="#EFE8DE"/>
+    <rect x="772" y="286" width="306" height="7" rx="3.5" fill="#EFE8DE"/>
+    <rect x="772" y="304" width="196" height="7" rx="3.5" fill="#EFE8DE"/>
+
+    <!-- Oversized Accept button -->
+    <rect x="772" y="342" width="306" height="60" rx="8" fill="#BF4B1A"/>
+    <text x="925" y="380" class="sans" font-size="23" font-weight="800" fill="#FAF7F2" text-anchor="middle">Accept All</text>
+
+    <!-- Tiny, faint reject link -->
+    <text x="925" y="422" class="sans" font-size="12" fill="#C9C2BB" text-anchor="middle">reject</text>
+
+    <!-- Cursor pointing at Accept -->
+    <g transform="translate(1006 372) rotate(14)">
+      <path d="M0 0 L0 34 L9 26 L15 40 L21 37 L15 24 L27 24 Z" fill="#1A1816" stroke="#FAF7F2" stroke-width="1.5"/>
+    </g>
+  </g>
+
+  <!-- Text block -->
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  +  REGULATION</text>
+
+  <text x="84" y="256" class="serif" font-size="70" font-weight="800" fill="#1A1816">Consent</text>
+  <text x="84" y="336" class="serif" font-size="70" font-weight="800" fill="#BF4B1A">theater.</text>
+
+  <rect x="84" y="372" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="424" class="sans" font-size="21" fill="#7B746E">90% clicked yes. Almost nobody meant it.</text>
+  <text x="84" y="454" class="sans" font-size="21" fill="#7B746E">AI is about to repeat the mistake.</text>
+</svg>
