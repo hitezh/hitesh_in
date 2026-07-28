@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Two cards on the right: a faded dashed RENT card labelled metered and deprecating, and a solid orange OWN card labelled fixed and yours.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- rent vs own cards, right side -->
+  <g>
+    <!-- RENT: rented, metered, faded -->
+    <rect x="812" y="176" width="300" height="120" rx="10" fill="none" stroke="#C9BEB0" stroke-width="2.5" stroke-dasharray="7 7"/>
+    <text x="836" y="222" class="sans" font-size="26" font-weight="800" fill="#A79E95">RENT</text>
+    <text x="836" y="252" class="sans" font-size="16" fill="#B7AEA4">metered, per token</text>
+    <text x="836" y="276" class="sans" font-size="16" fill="#B7AEA4">deprecates on their clock</text>
+
+    <!-- OWN: fixed asset, solid orange -->
+    <rect x="812" y="330" width="300" height="120" rx="10" fill="#BF4B1A"/>
+    <text x="836" y="376" class="sans" font-size="26" font-weight="800" fill="#FAF7F2">OWN</text>
+    <text x="836" y="406" class="sans" font-size="16" fill="#F6E7DC">fixed version, yours</text>
+    <text x="836" y="430" class="sans" font-size="16" fill="#F6E7DC">fine-tune, run it anywhere</text>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  STRATEGY</text>
+
+  <text x="84" y="256" class="serif" font-size="58" font-weight="800" fill="#1A1816">Rent the model,</text>
+  <text x="84" y="322" class="serif" font-size="58" font-weight="800" fill="#BF4B1A">or own it?</text>
+
+  <rect x="84" y="356" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="406" class="sans" font-size="21" fill="#7B746E">Open weights make a few AI jobs worth owning</text>
+  <text x="84" y="436" class="sans" font-size="21" fill="#7B746E">outright. Most are still cheaper to rent.</text>
+</svg>
