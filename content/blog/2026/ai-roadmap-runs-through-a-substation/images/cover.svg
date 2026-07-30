@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A small AI chip at the top connected by a power line down to a large electrical transformer, the cable pinched in the middle to show a bottleneck.">
+  <defs>
+    <style>
+      .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+      .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- illustration, right side -->
+  <g transform="translate(955 315)">
+
+    <!-- chip / model node, top -->
+    <g>
+      <rect x="-42" y="-232" width="84" height="84" rx="10" fill="#BF4B1A"/>
+      <!-- chip pins -->
+      <g stroke="#BF4B1A" stroke-width="6" stroke-linecap="round">
+        <line x1="-58" y1="-212" x2="-42" y2="-212"/>
+        <line x1="-58" y1="-190" x2="-42" y2="-190"/>
+        <line x1="-58" y1="-168" x2="-42" y2="-168"/>
+        <line x1="42" y1="-212" x2="58" y2="-212"/>
+        <line x1="42" y1="-190" x2="58" y2="-190"/>
+        <line x1="42" y1="-168" x2="58" y2="-168"/>
+      </g>
+      <text x="0" y="-183" class="sans" font-size="17" font-weight="800" fill="#FAF7F2" text-anchor="middle">AI</text>
+    </g>
+
+    <!-- the constrained line from chip down to transformer, pinched in the middle -->
+    <path d="M 0 -148 C 0 -120, -40 -108, 0 -92 C 40 -76, 0 -64, 0 -36"
+          fill="none" stroke="#1A1816" stroke-width="7" stroke-linecap="round"/>
+    <!-- bottleneck marker -->
+    <circle cx="0" cy="-92" r="12" fill="#FAF7F2" stroke="#BF4B1A" stroke-width="5"/>
+
+    <!-- transformer / substation, bottom -->
+    <g>
+      <!-- bushings on top -->
+      <g fill="#7B746E">
+        <rect x="-36" y="-48" width="16" height="24" rx="3"/>
+        <rect x="20" y="-48" width="16" height="24" rx="3"/>
+      </g>
+      <rect x="-30" y="-56" width="60" height="10" rx="3" fill="#1A1816"/>
+      <!-- tank -->
+      <rect x="-72" y="-24" width="144" height="150" rx="10" fill="#1A1816"/>
+      <!-- cooling fins -->
+      <g stroke="#7B746E" stroke-width="5">
+        <line x1="-88" y1="6" x2="-72" y2="6"/>
+        <line x1="-88" y1="34" x2="-72" y2="34"/>
+        <line x1="-88" y1="62" x2="-72" y2="62"/>
+        <line x1="-88" y1="90" x2="-72" y2="90"/>
+        <line x1="72" y1="6" x2="88" y2="6"/>
+        <line x1="72" y1="34" x2="88" y2="34"/>
+        <line x1="72" y1="62" x2="88" y2="62"/>
+        <line x1="72" y1="90" x2="88" y2="90"/>
+      </g>
+      <!-- lightning mark -->
+      <path d="M 8 12 L -14 60 L 2 60 L -8 100 L 22 46 L 4 46 Z" fill="#BF4B1A"/>
+    </g>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  INFRASTRUCTURE</text>
+
+  <text x="84" y="250" class="serif" font-size="55" font-weight="800" fill="#1A1816">Your AI roadmap</text>
+  <text x="84" y="316" class="serif" font-size="55" font-weight="800" fill="#1A1816">now runs through</text>
+  <text x="84" y="382" class="serif" font-size="55" font-weight="800" fill="#BF4B1A">a substation.</text>
+
+  <rect x="84" y="416" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="466" class="sans" font-size="21" fill="#7B746E">Chips were never the hard part. The constraint</text>
+  <text x="84" y="496" class="sans" font-size="21" fill="#7B746E">moved to power, and capital can't rush it.</text>
+</svg>
