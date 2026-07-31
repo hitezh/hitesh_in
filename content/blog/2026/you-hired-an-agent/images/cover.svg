@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An editorial illustration: a staff ID badge issued to an AI agent. Its objective field is filled in with 'grow the business, now', but the fields for who it reports to, who is accountable, and its skin in the game are left blank.">
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans  { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- card -->
+  <rect x="0" y="0" width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- left: text block -->
+  <text x="92" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">ON&#160;&#160;AGENTIC&#160;&#160;AI</text>
+
+  <text x="88" y="262" class="serif" font-size="80" fill="#1A1816">You hired an</text>
+  <text x="88" y="346" class="serif" font-size="80" fill="#1A1816">agent<tspan fill="#BF4B1A">.</tspan></text>
+
+  <rect x="92" y="380" width="68" height="5" rx="2.5" fill="#BF4B1A"/>
+
+  <text x="92" y="434" class="sans" font-size="22" fill="#7B746E">You just forgot to give it anything</text>
+  <text x="92" y="466" class="sans" font-size="22" fill="#7B746E">to lose.</text>
+
+  <!-- right: staff badge -->
+  <!-- lanyard clip -->
+  <rect x="906" y="96" width="48" height="20" rx="5" fill="none" stroke="#B5AFA9" stroke-width="3"/>
+  <line x1="930" y1="116" x2="930" y2="140" stroke="#B5AFA9" stroke-width="3"/>
+
+  <!-- card body -->
+  <rect x="770" y="140" width="320" height="392" rx="16" fill="#FFFFFF" stroke="#E8DDD0" stroke-width="2"/>
+  <!-- header band -->
+  <rect x="770" y="140" width="320" height="64" rx="16" fill="#1A1816"/>
+  <rect x="770" y="176" width="320" height="28" fill="#1A1816"/>
+  <text x="796" y="180" class="sans" font-size="17" letter-spacing="3" fill="#FAF7F2">STAFF&#160;&#160;BADGE</text>
+
+  <!-- avatar with robot glyph -->
+  <circle cx="830" cy="266" r="34" fill="#FAF7F2" stroke="#E8DDD0" stroke-width="2"/>
+  <rect x="814" y="252" width="32" height="24" rx="6" fill="none" stroke="#7B746E" stroke-width="3"/>
+  <circle cx="824" cy="264" r="3.2" fill="#7B746E"/>
+  <circle cx="836" cy="264" r="3.2" fill="#7B746E"/>
+  <line x1="830" y1="245" x2="830" y2="252" stroke="#7B746E" stroke-width="3"/>
+
+  <text x="882" y="258" class="sans" font-size="15" letter-spacing="2" fill="#B5AFA9">NAME</text>
+  <text x="882" y="284" class="serif" font-size="26" fill="#1A1816">Agent</text>
+
+  <!-- fields -->
+  <text x="796" y="344" class="sans" font-size="14" letter-spacing="2" fill="#B5AFA9">OBJECTIVE</text>
+  <text x="796" y="368" class="sans" font-size="18" fill="#BF4B1A">grow the business, now</text>
+
+  <text x="796" y="410" class="sans" font-size="14" letter-spacing="2" fill="#B5AFA9">ACCOUNTABLE TO</text>
+  <line x1="796" y1="428" x2="1064" y2="428" stroke="#E0D6C8" stroke-width="2" stroke-dasharray="4 7"/>
+
+  <text x="796" y="466" class="sans" font-size="14" letter-spacing="2" fill="#B5AFA9">SKIN IN THE GAME</text>
+  <line x1="796" y1="484" x2="1064" y2="484" stroke="#E0D6C8" stroke-width="2" stroke-dasharray="4 7"/>
+</svg>
