@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A token bill going down while a hidden bill labelled engineering, evals and trust rises to meet it, with an arrow showing the cost moving across rather than disappearing.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- two bars: visible token cost falling, hidden cost rising -->
+  <g>
+    <!-- visible / token bill: short bar -->
+    <rect x="812" y="360" width="120" height="120" rx="8" fill="#EADFD1" stroke="#E0D3C2" stroke-width="1.5"/>
+    <text x="872" y="508" class="sans" font-size="15" font-weight="700" fill="#7B746E" text-anchor="middle">TOKEN BILL</text>
+    <text x="872" y="527" class="sans" font-size="12.5" letter-spacing="1" fill="#B7AEA4" text-anchor="middle">MEASURED</text>
+
+    <!-- hidden cost: tall bar -->
+    <rect x="992" y="150" width="120" height="330" rx="8" fill="#BF4B1A"/>
+    <text x="1052" y="508" class="sans" font-size="15" font-weight="800" fill="#5C554F" text-anchor="middle">HIDDEN COST</text>
+    <text x="1052" y="527" class="sans" font-size="12.5" letter-spacing="1" fill="#A79E95" text-anchor="middle">UNMEASURED</text>
+    <text x="1052" y="300" class="sans" font-size="15" font-weight="700" fill="#FAF7F2" text-anchor="middle">ENG TIME</text>
+    <text x="1052" y="330" class="sans" font-size="15" font-weight="700" fill="#FAF7F2" text-anchor="middle">EVALS</text>
+    <text x="1052" y="360" class="sans" font-size="15" font-weight="700" fill="#FAF7F2" text-anchor="middle">TRUST</text>
+
+    <!-- arrow: cost moves across, not away -->
+    <g stroke="#BF4B1A" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M872 336 C 872 250, 992 250, 992 214"/>
+      <path d="M978 236 L994 206 L1008 232"/>
+    </g>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  STRATEGY</text>
+
+  <text x="84" y="256" class="serif" font-size="58" font-weight="800" fill="#1A1816">Cheaper tokens,</text>
+  <text x="84" y="322" class="serif" font-size="58" font-weight="800" fill="#BF4B1A">bigger bill.</text>
+
+  <rect x="84" y="356" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="406" class="sans" font-size="21" fill="#7B746E">An efficiency layer rarely deletes cost. It moves</text>
+  <text x="84" y="436" class="sans" font-size="21" fill="#7B746E">it to a budget nobody thought to measure.</text>
+</svg>
