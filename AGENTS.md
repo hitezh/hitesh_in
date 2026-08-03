@@ -39,7 +39,8 @@ Lead generation is a consequence of demonstrating sound judgment, not the primar
 4. Put post-specific images in `content/blog/YYYY/<slug>/images/`.
 5. Draft using the front matter and writing guidance below.
 6. Preview drafts with `hugo server -D` and inspect the home-page card and individual post.
-7. Before publishing, remove `draft: true` or change it to `draft: false`, verify links and images, and run `hugo --minify`.
+7. Ask Hitesh for a review pass before publishing. A green build is not the finish line. Send the draft or the deploy preview and ask specifically for a read on cadence and voice, not only on facts. Expect notes, and expect more than one round; prose feedback is normal here, not a sign something went wrong.
+8. Before publishing, remove `draft: true` or change it to `draft: false`, verify links and images, and run `hugo --minify`.
 
 `hugo new blog/YYYY/<slug>/index.md` may be used to create the initial file, but the generated front matter must be completed before publication.
 
@@ -152,8 +153,8 @@ Engagement here comes from substance and specificity, not tricks. The anti-AI ru
 - **Front-load, don't bury.** Put the point up top. Use the body to earn it, not to delay it.
 - **Make headings carry the argument.** A reader skimming only the `##` headings should still get the through-line.
 - **Trade abstraction for specifics.** One real example, named company, dated event, or hard number does more work than a paragraph of generalities.
-- **Keep momentum.** Short opening paragraph. Vary sentence length. Cut any sentence that doesn't advance the idea — tightening is the highest-leverage edit.
-- **Close with something to chew on.** An implication, a prediction you'd stake, a question you actually want answered, or what you'd do differently. Not a summary.
+- **Keep momentum.** Short opening paragraph. Vary sentence length. Cut any sentence that doesn't advance the idea. Tightening is the highest-leverage edit right up to the point where the prose stops breathing, and then it inverts. See "Don't over-compress" below.
+- **Close with something to chew on.** An implication, a prediction you'd stake, a question you actually want answered, or what you'd do differently. Not a summary. This is about how the *post* ends. Individual paragraphs mostly should not do it.
 
 ### Flowy, conversational, link-dense
 
@@ -168,6 +169,25 @@ For technology and industry analysis, lean into a flowing, link-dense register, 
 
 This is a register, not a costume. Keep the first-person, experience-led core: ground the analysis in what you have seen, advised on, or built, and say "I" where you have a view. Borrow the flow and the links from commentary writing; do not slide into anonymous third-person punditry.
 
+### Don't over-compress
+
+Nearly every rule in this guide subtracts something. Follow them hard enough and the prose lands in a different failure mode: clipped, uniform, oddly translated-sounding, with no air in it. It reads as authority without warmth. Signs of having gone too far:
+
+- **Uniform sentence length.** Four sentences in a row at roughly thirty words each is monotonous even when every one of them is good. Break the run with a short one. "That matters." "Someone always pays." A single short sentence resets the reader's ear.
+- **Peak fatigue.** If every paragraph ends on a memorable line, none of them land. Essays should have peaks, not a plateau. Make roughly half the paragraph endings deliberately matter-of-fact so the real ones carry weight.
+- **Literary diction where a plain word exists.** Use the word you would say out loud.
+- **Too finished.** Leave 10 to 20 percent of the prose conversational rather than crafted. Not sloppy, just unpolished. Readers bond with authenticity rather than perfection, and one plain sentence buys more trust than an elegant one.
+
+Compressed on the left, natural on the right:
+
+| Too compressed | Better |
+| --- | --- |
+| The router grades difficulty from the prompt. | The router tries to estimate how demanding a request is by looking only at the prompt. |
+| Routing rewards moving. Caching rewards staying put. You cannot have both. | Routing wants requests to move; caching pays out when they stay. The two work against each other. |
+| A machine for turning a legible cost into an illegible one. | The bill fell. The cost did not. It moved into engineering time and testing effort. |
+| The vendors have already shown their hand. | The pricing already tells you which one the vendors expect you to use. |
+| It is also fairly undifferentiated work. | It's commodity engineering. |
+
 ### Style details to preserve
 
 - Keep paragraphs compact—usually one to four sentences.
@@ -176,6 +196,7 @@ This is a register, not a costume. Keep the first-person, experience-led core: g
 - Use bold sparingly for the lead phrase in a list and italics for a brief aside or measured emphasis.
 - Prefer concrete nouns and verbs over abstractions: say what a bank, founder, developer, or reader actually does.
 - Explain acronyms on first use unless the intended audience certainly knows them.
+- Use American spelling: "optimization", "behavior", "analyze". The archive is split on this, but the majority of posts and Hitesh's own habit are American.
 - Use examples relevant to work, technology, entrepreneurship, banking, family, or everyday Indian life when they arise naturally.
 - Link to sources for statistics, laws, standards, quotations, and claims that may have changed. For time-sensitive topics, verify facts immediately before publishing.
 - Preserve intentional personality, but fix spelling, punctuation, broken links, and unclear sentences. The voice comes from the perspective and rhythm, not from errors.
@@ -194,7 +215,7 @@ Sentence reflexes:
 - **Anaphora and stacked tricolons** — repeating the same sentence opener, or rule-of-three after rule-of-three ("Products solve problems; platforms create worlds…"). One tricolon can be elegant; three in a row is a pattern.
 - **Tacked-on "-ing" analysis** — "…, highlighting its importance", "…, reflecting broader trends", "…, underscoring its role." Delete these; they assert significance instead of earning it.
 - **False ranges** — "from innovation to cultural transformation." Only use "from X to Y" when there's a real spectrum with a middle.
-- **Fragments for drama** — "He published this. Openly. In a book." Write the sentence.
+- **Fragments for drama** — "He published this. Openly. In a book." Don't stack fragments to build a reveal. A single short sentence dropped among long ones is a different thing, and often exactly what a dense paragraph needs; the tell is two or three in a row doing theatre.
 
 Tone reflexes:
 
@@ -235,6 +256,7 @@ Structure and formatting:
 - **Use a metaphor once** if it clarifies, then move on.
 - **Link real sources** for stats, laws, standards, and claims, and name names. Verify anything time-sensitive right before publishing.
 - **End on the implication, the next question, or what you'd do differently** — never a recap.
+- **Drop into plain speech every so often** — "That's just moving the problem." "Someone still pays." "The market will solve this anyway." Sentences that sound said rather than written are what make the polished ones credible.
 - **Let a small idea stay a small post.** Don't force every piece into a long-form template.
 
 ## Internal links and calls to action
@@ -260,6 +282,8 @@ Before considering a post complete, confirm:
 - [ ] The `date` is today or earlier, never in the future, or Hugo will drop the post from the deployed site.
 - [ ] Images exist in the page bundle, render correctly, have useful alt text, and include credit where needed. For an SVG cover, commit only `cover.svg`; CI generates the `cover.png` social raster (run `node .github/scripts/rasterize-cover.mjs` to preview it locally).
 - [ ] The post has been proofread aloud for Hitesh's conversational rhythm.
+- [ ] Checked against "Don't over-compress": read three consecutive paragraphs and confirm the sentence lengths genuinely vary, that at least half the paragraph endings are flat rather than quotable, and that a few sentences sound spoken rather than written.
+- [ ] A review pass has been requested from Hitesh and the resulting notes are addressed.
 - [ ] Scanned against "Sound like Hitesh, not an AI" — no negative parallelism, self-answered questions, "Here's the…" suspense, "-ing" analysis tails, em-dash overuse, bold-lead bullets, or the AI house vocab; any single trope that remains is deliberate and isolated.
 - [ ] Straight quotes and plain ASCII throughout (no smart quotes, no `→` arrows).
 
