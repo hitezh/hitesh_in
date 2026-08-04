@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A build-versus-buy column: the dividing line has moved up so more of the buy region becomes forkable, with a governance cost attached to the fork.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- right-side build/buy column -->
+  <g>
+    <!-- BUY region (shrunk) -->
+    <rect x="812" y="150" width="300" height="96" rx="8" fill="#EADFD1" stroke="#E0D3C2" stroke-width="1.5"/>
+    <text x="962" y="192" class="sans" font-size="22" font-weight="800" fill="#5C554F" text-anchor="middle">BUY</text>
+    <text x="962" y="216" class="sans" font-size="12.5" letter-spacing="1" fill="#A79E95" text-anchor="middle">RENT THE MAINTENANCE</text>
+
+    <!-- FORK region (grown) -->
+    <rect x="812" y="258" width="300" height="222" rx="8" fill="#BF4B1A"/>
+    <text x="962" y="316" class="sans" font-size="22" font-weight="800" fill="#FAF7F2" text-anchor="middle">FORK</text>
+    <text x="962" y="340" class="sans" font-size="12.5" letter-spacing="1" fill="#F3D9CB" text-anchor="middle">AGENT-MAINTAINED</text>
+
+    <!-- governance-cost pill inside the fork region -->
+    <rect x="852" y="392" width="220" height="52" rx="26" fill="none" stroke="#F3D9CB" stroke-width="2" stroke-dasharray="5 6"/>
+    <text x="962" y="424" class="sans" font-size="17" font-weight="700" fill="#F8E7DC" text-anchor="middle">+ cost to govern</text>
+
+    <!-- old dividing line (dashed) and the shift up -->
+    <line x1="800" y1="360" x2="1124" y2="360" stroke="#C9BEB0" stroke-width="2.5" stroke-dasharray="7 7"/>
+    <text x="1124" y="382" class="sans" font-size="13" letter-spacing="1" fill="#B7AEA4" text-anchor="end">LINE WAS HERE</text>
+
+    <!-- upward arrow: the line moved up, more becomes forkable -->
+    <g stroke="#BF4B1A" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="770" y1="356" x2="770" y2="262"/>
+      <path d="M756 284 L770 258 L784 284"/>
+    </g>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">BUILD  VS  BUY</text>
+
+  <text x="84" y="252" class="serif" font-size="58" font-weight="800" fill="#1A1816">Cheap to fork,</text>
+  <text x="84" y="318" class="serif" font-size="58" font-weight="800" fill="#BF4B1A">costly to keep.</text>
+
+  <rect x="84" y="352" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="402" class="sans" font-size="21" fill="#7B746E">AI cheapened maintenance, so the line moves.</text>
+  <text x="84" y="432" class="sans" font-size="21" fill="#7B746E">Own what's worth governing. Rent the rest.</text>
+</svg>
