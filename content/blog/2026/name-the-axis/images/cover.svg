@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A scatter plot of options on cost and quality axes. Several points are faded grey and labelled dominated. A curve of orange points forms the Pareto frontier, where no option is better on both axes at once.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- plot area on the right -->
+  <g>
+    <!-- axes -->
+    <g stroke="#C9BEB0" stroke-width="2.5" fill="none" stroke-linecap="round">
+      <path d="M770 150 L770 510 L1130 510"/>
+      <path d="M770 150 L762 168 M770 150 L778 168"/>
+      <path d="M1130 510 L1112 502 M1130 510 L1112 518"/>
+    </g>
+    <text x="748" y="330" class="sans" font-size="16" letter-spacing="2" fill="#9A9088" text-anchor="middle" transform="rotate(-90 748 330)">QUALITY</text>
+    <text x="950" y="540" class="sans" font-size="16" letter-spacing="2" fill="#9A9088" text-anchor="middle">COST</text>
+
+    <!-- dominated points (faded) -->
+    <g fill="#CBC0B2">
+      <circle cx="905" cy="455" r="9"/>
+      <circle cx="965" cy="430" r="9"/>
+      <circle cx="960" cy="392" r="9"/>
+      <circle cx="1035" cy="368" r="9"/>
+      <circle cx="885" cy="440" r="9"/>
+      <circle cx="1050" cy="322" r="9"/>
+      <circle cx="925" cy="378" r="9"/>
+      <circle cx="1000" cy="430" r="9"/>
+    </g>
+    <text x="1000" y="478" class="sans" font-size="15.5" font-weight="700" letter-spacing="1" fill="#B7AEA4" text-anchor="middle">DOMINATED</text>
+
+    <!-- frontier curve -->
+    <path d="M800 470 C 855 430, 905 388, 950 335 C 1000 278, 1055 232, 1092 188" fill="none" stroke="#BF4B1A" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- frontier points -->
+    <g fill="#BF4B1A">
+      <circle cx="800" cy="470" r="11"/>
+      <circle cx="870" cy="410" r="11"/>
+      <circle cx="950" cy="335" r="11"/>
+      <circle cx="1030" cy="262" r="11"/>
+      <circle cx="1092" cy="188" r="11"/>
+    </g>
+    <text x="1058" y="150" class="sans" font-size="16" font-weight="800" letter-spacing="1" fill="#BF4B1A" text-anchor="middle">THE FRONTIER</text>
+  </g>
+
+  <!-- left text column -->
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">DECISION MAKING</text>
+
+  <text x="84" y="242" class="serif" font-size="52" font-weight="800" fill="#1A1816">Name the axis</text>
+  <text x="84" y="304" class="serif" font-size="52" font-weight="800" fill="#1A1816">you're willing</text>
+  <text x="84" y="366" class="serif" font-size="52" font-weight="800" fill="#BF4B1A">to lose on.</text>
+
+  <rect x="84" y="402" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="452" class="sans" font-size="21" fill="#7B746E">On the frontier there is no best option,</text>
+  <text x="84" y="482" class="sans" font-size="21" fill="#7B746E">only the trade you choose to make.</text>
+</svg>
