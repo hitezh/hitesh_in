@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An editorial diagram: two datastores side by side, each holding the same rows of data, with a jagged crack running down the gap between them and a single unit slipping through the seam. The headline reads: count your systems.">
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans  { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- card -->
+  <rect x="0" y="0" width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- left: text block -->
+  <text x="92" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">ON&#160;&#160;SOFTWARE&#160;&#160;ARCHITECTURE</text>
+
+  <text x="88" y="262" class="serif" font-size="76" fill="#1A1816">Count your</text>
+  <text x="88" y="342" class="serif" font-size="76" fill="#1A1816">systems<tspan fill="#BF4B1A">.</tspan></text>
+
+  <rect x="92" y="376" width="68" height="5" rx="2.5" fill="#BF4B1A"/>
+
+  <text x="92" y="432" class="sans" font-size="22" fill="#7B746E">Every system you add is a seam,</text>
+  <text x="92" y="464" class="sans" font-size="22" fill="#7B746E">and the seam is where correctness breaks.</text>
+
+  <!-- right: two datastores holding the same fact, split by a seam -->
+
+  <!-- "the seam" label + leader -->
+  <text x="905" y="176" class="sans" font-size="18" letter-spacing="2" fill="#BF4B1A" text-anchor="middle">THE&#160;&#160;SEAM</text>
+  <line x1="905" y1="188" x2="905" y2="214" stroke="#BF4B1A" stroke-width="2"/>
+
+  <!-- left datastore -->
+  <rect x="724" y="220" width="162" height="216" rx="10" fill="#BF4B1A" fill-opacity="0.05" stroke="#7B746E" stroke-width="2"/>
+  <g stroke="#C9BEB0" stroke-width="2">
+    <line x1="748" y1="266" x2="862" y2="266"/>
+    <line x1="748" y1="302" x2="862" y2="302"/>
+    <line x1="748" y1="338" x2="862" y2="338"/>
+    <line x1="748" y1="374" x2="862" y2="374"/>
+  </g>
+  <g fill="#7B746E">
+    <rect x="748" y="256" width="20" height="20" rx="3"/>
+    <rect x="748" y="292" width="20" height="20" rx="3"/>
+    <rect x="748" y="328" width="20" height="20" rx="3"/>
+    <rect x="748" y="364" width="20" height="20" rx="3"/>
+  </g>
+  <text x="805" y="418" class="sans" font-size="17" fill="#7B746E" text-anchor="middle">reservations</text>
+
+  <!-- right datastore -->
+  <rect x="924" y="220" width="162" height="216" rx="10" fill="#BF4B1A" fill-opacity="0.05" stroke="#7B746E" stroke-width="2"/>
+  <g stroke="#C9BEB0" stroke-width="2">
+    <line x1="948" y1="266" x2="1062" y2="266"/>
+    <line x1="948" y1="302" x2="1062" y2="302"/>
+    <line x1="948" y1="338" x2="1062" y2="338"/>
+    <line x1="948" y1="374" x2="1062" y2="374"/>
+  </g>
+  <g fill="#7B746E">
+    <rect x="1042" y="256" width="20" height="20" rx="3"/>
+    <rect x="1042" y="292" width="20" height="20" rx="3"/>
+    <rect x="1042" y="328" width="20" height="20" rx="3"/>
+    <rect x="1042" y="364" width="20" height="20" rx="3"/>
+  </g>
+  <text x="1005" y="418" class="sans" font-size="17" fill="#7B746E" text-anchor="middle">ledger</text>
+
+  <!-- the jagged crack running down the gap -->
+  <path d="M905,214 L896,252 L916,288 L894,326 L914,364 L900,402 L907,438"
+        fill="none" stroke="#BF4B1A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- a unit slipping through the seam -->
+  <rect x="893" y="300" width="24" height="24" rx="4" fill="#BF4B1A" transform="rotate(18 905 312)"/>
+  <rect x="896" y="360" width="18" height="18" rx="3" fill="#BF4B1A" fill-opacity="0.45" transform="rotate(24 905 369)"/>
+
+  <!-- caption under diagram -->
+  <text x="905" y="474" class="sans" font-size="17" fill="#1A1816" text-anchor="middle">One fact, two places. It will disagree with itself.</text>
+</svg>
