@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An editorial diagram contrasting two paths to competence in a new domain. A long muted bar labelled before reaches the competent line slowly; a short accent bar labelled with AI reaches it much sooner. The gap between the two endpoints is labelled time you get back.">
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans  { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- card -->
+  <rect x="0" y="0" width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- left: text block -->
+  <text x="92" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">ON&#160;&#160;AI&#160;&#160;STRATEGY</text>
+
+  <text x="88" y="258" class="serif" font-size="72" fill="#1A1816">How fast your</text>
+  <text x="88" y="338" class="serif" font-size="72" fill="#1A1816">company learns<tspan fill="#BF4B1A">.</tspan></text>
+
+  <rect x="92" y="372" width="68" height="5" rx="2.5" fill="#BF4B1A"/>
+
+  <text x="92" y="428" class="sans" font-size="22" fill="#7B746E">Not what AI produces. How quickly your</text>
+  <text x="92" y="460" class="sans" font-size="22" fill="#7B746E">people reach competence in a new domain.</text>
+
+  <!-- right: two ramps to a shared competent line -->
+  <!-- start line -->
+  <line x1="712" y1="200" x2="712" y2="470" stroke="#E8DDD0" stroke-width="2"/>
+  <text x="712" y="196" class="sans" font-size="15" fill="#B5AFA9">new domain</text>
+
+  <!-- competent line (right edge target) -->
+  <line x1="1120" y1="200" x2="1120" y2="470" stroke="#1A1816" stroke-width="2" stroke-dasharray="4 5"/>
+  <text x="1120" y="196" class="sans" font-size="15" fill="#1A1816" text-anchor="end">competent</text>
+
+  <!-- before: long muted ramp -->
+  <rect x="712" y="278" width="408" height="26" rx="13" fill="#7B746E" fill-opacity="0.22"/>
+  <circle cx="1120" cy="291" r="8" fill="#7B746E"/>
+  <text x="724" y="266" class="sans" font-size="18" fill="#7B746E">before</text>
+
+  <!-- with AI: short accent ramp -->
+  <rect x="712" y="368" width="150" height="26" rx="13" fill="#BF4B1A" fill-opacity="0.85"/>
+  <circle cx="862" cy="381" r="8" fill="#BF4B1A"/>
+  <text x="724" y="356" class="sans" font-size="18" fill="#BF4B1A">with AI</text>
+
+  <!-- time-you-get-back bracket between the two endpoints -->
+  <line x1="862" y1="410" x2="862" y2="440" stroke="#B5AFA9" stroke-width="2"/>
+  <line x1="1120" y1="410" x2="1120" y2="440" stroke="#B5AFA9" stroke-width="2"/>
+  <line x1="862" y1="440" x2="1120" y2="440" stroke="#B5AFA9" stroke-width="2"/>
+  <text x="991" y="464" class="sans" font-size="17" fill="#1A1816" text-anchor="middle">time you get back</text>
+</svg>
