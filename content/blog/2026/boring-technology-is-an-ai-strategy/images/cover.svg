@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A stack of four technology layers: three muted, boring layers labeled database, queue and deploy, and one highlighted layer labeled AI, your one bet. Three innovation tokens sit above the stack, two spent, one reserved for AI.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- innovation tokens: three coins, one is the accent AI bet -->
+  <g>
+    <text x="812" y="132" class="sans" font-size="15" letter-spacing="3" fill="#A79E95" text-anchor="middle">INNOVATION TOKENS</text>
+    <circle cx="872" cy="176" r="24" fill="none" stroke="#C9BEB0" stroke-width="2" stroke-dasharray="5 5"/>
+    <circle cx="962" cy="176" r="24" fill="none" stroke="#C9BEB0" stroke-width="2" stroke-dasharray="5 5"/>
+    <circle cx="1052" cy="176" r="24" fill="#BF4B1A"/>
+    <text x="1052" y="182" class="sans" font-size="17" font-weight="800" fill="#FAF7F2" text-anchor="middle">AI</text>
+  </g>
+
+  <!-- the stack: three boring layers, one AI bet -->
+  <g>
+    <rect x="812" y="238" width="300" height="60" rx="8" fill="#BF4B1A"/>
+    <text x="962" y="270" class="sans" font-size="20" font-weight="800" fill="#FAF7F2" text-anchor="middle">AI  ·  YOUR ONE BET</text>
+    <text x="962" y="289" class="sans" font-size="11.5" letter-spacing="1" fill="#F3D9CB" text-anchor="middle">UNKNOWN FAILURE MODES</text>
+
+    <rect x="812" y="312" width="300" height="56" rx="8" fill="#EADFD1" stroke="#E0D3C2" stroke-width="1.5"/>
+    <text x="962" y="346" class="sans" font-size="19" font-weight="700" fill="#5C554F" text-anchor="middle">DATABASE</text>
+
+    <rect x="812" y="382" width="300" height="56" rx="8" fill="#EADFD1" stroke="#E0D3C2" stroke-width="1.5"/>
+    <text x="962" y="416" class="sans" font-size="19" font-weight="700" fill="#5C554F" text-anchor="middle">QUEUE</text>
+
+    <rect x="812" y="452" width="300" height="56" rx="8" fill="#EADFD1" stroke="#E0D3C2" stroke-width="1.5"/>
+    <text x="962" y="486" class="sans" font-size="19" font-weight="700" fill="#5C554F" text-anchor="middle">DEPLOY</text>
+
+    <text x="1128" y="368" class="sans" font-size="12" letter-spacing="2" fill="#A79E95" text-anchor="middle" transform="rotate(90 1128 368)">BORING ON PURPOSE</text>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  STRATEGY</text>
+
+  <text x="84" y="256" class="serif" font-size="56" font-weight="800" fill="#1A1816">Boring technology</text>
+  <text x="84" y="320" class="serif" font-size="56" font-weight="800" fill="#BF4B1A">is an AI strategy.</text>
+
+  <rect x="84" y="354" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="404" class="sans" font-size="21" fill="#7B746E">You get a few innovation tokens. Spend one</text>
+  <text x="84" y="434" class="sans" font-size="21" fill="#7B746E">on the AI bet that matters, and keep the rest</text>
+  <text x="84" y="464" class="sans" font-size="21" fill="#7B746E">of the stack deliberately, unfashionably dull.</text>
+</svg>
