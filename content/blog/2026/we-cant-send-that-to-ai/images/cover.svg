@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Two stacked gates. The top gate, labeled encryption, has an open padlock and reads 'the wall the news is about'. The bottom gate, labeled governance, has a closed padlock highlighted in accent color and reads 'the gate that was actually shut'. Headline: the excuse for not using AI is about to expire.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- ===== left column: headline ===== -->
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  ·  DATA  ·  PRIVACY</text>
+
+  <text x="84" y="252" class="serif" font-size="52" font-weight="800" fill="#1A1816">The excuse for</text>
+  <text x="84" y="310" class="serif" font-size="52" font-weight="800" fill="#1A1816">not using AI</text>
+  <text x="84" y="368" class="serif" font-size="52" font-weight="800" fill="#BF4B1A">is about to expire.</text>
+
+  <rect x="84" y="400" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+
+  <text x="84" y="450" class="sans" font-size="20" fill="#7B746E">The wall was never cryptography. It was</text>
+  <text x="84" y="480" class="sans" font-size="20" fill="#7B746E">knowing what data you hold, and what</text>
+  <text x="84" y="510" class="sans" font-size="20" fill="#7B746E">you're actually allowed to do with it.</text>
+
+  <!-- ===== right column: two gates ===== -->
+  <!-- top gate: encryption, open lock, muted -->
+  <g>
+    <rect x="748" y="150" width="372" height="150" rx="12" fill="#EFE7DB" stroke="#E0D3C2" stroke-width="1.5"/>
+    <!-- open padlock -->
+    <path d="M799 214 V 200 A 18 18 0 0 1 835 200 V 214" transform="rotate(-32 799 214)" fill="none" stroke="#A79E95" stroke-width="6" stroke-linecap="round"/>
+    <rect x="792" y="212" width="52" height="44" rx="9" fill="#D9CDBD"/>
+    <circle cx="818" cy="232" r="5" fill="#EFE7DB"/>
+    <rect x="815" y="232" width="6" height="13" rx="3" fill="#EFE7DB"/>
+    <text x="884" y="205" class="sans" font-size="24" font-weight="800" fill="#5C554F">ENCRYPTION</text>
+    <text x="884" y="236" class="sans" font-size="15" fill="#8A827B">the wall the news is about,</text>
+    <text x="884" y="258" class="sans" font-size="15" fill="#8A827B">now falling away</text>
+    <text x="884" y="284" class="sans" font-size="12" letter-spacing="2" fill="#B7735A">SOLVED BY CRYPTOGRAPHY</text>
+  </g>
+
+  <!-- bottom gate: governance, closed lock, accent -->
+  <g>
+    <rect x="748" y="330" width="372" height="150" rx="12" fill="#FBEEE7" stroke="#BF4B1A" stroke-width="2.5"/>
+    <!-- closed padlock -->
+    <path d="M792 396 V 380 A 20 20 0 0 1 832 380 V 396" fill="none" stroke="#BF4B1A" stroke-width="6" stroke-linecap="round"/>
+    <rect x="786" y="394" width="52" height="44" rx="9" fill="#BF4B1A"/>
+    <circle cx="812" cy="414" r="5" fill="#FBEEE7"/>
+    <rect x="809" y="414" width="6" height="13" rx="3" fill="#FBEEE7"/>
+    <text x="878" y="385" class="sans" font-size="24" font-weight="800" fill="#1A1816">GOVERNANCE</text>
+    <text x="878" y="416" class="sans" font-size="15" fill="#6B635C">the gate that was</text>
+    <text x="878" y="438" class="sans" font-size="15" fill="#6B635C">actually shut all along</text>
+    <text x="878" y="464" class="sans" font-size="12" letter-spacing="2" fill="#BF4B1A" font-weight="700">STILL YOUR PROBLEM</text>
+  </g>
+</svg>
