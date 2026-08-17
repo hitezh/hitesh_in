@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A price tag showing a struck-through list price and a much lower gray-market price beneath it, with the gap between them labelled subsidy.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- price tag, right side -->
+  <g transform="translate(880 150)">
+    <!-- tag body -->
+    <path d="M40 0 H236 A16 16 0 0 1 252 16 V300 A16 16 0 0 1 236 316 H40 A16 16 0 0 1 26 308 L-2 168 A16 16 0 0 1 -2 148 L26 8 A16 16 0 0 1 40 0 Z" fill="#1A1816"/>
+    <!-- tag hole -->
+    <circle cx="34" cy="158" r="14" fill="#FAF7F2"/>
+    <circle cx="34" cy="158" r="5" fill="#1A1816"/>
+
+    <!-- list price, struck through -->
+    <text x="150" y="96" class="serif" font-size="46" font-weight="800" fill="#7B746E" text-anchor="middle">$25</text>
+    <line x1="86" y1="82" x2="214" y2="82" stroke="#BF4B1A" stroke-width="4" stroke-linecap="round"/>
+    <text x="150" y="128" class="sans" font-size="14" letter-spacing="2" fill="#B7AEA4" text-anchor="middle">LIST</text>
+
+    <!-- gray-market price -->
+    <text x="150" y="228" class="serif" font-size="72" font-weight="800" fill="#FAF7F2" text-anchor="middle">$11</text>
+    <text x="150" y="262" class="sans" font-size="14" letter-spacing="2" fill="#BF4B1A" text-anchor="middle">GRAY MARKET</text>
+  </g>
+
+  <!-- the gap, labelled -->
+  <g transform="translate(1148 246)">
+    <line x1="0" y1="-58" x2="0" y2="58" stroke="#BF4B1A" stroke-width="3"/>
+    <line x1="-8" y1="-58" x2="8" y2="-58" stroke="#BF4B1A" stroke-width="3"/>
+    <line x1="-8" y1="58" x2="8" y2="58" stroke="#BF4B1A" stroke-width="3"/>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  STRATEGY</text>
+
+  <text x="84" y="262" class="serif" font-size="55" font-weight="800" fill="#1A1816">The gray market</text>
+  <text x="84" y="328" class="serif" font-size="55" font-weight="800" fill="#1A1816">knows what AI</text>
+  <text x="84" y="394" class="serif" font-size="55" font-weight="800" fill="#BF4B1A">really costs.</text>
+
+  <rect x="84" y="428" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="478" class="sans" font-size="21" fill="#7B746E">A discount market is price discovery. The gap</text>
+  <text x="84" y="508" class="sans" font-size="21" fill="#7B746E">it quotes is the subsidy someone else is paying.</text>
+</svg>
