@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A single pool of memory wafers being split: a thick arrow sends most capacity to AI and HBM, a thin arrow leaves a trickle for laptops, servers and cars, whose price rises 500 percent.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- source: one pool of wafer capacity -->
+  <g>
+    <rect x="835" y="120" width="230" height="74" rx="10" fill="#EADFD1" stroke="#E0D3C2" stroke-width="1.5"/>
+    <text x="950" y="155" class="sans" font-size="17" font-weight="800" fill="#5C554F" text-anchor="middle">MEMORY WAFERS</text>
+    <text x="950" y="177" class="sans" font-size="12.5" letter-spacing="1" fill="#B7AEA4" text-anchor="middle">ONE SHARED SUPPLY</text>
+  </g>
+
+  <!-- thick arrow: most capacity to AI -->
+  <g stroke="#BF4B1A" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M905 198 C 875 250, 835 250, 820 300" stroke-width="18"/>
+    <path d="M800 286 L818 316 L840 296" stroke-width="18"/>
+  </g>
+
+  <!-- thin arrow: trickle to everyone else -->
+  <g stroke="#C4B7A6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M995 198 C 1020 250, 1055 250, 1062 300" stroke-width="4"/>
+    <path d="M1052 288 L1063 314 L1075 292" stroke-width="4"/>
+  </g>
+
+  <!-- destination: AI / HBM (big) -->
+  <g>
+    <rect x="720" y="330" width="200" height="164" rx="10" fill="#BF4B1A"/>
+    <text x="820" y="404" class="sans" font-size="26" font-weight="800" fill="#FAF7F2" text-anchor="middle">AI / HBM</text>
+    <text x="820" y="436" class="sans" font-size="14" fill="#F3D8C9" text-anchor="middle">pays any price</text>
+    <text x="820" y="474" class="sans" font-size="13" letter-spacing="1" fill="#F0C9B5" text-anchor="middle">SOLD OUT TO 2027</text>
+  </g>
+
+  <!-- destination: everyone else (small) -->
+  <g>
+    <rect x="985" y="404" width="160" height="90" rx="10" fill="none" stroke="#C4B7A6" stroke-width="1.8"/>
+    <text x="1065" y="436" class="sans" font-size="14.5" font-weight="700" fill="#7B746E" text-anchor="middle">LAPTOPS</text>
+    <text x="1065" y="457" class="sans" font-size="14.5" font-weight="700" fill="#7B746E" text-anchor="middle">SERVERS · CARS</text>
+    <text x="1065" y="481" class="sans" font-size="12.5" letter-spacing="1" fill="#B7AEA4" text-anchor="middle">WHAT'S LEFT</text>
+  </g>
+
+  <!-- price tag -->
+  <text x="1065" y="360" class="serif" font-size="34" font-weight="800" fill="#BF4B1A" text-anchor="middle">+500%</text>
+  <text x="1065" y="382" class="sans" font-size="12" letter-spacing="1.5" fill="#A79E95" text-anchor="middle">IN 12 MONTHS</text>
+
+  <!-- headline -->
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  ECONOMICS</text>
+
+  <text x="84" y="248" class="serif" font-size="54" font-weight="800" fill="#1A1816">The AI tax on</text>
+  <text x="84" y="310" class="serif" font-size="54" font-weight="800" fill="#1A1816">hardware with</text>
+  <text x="84" y="372" class="serif" font-size="54" font-weight="800" fill="#BF4B1A">no AI in it.</text>
+
+  <rect x="84" y="406" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="456" class="sans" font-size="21" fill="#7B746E">The buyer who doesn't care about the price</text>
+  <text x="84" y="486" class="sans" font-size="21" fill="#7B746E">sets yours. Even if you never touch AI.</text>
+</svg>
