@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A diagram: many AI model inputs on the left converge into a single highlighted meter box on the right, labelled per-token billing.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- converging diagram, right side -->
+  <g>
+    <!-- input model nodes -->
+    <g fill="#C9BEB0">
+      <circle cx="792" cy="196" r="9"/>
+      <circle cx="792" cy="256" r="9"/>
+      <circle cx="792" cy="316" r="9"/>
+      <circle cx="792" cy="376" r="9"/>
+      <circle cx="792" cy="436" r="9"/>
+    </g>
+    <text x="792" y="486" class="sans" font-size="15" letter-spacing="1" fill="#A79E95" text-anchor="middle">400+ MODELS</text>
+
+    <!-- converging lines into the meter -->
+    <g stroke="#C9BEB0" stroke-width="2.5" fill="none" stroke-linecap="round">
+      <path d="M801 196 C 870 196, 900 300, 946 300"/>
+      <path d="M801 256 C 870 256, 900 300, 946 300"/>
+      <line x1="801" y1="316" x2="946" y2="300"/>
+      <path d="M801 376 C 870 376, 900 300, 946 300"/>
+      <path d="M801 436 C 870 436, 900 300, 946 300"/>
+    </g>
+
+    <!-- the meter -->
+    <rect x="944" y="262" width="180" height="78" rx="10" fill="#BF4B1A"/>
+    <text x="1034" y="299" class="sans" font-size="26" font-weight="800" fill="#FAF7F2" text-anchor="middle">METER</text>
+    <text x="1034" y="323" class="sans" font-size="13" letter-spacing="1.5" fill="#F4D9C9" text-anchor="middle">ROUTE + BILL</text>
+
+    <text x="1034" y="378" class="sans" font-size="15" letter-spacing="1" fill="#A79E95" text-anchor="middle">$ PER TOKEN</text>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  ECONOMICS</text>
+
+  <text x="84" y="252" class="serif" font-size="56" font-weight="800" fill="#1A1816">The money settles</text>
+  <text x="84" y="318" class="serif" font-size="56" font-weight="800" fill="#BF4B1A">at the meter.</text>
+
+  <rect x="84" y="352" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="402" class="sans" font-size="21" fill="#7B746E">Stripe paid $7B for the layer that measures,</text>
+  <text x="84" y="432" class="sans" font-size="21" fill="#7B746E">routes, and bills every token. Not the model.</text>
+</svg>
