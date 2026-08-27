@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A hub-and-spoke diagram: models, datasets, teams and tools all connect to one central hub, which is now enclosed and stamped OWNED.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- hub-and-spoke, right side. hub center ~ (960, 315) -->
+  <g>
+    <!-- spokes -->
+    <g stroke="#C9BEB0" stroke-width="3">
+      <line x1="960" y1="315" x2="960" y2="150"/>
+      <line x1="960" y1="315" x2="1108" y2="315"/>
+      <line x1="960" y1="315" x2="960" y2="480"/>
+      <line x1="960" y1="315" x2="812" y2="315"/>
+    </g>
+
+    <!-- outer nodes -->
+    <g>
+      <rect x="886" y="118" width="148" height="58" rx="8" fill="#EADFD1" stroke="#E0D3C2" stroke-width="1.5"/>
+      <text x="960" y="153" class="sans" font-size="19" font-weight="700" fill="#5C554F" text-anchor="middle">MODELS</text>
+
+      <rect x="1034" y="286" width="152" height="58" rx="8" fill="#EADFD1" stroke="#E0D3C2" stroke-width="1.5"/>
+      <text x="1110" y="321" class="sans" font-size="19" font-weight="700" fill="#5C554F" text-anchor="middle">DATASETS</text>
+
+      <rect x="886" y="454" width="148" height="58" rx="8" fill="#EADFD1" stroke="#E0D3C2" stroke-width="1.5"/>
+      <text x="960" y="489" class="sans" font-size="19" font-weight="700" fill="#5C554F" text-anchor="middle">TEAMS</text>
+
+      <rect x="738" y="286" width="140" height="58" rx="8" fill="#EADFD1" stroke="#E0D3C2" stroke-width="1.5"/>
+      <text x="808" y="321" class="sans" font-size="19" font-weight="700" fill="#5C554F" text-anchor="middle">TOOLS</text>
+    </g>
+
+    <!-- former neutral ring, now dashed and faded -->
+    <circle cx="960" cy="315" r="84" fill="none" stroke="#C9BEB0" stroke-width="2" stroke-dasharray="6 7"/>
+
+    <!-- the hub: now owned -->
+    <circle cx="960" cy="315" r="62" fill="#BF4B1A"/>
+    <text x="960" y="309" class="sans" font-size="18" font-weight="800" fill="#FAF7F2" text-anchor="middle">HUB</text>
+    <text x="960" y="333" class="sans" font-size="12.5" letter-spacing="2" fill="#F3D9C9" text-anchor="middle">OWNED</text>
+  </g>
+
+  <!-- left text block -->
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  STRATEGY</text>
+
+  <text x="84" y="250" class="serif" font-size="52" font-weight="800" fill="#1A1816">The neutral layer</text>
+  <text x="84" y="312" class="serif" font-size="52" font-weight="800" fill="#BF4B1A">just got an owner.</text>
+
+  <rect x="84" y="346" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="398" class="sans" font-size="20" fill="#7B746E">Infrastructure everyone shares eventually</text>
+  <text x="84" y="426" class="sans" font-size="20" fill="#7B746E">belongs to someone. Price portability in early.</text>
+</svg>
