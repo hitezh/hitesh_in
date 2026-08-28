@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A funnel: many open model tiles fall through a hub labeled DISTRIBUTION into a single GPU, with an owner's frame drawn around the hub.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- right-side diagram: models -> owned hub -> GPU -->
+  <g>
+    <!-- scattered model tiles feeding in -->
+    <g fill="#EADFD1" stroke="#E0D3C2" stroke-width="1.5">
+      <rect x="812" y="120" width="70" height="44" rx="7"/>
+      <rect x="898" y="112" width="70" height="44" rx="7"/>
+      <rect x="984" y="120" width="70" height="44" rx="7"/>
+      <rect x="855" y="172" width="70" height="44" rx="7"/>
+      <rect x="941" y="172" width="70" height="44" rx="7"/>
+    </g>
+    <g class="sans" font-size="12" font-weight="700" fill="#A79E95" text-anchor="middle">
+      <text x="847" y="147">model</text>
+      <text x="933" y="139">model</text>
+      <text x="1019" y="147">model</text>
+      <text x="890" y="199">model</text>
+      <text x="976" y="199">model</text>
+    </g>
+
+    <!-- converging lines into the hub -->
+    <g stroke="#C9BEB0" stroke-width="2" fill="none">
+      <line x1="847" y1="164" x2="933" y2="250"/>
+      <line x1="933" y1="156" x2="933" y2="250"/>
+      <line x1="1019" y1="164" x2="933" y2="250"/>
+      <line x1="890" y1="216" x2="933" y2="250"/>
+      <line x1="976" y1="216" x2="933" y2="250"/>
+    </g>
+
+    <!-- owner frame around the hub -->
+    <rect x="820" y="250" width="226" height="86" rx="10" fill="none" stroke="#BF4B1A" stroke-width="2.5" stroke-dasharray="7 6"/>
+    <text x="1042" y="246" class="sans" font-size="12.5" font-weight="700" letter-spacing="1" fill="#BF4B1A" text-anchor="end">OWNED</text>
+
+    <!-- the hub -->
+    <rect x="838" y="268" width="190" height="50" rx="8" fill="#BF4B1A"/>
+    <text x="933" y="300" class="sans" font-size="18" font-weight="800" fill="#FAF7F2" text-anchor="middle">DISTRIBUTION</text>
+
+    <!-- funnel down to the GPU -->
+    <g stroke="#BF4B1A" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="933" y1="336" x2="933" y2="404"/>
+      <path d="M919 382 L933 408 L947 382"/>
+    </g>
+
+    <!-- GPU -->
+    <rect x="853" y="424" width="160" height="72" rx="8" fill="#1A1816"/>
+    <text x="933" y="468" class="sans" font-size="22" font-weight="800" fill="#FAF7F2" text-anchor="middle">GPU</text>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  STRATEGY</text>
+
+  <text x="84" y="250" class="serif" font-size="56" font-weight="800" fill="#1A1816">Nvidia didn't</text>
+  <text x="84" y="314" class="serif" font-size="56" font-weight="800" fill="#1A1816">overpay for</text>
+  <text x="84" y="378" class="serif" font-size="56" font-weight="800" fill="#BF4B1A">Hugging Face.</text>
+
+  <rect x="84" y="410" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="460" class="sans" font-size="21" fill="#7B746E">Commoditize the complement, own the</text>
+  <text x="84" y="490" class="sans" font-size="21" fill="#7B746E">distribution. The rest is demand generation.</text>
+</svg>
