@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An editorial diagram: a timeline with a dashed line marking when a fix is disclosed. An older, muted dot sits to the right of it, where exploits used to arrive after disclosure. An orange arrow sweeps left across the disclosure line to a bright dot before it, where the exploit now arrives first. The patch gap just went negative.">
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans  { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#BF4B1A"/>
+    </marker>
+  </defs>
+
+  <!-- card -->
+  <rect x="0" y="0" width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- left: text block -->
+  <text x="92" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">ON&#160;&#160;AI&#160;&#160;SECURITY</text>
+
+  <text x="88" y="264" class="serif" font-size="68" fill="#1A1816">The patch gap</text>
+  <text x="88" y="340" class="serif" font-size="68" fill="#1A1816">went negative<tspan fill="#BF4B1A">.</tspan></text>
+
+  <rect x="92" y="374" width="68" height="5" rx="2.5" fill="#BF4B1A"/>
+
+  <text x="92" y="430" class="sans" font-size="22" fill="#7B746E">A hint is now enough. AI made knowing</text>
+  <text x="92" y="462" class="sans" font-size="22" fill="#7B746E">where to look the cheap part.</text>
+
+  <!-- right: timeline diagram card -->
+  <rect x="742" y="150" width="378" height="330" rx="10" fill="#FFFFFF" stroke="#E8DDD0" stroke-width="2"/>
+
+  <text x="772" y="200" class="sans" font-size="15" letter-spacing="2.5" fill="#B5AFA9">MEAN&#160;TIME&#160;TO&#160;EXPLOIT</text>
+
+  <!-- negative zone (before the fix ships) -->
+  <rect x="772" y="300" width="182" height="70" rx="6" fill="#BF4B1A" fill-opacity="0.08"/>
+
+  <!-- disclosure line -->
+  <line x1="954" y1="252" x2="954" y2="392" stroke="#7B746E" stroke-width="2" stroke-dasharray="4 5"/>
+  <text x="954" y="244" class="sans" font-size="15" fill="#7B746E" text-anchor="middle">fix disclosed</text>
+
+  <!-- timeline track -->
+  <line x1="772" y1="335" x2="1092" y2="335" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- old regime: exploit arrived after disclosure -->
+  <circle cx="1046" cy="335" r="9" fill="#B5AFA9"/>
+  <text x="1046" y="372" class="sans" font-size="15" fill="#B5AFA9" text-anchor="middle">then</text>
+
+  <!-- new regime: exploit arrives before disclosure -->
+  <circle cx="852" cy="335" r="12" fill="#BF4B1A"/>
+  <text x="852" y="372" class="sans" font-size="15" fill="#BF4B1A" text-anchor="middle" font-weight="700">now</text>
+
+  <!-- arrow sweeping left across the disclosure line -->
+  <path d="M1046,314 C1010,270 892,270 858,312" fill="none" stroke="#BF4B1A" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- caption -->
+  <text x="772" y="450" class="sans" font-size="17" fill="#B5AFA9">the exploit now lands before the patch</text>
+</svg>
