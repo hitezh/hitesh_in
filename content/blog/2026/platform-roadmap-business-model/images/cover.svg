@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Two arrows on a platform roadmap pointing the same direction: a dashed one labeled security and performance, a solid one labeled ad revenue, aligned toward the same deprecation.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">PLATFORM  STRATEGY</text>
+
+  <text x="84" y="238" class="serif" font-size="52" font-weight="800" fill="#1A1816">Your platform's roadmap</text>
+  <text x="84" y="300" class="serif" font-size="52" font-weight="800" fill="#BF4B1A">is its business model.</text>
+
+  <rect x="84" y="336" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="386" class="sans" font-size="21" fill="#7B746E">When the security fix also guards the revenue,</text>
+  <text x="84" y="416" class="sans" font-size="21" fill="#7B746E">believe the revenue. Read deprecations as strategy.</text>
+
+  <!-- roadmap: two arrows pointing the same way -->
+  <g>
+    <text x="84" y="502" class="sans" font-size="14" letter-spacing="2" fill="#A79E95">THE ALIGNMENT TEST</text>
+
+    <!-- stated reason: dashed, muted -->
+    <g stroke="#C9BEB0" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 8">
+      <line x1="90" y1="536" x2="470" y2="536"/>
+    </g>
+    <path d="M470 536 L448 524 L448 548 Z" fill="#C9BEB0"/>
+    <text x="90" y="522" class="sans" font-size="16" font-weight="700" fill="#A79E95">SECURITY / PERFORMANCE</text>
+
+    <!-- revenue: solid, accent -->
+    <g stroke="#BF4B1A" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="90" y1="580" x2="470" y2="580"/>
+    </g>
+    <path d="M472 580 L446 566 L446 594 Z" fill="#BF4B1A"/>
+    <text x="90" y="614" class="sans" font-size="16" font-weight="700" fill="#BF4B1A">AD REVENUE</text>
+  </g>
+
+  <!-- destination marker -->
+  <g>
+    <line x1="520" y1="500" x2="520" y2="616" stroke="#E0D3C2" stroke-width="2" stroke-dasharray="4 6"/>
+    <circle cx="520" cy="536" r="7" fill="#C9BEB0"/>
+    <circle cx="520" cy="580" r="7" fill="#BF4B1A"/>
+    <text x="548" y="552" class="sans" font-size="20" font-weight="800" fill="#1A1816">Same</text>
+    <text x="548" y="580" class="sans" font-size="20" font-weight="800" fill="#1A1816">direction.</text>
+  </g>
+</svg>
