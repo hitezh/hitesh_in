@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An editorial cover for an essay on AI strategy. On the left, the headline reads Keep your own scoreboard. On the right, a dark prediction ledger card lists four claims, each marked with a check or a cross, showing that confident predictions get graded against outcomes.">
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans  { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- card -->
+  <rect x="0" y="0" width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- left: text block -->
+  <text x="90" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">ON&#160;&#160;MAKING&#160;&#160;AI&#160;&#160;DECISIONS</text>
+
+  <text x="86" y="258" class="serif" font-size="72" fill="#1A1816">Keep your own</text>
+  <text x="86" y="338" class="serif" font-size="72" fill="#1A1816">scoreboard<tspan fill="#BF4B1A">.</tspan></text>
+
+  <rect x="90" y="372" width="68" height="5" rx="2.5" fill="#BF4B1A"/>
+
+  <text x="90" y="428" class="sans" font-size="22" fill="#7B746E">Both the boosters and the doomers sell</text>
+  <text x="90" y="460" class="sans" font-size="22" fill="#7B746E">certainty. Grade your bets instead.</text>
+
+  <!-- right: prediction ledger card -->
+  <rect x="700" y="150" width="418" height="332" rx="14" fill="#1A1816"/>
+
+  <text x="726" y="200" class="sans" font-size="16" letter-spacing="3" fill="#E8DDD0">PREDICTION&#160;&#160;LEDGER</text>
+  <line x1="726" y1="220" x2="1092" y2="220" stroke="#3A3632" stroke-width="1.5"/>
+
+  <!-- row 1: wrong -->
+  <rect x="726" y="252" width="250" height="20" rx="6" fill="#FAF7F2" fill-opacity="0.16"/>
+  <circle cx="1058" cy="262" r="16" fill="none" stroke="#7B746E" stroke-width="2.5"/>
+  <line x1="1051" y1="255" x2="1065" y2="269" stroke="#7B746E" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="1065" y1="255" x2="1051" y2="269" stroke="#7B746E" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- row 2: right -->
+  <rect x="726" y="304" width="196" height="20" rx="6" fill="#FAF7F2" fill-opacity="0.16"/>
+  <circle cx="1058" cy="314" r="16" fill="#BF4B1A"/>
+  <polyline points="1050,314 1056,321 1067,308" fill="none" stroke="#FAF7F2" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- row 3: wrong -->
+  <rect x="726" y="356" width="278" height="20" rx="6" fill="#FAF7F2" fill-opacity="0.16"/>
+  <circle cx="1058" cy="366" r="16" fill="none" stroke="#7B746E" stroke-width="2.5"/>
+  <line x1="1051" y1="359" x2="1065" y2="373" stroke="#7B746E" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="1065" y1="359" x2="1051" y2="373" stroke="#7B746E" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- row 4: right -->
+  <rect x="726" y="408" width="222" height="20" rx="6" fill="#FAF7F2" fill-opacity="0.16"/>
+  <circle cx="1058" cy="418" r="16" fill="#BF4B1A"/>
+  <polyline points="1050,418 1056,425 1067,412" fill="none" stroke="#FAF7F2" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="726" y="466" class="sans" font-size="15" fill="#B5AFA9">claim dated, then checked against what happened</text>
+</svg>
