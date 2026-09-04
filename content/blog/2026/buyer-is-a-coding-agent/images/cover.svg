@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A software tool being chosen by a coding agent rather than a human buyer: a marketing funnel on the left points at a person, but the agent picks a different default tool.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- right side: the agent choosing a default from a shortlist -->
+  <g>
+    <!-- agent node -->
+    <rect x="820" y="150" width="292" height="60" rx="8" fill="#1A1816"/>
+    <text x="966" y="188" class="sans" font-size="22" font-weight="800" fill="#FAF7F2" text-anchor="middle">CODING AGENT</text>
+
+    <!-- chosen default (accent) -->
+    <rect x="820" y="238" width="292" height="60" rx="8" fill="#BF4B1A"/>
+    <text x="900" y="276" class="sans" font-size="21" font-weight="800" fill="#FAF7F2" text-anchor="middle">CHOSEN</text>
+    <text x="1030" y="275" class="sans" font-size="14" letter-spacing="1" fill="#F3D9C8" text-anchor="middle">90% OF RUNS</text>
+
+    <!-- also-rans -->
+    <rect x="820" y="314" width="292" height="52" rx="8" fill="none" stroke="#C9BEB0" stroke-width="2" stroke-dasharray="6 6"/>
+    <text x="840" y="347" class="sans" font-size="17" font-weight="700" fill="#A79E95">mentioned 139 times</text>
+    <text x="1092" y="347" class="sans" font-size="17" font-weight="800" fill="#A79E95" text-anchor="end">0 picks</text>
+
+    <rect x="820" y="380" width="292" height="52" rx="8" fill="none" stroke="#C9BEB0" stroke-width="2" stroke-dasharray="6 6"/>
+    <text x="840" y="413" class="sans" font-size="17" font-weight="700" fill="#A79E95">mentioned 194 times</text>
+    <text x="1092" y="413" class="sans" font-size="17" font-weight="800" fill="#A79E95" text-anchor="end">4 picks</text>
+
+    <!-- connector from agent to chosen -->
+    <g stroke="#BF4B1A" stroke-width="4" fill="none" stroke-linecap="round">
+      <line x1="966" y1="210" x2="966" y2="238"/>
+    </g>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  STRATEGY</text>
+
+  <text x="84" y="256" class="serif" font-size="56" font-weight="800" fill="#1A1816">Your next buyer</text>
+  <text x="84" y="322" class="serif" font-size="56" font-weight="800" fill="#BF4B1A">is a coding agent.</text>
+
+  <rect x="84" y="356" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="406" class="sans" font-size="21" fill="#7B746E">It reads your docs, ignores your brand, and</text>
+  <text x="84" y="436" class="sans" font-size="21" fill="#7B746E">has decided before you say hello.</text>
+</svg>
