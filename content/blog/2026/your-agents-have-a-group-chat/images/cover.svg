@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An editorial diagram: five separate agent sandboxes, isolated with no connections between them, each linked by a dashed line to one shared channel node in the middle. The point: agents walled off from each other still coordinate through a common medium.">
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans  { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- card -->
+  <rect x="0" y="0" width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- left: text block -->
+  <text x="92" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">ON&#160;&#160;MULTI-AGENT&#160;&#160;AI</text>
+
+  <text x="88" y="262" class="serif" font-size="76" fill="#1A1816">Nobody built</text>
+  <text x="88" y="342" class="serif" font-size="76" fill="#1A1816">the network<tspan fill="#BF4B1A">.</tspan></text>
+
+  <rect x="92" y="376" width="68" height="5" rx="2.5" fill="#BF4B1A"/>
+
+  <text x="92" y="432" class="sans" font-size="22" fill="#7B746E">Isolated agents found a shared surface</text>
+  <text x="92" y="464" class="sans" font-size="22" fill="#7B746E">and coordinated through it on their own.</text>
+
+  <!-- right: coordination diagram, hub centred at (800,316) -->
+  <!-- dashed connectors from each agent to the shared channel (drawn first, sit behind) -->
+  <g stroke="#BF4B1A" stroke-width="2.5" stroke-opacity="0.5" stroke-dasharray="5 6">
+    <line x1="800" y1="116" x2="800" y2="316"/>
+    <line x1="990" y1="254" x2="800" y2="316"/>
+    <line x1="918" y1="478" x2="800" y2="316"/>
+    <line x1="682" y1="478" x2="800" y2="316"/>
+    <line x1="610" y1="254" x2="800" y2="316"/>
+  </g>
+
+  <!-- agent sandboxes: isolated boxes, no links between them -->
+  <g>
+    <!-- top -->
+    <rect x="772" y="88"  width="56" height="56" rx="8" fill="#FAF7F2" stroke="#7B746E" stroke-width="2"/>
+    <circle cx="800" cy="116" r="6" fill="#7B746E"/>
+    <text x="800" y="166" class="sans" font-size="13" fill="#B5AFA9" text-anchor="middle">agent</text>
+    <!-- upper right -->
+    <rect x="962" y="226" width="56" height="56" rx="8" fill="#FAF7F2" stroke="#7B746E" stroke-width="2"/>
+    <circle cx="990" cy="254" r="6" fill="#7B746E"/>
+    <text x="990" y="304" class="sans" font-size="13" fill="#B5AFA9" text-anchor="middle">agent</text>
+    <!-- lower right -->
+    <rect x="890" y="450" width="56" height="56" rx="8" fill="#FAF7F2" stroke="#7B746E" stroke-width="2"/>
+    <circle cx="918" cy="478" r="6" fill="#7B746E"/>
+    <text x="918" y="528" class="sans" font-size="13" fill="#B5AFA9" text-anchor="middle">agent</text>
+    <!-- lower left -->
+    <rect x="654" y="450" width="56" height="56" rx="8" fill="#FAF7F2" stroke="#7B746E" stroke-width="2"/>
+    <circle cx="682" cy="478" r="6" fill="#7B746E"/>
+    <text x="682" y="528" class="sans" font-size="13" fill="#B5AFA9" text-anchor="middle">agent</text>
+    <!-- upper left -->
+    <rect x="582" y="226" width="56" height="56" rx="8" fill="#FAF7F2" stroke="#7B746E" stroke-width="2"/>
+    <circle cx="610" cy="254" r="6" fill="#7B746E"/>
+    <text x="610" y="304" class="sans" font-size="13" fill="#B5AFA9" text-anchor="middle">agent</text>
+  </g>
+
+  <!-- shared channel hub -->
+  <rect x="738" y="286" width="124" height="60" rx="10" fill="#FAF7F2" stroke="#BF4B1A" stroke-width="2.5"/>
+  <text x="800" y="311" class="sans" font-size="15" fill="#1A1816" text-anchor="middle">shared</text>
+  <text x="800" y="331" class="sans" font-size="15" fill="#1A1816" text-anchor="middle">channel</text>
+</svg>
