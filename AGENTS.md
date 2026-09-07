@@ -97,6 +97,7 @@ Rules:
 - `image` is optional but recommended. Use the bundle-relative form `images/<filename>` and ensure the file exists. Use a descriptive filename, not `image1.jpg`.
 - Prefer `image`; do not add the legacy `coverImage` field to new posts.
 - Cover images are usually authored as an SVG (`images/cover.svg`). Social platforms cannot render SVG, so a raster `cover.png` sibling is required for the Open Graph card and the LinkedIn announcement. **You only commit the SVG.** CI (`.github/workflows/cover-image.yml`) renders `cover.png` from it with headless Chromium and commits it back to the branch. To generate or preview it locally, run `node .github/scripts/rasterize-cover.mjs`. Do not hand-edit the generated PNG.
+- Optionally, add `images/slide-1.svg`, `slide-2.svg`, ... (same commit-only-the-SVG rule, same CI rasterization) to have the post announced on LinkedIn as a multi-image carousel of 3-5 key facts/insights/takeaways instead of a single cover image. See [`.github/README-linkedin.md`](.github/README-linkedin.md#carousel-slides) for the convention.
 - Do not add `author`; the site is Hitesh's personal blog and existing posts omit it.
 - Keep `draft: true` while drafting. Published posts in the repository normally omit `draft`.
 - The directory year and the year in `date` must match.
