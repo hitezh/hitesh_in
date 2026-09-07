@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500" role="img" aria-label="Carousel slide: the number 215,128, labelled machine-generated pages, above the headline built for one purpose: get cited by AI, not read by you.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="1500" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="1472" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <text x="90" y="136" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI &#183; TRUST</text>
+  <text x="1110" y="136" class="sans" font-size="19" letter-spacing="2" fill="#B5AFA9" text-anchor="end">1 / 5</text>
+
+  <text x="88" y="560" class="serif" font-size="150" font-weight="800" fill="#1A1816">215,128</text>
+  <text x="90" y="604" class="sans" font-size="20" letter-spacing="3" fill="#A79E95">MACHINE-GENERATED PAGES</text>
+
+  <text x="90" y="730" class="serif" font-size="58" font-weight="700" fill="#1A1816">Built for one purpose:</text>
+  <text x="90" y="800" class="serif" font-size="58" font-weight="700" fill="#1A1816">get cited by AI,</text>
+  <text x="90" y="870" class="serif" font-size="58" font-weight="700" fill="#BF4B1A">not read by you.</text>
+
+  <rect x="90" y="906" width="72" height="6" rx="3" fill="#BF4B1A"/>
+
+  <text x="90" y="990" class="sans" font-size="28" fill="#7B746E">A Trellner Research investigation into</text>
+  <text x="90" y="1028" class="sans" font-size="28" fill="#7B746E">where Perplexity's software picks come from.</text>
+
+  <text x="90" y="1440" class="sans" font-size="17" fill="#B5AFA9">hitesh.in</text>
+</svg>

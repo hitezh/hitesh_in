@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A stack of identical dashed, machine-generated pages feeding an arrow into one solid, confident AI answer card reading top pick.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- right-side diagram: fabricated pages -> confident answer -->
+  <g>
+    <!-- deck of identical, dashed (machine-made) pages -->
+    <g>
+      <rect x="852" y="128" width="150" height="104" rx="8" fill="#F3EADD" stroke="#C9BEB0" stroke-width="2" stroke-dasharray="6 6"/>
+      <rect x="838" y="142" width="150" height="104" rx="8" fill="#F3EADD" stroke="#C9BEB0" stroke-width="2" stroke-dasharray="6 6"/>
+      <rect x="824" y="156" width="150" height="104" rx="8" fill="#FBF6EF" stroke="#B7AEA4" stroke-width="2" stroke-dasharray="6 6"/>
+      <text x="838" y="182" class="sans" font-size="12" font-weight="700" letter-spacing="1" fill="#A79E95">BEST SOFTWARE</text>
+      <line x1="838" y1="198" x2="958" y2="198" stroke="#D7CBBB" stroke-width="5" stroke-linecap="round"/>
+      <line x1="838" y1="214" x2="946" y2="214" stroke="#D7CBBB" stroke-width="5" stroke-linecap="round"/>
+      <line x1="838" y1="230" x2="922" y2="230" stroke="#D7CBBB" stroke-width="5" stroke-linecap="round"/>
+    </g>
+    <text x="899" y="298" class="sans" font-size="20" font-weight="800" fill="#BF4B1A" text-anchor="middle">x 215,128</text>
+    <text x="899" y="320" class="sans" font-size="12.5" letter-spacing="1.5" fill="#A79E95" text-anchor="middle">MACHINE-GENERATED</text>
+
+    <!-- downward arrow: laundering -->
+    <g stroke="#BF4B1A" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="899" y1="344" x2="899" y2="392"/>
+      <path d="M881 372 L899 398 L917 372"/>
+    </g>
+
+    <!-- confident answer card -->
+    <rect x="800" y="414" width="198" height="92" rx="10" fill="#FFFFFF" stroke="#BF4B1A" stroke-width="2.5"/>
+    <circle cx="828" cy="452" r="13" fill="#BF4B1A"/>
+    <path d="M822 452 l4 5 l8 -10" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="850" y="450" class="sans" font-size="20" font-weight="800" fill="#1A1816">Top pick</text>
+    <text x="850" y="478" class="sans" font-size="14" fill="#7B746E">(source: trust us)</text>
+  </g>
+
+  <!-- left-side text -->
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  &#183;  TRUST</text>
+
+  <text x="84" y="252" class="serif" font-size="54" font-weight="800" fill="#1A1816">Someone built 215,000</text>
+  <text x="84" y="314" class="serif" font-size="54" font-weight="800" fill="#BF4B1A">pages to game your AI.</text>
+
+  <rect x="84" y="348" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="398" class="sans" font-size="21" fill="#7B746E">AI recommendations run on sources you</text>
+  <text x="84" y="428" class="sans" font-size="21" fill="#7B746E">cannot see. Provenance is the new moat.</text>
+</svg>
