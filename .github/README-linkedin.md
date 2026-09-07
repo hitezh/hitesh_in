@@ -20,6 +20,11 @@ The post is built from the post's front matter:
   accepts JPG/PNG/GIF, so an SVG `image:` is swapped for its `.png` (then `.jpg`)
   page-bundle sibling, falling back to `static/images/default.jpg` — the same
   rule `head.html` uses for OG images.
+- **Carousel (optional):** if the post bundle has 2 or more `images/slide-N.png`
+  files (`slide-1.png`, `slide-2.png`, ...), the script posts a LinkedIn
+  **MultiImage** carousel of those slides instead of the single featured image —
+  see [Carousel slides](#carousel-slides) below. With 0 or 1 slide PNGs it falls
+  back to the ordinary single-image post.
 - **Body:** title, description, `Read more: <url>`, and up to three hashtags.
 - **Link placement:** by default the link sits in the **body**, which works with
   the `w_member_social` token. Posting it as the **first comment** instead — which
@@ -38,6 +43,47 @@ Read more: https://hitesh.in/<year>/<slug>/
 ```
 
 (Set `POST_IMAGE=false` to skip the image.)
+
+## Carousel slides
+
+A post can ship as a LinkedIn carousel (a "MultiImage" post) instead of a
+single image. This is a plain image post with multiple pictures, not a
+document/PDF carousel, and — unlike the first-comment link — it needs only
+the `w_member_social` scope the app already has; no Community Management API
+required.
+
+To use it, add `images/slide-1.svg`, `images/slide-2.svg`, ... to the post's
+page bundle, alongside `cover.svg`, and follow the same rule as the cover:
+**commit only the SVGs.** The [cover-image.yml](workflows/cover-image.yml)
+workflow rasterizes any `slide-N.svg` to a `slide-N.png` sibling the same way
+it rasterizes `cover.svg` — see
+[`rasterize-cover.mjs`](scripts/rasterize-cover.mjs). To preview locally:
+
+```sh
+node .github/scripts/rasterize-cover.mjs
+```
+
+A few things to know:
+
+- **2 to 20 slides.** With 0 or 1 `slide-N.png` present, the announcer falls
+  back to posting the single featured `image:` instead — a post never needs
+  slides to be announced.
+- **Each SVG sets its own render size** via its own `width`/`height`
+  attributes (the rasterizer reads them per file), so slides don't have to
+  share the cover's 1200x630 frame. A 4:5 portrait card (e.g. `1200x1500`)
+  reads better on mobile for text-heavy "key takeaway" slides than the wide
+  OG-card ratio.
+- **Alt text** comes from each slide SVG's own `role="img" aria-label="..."`
+  (the same accessibility attribute the cover already uses), carried through
+  to the uploaded image's `altText`. Write a real, specific label per slide.
+- **The post's title stays in the commentary text**, not slide 1 — the
+  script still composes `title` + `description` + hashtags as the post body;
+  slides are the visual payload (a hook, then 3-5 concrete facts/insights/
+  takeaways from the article), not a duplicate headline.
+- If some slide uploads fail partway through (network hiccup, one bad file),
+  the script only uses the carousel when at least 2 uploads succeeded;
+  otherwise it falls back to the single cover image rather than posting a
+  broken 1-image "carousel" (LinkedIn's MultiImage endpoint requires 2+).
 
 ## One-time setup
 

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An editorial diagram: a generated document on the right flows down to a meeting table ringed with filled seats and one empty seat outlined in orange, a question mark hanging over the empty seat. The model produced the work, but no one is there to answer for it.">
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans  { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- card -->
+  <rect x="0" y="0" width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- left: text block -->
+  <text x="92" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">ON&#160;&#160;AI&#160;&#160;&amp;&#160;&#160;ACCOUNTABILITY</text>
+
+  <text x="88" y="262" class="serif" font-size="76" fill="#1A1816">AI writes</text>
+  <text x="88" y="342" class="serif" font-size="76" fill="#1A1816">the memo<tspan fill="#BF4B1A">.</tspan></text>
+
+  <rect x="92" y="376" width="68" height="5" rx="2.5" fill="#BF4B1A"/>
+
+  <text x="92" y="432" class="sans" font-size="22" fill="#7B746E">You still sit in the meeting</text>
+  <text x="92" y="464" class="sans" font-size="22" fill="#7B746E">and answer for it.</text>
+
+  <!-- right: document flowing to a meeting table -->
+
+  <!-- generated document -->
+  <text x="930" y="112" class="sans" font-size="17" fill="#B5AFA9" text-anchor="middle">generated</text>
+  <g>
+    <rect x="876" y="128" width="108" height="132" rx="6" fill="#FFFFFF" stroke="#E8DDD0" stroke-width="2"/>
+    <path d="M966,128 l18,18 h-18 z" fill="#E8DDD0"/>
+    <rect x="894" y="154" width="72" height="5" rx="2.5" fill="#7B746E"/>
+    <rect x="894" y="170" width="72" height="5" rx="2.5" fill="#B5AFA9"/>
+    <rect x="894" y="186" width="72" height="5" rx="2.5" fill="#B5AFA9"/>
+    <rect x="894" y="202" width="52" height="5" rx="2.5" fill="#B5AFA9"/>
+    <rect x="894" y="222" width="72" height="5" rx="2.5" fill="#B5AFA9"/>
+    <rect x="894" y="238" width="40" height="5" rx="2.5" fill="#B5AFA9"/>
+  </g>
+
+  <!-- flow arrow down to the table -->
+  <line x1="930" y1="272" x2="930" y2="322" stroke="#B5AFA9" stroke-width="2" stroke-dasharray="4 6"/>
+  <path d="M930,330 l-7,-12 h14 z" fill="#B5AFA9"/>
+
+  <!-- meeting table -->
+  <ellipse cx="930" cy="452" rx="150" ry="48" fill="#BF4B1A" fill-opacity="0.06" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- filled seats (people present) -->
+  <g fill="#7B746E">
+    <circle cx="852" cy="404" r="17"/>
+    <circle cx="930" cy="398" r="17"/>
+    <circle cx="852" cy="500" r="17"/>
+    <circle cx="930" cy="506" r="17"/>
+    <circle cx="1008" cy="500" r="17"/>
+  </g>
+
+  <!-- the empty seat -->
+  <circle cx="1008" cy="404" r="17" fill="#FAF7F2" stroke="#BF4B1A" stroke-width="2.5"/>
+  <text x="1008" y="366" class="serif" font-size="40" fill="#BF4B1A" text-anchor="middle">?</text>
+
+  <text x="930" y="556" class="sans" font-size="17" fill="#B5AFA9" text-anchor="middle">the follow-up question</text>
+</svg>
