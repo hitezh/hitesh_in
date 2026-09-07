@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500" role="img" aria-label="Carousel slide: headline the AI removed the smell test, explaining that old spam had to survive a human at the point of decision while an answer engine deletes that moment.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="1500" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="1472" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <text x="90" y="136" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">WHAT CHANGED</text>
+  <text x="1110" y="136" class="sans" font-size="19" letter-spacing="2" fill="#B5AFA9" text-anchor="end">4 / 6</text>
+
+  <text x="88" y="730" class="serif" font-size="66" font-weight="800" fill="#1A1816">The AI removed</text>
+  <text x="88" y="806" class="serif" font-size="66" font-weight="800" fill="#BF4B1A">the smell test.</text>
+
+  <rect x="90" y="842" width="72" height="6" rx="3" fill="#BF4B1A"/>
+
+  <text x="90" y="918" class="sans" font-size="30" fill="#7B746E">Old spam had to survive a human</text>
+  <text x="90" y="956" class="sans" font-size="30" fill="#7B746E">at the point of decision. An answer</text>
+  <text x="90" y="994" class="sans" font-size="30" fill="#7B746E">engine deletes that moment and</text>
+  <text x="90" y="1032" class="sans" font-size="30" fill="#7B746E">hands you "Top pick" in clean prose.</text>
+
+  <text x="90" y="1440" class="sans" font-size="17" fill="#B5AFA9">hitesh.in</text>
+</svg>

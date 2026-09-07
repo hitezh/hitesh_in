@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500" role="img" aria-label="Carousel slide: headline provenance is the new moat, advising readers to ask an AI shortlist for its sources and open two of them before trusting it.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="1500" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="1472" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <text x="90" y="136" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">WHAT TO DO</text>
+  <text x="1110" y="136" class="sans" font-size="19" letter-spacing="2" fill="#B5AFA9" text-anchor="end">6 / 6</text>
+
+  <text x="88" y="730" class="serif" font-size="66" font-weight="800" fill="#1A1816">Provenance is</text>
+  <text x="88" y="806" class="serif" font-size="66" font-weight="800" fill="#BF4B1A">the new moat.</text>
+
+  <rect x="90" y="842" width="72" height="6" rx="3" fill="#BF4B1A"/>
+
+  <text x="90" y="918" class="sans" font-size="30" fill="#7B746E">Before you trust an AI shortlist:</text>
+  <text x="90" y="956" class="sans" font-size="30" fill="#7B746E">ask for its sources, and open two</text>
+  <text x="90" y="994" class="sans" font-size="30" fill="#7B746E">of them. It takes two minutes, and</text>
+  <text x="90" y="1032" class="sans" font-size="30" fill="#7B746E">almost nobody does it.</text>
+
+  <text x="90" y="1440" class="sans" font-size="17" fill="#B5AFA9">hitesh.in</text>
+</svg>
