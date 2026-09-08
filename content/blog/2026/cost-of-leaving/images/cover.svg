@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A one-way turnstile: a small tag marks a cheap price to enter on the left, a large tag marks a much bigger price to leave on the right.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- headline -->
+  <text x="70" y="150" class="serif" font-size="52" font-weight="700" fill="#2E2A26">The real cost</text>
+  <text x="70" y="212" class="serif" font-size="52" font-weight="700" fill="#2E2A26">of any vendor</text>
+  <text x="70" y="274" class="serif" font-size="52" font-weight="700" fill="#BF4B1A">is the cost of leaving.</text>
+  <text x="72" y="330" class="sans" font-size="21" font-weight="600" fill="#5C554F">You price the way in. They price the way out.</text>
+
+  <!-- ground line -->
+  <line x1="70" y1="470" x2="1130" y2="470" stroke="#E0D3C2" stroke-width="2"/>
+
+  <!-- the platform / gate post in the middle -->
+  <rect x="588" y="368" width="24" height="102" rx="4" fill="#5C554F"/>
+  <rect x="576" y="356" width="48" height="20" rx="4" fill="#5C554F"/>
+
+  <!-- IN: cheap, easy arrow toward the gate -->
+  <g>
+    <line x1="150" y1="430" x2="560" y2="430" stroke="#9AA98C" stroke-width="6"/>
+    <path d="M560 430 l-22 -12 v24 z" fill="#9AA98C"/>
+    <text x="150" y="410" class="sans" font-size="20" font-weight="800" fill="#5C554F" letter-spacing="1">ENTER</text>
+    <!-- small price tag -->
+    <g transform="translate(300,452)">
+      <rect x="0" y="0" width="118" height="52" rx="8" fill="#EADFD1" stroke="#E0D3C2" stroke-width="1.5"/>
+      <circle cx="18" cy="26" r="6" fill="none" stroke="#5C554F" stroke-width="2"/>
+      <text x="66" y="35" class="sans" font-size="24" font-weight="800" fill="#5C554F" text-anchor="middle">$</text>
+    </g>
+  </g>
+
+  <!-- OUT: expensive, barred exit on the far side of the gate -->
+  <g>
+    <line x1="640" y1="430" x2="1030" y2="430" stroke="#BF4B1A" stroke-width="6" stroke-dasharray="2 14" stroke-linecap="round"/>
+    <path d="M1030 430 l-22 -12 v24 z" fill="#BF4B1A"/>
+    <text x="1035" y="410" class="sans" font-size="20" font-weight="800" fill="#BF4B1A" letter-spacing="1" text-anchor="end">EXIT</text>
+    <!-- large price tag -->
+    <g transform="translate(720,432)">
+      <rect x="0" y="0" width="210" height="86" rx="10" fill="#BF4B1A"/>
+      <circle cx="26" cy="43" r="8" fill="none" stroke="#FAF7F2" stroke-width="2.5"/>
+      <text x="118" y="58" class="sans" font-size="42" font-weight="800" fill="#FAF7F2" text-anchor="middle">$$$</text>
+    </g>
+  </g>
+
+  <!-- one-way turnstile mark above the gate -->
+  <g transform="translate(600,300)" stroke="#BF4B1A" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M-34 0 a34 34 0 1 1 12 26"/>
+    <path d="M-22 12 l-14 -12 18 -8" stroke-linejoin="round"/>
+  </g>
+</svg>
