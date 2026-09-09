@@ -70,6 +70,10 @@ CI uses Hugo `0.162.0` (pinned in `netlify.toml`). `public/` is gitignored.
   PNG; do not hand-make it. To preview the raster locally, run
   `node .github/scripts/rasterize-cover.mjs`. If no raster resolves at all,
   `head.html` falls back to `static/images/default.jpg`.
+- New SVG covers start with [`.github/templates/blog-cover.svg`](.github/templates/blog-cover.svg).
+  It uses a high-contrast editorial composition built for feed-size legibility:
+  one 2-4-line claim, one concrete supporting line, and one simple visual in the
+  right-hand zone. Adapt it to the post rather than copying its placeholder text.
 - Develop on a feature branch and open a pull request; Netlify deploys on merge
   to `master`, and the LinkedIn workflow announces newly published posts. See
   `.github/README-linkedin.md` for that pipeline.
