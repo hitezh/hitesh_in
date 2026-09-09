@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An editorial diagram of a security gate meant to approve every action before it reaches the outside world. The gate is drawn as a solid barrier labelled Sentinel approves, but it has a jagged crack running through it, with a small shape slipping through the crack toward a photo icon on the other side. The message: the approval architecture was sound, but it still broke.">
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans  { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- card -->
+  <rect x="0" y="0" width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- kicker -->
+  <text x="92" y="120" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">ON&#160;&#160;AI&#160;&#160;AGENTS</text>
+
+  <!-- headline -->
+  <text x="88" y="214" class="serif" font-size="60" fill="#1A1816">Meta built the right</text>
+  <text x="88" y="284" class="serif" font-size="60" fill="#1A1816">cage for its agent.</text>
+  <text x="88" y="354" class="serif" font-size="60" fill="#1A1816">It still broke<tspan fill="#BF4B1A">.</tspan></text>
+
+  <rect x="92" y="390" width="68" height="5" rx="2.5" fill="#BF4B1A"/>
+
+  <text x="92" y="448" class="sans" font-size="22" fill="#7B746E">The gate wasn't beaten. It just</text>
+  <text x="92" y="478" class="sans" font-size="22" fill="#7B746E">didn't fire, on an ordinary request.</text>
+
+  <!-- diagram: a walled gate with a crack, something slipping through -->
+
+  <!-- agent side (left of gate) -->
+  <circle cx="892" cy="300" r="26" fill="none" stroke="#7B746E" stroke-width="2.5"/>
+  <text x="892" y="307" class="sans" font-size="16" fill="#7B746E" text-anchor="middle">muse</text>
+  <text x="892" y="350" class="sans" font-size="14" fill="#B5AFA9" text-anchor="middle">isolated VM</text>
+
+  <!-- the gate: solid barrier -->
+  <rect x="978" y="150" width="26" height="300" fill="#1A1816"/>
+  <text x="991" y="132" class="sans" font-size="16" fill="#1A1816" text-anchor="middle">sentinel</text>
+  <text x="991" y="474" class="sans" font-size="14" fill="#7B746E" text-anchor="middle">approves</text>
+
+  <!-- the crack through the gate -->
+  <path d="M991,150 L982,210 L998,240 L984,270 L1000,300 L988,340 L991,450"
+        fill="none" stroke="#BF4B1A" stroke-width="3"/>
+
+  <!-- something slipping through the crack -->
+  <path d="M991,290 q18,4 30,20 q10,14 -2,24 q-14,10 -26,-4 q-10,-14 -2,-40 Z"
+        fill="#BF4B1A" fill-opacity="0.18" stroke="#BF4B1A" stroke-width="2"/>
+
+  <!-- destination: exposed photo icon (right of gate) -->
+  <rect x="1078" y="270" width="70" height="56" rx="4" fill="none" stroke="#BF4B1A" stroke-width="2.5"/>
+  <circle cx="1097" cy="288" r="6" fill="#BF4B1A" fill-opacity="0.4"/>
+  <path d="M1084,318 L1104,296 L1118,308 L1142,282 L1142,318 Z" fill="#BF4B1A" fill-opacity="0.25"/>
+  <text x="1113" y="354" class="sans" font-size="14" fill="#7B746E" text-anchor="middle">exposed</text>
+
+  <!-- arrow from agent to gate -->
+  <line x1="920" y1="300" x2="972" y2="300" stroke="#B5AFA9" stroke-width="2"/>
+  <path d="M964,293 L980,300 L964,307 Z" fill="#7B746E"/>
+</svg>
