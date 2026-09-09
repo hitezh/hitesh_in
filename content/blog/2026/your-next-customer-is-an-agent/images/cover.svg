@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An editorial diagram showing a person icon on the left and a storefront icon on the right, with an agent icon inserted between them on the connecting line, intercepting the path. The message: the customer's intent now passes through an agent before it reaches the business.">
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans  { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- card -->
+  <rect x="0" y="0" width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- kicker -->
+  <text x="92" y="120" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">ON&#160;&#160;AI&#160;&#160;STRATEGY</text>
+
+  <!-- headline -->
+  <text x="88" y="214" class="serif" font-size="58" fill="#1A1816">Your next customer</text>
+  <text x="88" y="284" class="serif" font-size="58" fill="#1A1816">might be an AI agent</text>
+  <text x="88" y="354" class="serif" font-size="58" fill="#1A1816">not a person<tspan fill="#BF4B1A">.</tspan></text>
+
+  <rect x="92" y="390" width="68" height="5" rx="2.5" fill="#BF4B1A"/>
+
+  <text x="92" y="448" class="sans" font-size="22" fill="#7B746E">Meta's Muse just made that</text>
+  <text x="92" y="478" class="sans" font-size="22" fill="#7B746E">real, at consumer scale.</text>
+
+  <!-- diagram: person --> agent --> storefront, on a horizontal line -->
+
+  <line x1="838" y1="330" x2="1150" y2="330" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- person icon -->
+  <circle cx="860" cy="300" r="16" fill="none" stroke="#7B746E" stroke-width="2.5"/>
+  <path d="M838,352 q22,-26 44,0" fill="none" stroke="#7B746E" stroke-width="2.5"/>
+  <text x="860" y="384" class="sans" font-size="14" fill="#7B746E" text-anchor="middle">customer</text>
+
+  <!-- agent icon, inserted on the line, intercepting -->
+  <rect x="965" y="292" width="70" height="70" rx="12" fill="#BF4B1A" fill-opacity="0.12" stroke="#BF4B1A" stroke-width="2.5"/>
+  <circle cx="990" cy="318" r="5" fill="#BF4B1A"/>
+  <circle cx="1010" cy="318" r="5" fill="#BF4B1A"/>
+  <path d="M986,338 q14,10 28,0" fill="none" stroke="#BF4B1A" stroke-width="2.5"/>
+  <text x="1000" y="386" class="sans" font-size="14" fill="#BF4B1A" text-anchor="middle">agent</text>
+
+  <!-- storefront icon -->
+  <rect x="1108" y="292" width="42" height="38" fill="none" stroke="#7B746E" stroke-width="2.5"/>
+  <path d="M1102,292 L1156,292 L1150,272 L1108,272 Z" fill="none" stroke="#7B746E" stroke-width="2.5"/>
+  <text x="1129" y="352" class="sans" font-size="14" fill="#7B746E" text-anchor="middle">your business</text>
+
+  <!-- arrows -->
+  <path d="M900,330 L958,330" stroke="#B5AFA9" stroke-width="2"/>
+  <path d="M950,323 L964,330 L950,337 Z" fill="#7B746E"/>
+  <path d="M1042,330 L1100,330" stroke="#B5AFA9" stroke-width="2"/>
+  <path d="M1092,323 L1106,330 L1092,337 Z" fill="#7B746E"/>
+</svg>
