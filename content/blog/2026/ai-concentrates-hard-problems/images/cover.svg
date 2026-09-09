@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An editorial diagram. A mixed field of neat circles and jagged blobs passes through a vertical filter marked AI. The neat, well-posed circles pass through and fade away as cleared. The jagged, ill-posed blobs cannot pass and pile up denser on the near side, labelled left to you. The message: AI clears the well-posed problems and concentrates the hard ones.">
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans  { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- card -->
+  <rect x="0" y="0" width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- kicker -->
+  <text x="92" y="120" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">ON&#160;&#160;AI&#160;&#160;STRATEGY</text>
+
+  <!-- headline -->
+  <text x="88" y="214" class="serif" font-size="62" fill="#1A1816">AI clears the easy</text>
+  <text x="88" y="284" class="serif" font-size="62" fill="#1A1816">problems.</text>
+  <text x="88" y="360" class="serif" font-size="62" fill="#1A1816">It concentrates the</text>
+  <text x="88" y="430" class="serif" font-size="62" fill="#1A1816">hard ones<tspan fill="#BF4B1A">.</tspan></text>
+
+  <rect x="92" y="466" width="68" height="5" rx="2.5" fill="#BF4B1A"/>
+
+  <text x="92" y="524" class="sans" font-size="22" fill="#7B746E">The well-posed work gets solved.</text>
+  <text x="92" y="554" class="sans" font-size="22" fill="#7B746E">The messy residue is left to you.</text>
+
+  <!-- diagram: mixed field -> AI filter -> neat circles pass, blobs pile up -->
+
+  <!-- the AI filter: a vertical dashed gate -->
+  <line x1="1010" y1="96" x2="1010" y2="470" stroke="#BF4B1A" stroke-width="3" stroke-dasharray="6 9"/>
+  <text x="1010" y="86" class="sans" font-size="19" letter-spacing="2" fill="#BF4B1A" text-anchor="middle">AI</text>
+
+  <!-- LEFT of gate: ill-posed blobs, held back, dense and solid -->
+  <text x="905" y="120" class="sans" font-size="15" fill="#7B746E" text-anchor="middle">left to you</text>
+
+  <path d="M876,168 q-20,-14 -6,-30 q18,-16 34,-4 q22,-6 16,18 q10,18 -12,22 q-14,16 -30,2 q-16,2 -2,-8 Z" fill="#BF4B1A" fill-opacity="0.16" stroke="#BF4B1A" stroke-width="2"/>
+  <path d="M946,232 q-16,-18 4,-28 q22,-12 32,8 q18,4 6,22 q-2,20 -22,14 q-20,8 -26,-12 q-8,-14 6,-4 Z" fill="#BF4B1A" fill-opacity="0.16" stroke="#BF4B1A" stroke-width="2"/>
+  <path d="M872,286 q-22,-8 -10,-28 q14,-20 34,-8 q20,-8 22,14 q14,14 -6,26 q-8,20 -28,8 q-20,4 -14,-16 Z" fill="#BF4B1A" fill-opacity="0.16" stroke="#BF4B1A" stroke-width="2"/>
+  <path d="M950,352 q-18,-16 0,-30 q18,-16 34,0 q20,-2 12,20 q4,20 -18,20 q-14,14 -30,-2 q-14,-8 2,-8 Z" fill="#BF4B1A" fill-opacity="0.16" stroke="#BF4B1A" stroke-width="2"/>
+  <path d="M886,418 q-20,-10 -6,-28 q16,-18 34,-6 q22,-8 20,16 q12,16 -10,24 q-10,18 -30,6 q-18,0 -8,-12 Z" fill="#BF4B1A" fill-opacity="0.16" stroke="#BF4B1A" stroke-width="2"/>
+
+  <!-- a couple of neat circles still on the left, approaching the gate -->
+  <circle cx="978" cy="196" r="12" fill="none" stroke="#B5AFA9" stroke-width="2"/>
+  <circle cx="984" cy="300" r="11" fill="none" stroke="#B5AFA9" stroke-width="2"/>
+  <circle cx="972" cy="392" r="12" fill="none" stroke="#B5AFA9" stroke-width="2"/>
+
+  <!-- RIGHT of gate: well-posed circles pass through, faded, thinning out (cleared) -->
+  <circle cx="1052" cy="176" r="11" fill="#B5AFA9" fill-opacity="0.35" stroke="#B5AFA9" stroke-width="1.5"/>
+  <circle cx="1100" cy="238" r="10" fill="#B5AFA9" fill-opacity="0.28" stroke="#B5AFA9" stroke-width="1.5"/>
+  <circle cx="1060" cy="300" r="11" fill="#B5AFA9" fill-opacity="0.30" stroke="#B5AFA9" stroke-width="1.5"/>
+  <circle cx="1108" cy="360" r="9" fill="#B5AFA9" fill-opacity="0.22" stroke="#B5AFA9" stroke-width="1.5"/>
+  <circle cx="1058" cy="410" r="10" fill="#B5AFA9" fill-opacity="0.26" stroke="#B5AFA9" stroke-width="1.5"/>
+  <text x="1096" y="452" class="sans" font-size="15" fill="#B5AFA9" text-anchor="middle">cleared</text>
+</svg>
