@@ -1,17 +1,21 @@
 {{ define "main" }}
-{{ if eq .Section "blog" }}<div class="progress-bar" id="progress"></div>{{ end }}
+{{ if or (eq .Section "blog") (eq .Section "newsletter") }}<div class="progress-bar" id="progress"></div>{{ end }}
 <article class="post">
   <div class="container">
     <header class="post-header">
-      {{ if eq .Section "blog" }}
+      {{ if or (eq .Section "blog") (eq .Section "newsletter") }}
       <div class="post-meta-top">
         <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
           {{ .Date.Format "January 2, 2006" }}
         </time>
+        {{ if eq .Section "blog" }}
         {{ with .Params.categories }}
         <div class="post-tags">
           {{ range . }}<a href="{{ `categories/` | relURL }}{{ . | urlize | lower }}" class="tag">{{ . | humanize }}</a>{{ end }}
         </div>
+        {{ end }}
+        {{ else if eq .Section "newsletter" }}
+        {{ with .Params.week }}<span class="tag">{{ . }}</span>{{ end }}
         {{ end }}
       </div>
       {{ end }}
@@ -43,6 +47,10 @@
     </div>
 
     {{ if eq .Section "blog" }}
+    <aside class="post-newsletter-note">
+      <p>Enjoyed this article? <a href="/newsletter/">Subscribe to receive a weekly summary of new posts and exclusive insights.</a></p>
+    </aside>
+    {{ partial "subscribe.html" . }}
     <footer class="post-footer">
       {{ with .Params.tags }}
       <div class="post-footer-tags">
@@ -51,11 +59,18 @@
       {{ end }}
       <a href="/blog/" class="back-link">← All posts</a>
     </footer>
+    {{ else if eq .Section "newsletter" }}
+    {{ partial "subscribe.html" . }}
+    <footer class="post-footer">
+      <a href="/newsletter/" class="back-link">← All newsletters</a>
+    </footer>
+    {{ else if eq .RelPermalink "/about/" }}
+    {{ partial "subscribe.html" . }}
     {{ end }}
   </div>
 </article>
 
-{{ if eq .Section "blog" }}
+{{ if or (eq .Section "blog") (eq .Section "newsletter") }}
 <script>
 (function() {
   var bar = document.getElementById('progress');

@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="list-page newsletter-list-page">
+  <div class="container">
+    <header class="page-header">
+      <h1 class="page-title">{{ .Title }}</h1>
+      {{ with .Params.description }}<p class="page-description">{{ . }}</p>{{ end }}
+    </header>
+
+    {{ partial "subscribe.html" . }}
+
+    <div class="post-list post-list--full">
+      {{ $paginator := .Paginate .Pages }}
+      {{ range $paginator.Pages }}
+      <article class="post-item">
+        <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+        <div class="post-item-main">
+          <div class="post-item-body">
+            <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
+            {{ with .Params.description }}<p class="post-excerpt">{{ . }}</p>{{ end }}
+            {{ with .Params.subject }}<p class="newsletter-subject">Subject: {{ . }}</p>{{ end }}
+          </div>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+
+    {{ template "_internal/pagination.html" . }}
+  </div>
+</div>
+{{ end }}

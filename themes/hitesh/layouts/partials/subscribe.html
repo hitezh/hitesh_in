@@ -1,0 +1,8 @@
+<section class="newsletter-cta" aria-labelledby="newsletter-cta-title">
+  <div class="newsletter-cta-inner">
+    <p class="section-label">Newsletter</p>
+    <h2 id="newsletter-cta-title" class="newsletter-cta-title">{{ .Site.Params.newsletter_title | default "Weekly AI Brief" }}</h2>
+    <p class="newsletter-cta-desc">{{ .Site.Params.newsletter_description | default "Every Sunday I connect the week's ideas into a practical briefing for founders, CTOs, and technology leaders. Includes exclusive insights not published on the blog." }}</p>
+    <a class="btn-primary" href="{{ .Site.Params.newsletter_subscribe_url | default "/newsletter/" }}">Subscribe or read the archive</a>
+  </div>
+</section>

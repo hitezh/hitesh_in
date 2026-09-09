@@ -16,10 +16,12 @@ googleAnalytics = "" # example : UA-123-45
 
 [permalinks]
   blog = ':year/:slug'
+  newsletter = '/newsletter/:year/:slug/'
 
 ############################## Output ###############################
 [outputs]
 home = ["HTML", "RSS", "JSON"]
+section = ["HTML", "RSS"]
 
 [services.disqus]
 shortname = ""
@@ -47,6 +49,11 @@ URL = "about"
 weight = 2
 
 [[menu.main]]
+name = "Newsletter"
+URL = "/newsletter/"
+weight = 3
+
+[[menu.main]]
 name = "Contact"
 URL = "https://twitter.com/fullstackcto"
 weight = 4
@@ -59,6 +66,9 @@ weight = 4
 
 #################### default parameters ################################
 [params]
+newsletter_title = "Weekly AI Brief"
+newsletter_description = "Every Sunday I connect the week's ideas into a practical briefing for founders, CTOs, and technology leaders. Includes exclusive insights not published on the blog."
+newsletter_subscribe_url = "/newsletter/"
 # Meta data
 description = "Thoughts on life, technology, education and entrepreneurship"
 author = "Hitesh Sarda"
