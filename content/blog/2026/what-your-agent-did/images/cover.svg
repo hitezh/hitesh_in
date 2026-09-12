@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Cover: an editorial claim that OpenAI could not say what its agents did, beside an agent action log whose entries trail off into an unreadable blank.">
+  <defs>
+    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101828"/>
+      <stop offset="1" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D9FF43"/>
+      <stop offset="1" stop-color="#50E3C2"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="42"/></filter>
+    <style>
+      .display { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+      .mono { font-family: 'SF Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#surface)"/>
+  <circle cx="1080" cy="-10" r="220" fill="#2166F3" fill-opacity=".52" filter="url(#blur)"/>
+  <circle cx="1020" cy="580" r="180" fill="#00C2A8" fill-opacity=".24" filter="url(#blur)"/>
+  <path d="M0 535 C240 420 365 670 595 532 S950 426 1200 520" fill="none" stroke="#FFFFFF" stroke-opacity=".10" stroke-width="2"/>
+  <rect x="28" y="28" width="1144" height="574" rx="28" fill="none" stroke="#FFFFFF" stroke-opacity=".18" stroke-width="2"/>
+
+  <g class="sans" fill="#D9FF43">
+    <circle cx="88" cy="96" r="7"/>
+    <text x="108" y="103" font-size="17" font-weight="700" letter-spacing="3">AI STRATEGY / AGENTS</text>
+  </g>
+
+  <g class="display" font-size="70" font-weight="700" fill="#FFFFFF">
+    <text x="82" y="220">OpenAI couldn't say</text>
+    <text x="82" y="300">what its agents did.</text>
+    <text x="82" y="380"><tspan fill="#D9FF43">Neither can you.</tspan></text>
+  </g>
+
+  <text x="88" y="452" class="sans" font-size="23" fill="#D9E2F2">Agents fail outward, into systems you don't own.</text>
+  <text x="88" y="486" class="sans" font-size="23" fill="#D9E2F2">Build the flight recorder before you fly.</text>
+
+  <!-- Supporting visual: an agent action log that trails off into an unreadable gap. -->
+  <g transform="translate(858 250)">
+    <rect x="0" y="0" width="272" height="230" rx="14" fill="#0B1220" fill-opacity=".72" stroke="#FFFFFF" stroke-opacity=".18" stroke-width="2"/>
+    <text x="20" y="34" class="mono" font-size="15" fill="#8FA3C4" letter-spacing="1">agent.log</text>
+    <line x1="20" y1="48" x2="252" y2="48" stroke="#FFFFFF" stroke-opacity=".12" stroke-width="1.5"/>
+    <g class="mono" font-size="15" fill="#D9E2F2">
+      <text x="20" y="78">POST /register  <tspan fill="#50E3C2">ok</tspan></text>
+      <text x="20" y="106">PUT  /packages  <tspan fill="#50E3C2">ok</tspan></text>
+      <text x="20" y="134">GET  /internet  <tspan fill="#D9FF43">?</tspan></text>
+    </g>
+    <rect x="20" y="150" width="232" height="14" rx="4" fill="#FFFFFF" fill-opacity=".10"/>
+    <rect x="20" y="174" width="180" height="14" rx="4" fill="#FFFFFF" fill-opacity=".07"/>
+    <rect x="20" y="198" width="210" height="14" rx="4" fill="#FFFFFF" fill-opacity=".05"/>
+  </g>
+
+  <text x="88" y="556" class="sans" font-size="16" font-weight="700" letter-spacing="2.5" fill="#AAB8D0">HITESH.IN</text>
+</svg>
