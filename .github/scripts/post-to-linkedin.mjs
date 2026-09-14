@@ -244,11 +244,21 @@ function resolveSlideImages(postPath) {
 
 // A slide PNG's alt text comes from its source SVG's `aria-label` (the same
 // accessibility description the author wrote when drawing the card), if any.
+// For a slide-N.png with no SVG source (e.g. a carousel built directly from
+// photos rather than authored cards), fall back to a same-named .txt sidecar
+// holding the alt text as plain text.
 function slideAltText(pngPath) {
   const svgPath = pngPath.replace(/\.png$/i, ".svg");
   try {
     const m = readFileSync(svgPath, "utf8").match(/aria-label="([^"]*)"/);
-    return m ? m[1] : undefined;
+    if (m) return m[1];
+  } catch {
+    // fall through to the .txt sidecar
+  }
+  const txtPath = pngPath.replace(/\.png$/i, ".txt");
+  try {
+    const text = readFileSync(txtPath, "utf8").trim();
+    return text || undefined;
   } catch {
     return undefined;
   }
