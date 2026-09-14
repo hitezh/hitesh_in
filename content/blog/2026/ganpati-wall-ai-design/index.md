@@ -21,7 +21,11 @@ So I started with Gemini. I gave it one instruction: reimagine a jharokha, black
 
 ![Gemini's black-and-white jharokha design, generated from a one-line prompt](images/ai-jharokha-brief.jpg)
 
-For the actual wall, I went a different route. I had a jharokha design I liked, so I gave ChatGPT that photo along with a picture of my bare wall and asked it to put the design on all ten squares. First pass came back lit like a movie set, all warm gold.
+Not every version made the cut. At one point I tried a simpler quatrefoil lattice, cut one panel, mounted it on a single square, and asked ChatGPT to preview it across the rest of the wall. It looked decent, just not as striking as I wanted, so it stayed shortlisted and unused.
+
+![A shortlisted design that didn't make it: a simpler quatrefoil lattice, tried on one panel and previewed across the wall](images/shortlisted-quatrefoil-mockup.jpg)
+
+For the design I actually went with, I gave ChatGPT a photo of the jharokha pattern I liked along with a picture of my bare wall and asked it to put the design on all ten squares. First pass came back lit like a movie set, all warm gold.
 
 ![The reference jharokha design applied to all ten squares of the wall, lit in dramatic gold](images/ai-wall-mockup-gold.jpg)
 
