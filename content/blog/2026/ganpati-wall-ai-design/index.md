@@ -21,9 +21,13 @@ So I started with Gemini. I gave it one instruction: reimagine a jharokha, black
 
 ![Gemini's black-and-white jharokha design, generated from a one-line prompt](images/ai-jharokha-brief.jpg)
 
-Before committing to cutting ten of these in brass, I wanted to see how it would actually sit on the wall. I cut and mounted just one, photographed it in place, and fed that photo to ChatGPT: try this on the rest. It generated a full mockup of the wall with the design repeated across all ten squares, close enough to the real thing that I could tell it would work before spending on nine more panels.
+For the actual wall, I went a different route. I had a jharokha design I liked, so I gave ChatGPT that photo along with a picture of my bare wall and asked it to put the design on all ten squares. First pass came back lit like a movie set, all warm gold.
 
-![A single real panel, and ChatGPT's mockup of it applied across the whole wall](images/ai-wall-mockup.jpg)
+![The reference jharokha design applied to all ten squares of the wall, lit in dramatic gold](images/ai-wall-mockup-gold.jpg)
+
+I asked for the same thing without the artificial lighting, closer to how it would sit on a normal afternoon. That's the version I actually used to sign off on the design before booking the laser cutting.
+
+![The same mockup without the AI's gold lighting, closer to how the brass would really look](images/ai-wall-mockup-daylight.jpg)
 
 Here's how it actually turned out, ten Ganeshas, ten jharokhas, cut and finished in brass.
 
