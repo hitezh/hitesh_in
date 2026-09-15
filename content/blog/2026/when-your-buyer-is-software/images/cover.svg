@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Cover: when the buyer is an AI agent, the sponsored buy box and product screen no longer matter; the agent reads price and stock as plain data.">
+  <defs>
+    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101828"/>
+      <stop offset="1" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D9FF43"/>
+      <stop offset="1" stop-color="#50E3C2"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="42"/></filter>
+    <style>
+      .display { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#surface)"/>
+  <circle cx="1080" cy="-10" r="220" fill="#2166F3" fill-opacity=".52" filter="url(#blur)"/>
+  <circle cx="1020" cy="580" r="180" fill="#00C2A8" fill-opacity=".24" filter="url(#blur)"/>
+  <path d="M0 535 C240 420 365 670 595 532 S950 426 1200 520" fill="none" stroke="#FFFFFF" stroke-opacity=".10" stroke-width="2"/>
+  <rect x="28" y="28" width="1144" height="574" rx="28" fill="none" stroke="#FFFFFF" stroke-opacity=".18" stroke-width="2"/>
+
+  <g class="sans" fill="#D9FF43">
+    <circle cx="88" cy="96" r="7"/>
+    <text x="108" y="103" font-size="17" font-weight="700" letter-spacing="3">AI STRATEGY / PLATFORMS</text>
+  </g>
+
+  <g class="display" font-size="72" font-weight="700" fill="#FFFFFF">
+    <text x="82" y="214">When your buyer</text>
+    <text x="82" y="298">is <tspan fill="#D9FF43">software,</tspan></text>
+    <text x="82" y="382">the interface</text>
+    <text x="82" y="466">is not a moat.</text>
+  </g>
+
+  <text x="88" y="524" class="sans" font-size="22" fill="#D9E2F2">A court just ruled Amazon can't wall the shopping agents out.</text>
+
+  <!-- Supporting visual: an agent reading a product card as plain data, ignoring the sponsored badge. -->
+  <g transform="translate(925 300)">
+    <circle r="118" fill="#D9FF43" fill-opacity=".10" stroke="#D9FF43" stroke-width="2"/>
+    <rect x="-70" y="-66" width="140" height="132" rx="12" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="2"/>
+    <rect x="-70" y="-66" width="140" height="30" rx="12" fill="#2166F3" fill-opacity=".45"/>
+    <text x="0" y="-45" text-anchor="middle" class="sans" font-size="12" font-weight="700" fill="#AAB8D0" letter-spacing="1">SPONSORED</text>
+    <line x1="-52" y1="-8" x2="52" y2="-8" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="6" stroke-linecap="round"/>
+    <line x1="-52" y1="14" x2="24" y2="14" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="6" stroke-linecap="round"/>
+    <text x="0" y="52" text-anchor="middle" class="sans" font-size="20" font-weight="700" fill="#D9FF43">$ in stock</text>
+    <path d="M96 -70 L128 -70 M112 -86 L112 -54" stroke="url(#signal)" stroke-width="9" stroke-linecap="round"/>
+  </g>
+
+  <text x="88" y="566" class="sans" font-size="16" font-weight="700" letter-spacing="2.5" fill="#AAB8D0">HITESH.IN</text>
+</svg>
