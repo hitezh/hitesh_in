@@ -1,51 +1,86 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Template for a blog cover with an oversized editorial headline and a simple supporting visual">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Template for a blog cover styled as a screenshotted X post: an avatar and handle, an oversized claim as the post text, an attached visual, and an engagement bar.">
   <defs>
-    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#101828"/>
-      <stop offset="1" stop-color="#172554"/>
+    <linearGradient id="avatar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2166F3"/>
+      <stop offset="1" stop-color="#00C2A8"/>
     </linearGradient>
-    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#D9FF43"/>
-      <stop offset="1" stop-color="#50E3C2"/>
-    </linearGradient>
-    <filter id="blur"><feGaussianBlur stdDeviation="42"/></filter>
     <style>
-      .display { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
       .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
     </style>
   </defs>
 
-  <!-- Base: dark enough for feeds, with a little depth rather than a flat card. -->
-  <rect width="1200" height="630" fill="url(#surface)"/>
-  <circle cx="1080" cy="-10" r="220" fill="#2166F3" fill-opacity=".52" filter="url(#blur)"/>
-  <circle cx="1020" cy="580" r="180" fill="#00C2A8" fill-opacity=".24" filter="url(#blur)"/>
-  <path d="M0 535 C240 420 365 670 595 532 S950 426 1200 520" fill="none" stroke="#FFFFFF" stroke-opacity=".10" stroke-width="2"/>
-  <rect x="28" y="28" width="1144" height="574" rx="28" fill="none" stroke="#FFFFFF" stroke-opacity=".18" stroke-width="2"/>
+  <!-- Base: near-black, like an X/Twitter dark-mode embed, with a rounded card frame. -->
+  <rect width="1200" height="630" fill="#000000"/>
+  <rect x="24" y="24" width="1152" height="582" rx="24" fill="#000000" stroke="#2F3336" stroke-width="2"/>
 
-  <!-- Replace this with a short category, such as AI STRATEGY or BANKING. -->
-  <g class="sans" fill="#D9FF43">
-    <circle cx="88" cy="96" r="7"/>
-    <text x="108" y="103" font-size="17" font-weight="700" letter-spacing="3">CATEGORY / POINT OF VIEW</text>
+  <!-- Platform mark, top right. A generic crossed mark, not a traced logo. -->
+  <g transform="translate(1114 50)" stroke="#E7E9EA" stroke-width="4" stroke-linecap="round">
+    <line x1="0" y1="0" x2="22" y2="22"/>
+    <line x1="22" y1="0" x2="0" y2="22"/>
   </g>
 
-  <!-- Keep the headline to 2-4 lines. Make one key word signal-colored. -->
-  <g class="display" font-size="76" font-weight="700" fill="#FFFFFF">
-    <text x="82" y="224">The sharp claim</text>
-    <text x="82" y="310">goes <tspan fill="#D9FF43">right here.</tspan></text>
-    <text x="82" y="396">Make it worth stopping.</text>
+  <!-- Author header: avatar, display name, verified check, handle. -->
+  <g>
+    <circle cx="108" cy="108" r="44" fill="url(#avatar)"/>
+    <text x="108" y="120" class="sans" font-size="34" font-weight="800" fill="#FFFFFF" text-anchor="middle">HS</text>
+
+    <text x="172" y="98" class="sans" font-size="30" font-weight="800" fill="#E7E9EA">Hitesh Sarda</text>
+    <g transform="translate(432 84)">
+      <circle r="13" fill="#1D9BF0"/>
+      <path d="M-6 0l4 4 8-8" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Replace the date with the post's real publish date. -->
+    <text x="172" y="134" class="sans" font-size="24" fill="#71767B">@fullstackcto &#183; Sep 16</text>
+  </g>
+
+  <!-- Post text: keep the claim to 2-4 lines. Make one key word signal-colored. -->
+  <g class="sans" font-size="58" font-weight="700" fill="#E7E9EA">
+    <text x="72" y="232">The sharp claim</text>
+    <text x="72" y="304">goes <tspan fill="#D9FF43">right here.</tspan></text>
+    <text x="72" y="376">Make it worth stopping.</text>
   </g>
 
   <!-- Use this line only for a concrete fact or a useful tension. -->
-  <text x="88" y="462" class="sans" font-size="23" fill="#D9E2F2">A short, specific subhead that earns the click.</text>
+  <text x="72" y="428" class="sans" font-size="26" fill="#D9E2F2">A short, specific line that earns the click.</text>
 
-  <!-- Supporting visual: replace with one simple diagram, object, or number.
-       Keep it in this right-hand zone so the title wins at feed size. -->
-  <g transform="translate(925 286)">
-    <circle r="112" fill="#D9FF43" fill-opacity=".12" stroke="#D9FF43" stroke-width="2"/>
-    <circle r="76" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="2" stroke-dasharray="7 10"/>
-    <path d="M-42 16 L-4 -26 L26 4 L60 -48" fill="none" stroke="url(#signal)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="60" cy="-48" r="10" fill="#D9FF43"/>
+  <!-- Replace with a hashtag version of the category, e.g. #AISTRATEGY or #BANKING. -->
+  <text x="72" y="466" class="sans" font-size="26" font-weight="700" fill="#1D9BF0">#CATEGORY</text>
+
+  <!-- Attached media: replace with one simple diagram, object, or number, styled like an embedded image. -->
+  <g transform="translate(860 210)">
+    <rect x="0" y="0" width="256" height="220" rx="18" fill="#16181C" stroke="#2F3336" stroke-width="2"/>
+    <g transform="translate(128 110)">
+      <circle r="80" fill="#D9FF43" fill-opacity=".12" stroke="#D9FF43" stroke-width="2"/>
+      <circle r="54" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="2" stroke-dasharray="6 9"/>
+      <path d="M-30 12 L-3 -18 L18 3 L42 -34" fill="none" stroke="#50E3C2" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="42" cy="-34" r="7" fill="#D9FF43"/>
+    </g>
   </g>
 
-  <text x="88" y="556" class="sans" font-size="16" font-weight="700" letter-spacing="2.5" fill="#AAB8D0">HITESH.IN</text>
+  <!-- Analytics row, above the divider. Adjust the view count to taste. -->
+  <text x="72" y="510" class="sans" font-size="22" fill="#71767B">10:41 AM &#183; Sep 16, 2026 &#183; <tspan font-weight="700" fill="#E7E9EA">412K</tspan> Views</text>
+  <line x1="64" y1="530" x2="1136" y2="530" stroke="#2F3336" stroke-width="1"/>
+
+  <!-- Engagement bar: reply, repost, like, bookmark, share. Counts are cosmetic; keep them plausible, not absurd. -->
+  <g class="sans" font-size="22" fill="#71767B">
+    <g transform="translate(72 556)">
+      <path d="M2 3h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2z" fill="none" stroke="#71767B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="32" y="16">482</text>
+    </g>
+    <g transform="translate(292 556)">
+      <path d="M17 1l4 4-4 4 M3 11V9a4 4 0 0 1 4-4h14 M7 23l-4-4 4-4 M21 13v2a4 4 0 0 1-4 4H3" fill="none" stroke="#00BA7C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="32" y="16" fill="#00BA7C" font-weight="700">3.1K</text>
+    </g>
+    <g transform="translate(512 556)">
+      <path d="M12 21.5l-1.6-1.4C4.9 15.4 1.5 12.4 1.5 8.6 1.5 5.5 3.9 3 7 3c1.7 0 3.4.8 4.5 2.1C12.6 3.8 14.3 3 16 3c3.1 0 5.5 2.5 5.5 5.6 0 3.8-3.4 6.8-8.9 11.5L12 21.5z" fill="#F91880"/>
+      <text x="32" y="16" fill="#F91880" font-weight="700">18.4K</text>
+    </g>
+    <g transform="translate(940 556)">
+      <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" fill="none" stroke="#71767B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g transform="translate(1080 556)">
+      <path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7 M16 6l-4-4-4 4 M12 2v14" fill="none" stroke="#71767B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
 </svg>
