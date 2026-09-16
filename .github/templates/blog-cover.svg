@@ -31,7 +31,7 @@
     <circle cx="1136" cy="96" r="5"/>
   </g>
 
-  <!-- The post itself. Regular weight, full width, no accent colour: it has to read as
+  <!-- The post itself. Regular weight, full width, almost no colour: it has to read as
        text someone typed, not as a designed headline.
 
        Open with the claim in caps (2 lines, the hook), leave a blank line, then land a
@@ -45,6 +45,10 @@
     <text x="64" y="472">makes the claim worth stopping for.</text>
   </g>
 
+  <!-- One trailing hashtag, X-blue, the way a real post ends with a clickable tag.
+       Replace with a hashtag version of the post's category, e.g. #AISTRATEGY. -->
+  <text x="64" y="528" class="sans" font-size="34" fill="#1D9BF0">#CATEGORY</text>
+
   <!-- Timestamp and view count. Use the post's real publish date; keep the count plausible. -->
-  <text x="64" y="566" class="sans" font-size="30" fill="#71767B">8:31 PM &#183; Sep 16, 2026 &#183; <tspan font-weight="700" fill="#E7E9EA">1.8M</tspan> Views</text>
+  <text x="64" y="588" class="sans" font-size="30" fill="#71767B">8:31 PM &#183; Sep 16, 2026 &#183; <tspan font-weight="700" fill="#E7E9EA">1.8M</tspan> Views</text>
 </svg>
