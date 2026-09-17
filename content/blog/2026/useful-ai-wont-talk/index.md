@@ -3,7 +3,7 @@ title: "The most useful AI won't talk to your customers"
 slug: "useful-ai-wont-talk"
 date: "2026-09-16"
 description: "A new class of models is built to be called by software, not chatted with. What decides whether they pay off is calibrated confidence, not raw intelligence."
-image: images/cover.svg
+image: images/cover.png
 draft: false
 categories:
   - "technology"
