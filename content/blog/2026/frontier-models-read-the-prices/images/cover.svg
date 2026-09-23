@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Blog cover styled as a screenshot of an X post from Hitesh Sarda. The post reads: THE MODEL DIDN'T FAIL. THE REVIEW TEAM WENT FROM 10 TO 1. Pentagon staffing fell 90% right as AI scaled strikes past 1,000 targets a day. Hashtag AISTRATEGY, dated September 23, 2026, with a view count.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Blog cover styled as a screenshot of an X post from Hitesh Sarda. The post reads: THREE LABS SHIPPED FLAGSHIP MODELS THIS WEEK. TWO CUT PRICE. Opus 5.5, GPT-6 Sol and Luna, and Grok 4.7 landed within 48 hours. Only xAI held its price flat. Hashtag AISTRATEGY, dated September 23, 2026, with a view count.">
   <defs>
     <linearGradient id="avatar" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#2166F3"/>
@@ -30,14 +30,14 @@
   </g>
 
   <g class="sans" font-size="52" fill="#E7E9EA">
-    <text x="64" y="244">THE MODEL DIDN'T FAIL. THE</text>
-    <text x="64" y="310">REVIEW TEAM WENT FROM 10 TO 1.</text>
+    <text x="64" y="244">THREE LABS SHIPPED FLAGSHIPS</text>
+    <text x="64" y="310">THIS WEEK. TWO CUT PRICE.</text>
 
-    <text x="64" y="406">Pentagon staffing fell 90% right as AI</text>
-    <text x="64" y="472">scaled strikes past 1,000 targets a day.</text>
+    <text x="64" y="406">Opus 5.5, GPT-6 Sol/Luna, and Grok 4.7,</text>
+    <text x="64" y="472">all within 48 hours. Only xAI held firm.</text>
   </g>
 
   <text x="64" y="528" class="sans" font-size="34" fill="#1D9BF0">#AISTRATEGY</text>
 
-  <text x="64" y="588" class="sans" font-size="30" fill="#71767B">9:14 AM &#183; Sep 23, 2026 &#183; <tspan font-weight="700" fill="#E7E9EA">2.1M</tspan> Views</text>
+  <text x="64" y="588" class="sans" font-size="30" fill="#71767B">10:02 AM &#183; Sep 23, 2026 &#183; <tspan font-weight="700" fill="#E7E9EA">1.6M</tspan> Views</text>
 </svg>
