@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A data center on the ground blocked by a seven-year grid queue, with an arc showing Google routing TPUs up into orbit instead, over the ground path.">
+  <defs>
+    <style>
+      .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+      .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+    </style>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#BF4B1A"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <g class="sans">
+    <!-- ground row: data center blocked by a queue gate -->
+    <text x="740" y="172" font-size="14" letter-spacing="1" fill="#7B746E">THE GROUND ROUTE</text>
+
+    <!-- data center -->
+    <rect x="720" y="212" width="64" height="52" rx="4" fill="#1A1816"/>
+    <g stroke="#BF4B1A" stroke-width="2">
+      <line x1="732" y1="224" x2="732" y2="252"/>
+      <line x1="744" y1="224" x2="744" y2="252"/>
+      <line x1="756" y1="224" x2="756" y2="252"/>
+      <line x1="768" y1="224" x2="768" y2="252"/>
+    </g>
+
+    <!-- queue gate: a row of ticks -->
+    <line x1="800" y1="238" x2="900" y2="238" stroke="#7B746E" stroke-width="2" stroke-dasharray="3 6"/>
+    <g stroke="#BF4B1A" stroke-width="4">
+      <line x1="840" y1="216" x2="840" y2="260"/>
+      <line x1="854" y1="216" x2="854" y2="260"/>
+    </g>
+    <text x="847" y="290" font-size="15" font-weight="700" fill="#BF4B1A" text-anchor="middle">7-YEAR</text>
+    <text x="847" y="308" font-size="15" font-weight="700" fill="#BF4B1A" text-anchor="middle">GRID QUEUE</text>
+
+    <!-- blocked: a plain arrow stopping at the gate -->
+    <path d="M786 238 L 836 238" fill="none" stroke="#7B746E" stroke-width="3"/>
+
+    <!-- the arc up and over: TPUs to orbit -->
+    <path d="M760 208 C 800 100, 970 56, 1055 118" fill="none" stroke="#BF4B1A" stroke-width="3.5" marker-end="url(#arrow2)"/>
+
+    <!-- satellite at end of arc -->
+    <g transform="translate(1090 130)">
+      <rect x="-14" y="-9" width="28" height="18" rx="3" fill="#1A1816"/>
+      <rect x="-34" y="-4" width="16" height="8" fill="#BF4B1A"/>
+      <rect x="18" y="-4" width="16" height="8" fill="#BF4B1A"/>
+    </g>
+    <text x="1080" y="165" font-size="14" font-weight="700" fill="#1A1816" text-anchor="middle">TPUs IN ORBIT</text>
+    <text x="1080" y="183" font-size="13" fill="#7B746E" text-anchor="middle">launching Oct 1</text>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  STRATEGY</text>
+
+  <text x="84" y="418" class="serif" font-size="50" font-weight="800" fill="#1A1816">Google would rather</text>
+  <text x="84" y="484" class="serif" font-size="50" font-weight="800" fill="#1A1816">solve rocket science</text>
+  <text x="84" y="550" class="serif" font-size="50" font-weight="800" fill="#BF4B1A">than wait for a line.</text>
+
+  <text x="720" y="470" class="sans" font-size="20" fill="#7B746E">Grid connections now take up to seven</text>
+  <text x="720" y="498" class="sans" font-size="20" fill="#7B746E">years. Google is testing an escape route</text>
+  <text x="720" y="526" class="sans" font-size="20" fill="#7B746E">that costs eighteen times too much, today.</text>
+</svg>
