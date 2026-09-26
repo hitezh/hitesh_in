@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A blog cover styled as a screenshot of an X post by Hitesh Sarda: the claim in caps reads MICROSOFT OWNS 450 MILLION SEATS. ONLY 7% OPEN COPILOT, followed by the line, distribution stopped being the AI moat, and the hashtag AIStrategy.">
+  <defs>
+    <linearGradient id="avatar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2166F3"/>
+      <stop offset="1" stop-color="#00C2A8"/>
+    </linearGradient>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="#000000"/>
+
+  <circle cx="104" cy="96" r="44" fill="url(#avatar)"/>
+  <text x="104" y="108" class="sans" font-size="34" font-weight="800" fill="#FFFFFF" text-anchor="middle">HS</text>
+
+  <text x="168" y="86" class="sans" font-size="35" font-weight="700" fill="#E7E9EA">Hitesh Sarda</text>
+  <g transform="translate(406 74)">
+    <circle r="15" fill="#1D9BF0"/>
+    <path d="M-7 0l5 5 9-9" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="168" y="132" class="sans" font-size="33" fill="#71767B">@fullstackcto</text>
+
+  <rect x="856" y="64" width="190" height="64" rx="32" fill="#EFF3F4"/>
+  <text x="951" y="107" class="sans" font-size="30" font-weight="700" fill="#0F1419" text-anchor="middle">Follow</text>
+  <g fill="#71767B">
+    <circle cx="1092" cy="96" r="5"/>
+    <circle cx="1114" cy="96" r="5"/>
+    <circle cx="1136" cy="96" r="5"/>
+  </g>
+
+  <g class="sans" font-size="46" fill="#E7E9EA">
+    <text x="64" y="228">MICROSOFT OWNS 450 MILLION</text>
+    <text x="64" y="286">SEATS. ONLY 7% OPEN COPILOT.</text>
+
+    <text x="64" y="388">distribution stopped being the</text>
+    <text x="64" y="446">AI moat.</text>
+  </g>
+
+  <text x="64" y="528" class="sans" font-size="34" fill="#1D9BF0">#AIStrategy</text>
+
+  <text x="64" y="588" class="sans" font-size="30" fill="#71767B">9:14 AM &#183; Sep 26, 2026 &#183; <tspan font-weight="700" fill="#E7E9EA">612K</tspan> Views</text>
+</svg>
