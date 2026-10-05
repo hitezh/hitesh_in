@@ -1,6 +1,6 @@
 baseURL = 'https://hitesh.in/'
 locale   = 'en-US'
-title    = 'Hitesh Sarda'
+title    = 'Dr. Hitesh Sarda'
 theme    = 'hitesh'
 
 [pagination]
@@ -10,7 +10,7 @@ theme    = 'hitesh'
   blog = ':year/:slug'
 
 [params]
-  author      = "Hitesh Sarda"
+  author      = "Dr. Hitesh Sarda"
   description = "Thoughts on technology, entrepreneurship, and life."
   tagline     = "Building software that brings customers back."
   twitter     = "fullstackcto"

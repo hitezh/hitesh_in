@@ -11,7 +11,7 @@ download_label: "Get the free PDF"
 format: "PDF"
 chapters_total: 11
 parts_total: 3
-author_name: "Hitesh Sarda"
+author_name: "Dr. Hitesh Sarda"
 endorsement: "If you want to stop experimenting and start delivering real business results with this technology, this is where you start."
 endorser: "Shammik Gupta"
 endorser_title: "CEO, INSORCE"
