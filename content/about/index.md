@@ -3,7 +3,7 @@ title: "About"
 draft: false
 ---
 
-I work at the intersection of AI research, practical engineering, and business outcomes — helping leadership teams navigate AI adoption with clarity and confidence.
+I am Dr. Hitesh Sarda. I work at the intersection of AI research, practical engineering, and business outcomes — helping leadership teams navigate AI adoption with clarity and confidence.
 
 My focus is on **Retail, Loyalty, and Industrial domains**, where I lead the advisory for AI implementation and consulting engagements. Each engagement ends with evidence-based recommendations your leadership team can actually act on.
 

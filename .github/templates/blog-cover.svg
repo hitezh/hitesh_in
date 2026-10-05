@@ -16,8 +16,8 @@
   <circle cx="104" cy="96" r="44" fill="url(#avatar)"/>
   <text x="104" y="108" class="sans" font-size="34" font-weight="800" fill="#FFFFFF" text-anchor="middle">HS</text>
 
-  <text x="168" y="86" class="sans" font-size="35" font-weight="700" fill="#E7E9EA">Hitesh Sarda</text>
-  <g transform="translate(406 74)">
+  <text x="168" y="86" class="sans" font-size="35" font-weight="700" fill="#E7E9EA">Dr. Hitesh Sarda</text>
+  <g transform="translate(476 74)">
     <circle r="15" fill="#1D9BF0"/>
     <path d="M-7 0l5 5 9-9" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
