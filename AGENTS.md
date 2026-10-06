@@ -69,6 +69,28 @@ Do not force these themes into every article.
 
 Over time they should naturally emerge across the body of work.
 
+## Build posts around a claim, not a topic
+
+A post commits to one specific, debatable statement. It does not survey a topic. The test: could a reasonable person disagree with the title? If not, it's a topic wearing a title.
+
+- Weak: "The future of AI in software engineering." Better: "AI won't replace software engineers. It will replace the way we measure a good one."
+- Weak: "Lessons from [Company]." Better: "[Company] is solving the wrong problem — and that's exactly why its product is so popular."
+- Weak: "The future of work." Better: "The next productivity problem isn't finding AI tools. It's managing too many of them."
+
+Think of every post as claim plus evidence plus perspective, not as "personal" versus "professional." The evidence can be a personal experience, a company's product, a photograph of something built, or an industry number, but the post exists to argue the claim, not to report on the evidence. Aim for the reader thinking "I hadn't looked at it that way," not "that was informative."
+
+### The editorial mix
+
+Not rigid quotas, but a rough shape to notice across a quarter of posts, not to plan post by post:
+
+- Contrarian company/product takes, for reach and discussion — about 30%.
+- Personal stories and experiences, for trust and connection — about 25%.
+- AI/tech/business observations, for authority — about 20%.
+- Real artifact/photo stories, for authenticity and engagement — about 15%.
+- Practical frameworks and how-tos, for save/share value — about 10%.
+
+Don't force a post into a bucket it doesn't fit.
+
 ## Front matter
 
 Use YAML front matter delimited by `---`. Follow the established format:
@@ -96,9 +118,9 @@ Rules:
 - `tags` are optional. Use them for specific subjects a reader may want to find again. Keep them lowercase and hyphen-separated; reuse an existing tag where possible.
 - `image` is optional but recommended. Use the bundle-relative form `images/<filename>` and ensure the file exists. Use a descriptive filename, not `image1.jpg`.
 - Prefer `image`; do not add the legacy `coverImage` field to new posts.
-- Cover images are usually authored as an SVG (`images/cover.svg`). Start from [`.github/templates/blog-cover.svg`](.github/templates/blog-cover.svg), then make it specific to the post. The template is styled as a screenshot of an X post — avatar, name and handle, the claim as the post text, a trailing hashtag, and a view count — because that format reads well and gets clicked in a fast-moving feed. Keep the illusion: regular-weight text running nearly full width, no card frame, no decorative diagram, no colour beyond the verified check and the hashtag (both X-blue, `#1D9BF0`) — the text is the whole image, so it has to earn attention on its own. Open with the claim in caps across two lines, leave a blank line, then land one concrete supporting line, then the hashtag. The claim has to read like a real post someone would stop and tap on, not a headline shrunk to fit a box: name the company or product and take a stance a reader wouldn't expect from a vendor deck ("GOOGLE HAS THE BEST AI MONEY CAN BUY" / "its products still feel broken" outperformed every vaguer title tried). Use the post's real publish date, keep the view count plausible, and change the `aria-label` to describe the finished image.
-- For a post built around a real photo, screenshot, or artifact (a build, a design, a craft project), consider using that image as the cover instead of the SVG template — it has outperformed the template on reaction count for posts where the thing itself is the draw.
-- Social platforms cannot render SVG, so a raster `cover.png` sibling is required for the Open Graph card and the LinkedIn announcement. **You only commit the SVG.** CI (`.github/workflows/cover-image.yml`) renders `cover.png` from it with headless Chromium and commits it back to the branch. To generate or preview it locally, run `node .github/scripts/rasterize-cover.mjs`. Do not hand-edit the generated PNG.
+- Every cover has to answer one question: what is the provocative thing this post is saying? The claim is the brand, not the template, so pick one of two visual modes — don't blend them:
+  - **No standout real visual.** Author `images/cover.svg`, starting from [`.github/templates/blog-cover.svg`](.github/templates/blog-cover.svg), then make it specific to the post. The template is styled as a screenshot of an X post — avatar, name and handle, the claim as the post text, a trailing hashtag, and a view count — because that format reads well and gets clicked in a fast-moving feed. Keep the illusion: regular-weight text running nearly full width, no card frame, no decorative diagram, no colour beyond the verified check and the hashtag (both X-blue, `#1D9BF0`). Open with the claim in caps across two lines, leave a blank line, land one concrete supporting line, then the hashtag. The claim itself has to be the provocative statement, not a summary of one — "AWS ISN'T THE PROBLEM.", "AI DIDN'T MAKE ENGINEERS FASTER.", "YOUR NEXT CO-WORKER MAY BE AN AI AGENT." Use the post's real publish date, keep the view count plausible, and change the `aria-label` to describe the finished image. Social platforms cannot render SVG, so a raster `cover.png` sibling is required for the Open Graph card and the LinkedIn announcement. **You only commit the SVG.** CI (`.github/workflows/cover-image.yml`) renders `cover.png` from it with headless Chromium and commits it back to the branch. To generate or preview it locally, run `node .github/scripts/rasterize-cover.mjs`. Do not hand-edit the generated PNG.
+  - **A real photo, screenshot, or artifact is central to the story** — something built, designed, attended, received, or measured. Don't manufacture a template cover for it; let the artifact be the cover. Set `image: images/<descriptive-name>.jpg` directly; there's no `cover.svg` and nothing for CI to rasterize. This beat the template on reaction count for the one post that tried it ("I designed my Ganpati wall with AI, then had it laser cut").
 - Optionally, add `images/slide-1.svg`, `slide-2.svg`, ... (same commit-only-the-SVG rule, same CI rasterization) to have the post announced on LinkedIn as a multi-image carousel of 3-5 key facts/insights/takeaways instead of a single cover image. See [`.github/README-linkedin.md`](.github/README-linkedin.md#carousel-slides) for the convention.
 - Do not add `author`; the site is Hitesh's personal blog and existing posts omit it.
 - Keep `draft: true` while drafting. Published posts in the repository normally omit `draft`.
@@ -153,7 +175,7 @@ Engagement here comes from substance and specificity, not tricks. The anti-AI ru
 
 - **Earn the first line.** Open with a concrete claim, a number, or something you actually saw — not a windup. "A survey of 831 engineers found 97% use AI to code and 30% govern it" beats "AI is changing everything." The reader should know within two sentences why this is worth their time.
 - **Have a stake in the ground.** A clear, mildly contrarian opinion is more engaging than a balanced survey. Say what you think and why; then deal fairly with the best objection.
-- **Name the company, then contradict the comfortable read.** The blog's best-performing LinkedIn posts all name a specific company or product and take a stance against its own hype — "Google has the best AI money can buy. Its products still feel broken," "Gemini broke into three companies by guessing passwords," "450 million seats, 7% adoption." A named enterprise plus a contrarian take consistently outperforms a generic industry claim; use it wherever the post is actually about a specific player, not as a hook bolted onto an unrelated argument.
+- **Attack the hype, by name.** The blog's best-performing LinkedIn posts name a specific company or product and take a stance against its own hype, rather than making a generic industry claim — "Google has the best AI money can buy. Its products still feel broken," "Gemini broke into three companies by guessing passwords," "450 million seats, 7% adoption." The shape: name the company or product, state the popular belief about it, take a clear position against that belief, explain the gap between perception and reality, back it with evidence or a real experience rather than just criticism, and close with the implication for the reader. "Everyone is talking about X. I think they're looking at the wrong thing" beats "5 lessons from X." The caveat matters as much as the technique: don't manufacture negativity to get the shape. The stance has to be genuinely defensible — this is contrarian authority, not rage bait.
 - **Front-load, don't bury.** Put the point up top. Use the body to earn it, not to delay it.
 - **Make headings carry the argument.** A reader skimming only the `##` headings should still get the through-line.
 - **Trade abstraction for specifics.** One real example, named company, dated event, or hard number does more work than a paragraph of generalities.
@@ -290,6 +312,8 @@ Before considering a post complete, confirm:
 - [ ] A review pass has been requested from Hitesh and the resulting notes are addressed.
 - [ ] Scanned against "Sound like Hitesh, not an AI" — no negative parallelism, self-answered questions, "Here's the…" suspense, "-ing" analysis tails, em-dash overuse, bold-lead bullets, or the AI house vocab; any single trope that remains is deliberate and isolated.
 - [ ] Straight quotes and plain ASCII throughout (no smart quotes, no `→` arrows).
+- [ ] `hugo server -D` shows a good home-page card and post page.
+- [ ] `hugo --minify` completes without errors before publication.
 
 # Editorial philosophy
 
@@ -315,5 +339,3 @@ Why should a CTO care?
 Why should a product leader care?
 
 Why should an investor care?
-- [ ] `hugo server -D` shows a good home-page card and post page.
-- [ ] `hugo --minify` completes without errors before publication.
