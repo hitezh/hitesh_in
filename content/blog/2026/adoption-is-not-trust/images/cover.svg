@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An editorial diagram about AI adoption versus trust. A tall bar labelled use reads 84 percent. A much shorter bar labelled trust reads 29 percent. The wide space between them is labelled the gap. The message: adoption is not trust, and the gap is the real bottleneck.">
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans  { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- card -->
+  <rect x="0" y="0" width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- kicker -->
+  <text x="92" y="128" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">ON&#160;&#160;AI&#160;&#160;STRATEGY</text>
+
+  <!-- headline -->
+  <text x="88" y="228" class="serif" font-size="72" fill="#1A1816">Adoption is not</text>
+  <text x="88" y="308" class="serif" font-size="72" fill="#1A1816">trust<tspan fill="#BF4B1A">.</tspan></text>
+
+  <rect x="92" y="342" width="68" height="5" rx="2.5" fill="#BF4B1A"/>
+
+  <text x="92" y="398" class="sans" font-size="22" fill="#7B746E">The gap between using AI and trusting it</text>
+  <text x="92" y="428" class="sans" font-size="22" fill="#7B746E">is where the return quietly leaks out.</text>
+
+  <!-- diagram: two bars, use (tall) vs trust (short), the gap between -->
+
+  <!-- baseline -->
+  <line x1="760" y1="556" x2="1120" y2="556" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- use bar: 84% -->
+  <rect x="792" y="286" width="96" height="270" rx="4" fill="#BF4B1A" fill-opacity="0.14" stroke="#BF4B1A" stroke-width="2"/>
+  <text x="840" y="270" class="serif" font-size="40" fill="#1A1816" text-anchor="middle">84%</text>
+  <text x="840" y="584" class="sans" font-size="17" fill="#7B746E" text-anchor="middle">use</text>
+
+  <!-- trust bar: 29% -->
+  <rect x="992" y="463" width="96" height="93" rx="4" fill="#BF4B1A" stroke="#BF4B1A" stroke-width="2"/>
+  <text x="1040" y="447" class="serif" font-size="40" fill="#1A1816" text-anchor="middle">29%</text>
+  <text x="1040" y="584" class="sans" font-size="17" fill="#7B746E" text-anchor="middle">trust</text>
+
+  <!-- the gap bracket -->
+  <line x1="912" y1="286" x2="912" y2="463" stroke="#B5AFA9" stroke-width="1.5" stroke-dasharray="4 5"/>
+  <line x1="968" y1="286" x2="968" y2="463" stroke="#B5AFA9" stroke-width="1.5" stroke-dasharray="4 5"/>
+  <text x="940" y="380" class="sans" font-size="15" fill="#B5AFA9" text-anchor="middle" transform="rotate(-90 940 380)">the gap</text>
+</svg>
