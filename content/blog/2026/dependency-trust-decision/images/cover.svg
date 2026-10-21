@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A column of four dependency tiles feeding an arrow into a build server box that holds signing keys, cloud tokens and secrets. Three tiles are trusted and muted; one is highlighted red and labeled impostor, running code before review.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- eyebrow + headline (left) -->
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">SOFTWARE SUPPLY CHAIN</text>
+
+  <text x="84" y="252" class="serif" font-size="53" font-weight="800" fill="#1A1816">Every dependency</text>
+  <text x="84" y="316" class="serif" font-size="53" font-weight="800" fill="#1A1816">is a trust decision.</text>
+  <text x="84" y="392" class="serif" font-size="41" font-weight="800" fill="#BF4B1A">AI just stopped</text>
+  <text x="84" y="444" class="serif" font-size="41" font-weight="800" fill="#BF4B1A">asking.</text>
+
+  <text x="84" y="520" class="sans" font-size="16" letter-spacing="1" fill="#7B746E">One line runs code before anyone reads it.</text>
+
+  <!-- diagram (right): dependency tiles feeding the build -->
+  <g>
+    <text x="812" y="126" class="sans" font-size="14" letter-spacing="3" fill="#A79E95">DEPENDENCIES</text>
+
+    <rect x="812" y="146" width="212" height="52" rx="8" fill="#EADFD1" stroke="#E0D3C2" stroke-width="1.5"/>
+    <text x="836" y="178" class="sans" font-size="17" font-weight="700" fill="#5C554F">trusted crate</text>
+
+    <rect x="812" y="210" width="212" height="52" rx="8" fill="#EADFD1" stroke="#E0D3C2" stroke-width="1.5"/>
+    <text x="836" y="242" class="sans" font-size="17" font-weight="700" fill="#5C554F">trusted crate</text>
+
+    <rect x="812" y="274" width="212" height="52" rx="8" fill="#BF4B1A"/>
+    <text x="836" y="300" class="sans" font-size="17" font-weight="800" fill="#FAF7F2">impostor</text>
+    <text x="836" y="318" class="sans" font-size="11" letter-spacing="1" fill="#F3D9CB">RUNS AT BUILD TIME</text>
+
+    <rect x="812" y="338" width="212" height="52" rx="8" fill="#EADFD1" stroke="#E0D3C2" stroke-width="1.5"/>
+    <text x="836" y="370" class="sans" font-size="17" font-weight="700" fill="#5C554F">transitive dep</text>
+
+    <!-- arrow down into build -->
+    <line x1="918" y1="398" x2="918" y2="436" stroke="#C9BEB0" stroke-width="3"/>
+    <path d="M918 448 l-9 -14 h18 z" fill="#C9BEB0"/>
+
+    <!-- build server box -->
+    <rect x="792" y="456" width="252" height="120" rx="10" fill="#1A1816"/>
+    <text x="918" y="494" class="sans" font-size="20" font-weight="800" fill="#FAF7F2" text-anchor="middle">BUILD SERVER</text>
+    <text x="918" y="522" class="sans" font-size="12.5" letter-spacing="1" fill="#B8AEA4" text-anchor="middle">SIGNING KEYS · CLOUD TOKENS</text>
+    <text x="918" y="542" class="sans" font-size="12.5" letter-spacing="1" fill="#B8AEA4" text-anchor="middle">PRODUCTION SECRETS</text>
+    <text x="918" y="563" class="sans" font-size="11" letter-spacing="2" fill="#BF4B1A" text-anchor="middle">MOST PRIVILEGED · LEAST WATCHED</text>
+  </g>
+</svg>
