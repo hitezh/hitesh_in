@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An editorial diagram. A block labelled untrusted input moves right toward a protective fence of vertical slats guarding a box labelled CI secrets. One slat in the fence is missing, drawn as a faded dashed outline marked removed by AI, and the input passes straight through the gap into the secrets. The message: an AI cleanup removed a defensive pattern it could not see the purpose of, opening a path to protected credentials.">
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans  { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- card -->
+  <rect x="0" y="0" width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- kicker -->
+  <text x="92" y="132" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">ON&#160;&#160;AI&#160;&#160;&amp;&#160;&#160;SECURITY</text>
+
+  <!-- headline -->
+  <text x="88" y="238" class="serif" font-size="72" fill="#1A1816">The guardrail your</text>
+  <text x="88" y="318" class="serif" font-size="72" fill="#1A1816">AI can't see<tspan fill="#BF4B1A">.</tspan></text>
+
+  <rect x="92" y="352" width="68" height="5" rx="2.5" fill="#BF4B1A"/>
+
+  <text x="92" y="408" class="sans" font-size="22" fill="#7B746E">It can generate the fence. It can't tell you</text>
+  <text x="92" y="438" class="sans" font-size="22" fill="#7B746E">why the last person built one.</text>
+
+  <!-- diagram: untrusted input passes through a missing slat into CI secrets -->
+
+  <!-- untrusted input block -->
+  <text x="612" y="486" class="sans" font-size="15" fill="#B5AFA9">untrusted input</text>
+  <rect x="612" y="500" width="24" height="24" rx="4" fill="#BF4B1A" fill-opacity="0.10" stroke="#BF4B1A" stroke-width="2"/>
+  <text x="624" y="517" class="sans" font-size="15" fill="#BF4B1A" text-anchor="middle">&gt;_</text>
+
+  <!-- flow arrow toward the gap -->
+  <line x1="648" y1="512" x2="812" y2="512" stroke="#B5AFA9" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M804,505 L820,512 L804,519 Z" fill="#7B746E"/>
+
+  <!-- the fence: vertical slats, one missing -->
+  <text x="878" y="452" class="sans" font-size="18" fill="#1A1816" text-anchor="middle">the safe pattern</text>
+
+  <!-- rail -->
+  <rect x="828" y="472" width="100" height="8" rx="3" fill="#BF4B1A"/>
+  <rect x="828" y="556" width="100" height="8" rx="3" fill="#BF4B1A"/>
+
+  <!-- slats present -->
+  <rect x="834" y="472" width="12" height="92" rx="3" fill="#BF4B1A"/>
+  <rect x="858" y="472" width="12" height="92" rx="3" fill="#BF4B1A"/>
+  <!-- slat removed: faded dashed outline (the gap the input walks through) -->
+  <rect x="882" y="472" width="12" height="92" rx="3" fill="none" stroke="#B5AFA9" stroke-width="2" stroke-dasharray="5 5"/>
+  <rect x="906" y="472" width="12" height="92" rx="3" fill="#BF4B1A"/>
+
+  <text x="878" y="590" class="sans" font-size="14" fill="#7B746E" text-anchor="middle">removed by AI cleanup</text>
+
+  <!-- input continues through the gap -->
+  <line x1="894" y1="512" x2="1006" y2="512" stroke="#B5AFA9" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M998,505 L1014,512 L998,519 Z" fill="#7B746E"/>
+
+  <!-- CI secrets box -->
+  <rect x="1022" y="484" width="120" height="56" rx="8" fill="#1A1816"/>
+  <text x="1082" y="510" class="sans" font-size="16" fill="#FAF7F2" text-anchor="middle">CI secrets</text>
+  <text x="1082" y="530" class="sans" font-size="13" fill="#B5AFA9" text-anchor="middle">tokens, keys</text>
+</svg>
