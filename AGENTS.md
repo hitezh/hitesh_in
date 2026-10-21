@@ -105,6 +105,10 @@ categories:
 tags:
   - "specific-topic"
 image: images/descriptive-image-name.jpg
+newsletter: true
+newsletter_priority: normal
+newsletter_summary: >
+  One or two sentences explaining why this article matters.
 draft: true
 ---
 ```
@@ -116,6 +120,7 @@ Rules:
 - Set `slug` to the post's directory name. Hugo derives the URL from the *title* otherwise, so any `:`, `.`, or `?` in the title leaks into the URL (a two-sentence title becomes `.../my-post.-second-part.`). The LinkedIn announcer also builds the link from the directory name, so `slug` and the directory must match or the announced URL 404s.
 - Choose one or, when genuinely useful, two existing categories: `banking`, `education`, `entrepreneurship`, `life`, `others`, `sketches`, or `technology`. Do not create a near-duplicate category.
 - `tags` are optional. Use them for specific subjects a reader may want to find again. Keep them lowercase and hyphen-separated; reuse an existing tag where possible.
+- `newsletter`, `newsletter_priority`, and `newsletter_summary` are optional. Use them when a post should be considered for the weekly newsletter. `newsletter_priority` must be `low`, `normal`, or `high`; the summary should explain why the article matters in one or two sentences.
 - `image` is optional but recommended. Use the bundle-relative form `images/<filename>` and ensure the file exists. Use a descriptive filename, not `image1.jpg`.
 - Prefer `image`; do not add the legacy `coverImage` field to new posts.
 - Every cover has to answer one question: what is the provocative thing this post is saying? The claim is the brand, not the template, so pick one of two visual modes — don't blend them:

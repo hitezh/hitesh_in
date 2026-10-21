@@ -12,6 +12,10 @@ tags:
   - "decentralization"
   - "business-models"
 image: images/cover.svg
+newsletter: true
+newsletter_priority: high
+newsletter_summary: >
+  PeerTube is a useful reminder that technology strategy goes wrong when every tool is judged by platform-scale economics. Leaders should ask what job a system is actually meant to do before dismissing it as too small.
 ---
 
 I have spent a good part of my career on two very different kinds of software: products built to reach millions, and internal tools built for a few hundred people who could not do their jobs without them. Only one of those gets called a success story. The other gets called "niche," usually by someone who has never had to actually use the alternative.
