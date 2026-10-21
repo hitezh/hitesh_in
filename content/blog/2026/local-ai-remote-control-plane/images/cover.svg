@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A laptop labeled LOCAL COMPUTE connected by dashed lines to a remote server labeled CONTROL PLANE that returns a signed ID stamped onto the file.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <text x="84" y="132" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  GOVERNANCE</text>
+
+  <text x="84" y="228" class="serif" font-size="55" font-weight="800" fill="#1A1816">Your "local" AI has</text>
+  <text x="84" y="292" class="serif" font-size="55" font-weight="800" fill="#BF4B1A">a remote control plane.</text>
+
+  <rect x="84" y="322" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="372" class="sans" font-size="21" fill="#7B746E">The compute runs on your machine. The moderation,</text>
+  <text x="84" y="400" class="sans" font-size="21" fill="#7B746E">the signing, and the ID still sit on a server you don't run.</text>
+
+  <!-- diagram row -->
+  <g>
+    <!-- laptop: local compute -->
+    <g>
+      <rect x="150" y="470" width="200" height="118" rx="8" fill="#EADFD1" stroke="#E0D3C2" stroke-width="1.5"/>
+      <rect x="176" y="492" width="148" height="60" rx="4" fill="#FAF7F2" stroke="#D8CBBA" stroke-width="1.5"/>
+      <text x="250" y="522" class="sans" font-size="15" font-weight="800" fill="#5C554F" text-anchor="middle">LOCAL</text>
+      <text x="250" y="540" class="sans" font-size="12" letter-spacing="1" fill="#8A8177" text-anchor="middle">COMPUTE</text>
+      <rect x="138" y="588" width="224" height="10" rx="4" fill="#D8CBBA"/>
+    </g>
+
+    <!-- dashed path out: prompt leaves -->
+    <g stroke="#BF4B1A" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="366" y1="512" x2="486" y2="512" stroke-dasharray="7 8"/>
+      <path d="M474 502 L490 512 L474 522"/>
+    </g>
+    <text x="426" y="496" class="sans" font-size="13" fill="#A0968B" text-anchor="middle">prompt</text>
+
+    <!-- server: control plane -->
+    <g>
+      <rect x="500" y="470" width="230" height="118" rx="8" fill="#BF4B1A"/>
+      <text x="615" y="512" class="sans" font-size="17" font-weight="800" fill="#FAF7F2" text-anchor="middle">CONTROL PLANE</text>
+      <text x="615" y="540" class="sans" font-size="13" letter-spacing="1" fill="#F3D9C9" text-anchor="middle">MODERATE  ·  SIGN  ·  ID</text>
+    </g>
+
+    <!-- dashed path back: signed id -->
+    <g stroke="#BF4B1A" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="744" y1="512" x2="864" y2="512" stroke-dasharray="7 8"/>
+      <path d="M852 502 L868 512 L852 522"/>
+    </g>
+    <text x="804" y="496" class="sans" font-size="13" fill="#A0968B" text-anchor="middle">signed ID</text>
+
+    <!-- file with stamped id -->
+    <g>
+      <rect x="878" y="470" width="150" height="118" rx="8" fill="#EADFD1" stroke="#E0D3C2" stroke-width="1.5"/>
+      <text x="953" y="512" class="sans" font-size="15" font-weight="800" fill="#5C554F" text-anchor="middle">YOUR FILE</text>
+      <text x="953" y="538" class="sans" font-size="12" letter-spacing="0.5" fill="#8A8177" text-anchor="middle">+ hidden ID</text>
+    </g>
+  </g>
+</svg>
