@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A career ladder from junior to senior with the lower rungs faded out and cut, and a broken arrow where the path from junior to senior used to run.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- ladder of tiers, right side: SENIOR intact at top, MID and JUNIOR faded/cut below -->
+  <g>
+    <rect x="812" y="150" width="300" height="66" rx="8" fill="#BF4B1A"/>
+    <text x="962" y="191" class="sans" font-size="24" font-weight="800" fill="#FAF7F2" text-anchor="middle">SENIOR</text>
+
+    <rect x="812" y="300" width="300" height="66" rx="8" fill="none" stroke="#C9BEB0" stroke-width="2" stroke-dasharray="6 6"/>
+    <text x="962" y="336" class="sans" font-size="21" font-weight="700" fill="#A79E95" text-anchor="middle">MID-LEVEL</text>
+    <text x="962" y="356" class="sans" font-size="12.5" letter-spacing="1" fill="#B7AEA4" text-anchor="middle">AUTOMATED</text>
+
+    <rect x="812" y="414" width="300" height="66" rx="8" fill="none" stroke="#C9BEB0" stroke-width="2" stroke-dasharray="6 6"/>
+    <text x="962" y="450" class="sans" font-size="21" font-weight="700" fill="#A79E95" text-anchor="middle">JUNIOR</text>
+    <text x="962" y="470" class="sans" font-size="12.5" letter-spacing="1" fill="#B7AEA4" text-anchor="middle">AUTOMATED</text>
+
+    <!-- broken upward path: the pipeline that fed seniors, now severed -->
+    <g stroke="#BF4B1A" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="770" y1="452" x2="770" y2="352"/>
+      <line x1="770" y1="300" x2="770" y2="186"/>
+      <path d="M756 208 L770 182 L784 208"/>
+    </g>
+    <!-- the cut in the path -->
+    <g stroke="#BF4B1A" stroke-width="4" stroke-linecap="round">
+      <line x1="752" y1="338" x2="788" y2="314"/>
+      <line x1="752" y1="314" x2="788" y2="338"/>
+    </g>
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">HIRING  &amp;  AI</text>
+
+  <text x="84" y="256" class="serif" font-size="56" font-weight="800" fill="#1A1816">AI automated your</text>
+  <text x="84" y="322" class="serif" font-size="56" font-weight="800" fill="#BF4B1A">apprenticeship.</text>
+
+  <rect x="84" y="356" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="406" class="sans" font-size="21" fill="#7B746E">The grunt work made your seniors senior.</text>
+  <text x="84" y="436" class="sans" font-size="21" fill="#7B746E">Automate it, and ask where the next ones come from.</text>
+</svg>
