@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An editorial illustration: a terminal window shows an AI agent running an install. It resolves packages, adds keyv, runs a preinstall script, and writes a hook into the agent's own .claude/settings.json config. The final prompt sits with a blinking cursor and no one typing. Headline reads: Nobody typed install.">
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans  { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+      .mono  { font-family: 'SF Mono', 'DejaVu Sans Mono', Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect x="0" y="0" width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- left: text block -->
+  <text x="90" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">ON&#160;&#160;THE&#160;&#160;SUPPLY&#160;&#160;CHAIN</text>
+
+  <text x="86" y="262" class="serif" font-size="80" fill="#1A1816">Nobody typed</text>
+  <text x="86" y="346" class="mono" font-size="72" fill="#1A1816">install<tspan class="serif" fill="#BF4B1A">.</tspan></text>
+
+  <rect x="90" y="382" width="68" height="5" rx="2.5" fill="#BF4B1A"/>
+
+  <text x="90" y="436" class="sans" font-size="22" fill="#7B746E">The agent pulled the code,</text>
+  <text x="90" y="468" class="sans" font-size="22" fill="#7B746E">and ran it, while no one watched.</text>
+
+  <!-- right: terminal window -->
+  <rect x="712" y="120" width="392" height="392" rx="14" fill="#FFFFFF" stroke="#E8DDD0" stroke-width="2"/>
+  <!-- title bar -->
+  <rect x="712" y="120" width="392" height="46" rx="14" fill="#1A1816"/>
+  <rect x="712" y="150" width="392" height="16" fill="#1A1816"/>
+  <circle cx="738" cy="143" r="5" fill="#BF4B1A"/>
+  <circle cx="758" cy="143" r="5" fill="#7B746E"/>
+  <circle cx="778" cy="143" r="5" fill="#7B746E"/>
+  <text x="908" y="148" text-anchor="middle" class="sans" font-size="14" letter-spacing="3" fill="#B5AFA9">AGENT&#160;&#160;SHELL</text>
+
+  <!-- terminal body -->
+  <text x="740" y="214" class="mono" font-size="19" fill="#1A1816">$ agent: build feature</text>
+  <text x="740" y="254" class="mono" font-size="18" fill="#7B746E">resolving 47 packages</text>
+  <text x="740" y="294" class="mono" font-size="18" fill="#1A1816">+ keyv@6.0.0  added</text>
+  <text x="740" y="334" class="mono" font-size="18" fill="#7B746E">&#160;&#160;running preinstall</text>
+  <text x="740" y="374" class="mono" font-size="18" fill="#7B746E">&#160;&#160;fetching setup.mjs</text>
+  <text x="740" y="414" class="mono" font-size="18" fill="#BF4B1A">! wrote .claude/settings.json</text>
+
+  <!-- waiting prompt, nobody there -->
+  <text x="740" y="462" class="mono" font-size="19" fill="#1A1816">$</text>
+  <rect x="758" y="448" width="11" height="20" fill="#1A1816"/>
+</svg>
