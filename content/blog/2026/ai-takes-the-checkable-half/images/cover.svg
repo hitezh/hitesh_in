@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An editorial diagram of two feedback loops. On the left, a small tight orange loop labelled seconds, marked done, is the checkable half of a job that AI fills. On the right, a large dashed grey loop labelled weeks, marked waiting, is the slow half where AI stalls. The message: AI takes the half you can check cheaply.">
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans  { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#BF4B1A"/>
+    </marker>
+    <marker id="arrowGrey" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#B5AFA9"/>
+    </marker>
+  </defs>
+
+  <!-- card -->
+  <rect x="0" y="0" width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- kicker -->
+  <text x="92" y="128" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">ON&#160;&#160;AI&#160;&#160;STRATEGY</text>
+
+  <!-- headline -->
+  <text x="88" y="228" class="serif" font-size="70" fill="#1A1816">AI takes the half</text>
+  <text x="88" y="306" class="serif" font-size="70" fill="#1A1816">you can check cheaply<tspan fill="#BF4B1A">.</tspan></text>
+
+  <rect x="92" y="340" width="68" height="5" rx="2.5" fill="#BF4B1A"/>
+
+  <text x="92" y="396" class="sans" font-size="22" fill="#7B746E">The feedback loop, not the difficulty,</text>
+  <text x="92" y="426" class="sans" font-size="22" fill="#7B746E">decides where automation reaches next.</text>
+
+  <!-- diagram: two loops, one tight and fast, one wide and slow -->
+
+  <!-- fast loop (left): tight, solid, orange -->
+  <path d="M 300 545 A 42 42 0 1 1 342 503" fill="none" stroke="#BF4B1A" stroke-width="4" marker-end="url(#arrowOrange)"/>
+  <text x="300" y="514" class="sans" font-size="26" fill="#BF4B1A" text-anchor="middle" font-weight="700">&#10003;</text>
+  <text x="300" y="600" class="sans" font-size="17" fill="#1A1816" text-anchor="middle">fast check &#183; seconds</text>
+
+  <!-- slow loop (right): wide, dashed, grey -->
+  <path d="M 720 560 A 78 78 0 1 1 798 482" fill="none" stroke="#B5AFA9" stroke-width="3" stroke-dasharray="8 9" marker-end="url(#arrowGrey)"/>
+  <text x="720" y="512" class="sans" font-size="30" fill="#B5AFA9" text-anchor="middle">&#8230;</text>
+  <text x="720" y="600" class="sans" font-size="17" fill="#7B746E" text-anchor="middle">slow check &#183; weeks</text>
+
+  <!-- connector note between loops -->
+  <text x="510" y="512" class="sans" font-size="16" fill="#B5AFA9" text-anchor="middle" font-style="italic">same job</text>
+  <line x1="360" y1="530" x2="470" y2="530" stroke="#E8DDD0" stroke-width="2"/>
+  <line x1="552" y1="530" x2="632" y2="530" stroke="#E8DDD0" stroke-width="2"/>
+</svg>
