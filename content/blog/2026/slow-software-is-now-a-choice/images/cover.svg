@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An editorial diagram with two meters: the cost to optimize has collapsed to a tiny sliver, while the software-speed meter has barely moved and stays low. AI made optimization cheap; it did not make software fast.">
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans  { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- card -->
+  <rect x="0" y="0" width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- left: text block -->
+  <text x="92" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">ON&#160;&#160;SOFTWARE&#160;&#160;PERFORMANCE</text>
+
+  <text x="88" y="266" class="serif" font-size="76" fill="#1A1816">Cheap to</text>
+  <text x="88" y="346" class="serif" font-size="76" fill="#1A1816">optimize.</text>
+  <text x="88" y="440" class="serif" font-size="76" fill="#1A1816">Still slow<tspan fill="#BF4B1A">.</tspan></text>
+
+  <rect x="92" y="476" width="68" height="5" rx="2.5" fill="#BF4B1A"/>
+
+  <text x="92" y="532" class="sans" font-size="22" fill="#7B746E">AI collapsed the cost of the fix.</text>
+  <text x="92" y="562" class="sans" font-size="22" fill="#7B746E">It didn't touch the reason things are slow.</text>
+
+  <!-- right: two meters -->
+  <rect x="742" y="150" width="378" height="330" rx="10" fill="#FFFFFF" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- meter 1: cost to optimize -->
+  <text x="770" y="212" class="sans" font-size="20" fill="#1A1816">Cost to optimize</text>
+  <!-- faded ghost of what it used to be -->
+  <rect x="770" y="230" width="322" height="18" rx="9" fill="#BF4B1A" fill-opacity="0.12"/>
+  <rect x="770" y="230" width="322" height="18" rx="9" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+  <!-- collapsed to a sliver -->
+  <rect x="770" y="230" width="40" height="18" rx="9" fill="#BF4B1A"/>
+  <!-- down chevron marking the collapse -->
+  <path d="M1074,236 L1082,244 L1090,236" fill="none" stroke="#BF4B1A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1064" y="278" class="sans" font-size="17" fill="#BF4B1A" text-anchor="end">collapsed</text>
+
+  <!-- divider -->
+  <line x1="770" y1="316" x2="1092" y2="316" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- meter 2: software speed -->
+  <text x="770" y="368" class="sans" font-size="20" fill="#1A1816">Software speed</text>
+  <rect x="770" y="386" width="322" height="18" rx="9" fill="#F1EBE2"/>
+  <rect x="770" y="386" width="322" height="18" rx="9" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+  <!-- barely moved -->
+  <rect x="770" y="386" width="96" height="18" rx="9" fill="#7B746E"/>
+  <!-- flat line marking no change -->
+  <line x1="1052" y1="395" x2="1090" y2="395" stroke="#7B746E" stroke-width="3" stroke-linecap="round"/>
+  <text x="1092" y="434" class="sans" font-size="17" fill="#7B746E" text-anchor="end">unchanged</text>
+</svg>
