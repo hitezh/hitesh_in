@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="REPLACE_WITH_TITLE">
+  <defs><style>
+    .serif{font-family:Georgia,'Times New Roman',serif;}
+    .sans{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- optional decorative motif: one faint (opacity 0.12-0.18) accent-colored
+       element in the upper right that echoes the post's core idea. Delete
+       this whole <g> if the post doesn't need one; never add more than one. -->
+  <g transform="rotate(-8 1000 150)" opacity="0.15">
+    <!-- e.g. a giant struck-through number, a rotated stamp, a crossed-out icon -->
+  </g>
+
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">REPLACE_WITH_KICKER</text>
+
+  <!-- headline: break by hand into 2-3 short lines, ~68-74px, dark text,
+       with the single most important word/phrase in the accent color -->
+  <text x="80" y="266" class="serif" font-size="70" font-weight="800" fill="#1A1816">REPLACE_WITH_LINE_1</text>
+  <text x="80" y="342" class="serif" font-size="70" font-weight="800" fill="#1A1816">REPLACE_WITH_LINE_2</text>
+  <text x="80" y="418" class="serif" font-size="70" font-weight="800" fill="#BF4B1A">REPLACE_EMPHASIS</text>
+
+  <rect x="84" y="456" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="508" class="sans" font-size="22" fill="#7B746E">REPLACE_WITH_SUBTITLE_LINE_1</text>
+  <text x="84" y="538" class="sans" font-size="22" fill="#7B746E">REPLACE_WITH_SUBTITLE_LINE_2</text>
+</svg>
