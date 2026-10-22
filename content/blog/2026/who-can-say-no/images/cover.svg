@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An editorial diagram: two stacked columns of chips. A short column labeled MUST SAY YES holds three outlined chips; a much taller column labeled CAN SAY NO holds eight filled chips, marked as the number that sets the timeline. The headline reads: who can say no.">
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans  { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- card -->
+  <rect x="0" y="0" width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- left: text block -->
+  <text x="92" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">ON&#160;&#160;AI&#160;&#160;ADOPTION</text>
+
+  <text x="88" y="262" class="serif" font-size="76" fill="#1A1816">Who can</text>
+  <text x="88" y="342" class="serif" font-size="76" fill="#1A1816">say no<tspan fill="#BF4B1A">.</tspan></text>
+
+  <rect x="92" y="376" width="68" height="5" rx="2.5" fill="#BF4B1A"/>
+
+  <text x="92" y="432" class="sans" font-size="22" fill="#7B746E">Every AI project invites more people</text>
+  <text x="92" y="464" class="sans" font-size="22" fill="#7B746E">who can stall it than approve it.</text>
+
+  <!-- right: two stacks of chips -->
+
+  <!-- YES column (short): outlined chips -->
+  <g fill="#FAF7F2" stroke="#7B746E" stroke-width="2">
+    <rect x="748" y="396" width="120" height="26" rx="6"/>
+    <rect x="748" y="430" width="120" height="26" rx="6"/>
+    <rect x="748" y="464" width="120" height="26" rx="6"/>
+  </g>
+  <g fill="#7B746E">
+    <circle cx="768" cy="409" r="4"/>
+    <circle cx="768" cy="443" r="4"/>
+    <circle cx="768" cy="477" r="4"/>
+  </g>
+  <text x="808" y="524" class="sans" font-size="16" letter-spacing="2" fill="#7B746E" text-anchor="middle">MUST&#160;SAY&#160;YES</text>
+  <text x="808" y="548" class="sans" font-size="15" fill="#A79E94" text-anchor="middle">3</text>
+
+  <!-- NO column (tall): filled chips -->
+  <g fill="#BF4B1A">
+    <rect x="948" y="226" width="120" height="26" rx="6"/>
+    <rect x="948" y="260" width="120" height="26" rx="6"/>
+    <rect x="948" y="294" width="120" height="26" rx="6"/>
+    <rect x="948" y="328" width="120" height="26" rx="6"/>
+    <rect x="948" y="362" width="120" height="26" rx="6"/>
+    <rect x="948" y="396" width="120" height="26" rx="6"/>
+    <rect x="948" y="430" width="120" height="26" rx="6"/>
+    <rect x="948" y="464" width="120" height="26" rx="6"/>
+  </g>
+  <g fill="#FAF7F2">
+    <rect x="966" y="237" width="12" height="4" rx="2"/>
+    <rect x="966" y="271" width="12" height="4" rx="2"/>
+    <rect x="966" y="305" width="12" height="4" rx="2"/>
+    <rect x="966" y="339" width="12" height="4" rx="2"/>
+    <rect x="966" y="373" width="12" height="4" rx="2"/>
+    <rect x="966" y="407" width="12" height="4" rx="2"/>
+    <rect x="966" y="441" width="12" height="4" rx="2"/>
+    <rect x="966" y="475" width="12" height="4" rx="2"/>
+  </g>
+  <text x="1008" y="524" class="sans" font-size="16" letter-spacing="2" fill="#BF4B1A" text-anchor="middle">CAN&#160;SAY&#160;NO</text>
+  <text x="1008" y="548" class="sans" font-size="15" fill="#A79E94" text-anchor="middle">the number that sets the timeline</text>
+</svg>
