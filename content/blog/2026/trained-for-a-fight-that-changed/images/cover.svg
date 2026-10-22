@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Cover reading: Mastery is becoming a hobby. Effectiveness isn't. When the tools change, the revered expert is not the one who wins.">
+  <defs>
+    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101828"/>
+      <stop offset="1" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D9FF43"/>
+      <stop offset="1" stop-color="#50E3C2"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="42"/></filter>
+    <style>
+      .display { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#surface)"/>
+  <circle cx="1080" cy="-10" r="220" fill="#2166F3" fill-opacity=".52" filter="url(#blur)"/>
+  <circle cx="1020" cy="580" r="180" fill="#00C2A8" fill-opacity=".24" filter="url(#blur)"/>
+  <path d="M0 535 C240 420 365 670 595 532 S950 426 1200 520" fill="none" stroke="#FFFFFF" stroke-opacity=".10" stroke-width="2"/>
+  <rect x="28" y="28" width="1144" height="574" rx="28" fill="none" stroke="#FFFFFF" stroke-opacity=".18" stroke-width="2"/>
+
+  <g class="sans" fill="#D9FF43">
+    <circle cx="88" cy="96" r="7"/>
+    <text x="108" y="103" font-size="17" font-weight="700" letter-spacing="3">ENGINEERING LEADERSHIP</text>
+  </g>
+
+  <g class="display" font-size="70" font-weight="700" fill="#FFFFFF">
+    <text x="82" y="214">Mastery is becoming</text>
+    <text x="82" y="298">a <tspan fill="#D9FF43">hobby.</tspan></text>
+    <text x="82" y="382">Effectiveness isn't.</text>
+  </g>
+
+  <text x="88" y="452" class="sans" font-size="23" fill="#D9E2F2">When the tools change, the revered expert is not the one who wins.</text>
+
+  <!-- The dojo (dashed ring) and the trajectory that leaves it. -->
+  <g transform="translate(940 300)">
+    <circle r="112" fill="#D9FF43" fill-opacity=".10" stroke="#D9FF43" stroke-opacity=".55" stroke-width="2"/>
+    <circle r="74" fill="none" stroke="#FFFFFF" stroke-opacity=".45" stroke-width="2" stroke-dasharray="7 10"/>
+    <path d="M-46 44 L-8 2 L22 26 L70 -52" fill="none" stroke="url(#signal)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="70" cy="-52" r="10" fill="#D9FF43"/>
+  </g>
+
+  <text x="88" y="556" class="sans" font-size="16" font-weight="700" letter-spacing="2.5" fill="#AAB8D0">HITESH.IN</text>
+</svg>
