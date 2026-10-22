@@ -1,5 +1,5 @@
 ---
-title: "Your AI gateway holds every model key you own. Attackers noticed."
+title: "LiteLLM was compromised twice in seven months. Here is what that means for your AI strategy"
 slug: "your-ai-gateway-holds-every-key"
 date: "2026-10-22"
 description: "A compromised LiteLLM release spent about two hours on PyPI this week. It shows why the box you built for AI governance is also your most valuable target."
