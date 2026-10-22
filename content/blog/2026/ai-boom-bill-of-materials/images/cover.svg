@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A bill of materials for a hardware product. Most line items sit flat, but the memory line is highlighted in orange and its cost spikes upward, showing the AI boom landing on an ordinary product's costs.">
+  <defs><style>
+    .serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;}
+    .sans{font-family:-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;}
+    .mono{font-family:'SFMono-Regular', Menlo, Consolas, monospace;}
+  </style></defs>
+
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="14" y="14" width="1172" height="602" rx="10" fill="none" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- BOM card on the right -->
+  <g>
+    <rect x="742" y="96" width="376" height="438" rx="12" fill="#FFFFFF" stroke="#E0D3C2" stroke-width="1.5"/>
+    <text x="772" y="150" class="sans" font-size="16" letter-spacing="2" font-weight="700" fill="#7B746E">BILL OF MATERIALS</text>
+    <line x1="772" y1="168" x2="1088" y2="168" stroke="#E8DDD0" stroke-width="1.5"/>
+
+    <!-- flat line items -->
+    <g class="mono" font-size="19" fill="#7B746E">
+      <text x="772" y="212">Enclosure</text><text x="1088" y="212" text-anchor="end">$4.10</text>
+      <text x="772" y="256">Mainboard</text><text x="1088" y="256" text-anchor="end">$7.80</text>
+      <text x="772" y="300">Processor</text><text x="1088" y="300" text-anchor="end">$11.20</text>
+    </g>
+
+    <!-- highlighted memory line -->
+    <rect x="758" y="322" width="344" height="46" rx="7" fill="#F7E4DA"/>
+    <text x="772" y="352" class="mono" font-size="19" font-weight="700" fill="#BF4B1A">Memory</text>
+    <text x="1088" y="352" class="mono" font-size="19" font-weight="700" fill="#BF4B1A" text-anchor="end">$27.20</text>
+
+    <g class="mono" font-size="19" fill="#7B746E">
+      <text x="772" y="412">Display</text><text x="1088" y="412" text-anchor="end">$9.50</text>
+      <text x="772" y="456">Battery</text><text x="1088" y="456" text-anchor="end">$6.30</text>
+    </g>
+
+    <line x1="772" y1="482" x2="1088" y2="482" stroke="#E8DDD0" stroke-width="1.5"/>
+    <text x="772" y="514" class="mono" font-size="19" font-weight="700" fill="#1A1816">Total</text>
+    <text x="1088" y="514" class="mono" font-size="19" font-weight="700" fill="#1A1816" text-anchor="end">&#8593; up</text>
+  </g>
+
+  <!-- rising spike marker over the memory line -->
+  <g stroke="#BF4B1A" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M690 400 C 690 360, 726 360, 726 345"/>
+    <path d="M712 366 L728 338 L742 362"/>
+  </g>
+
+  <!-- left column -->
+  <text x="84" y="150" class="sans" font-size="19" letter-spacing="4" fill="#7B746E">AI  STRATEGY</text>
+
+  <text x="84" y="252" class="serif" font-size="55" font-weight="800" fill="#1A1816">The AI boom is on</text>
+  <text x="84" y="316" class="serif" font-size="55" font-weight="800" fill="#BF4B1A">your bill of materials.</text>
+
+  <rect x="84" y="350" width="72" height="5" rx="2.5" fill="#BF4B1A"/>
+  <text x="84" y="402" class="sans" font-size="21" fill="#7B746E">Memory doubled as AI ate the wafers. The</text>
+  <text x="84" y="432" class="sans" font-size="21" fill="#7B746E">firms paying never bought a single GPU.</text>
+</svg>
