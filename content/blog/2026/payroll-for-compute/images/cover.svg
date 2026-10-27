@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Blog cover styled as an X post: A 200 OK FROM YOUR AI VENDOR PROVES NOTHING. 155 responses carried other customers' data and every one looked healthy. #AISECURITY">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Blog cover styled as an X post: MICROSOFT IS TRADING PAYROLL FOR COMPUTE. Anthropic's first six months of 2026 earned 3.5x all of 2025. #AISTRATEGY">
   <defs>
     <linearGradient id="avatar" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#2166F3"/>
@@ -38,17 +38,17 @@
        concrete supporting line (2 lines). Keep it to these four lines so it stays
        legible at feed thumbnail size. -->
   <g class="sans" font-size="52" fill="#E7E9EA">
-    <text x="64" y="244">A 200 OK FROM YOUR AI VENDOR</text>
-    <text x="64" y="310">PROVES NOTHING.</text>
+    <text x="64" y="244">MICROSOFT IS TRADING PAYROLL</text>
+    <text x="64" y="310">FOR COMPUTE.</text>
 
-    <text x="64" y="406">155 replies held other customers' data.</text>
-    <text x="64" y="472">Every one of them looked healthy.</text>
+    <text x="64" y="406">Anthropic earned 3.5x all of 2025</text>
+    <text x="64" y="472">in the first six months of 2026.</text>
   </g>
 
   <!-- One trailing hashtag, X-blue, the way a real post ends with a clickable tag.
        Replace with a hashtag version of the post's category, e.g. #AISTRATEGY. -->
-  <text x="64" y="528" class="sans" font-size="34" fill="#1D9BF0">#AISECURITY</text>
+  <text x="64" y="528" class="sans" font-size="34" fill="#1D9BF0">#AISTRATEGY</text>
 
   <!-- Timestamp and view count. Use the post's real publish date; keep the count plausible. -->
-  <text x="64" y="588" class="sans" font-size="30" fill="#71767B">8:12 AM &#183; Oct 27, 2026 &#183; <tspan font-weight="700" fill="#E7E9EA">1.2M</tspan> Views</text>
+  <text x="64" y="588" class="sans" font-size="30" fill="#71767B">9:05 AM &#183; Oct 27, 2026 &#183; <tspan font-weight="700" fill="#E7E9EA">1.4M</tspan> Views</text>
 </svg>
