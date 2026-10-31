@@ -141,6 +141,9 @@ function parseFrontMatter(text) {
     draft: (scalar("draft") || "false").toLowerCase() === "true",
     tags: list("tags"),
     image: scalar("image"),
+    linkedin_hook: scalar("linkedin_hook"),
+    linkedin_question: scalar("linkedin_question"),
+    takeaways: list("takeaways"),
   };
 }
 
@@ -171,9 +174,19 @@ function toHashtag(tag) {
   return pascal ? `#${pascal}` : "";
 }
 
+// With `takeaways` in the front matter, the post leads with the hook (or the
+// title), gives the reader the takeaways as a numbered list they can use without
+// clicking through, and ends on the question. Without them, it falls back to
+// the original title + description blurb.
 function composeCommentary(fm) {
-  const lines = [fm.title];
-  if (fm.description) lines.push("", fm.description);
+  const lines = [fm.linkedin_hook || fm.title];
+  if (fm.takeaways?.length) {
+    lines.push("", "Quick takeaways:");
+    fm.takeaways.forEach((t, i) => lines.push(`${i + 1}. ${t}`));
+    if (fm.linkedin_question) lines.push("", fm.linkedin_question);
+  } else if (fm.description) {
+    lines.push("", fm.description);
+  }
   if (INCLUDE_HASHTAGS && fm.tags?.length) {
     const tags = fm.tags.slice(0, 3).map(toHashtag).filter(Boolean).join(" ");
     if (tags) lines.push("", `#Blog ${tags}`);
