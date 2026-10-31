@@ -76,7 +76,9 @@ Quick takeaways:
 #Blog #Tag1 #Tag2 #Tag3
 ```
 
-`takeaways` switches the format on. `linkedin_hook` and `linkedin_question` are
+For how to write these well, see
+[Writing the LinkedIn summary](../AGENTS.md#writing-the-linkedin-summary) in
+AGENTS.md. `takeaways` switches the format on. `linkedin_hook` and `linkedin_question` are
 optional. The description is not used in this format, because the hook and the
 takeaways do its job. Keep the fields on one line each, and avoid double quotes
 inside a value, since the front-matter reader is deliberately minimal. The theme
