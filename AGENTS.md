@@ -105,6 +105,12 @@ categories:
 tags:
   - "specific-topic"
 image: images/descriptive-image-name.jpg
+linkedin_hook: "The claim plus one concrete fact, under about 200 characters."
+takeaways:
+  - "An action or judgment the reader can use this week, with its own test."
+  - "A second one."
+  - "A third one."
+linkedin_question: "One question a founder or CTO could answer about their own company."
 draft: true
 ---
 ```
@@ -122,6 +128,10 @@ Rules:
   - **No standout real visual.** Author `images/cover.svg`, starting from [`.github/templates/blog-cover.svg`](.github/templates/blog-cover.svg), then make it specific to the post. The template is styled as a screenshot of an X post — avatar, name and handle, the claim as the post text, a trailing hashtag, and a view count — because that format reads well and gets clicked in a fast-moving feed. Keep the illusion: regular-weight text running nearly full width, no card frame, no decorative diagram, no colour beyond the verified check and the hashtag (both X-blue, `#1D9BF0`). Open with the claim in caps across two lines, leave a blank line, land one concrete supporting line, then the hashtag. The claim itself has to be the provocative statement, not a summary of one — "AWS ISN'T THE PROBLEM.", "AI DIDN'T MAKE ENGINEERS FASTER.", "YOUR NEXT CO-WORKER MAY BE AN AI AGENT." Use the post's real publish date, keep the view count plausible, and change the `aria-label` to describe the finished image. Social platforms cannot render SVG, so a raster `cover.png` sibling is required for the Open Graph card and the LinkedIn announcement. **You only commit the SVG.** CI (`.github/workflows/cover-image.yml`) renders `cover.png` from it with headless Chromium and commits it back to the branch. To generate or preview it locally, run `node .github/scripts/rasterize-cover.mjs`. Do not hand-edit the generated PNG.
   - **A real photo, screenshot, or artifact is central to the story** — something built, designed, attended, received, or measured. Don't manufacture a template cover for it; let the artifact be the cover. Set `image: images/<descriptive-name>.jpg` directly; there's no `cover.svg` and nothing for CI to rasterize. This beat the template on reaction count for the one post that tried it ("I designed my Ganpati wall with AI, then had it laser cut").
 - Optionally, add `images/slide-1.svg`, `slide-2.svg`, ... (same commit-only-the-SVG rule, same CI rasterization) to have the post announced on LinkedIn as a multi-image carousel of 3-5 key facts/insights/takeaways instead of a single cover image. See [`.github/README-linkedin.md`](.github/README-linkedin.md#carousel-slides) for the convention.
+- Add `linkedin_hook`, `takeaways` and `linkedin_question` to every new post. They turn the LinkedIn announcement from "title, description, link" into something a reader can use without clicking, which is what earns the click. See [`.github/README-linkedin.md`](.github/README-linkedin.md#takeaway-format) for the format. How to write them:
+  - **Hook:** the post's claim plus one concrete fact, in under about 200 characters. LinkedIn cuts the post off at "see more" after roughly two lines, so the hook has to stand alone. Lead with the number, the named company, or the thing that happened, never with "I wrote about".
+  - **Takeaways:** three, occasionally four. Each one is an action or a judgment the reader can apply this week, written to stand alone, and ideally carrying its own test or threshold ("If it takes more than a day, that is your real risk"). Take them from the post's strongest lines, not from its headings, and do not summarize the argument. One or two sentences each, plain words, no bold, no emoji, no arrows.
+  - **Question:** one sincere question that a founder or CTO could answer about their own company in a comment. Avoid yes/no questions and "What do you think?".
 - Do not add `author`; the site is Hitesh's personal blog and existing posts omit it.
 - Keep `draft: true` while drafting. Published posts in the repository normally omit `draft`.
 - The directory year and the year in `date` must match.
@@ -303,6 +313,7 @@ Before considering a post complete, confirm:
 - [ ] Factual and time-sensitive claims have been checked and linked to reliable sources.
 - [ ] Claims, numbers, and references a reader would want to verify are linked inline where they appear, not collected at the end.
 - [ ] Front matter uses the correct date, an explicit `slug`, existing categories, focused tags, and `image` syntax.
+- [ ] `linkedin_hook`, `takeaways` and `linkedin_question` are set, and the takeaways are useful to someone who never clicks through.
 - [ ] Internal links resolve to the target posts' real permalinks, and any advisory/training call to action is natural and singular.
 - [ ] The directory year matches the publication date's year.
 - [ ] The `date` is today or earlier, never in the future, or Hugo will drop the post from the deployed site.
