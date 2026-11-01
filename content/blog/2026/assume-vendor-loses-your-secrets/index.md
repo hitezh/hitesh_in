@@ -3,6 +3,12 @@ title: "Assume your platform vendor will lose your secrets"
 slug: "assume-vendor-loses-your-secrets"
 date: "2026-10-31"
 description: "Railway, OpenCode and Northflank each told customers to rotate their secrets within two weeks. The useful question is what a stolen key costs you before you notice."
+linkedin_hook: "In 13 days, Railway, OpenCode and Northflank each told customers to rotate their secrets. Assume your platform vendor is next."
+takeaways:
+  - "Time a full secret rotation. If it takes more than a day, that is your real risk."
+  - "Put hard spend caps on every AI key. A capped leak is an annoyance. An uncapped one is an incident."
+  - "Plant a few fake keys next to the real ones and alert on any use. It is the cheapest early warning you can buy."
+linkedin_question: "How long would it take your team to rotate every secret you have stored with a vendor?"
 categories:
   - "technology"
 tags:

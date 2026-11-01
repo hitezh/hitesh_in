@@ -25,7 +25,9 @@ The post is built from the post's front matter:
   **MultiImage** carousel of those slides instead of the single featured image —
   see [Carousel slides](#carousel-slides) below. With 0 or 1 slide PNGs it falls
   back to the ordinary single-image post.
-- **Body:** title, description, `Read more: <url>`, and up to three hashtags.
+- **Body:** by default, title, description, `Read more: <url>`, and up to three
+  hashtags. If the post sets `takeaways` (see [Takeaway format](#takeaway-format)),
+  the body becomes a hook, a numbered list of takeaways and a closing question.
 - **Link placement:** by default the link sits in the **body**, which works with
   the `w_member_social` token. Posting it as the **first comment** instead — which
   reads better and dodges LinkedIn's reach penalty on in-body links — needs the
@@ -43,6 +45,44 @@ Read more: https://hitesh.in/<year>/<slug>/
 ```
 
 (Set `POST_IMAGE=false` to skip the image.)
+
+## Takeaway format
+
+A title and a description ask the reader to click before they get anything. The
+takeaway format gives them something useful in the feed itself, which is what
+earns the click. Add these optional fields to the post's front matter:
+
+```yaml
+linkedin_hook: "In 13 days, Railway, OpenCode and Northflank each told customers to rotate their secrets. Assume your platform vendor is next."
+takeaways:
+  - "Time a full secret rotation. If it takes more than a day, that is your real risk."
+  - "Put hard spend caps on every AI key. A capped leak is an annoyance. An uncapped one is an incident."
+  - "Plant a few fake keys next to the real ones and alert on any use. It is the cheapest early warning you can buy."
+linkedin_question: "How long would it take your team to rotate every secret you have stored with a vendor?"
+```
+
+The announcement then reads:
+
+```
+<linkedin_hook, or the title if unset>
+
+Quick takeaways:
+1. <takeaway>
+2. <takeaway>
+3. <takeaway>
+
+<linkedin_question, if set>
+
+#Blog #Tag1 #Tag2 #Tag3
+```
+
+For how to write these well, see
+[Writing the LinkedIn summary](../AGENTS.md#writing-the-linkedin-summary) in
+AGENTS.md. `takeaways` switches the format on. `linkedin_hook` and `linkedin_question` are
+optional. The description is not used in this format, because the hook and the
+takeaways do its job. Keep the fields on one line each, and avoid double quotes
+inside a value, since the front-matter reader is deliberately minimal. The theme
+does not render these fields, so they never appear on the site.
 
 ## Carousel slides
 

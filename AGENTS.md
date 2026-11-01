@@ -105,6 +105,12 @@ categories:
 tags:
   - "specific-topic"
 image: images/descriptive-image-name.jpg
+linkedin_hook: "The claim plus one concrete fact, under about 200 characters."
+takeaways:
+  - "An action or judgment the reader can use this week, with its own test."
+  - "A second one."
+  - "A third one."
+linkedin_question: "One question a founder or CTO could answer about their own company."
 draft: true
 ---
 ```
@@ -122,6 +128,7 @@ Rules:
   - **No standout real visual.** Author `images/cover.svg`, starting from [`.github/templates/blog-cover.svg`](.github/templates/blog-cover.svg), then make it specific to the post. The template is styled as a screenshot of an X post — avatar, name and handle, the claim as the post text, a trailing hashtag, and a view count — because that format reads well and gets clicked in a fast-moving feed. Keep the illusion: regular-weight text running nearly full width, no card frame, no decorative diagram, no colour beyond the verified check and the hashtag (both X-blue, `#1D9BF0`). Open with the claim in caps across two lines, leave a blank line, land one concrete supporting line, then the hashtag. The claim itself has to be the provocative statement, not a summary of one — "AWS ISN'T THE PROBLEM.", "AI DIDN'T MAKE ENGINEERS FASTER.", "YOUR NEXT CO-WORKER MAY BE AN AI AGENT." Use the post's real publish date, keep the view count plausible, and change the `aria-label` to describe the finished image. Social platforms cannot render SVG, so a raster `cover.png` sibling is required for the Open Graph card and the LinkedIn announcement. **You only commit the SVG.** CI (`.github/workflows/cover-image.yml`) renders `cover.png` from it with headless Chromium and commits it back to the branch. To generate or preview it locally, run `node .github/scripts/rasterize-cover.mjs`. Do not hand-edit the generated PNG.
   - **A real photo, screenshot, or artifact is central to the story** — something built, designed, attended, received, or measured. Don't manufacture a template cover for it; let the artifact be the cover. Set `image: images/<descriptive-name>.jpg` directly; there's no `cover.svg` and nothing for CI to rasterize. This beat the template on reaction count for the one post that tried it ("I designed my Ganpati wall with AI, then had it laser cut").
 - Optionally, add `images/slide-1.svg`, `slide-2.svg`, ... (same commit-only-the-SVG rule, same CI rasterization) to have the post announced on LinkedIn as a multi-image carousel of 3-5 key facts/insights/takeaways instead of a single cover image. See [`.github/README-linkedin.md`](.github/README-linkedin.md#carousel-slides) for the convention.
+- Add `linkedin_hook`, `takeaways` and `linkedin_question` to every new post. They become the LinkedIn announcement. Write them using [Writing the LinkedIn summary](#writing-the-linkedin-summary) below; the mechanics are in [`.github/README-linkedin.md`](.github/README-linkedin.md#takeaway-format).
 - Do not add `author`; the site is Hitesh's personal blog and existing posts omit it.
 - Keep `draft: true` while drafting. Published posts in the repository normally omit `draft`.
 - The directory year and the year in `date` must match.
@@ -194,6 +201,104 @@ For technology and industry analysis, lean into a flowing, link-dense register, 
 - **Still no em dashes.** This register is flowy, not punctuation-heavy. Use commas, colons, full stops, and the occasional parenthesis for the pause an em dash would have taken.
 
 This is a register, not a costume. Keep the first-person, experience-led core: ground the analysis in what you have seen, advised on, or built, and say "I" where you have a view. Borrow the flow and the links from commentary writing; do not slide into anonymous third-person punditry.
+
+### The advisory shape
+
+For posts that react to industry events, this shape has worked well. The reference example is ["Assume your platform vendor will lose your secrets"](content/blog/2026/assume-vendor-loses-your-secrets/index.md).
+
+- **Open on a pattern when one exists.** "In thirteen days, three platforms told their customers to rotate their secrets" carries more weight than any single incident, and it ages better than news. Before settling on one story, check whether two or three recent ones point the same way.
+- **Quote the primary source once, verbatim.** One short line in the vendor's or author's own words ("Assume all environment variables have been decrypted") does more than a paragraph of paraphrase. Link it where it appears.
+- **Give each section one mechanism.** Explain *why* something happens in plain words: why an AI key is easier to cash in than a database password, why a platform that injects secrets must be able to decrypt them. Executives remember a mechanism long after they forget the incidents.
+- **Draft the headings first.** Read them alone, in order. If they don't state the argument, fix them before writing the body.
+- **Say what you couldn't verify.** "I could not independently confirm the report it cites" costs one sentence and buys a lot of trust. Leave out claims you couldn't check rather than hedging them into the post.
+- **Argue in prose, then finish with one ordered action list.** The argument stays connected prose. The last section can be a numbered list of five to eight things the reader should do, in the order you would do them. Start each item with a verb, and give most items a test or threshold ("If it takes more than a day, you have found the real risk"). This is the only list in the post, and it gives readers a reason to save and share it.
+- **Leave the reader one question to ask about their own company.** For example: "What can be stolen from the place I keep my keys, and how fast can I replace it?"
+- **Prefer calm to alarm.** When others are calling something an emergency, a steady "rehearse, don't panic" position reads as an advisor's voice. It is contrarian about tone without needing anyone to be wrong about facts.
+
+## Writing the LinkedIn summary
+
+Every post is announced on LinkedIn from three front-matter fields: `linkedin_hook`, `takeaways` and `linkedin_question`. Treat that announcement as a small piece of writing in its own right, not as an ad for the post. Most people who see it will never click. They should still leave with one idea they can use. That is what earns the click from the few who want the reasoning, and it is what makes people remember the name.
+
+The announcer assembles it like this, with the article link and three hashtags added automatically:
+
+```
+<linkedin_hook>
+
+Quick takeaways:
+1. <takeaway>
+2. <takeaway>
+3. <takeaway>
+
+<linkedin_question>
+```
+
+### The hook
+
+LinkedIn shows roughly the first two lines, about 200 characters, before "see more". The hook is all most people will read, so it has to work alone.
+
+- State the post's claim and anchor it in one concrete thing: a number, a named company, a date, something that happened.
+- Put the fact first and the claim second. "In 13 days, Railway, OpenCode and Northflank each told customers to rotate their secrets. Assume your platform vendor is next."
+- Write it for the feed, not as the title. A hook can be sharper and more specific than a title that also has to work in search.
+- Never open with "New post", "I just published", "I wrote about", "Hot take", or a question.
+
+### The takeaways
+
+Three, occasionally four. This is where the value lives.
+
+- Each takeaway is something the reader can do or decide this week: an action, a threshold, or a judgment. A summary of the argument doesn't count.
+- Each one stands alone. A reader who sees only takeaway two should still get something out of it.
+- Give it a test where you can. "Time a full secret rotation. If it takes more than a day, that is your real risk" beats "Practice secret rotation".
+- Take them from the post's strongest lines, usually its action list or its sharpest plain-speech sentences, never from its headings. Make no claim the post doesn't support.
+- One or two short sentences, under about 25 words. Vary how they open; three takeaways that all start with "Make sure" read as a template.
+- Plain text only: no bold, emoji, arrows, or hashtags. The list numbers itself.
+
+### The question
+
+One sincere question that a founder, CTO or product leader could answer from their own company's experience. Questions like that turn comments into stories, and stories are what other readers stop for.
+
+- Good: "How long would it take your team to rotate every secret you have stored with a vendor?"
+- Avoid yes/no questions, "Thoughts?", "Agree?", "What do you think?", and questions that fish for compliments.
+
+### What to avoid
+
+The "Sound like Hitesh, not an AI" rules apply here too, and LinkedIn adds its own temptations:
+
+- One sentence per line for drama, emoji bullets, "Here's what I learned", "Let that sink in", "This is huge".
+- Restating the title and the description. The reader has already seen the cover image, which carries the title.
+- Teasing instead of giving: "The third lesson surprised me" withholds the value the summary exists to deliver.
+- Extra hashtags or a link in the text; the announcer adds both.
+- Total length past about 1,000 characters. LinkedIn allows 3,000, but the format works because it is quick.
+
+### Three tests before publishing
+
+1. **Scroll test.** Would a CTO stop on the hook alone?
+2. **Never-clicks test.** If someone reads only the takeaways, do they have something to use on Monday?
+3. **Comment test.** Could a founder answer the question with a specific story from their company?
+
+### Before and after
+
+What this morning's post actually said on LinkedIn:
+
+```
+Assume your platform vendor will lose your secrets
+
+Railway, OpenCode and Northflank each told customers to rotate their secrets within two weeks. The useful question is what a stolen key costs you before you notice.
+```
+
+The same post in the new format:
+
+```
+In 13 days, Railway, OpenCode and Northflank each told customers to rotate their secrets. Assume your platform vendor is next.
+
+Quick takeaways:
+1. Time a full secret rotation. If it takes more than a day, that is your real risk.
+2. Put hard spend caps on every AI key. A capped leak is an annoyance. An uncapped one is an incident.
+3. Plant a few fake keys next to the real ones and alert on any use. It is the cheapest early warning you can buy.
+
+How long would it take your team to rotate every secret you have stored with a vendor?
+```
+
+The first asks the reader to click before they get anything. The second gives them three things to do and a reason to click for the rest.
 
 ### Don't over-compress
 
@@ -303,6 +408,7 @@ Before considering a post complete, confirm:
 - [ ] Factual and time-sensitive claims have been checked and linked to reliable sources.
 - [ ] Claims, numbers, and references a reader would want to verify are linked inline where they appear, not collected at the end.
 - [ ] Front matter uses the correct date, an explicit `slug`, existing categories, focused tags, and `image` syntax.
+- [ ] `linkedin_hook`, `takeaways` and `linkedin_question` are set and pass the scroll, never-clicks and comment tests in [Writing the LinkedIn summary](#writing-the-linkedin-summary).
 - [ ] Internal links resolve to the target posts' real permalinks, and any advisory/training call to action is natural and singular.
 - [ ] The directory year matches the publication date's year.
 - [ ] The `date` is today or earlier, never in the future, or Hugo will drop the post from the deployed site.
