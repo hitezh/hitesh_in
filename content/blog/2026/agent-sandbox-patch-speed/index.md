@@ -1,8 +1,8 @@
 ---
-title: "Your agent sandbox is only as safe as your patch speed"
+title: "The real price of an agent sandbox is the team that patches it"
 slug: "agent-sandbox-patch-speed"
 date: "2026-11-07"
-description: "Replit screened 6,211 Linux kernel CVEs in five months to keep agent sandboxes safe. Before you buy or build isolation, price the maintenance, not the technology."
+description: "Replit went through 6,211 Linux kernel advisories in five months to keep agent code contained. Ask who does that work before you pick a sandbox vendor or decide to build."
 categories:
   - "technology"
 tags:
@@ -12,7 +12,7 @@ tags:
   - "infrastructure"
   - "engineering-leadership"
 image: images/cover.svg
-linkedin_hook: "Replit screened 6,211 Linux kernel CVEs in five months to keep its agent sandboxes safe. If you run agents, isolation is a maintenance bill, and most teams haven't priced it."
+linkedin_hook: "Replit went through 6,211 Linux kernel advisories in five months to keep agent code contained. Whoever sells you a sandbox is either doing that work or leaving it to you."
 takeaways:
   - "Ask your sandbox vendor how many hours pass between a kernel or hypervisor fix landing upstream and reaching your workloads. If they can't answer, assume weeks."
   - "Move credentials out of the sandbox. If an escaped agent finds no API keys, the escape is worth far less."
@@ -20,40 +20,38 @@ takeaways:
 linkedin_question: "If an agent running in your sandbox were fully compromised tomorrow, what would it be able to reach, and who would find out first?"
 ---
 
-Replit [audited 6,211 Linux kernel CVEs](https://frontier.replit.com/sandbox-engine-microvms-part-1/) published between June 1 and November 4 to find out which ones could hurt its agent sandboxes. About 96% turned out not to matter: 4,375 were fixed upstream before disclosure and another 676 were excluded by how it configures the kernel. That leaves at least 15 that could enable local privilege escalation, and someone had to read all 6,211 to find them.
+A coding agent writes code and then runs it, often before any person has read it. That is why companies building agents end up needing a sandbox, a sealed environment where the code can run without touching anything that matters. Replit does this for hundreds of millions of projects, and it recently [described how it rebuilt its sandbox engine](https://frontier.replit.com/sandbox-engine-microvms-part-1/). The part I keep coming back to is a maintenance number. Between June 1 and November 4 it went through 6,211 Linux kernel vulnerabilities to work out which ones could affect its setup, and it reports that about 96% did not, either because the fix had landed upstream before disclosure or because its kernel configuration left the vulnerable code out.
 
-That is the number I would put in front of any executive who thinks agent isolation is a product you buy once. The same week, a researcher published [a guest-to-host escape from Firecracker](https://pwn.ai/blog/firecracker-escape), one of the most widely used microVM monitors, giving root on the host. Neither story is a scandal. Together they describe the real cost of running AI agents safely, which is a standing maintenance job.
+Even so, at least 15 could have helped code escalate its privileges, and a team had to read all 6,211 entries to find them. When a company buys or builds a sandbox, that reading is the cost nobody puts in the budget, and it is what I want to talk about.
 
-## The wall is only half of the strength
+## A separate kernel for each sandbox is a stronger wall, and it still has bugs
 
-A microVM gives each sandbox its own Linux kernel under the hypervisor, so a compromised guest does not by itself compromise the host. Replit moved to this design from Docker containers, which share the host's kernel. It is a sound choice, and it still does not make the problem go away. The Firecracker write-up shows the boundary itself can have holes. Its own test ran without the jailer, Firecracker's production hardening layer, and it says what an attacker could reach behind that layer needs a separate assessment. So the severity is arguable. The existence of the bug is not.
+Replit moved from Docker containers, which share the host's kernel, to microVMs, where each sandbox runs its own kernel under the hypervisor. A compromised guest then does not by itself compromise the host. That is a sound design, and I would choose it too.
 
-My view is that isolation strength is the quality of the wall multiplied by how quickly you can change it. Replit says security monitor updates reach every production sandbox [less than 15 minutes after merge](https://frontier.replit.com/sandbox-engine-microvms-part-1/). That figure is about detection rules, not kernel patches, so it is not a patch-latency number. It still shows what a mature operator measures: how fast the defenses can move. When a vendor tells you their sandbox is "isolated", the useful follow-up is how long a known hole stays open on your workloads.
+It does not make the problem go away, though. In the same week a researcher published [a guest-to-host escape from Firecracker](https://pwn.ai/blog/firecracker-escape), a widely used microVM monitor, ending with root on the host. The write-up ran its test without Firecracker's jailer, the layer that drops privileges in production, and says what an attacker could reach behind it needs a separate assessment, so how bad this is in practice is arguable. That bugs exist at this boundary is not. I think of isolation strength as the quality of the wall multiplied by how quickly its operator can fix it, and buyers tend to inspect only the first half.
 
-## A smaller kernel is a smaller workload for your team
+## A smaller kernel means fewer advisories, and a kernel of your own to maintain
 
-Replit builds its guest kernel from a near-empty configuration, drops unneeded hardware support and disables module loading. The security benefit is obvious. The less obvious benefit is that every subsystem you do not compile is a CVE nobody has to triage. Of the 6,211 CVEs it reviewed, 676 were dismissed by configuration alone.
+Replit builds its guest kernel from a near-empty configuration, drops hardware support it does not need, and disables module loading. The obvious benefit is less attack surface. The less obvious one is that every subsystem it does not compile is a vulnerability nobody has to triage, which is how 676 of those 6,211 entries were dismissed on configuration alone.
 
-The cost sits on the other side of the same coin. A custom kernel is a product you now maintain, and the volume of kernel advisories is high enough that triage is real labor. I expect it to grow as AI makes vulnerabilities cheaper to find, which is the argument I made in [AI just raised the interest rate on your technical debt](/2026/ai-raised-the-interest-on-technical-debt/). Replit has hundreds of millions of projects to justify a team for this. Your internal coding-agent platform probably does not.
+The catch is that a custom kernel becomes a product you maintain, and the volume of advisories is high enough that reading them is a real job. I expect that volume to rise as AI makes bugs cheaper to find, the same pressure I described in [AI just raised the interest rate on your technical debt](/2026/ai-raised-the-interest-on-technical-debt/). Replit has the scale to justify a team for this. A company running an internal coding-agent platform usually does not, and should be honest with itself about that before choosing to build.
 
-## Contain the consequences, not only the code
+## Keep keys and network rules outside the sandbox, so an escape finds little
 
-The part of Replit's design I find most useful is the part outside the VM. Egress filtering, DNS filtering and bandwidth limits run on the host, so the workload cannot turn them off. Credential brokers keep upstream API keys out of the sandbox entirely.
+The design choice I found most useful is the one outside the VM. Egress filtering, DNS filtering and bandwidth limits run on the host, where the workload cannot turn them off, and credential brokers keep upstream API keys out of the sandbox altogether. If an attacker does get out of the guest, there are no keys to steal and the network only reaches approved places, so the wall can fail at a much lower price.
 
-Think about what that does to an escape. An attacker who gets out of the guest still finds no keys to steal and a network that only talks to approved places. The wall can fail and the failure is cheap. It is the same logic as [assuming your platform vendor will lose your secrets](/2026/assume-vendor-loses-your-secrets/): design for the day the control breaks. The OpenAI model that [escaped its evaluation sandbox](/2026/blast-radius-of-a-goal/) is a reminder that this day arrives with agents faster than with people.
+It is the same reasoning as [assuming your platform vendor will lose your secrets](/2026/assume-vendor-loses-your-secrets/): plan for the day the control breaks. The OpenAI model that [escaped its evaluation sandbox](/2026/blast-radius-of-a-goal/) is a reminder that agents may find that day sooner than people do.
 
-## Rent the isolation, interrogate the landlord
+## Rent the isolation, then ask the vendor these seven things
 
-Most companies should buy this. Replit says four agent-infrastructure startups, Daytona, E2B, Runloop and Blaxel, raised $59.3 million between them this year, so there is a market of vendors who do this full time. I could not independently verify Replit's figures beyond its own post, and the vendors differ a lot, so treat my list as questions rather than a ranking.
+Most companies should buy this. Replit says four agent-infrastructure startups, Daytona, E2B, Runloop and Blaxel, raised $59.3 million between them this year, so there are vendors who do it full time. I could not verify Replit's figures beyond its own post, and the vendors differ a lot, so treat what follows as questions rather than a ranking. Before the demo, I would want evidence on each of these:
 
-If I were advising a team choosing one, I would ask for evidence on each of these before the demo:
-
-1. Name the isolation layer. Ask whether each sandbox gets its own kernel or shares the host's. If it is a shared kernel, the vendor's patch process is your whole security model.
+1. Name the isolation layer. Ask whether each sandbox gets its own kernel or shares the host's. With a shared kernel, the vendor's patch process is your entire security model.
 2. Time the fix path. Ask how long a fix takes to reach your workloads after it lands upstream. Anything beyond a few days needs a compensating control.
-3. Check where enforcement runs. Egress rules inside the sandbox can be rewritten by whatever runs in it. Insist on host-side enforcement.
+3. Check where enforcement runs. Egress rules inside the sandbox can be rewritten by whatever runs in it, so insist on host-side enforcement.
 4. Keep keys outside. Use short-lived tokens issued per task through a broker, never long-lived keys in environment variables.
 5. Cap the blast radius per task. Give each agent run its own network scope and spend limit, then test by trying to exceed both.
-6. Ask for the incident record. A vendor with no history of disclosing anything has either been lucky or is not looking.
+6. Ask for the incident record. A vendor that has never disclosed anything has either been lucky or is not looking.
 7. Rehearse the escape. Assume the sandbox fails once this year and run the drill: what does the agent reach, how fast do you notice, how fast do you rotate?
 
-Isolation technology is getting better quickly. Whether your team gets the benefit depends on the boring part, which is who is reading the advisories. If you want a second pair of eyes on an agent platform decision, that is what the [AI advisory hour](/work-with-me/) is for.
+Isolation technology is improving quickly, but whether your team benefits depends on who is reading the advisories. If you want a second pair of eyes on an agent platform decision, that is what the [AI advisory hour](/work-with-me/) is for.

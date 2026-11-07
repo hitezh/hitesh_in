@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Cover styled as an X post by Dr. Hitesh Sarda: YOUR AGENT SANDBOX IS ONLY AS SAFE AS YOUR PATCH SPEED. Replit screened 6,211 Linux CVEs in five months. Who does that for you? #AISECURITY">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Cover styled as an X post by Dr. Hitesh Sarda: AGENT ISOLATION IS A STANDING MAINTENANCE BILL. Replit read 6,211 Linux kernel advisories in five months. #AISECURITY">
   <defs>
     <linearGradient id="avatar" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#2166F3"/>
@@ -38,11 +38,11 @@
        concrete supporting line (2 lines). Keep it to these four lines so it stays
        legible at feed thumbnail size. -->
   <g class="sans" font-size="52" fill="#E7E9EA">
-    <text x="64" y="244">YOUR AGENT SANDBOX IS ONLY AS</text>
-    <text x="64" y="310">SAFE AS YOUR PATCH SPEED.</text>
+    <text x="64" y="244">AGENT ISOLATION IS A STANDING</text>
+    <text x="64" y="310">MAINTENANCE BILL.</text>
 
-    <text x="64" y="406">Replit screened 6,211 Linux CVEs</text>
-    <text x="64" y="472">in five months. Who does that for you?</text>
+    <text x="64" y="406">Replit read 6,211 Linux kernel</text>
+    <text x="64" y="472">advisories in five months.</text>
   </g>
 
   <!-- One trailing hashtag, X-blue, the way a real post ends with a clickable tag.
