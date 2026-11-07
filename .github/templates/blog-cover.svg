@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Template for a blog cover styled as a screenshot of an X post: an avatar, name and handle, a claim in caps followed by a concrete supporting line, and a view count.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Template for a blog cover styled as a screenshot of an X post: an avatar, name and handle, a claim in caps, a short explanatory paragraph, and a view count.">
   <defs>
     <linearGradient id="avatar" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#2166F3"/>
@@ -31,24 +31,32 @@
     <circle cx="1136" cy="96" r="5"/>
   </g>
 
-  <!-- The post itself. Regular weight, full width, almost no colour: it has to read as
-       text someone typed, not as a designed headline.
+  <!-- The post itself: a claim in caps, then a short paragraph that tells the reader
+       what actually happened and why it matters. Regular weight, full width, almost no
+       colour, so it reads as text someone typed.
 
-       Open with the claim in caps (2 lines, the hook), leave a blank line, then land a
-       concrete supporting line (2 lines). Keep it to these four lines so it stays
-       legible at feed thumbnail size. -->
-  <g class="sans" font-size="52" fill="#E7E9EA">
-    <text x="64" y="244">PUT THE SHARP CLAIM HERE, IN</text>
-    <text x="64" y="310">CAPS, ACROSS TWO FULL LINES.</text>
-
-    <text x="64" y="406">then one concrete, specific line that</text>
-    <text x="64" y="472">makes the claim worth stopping for.</text>
+       SVG does not wrap text, so every line is its own <text>. Budget: claim in 2 lines
+       (about 30 characters each at 48px), then up to 5 body lines (about 60 characters
+       each at 31px), roughly 300 characters of body. Render it and look before you
+       commit; if a line runs past the right edge, re-break it or trim the sentence. -->
+  <g class="sans" fill="#E7E9EA">
+    <g font-size="48">
+      <text x="64" y="220">PUT THE SHARP CLAIM HERE, IN</text>
+      <text x="64" y="274">CAPS, ACROSS TWO LINES.</text>
+    </g>
+    <g font-size="31">
+      <text x="64" y="336">Then a paragraph for the reader: what happened, with the real</text>
+      <text x="64" y="378">names and numbers, why it matters to a founder or CTO, and</text>
+      <text x="64" y="420">the question or decision it should change. Write it as plain</text>
+      <text x="64" y="462">sentences, up to five lines, about 300 characters. Re-break</text>
+      <text x="64" y="504">lines by hand so none runs past the right edge.</text>
+    </g>
   </g>
 
   <!-- One trailing hashtag, X-blue, the way a real post ends with a clickable tag.
        Replace with a hashtag version of the post's category, e.g. #AISTRATEGY. -->
-  <text x="64" y="528" class="sans" font-size="34" fill="#1D9BF0">#CATEGORY</text>
+  <text x="64" y="558" class="sans" font-size="31" fill="#1D9BF0">#CATEGORY</text>
 
   <!-- Timestamp and view count. Use the post's real publish date; keep the count plausible. -->
-  <text x="64" y="588" class="sans" font-size="30" fill="#71767B">8:31 PM &#183; Sep 16, 2026 &#183; <tspan font-weight="700" fill="#E7E9EA">1.8M</tspan> Views</text>
+  <text x="64" y="594" class="sans" font-size="28" fill="#71767B">8:31 PM &#183; Sep 16, 2026 &#183; <tspan font-weight="700" fill="#E7E9EA">1.8M</tspan> Views</text>
 </svg>
