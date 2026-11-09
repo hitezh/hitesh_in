@@ -35,6 +35,10 @@ I have spent 25+ years building production systems, including work at Citi, Virt
 
 Founders, CEOs, CTOs and leadership teams at companies in Hyderabad and across India, including Hyderabad's global capability centres, and teams abroad who want an outside view. The common thread is a team that has to make a real AI decision and wants evidence rather than vendor slides.
 
+## In the press
+
+{{< press >}}
+
 ## How I think about AI
 
 The fastest way to see whether we would work well together is to read how I reason about the problems you are facing. The [guides](/guides/) collect my writing by topic, including [what AI really costs](/guides/ai-cost/), [deploying AI agents safely](/guides/ai-agent-governance/), [leading teams that code with AI](/guides/ai-coding-agents/), [AI strategy for leadership teams](/guides/ai-strategy-for-leaders/) and [AI in retail and loyalty](/guides/ai-in-retail-and-loyalty/).

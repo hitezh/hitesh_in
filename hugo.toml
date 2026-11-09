@@ -62,3 +62,14 @@ theme    = 'hitesh'
     name   = "Work with me"
     url    = "/work-with-me/"
     weight = 5
+
+# Media coverage. Rendered by the {{< press >}} shortcode and listed in the
+# Person JSON-LD as `subjectOf`. Images live in static/images/press/.
+[[params.press]]
+  title   = "Hitesh Sarda: Driving India's AI Moment from Adoption to Global Leadership"
+  outlet  = "ET Focus"
+  edition = "Hyderabad"
+  date    = "2026-01-08"
+  page    = "2"
+  image   = "images/press/et-focus-hyderabad-2026-01-08.jpg"
+  summary = "Profile of Hitesh and 256 Technologies, a boutique AI advisory helping Indian companies move from adopting AI to leading with it."

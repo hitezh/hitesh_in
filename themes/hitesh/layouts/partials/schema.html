@@ -25,6 +25,18 @@
   (dict "@type" "Country" "name" "India")
 }}
 
+{{ $press := slice }}
+{{ range $p.press }}
+  {{ $press = $press | append (dict
+    "@type" "NewsArticle"
+    "headline" .title
+    "datePublished" .date
+    "image" (absURL .image)
+    "publisher" (dict "@type" "Organization" "name" .outlet)
+    "about" (dict "@id" $personID)
+  ) }}
+{{ end }}
+
 {{ $person := dict
   "@type" "Person"
   "@id" $personID
@@ -38,6 +50,7 @@
   "knowsAbout" ($p.knowsAbout | default slice)
   "sameAs" $sameAs
 }}
+{{ with $press }}{{ $person = merge $person (dict "subjectOf" .) }}{{ end }}
 
 {{ $orgSameAs := slice }}
 {{ with $p.companyURL }}{{ $orgSameAs = $orgSameAs | append . }}{{ end }}

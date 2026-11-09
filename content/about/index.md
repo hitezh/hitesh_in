@@ -32,6 +32,10 @@ Current focus areas:
 
 More detail on how I work with Hyderabad companies is on the [AI advisor in Hyderabad](/ai-advisor-hyderabad/) page.
 
+## In the press
+
+{{< press >}}
+
 ## Writing
 
 I've been writing here since 2009, across technology, entrepreneurship, and the long arc of building software products. These days the writing is about AI decisions leaders actually face. The [guides](/guides/) collect the best of it by theme: [AI costs](/guides/ai-cost/), [AI agent governance](/guides/ai-agent-governance/), [AI coding agents](/guides/ai-coding-agents/), [AI strategy for leadership teams](/guides/ai-strategy-for-leaders/) and [AI in retail and loyalty](/guides/ai-in-retail-and-loyalty/).

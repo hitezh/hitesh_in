@@ -1567,3 +1567,18 @@ a.tag:hover { color: var(--accent); }
   .book-feature-cover { max-width: 180px; }
 }
 
+
+/* ---- Press coverage ---- */
+.press-item { margin: var(--sp-6) 0; }
+.press-item img {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border: 1px solid var(--border);
+}
+.press-item figcaption {
+  margin-top: var(--sp-3);
+  font-size: var(--size-sm);
+  color: var(--text-muted);
+}
