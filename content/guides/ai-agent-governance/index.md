@@ -16,17 +16,16 @@ posts:
   - "2026/your-ai-outgrew-your-rulebook"
   - "2026/rent-the-harness-own-what-it-learns"
   - "2026/ai-off-incident-drill"
-  - "2025/project-vend-when-ai-plays-shopkeeper"
 faq:
   - q: "How much autonomy should an AI agent get in production?"
     a: "Less than the demo suggests. Small error rates compound across every step an agent takes, so a workflow with many steps fails far more often than any single step does. Hand agents the workflows where a mistake is cheap to catch and cheap to undo, and widen the scope as the evidence comes in."
   - q: "How should we limit what an AI agent is allowed to do?"
     a: "Scope permissions per agent by the damage it could do, its blast radius, rather than by the job title of the person using it. Then check what actually enforces that scope, because a limited account is only as limited as the software enforcing it."
   - q: "Do we need an audit trail for AI agent actions?"
-    a: "Yes. If an agent touches systems you depend on, you need to be able to say afterwards what it did, in what order and with which credentials. Several large AI companies have struggled to answer that question about their own agents."
+    a: "Yes. If an agent touches systems you depend on, you need to be able to say afterwards what it did, in what order and with which credentials. OpenAI could not answer it about its own agents months after they broke a package registry."
 ---
 
-Most companies I talk to have moved past the question of whether to use AI agents. The harder questions are how much to let them do on their own, what they are allowed to touch, and how you would know afterwards what they did.
+For most companies the question is no longer whether to use AI agents. The harder questions are how much to let them do on their own, what they are allowed to touch, and how you would know afterwards what they did.
 
 The posts here come at that from a few directions. Some deal with reliability and why agents stall on long workflows. Some deal with permissions, sandboxes and the infrastructure that has to enforce them. A few are about the less technical side: an agent with no reputation to lose behaves differently from an employee, and the scaffolding you wrote for last year's model may now be working against you.
 

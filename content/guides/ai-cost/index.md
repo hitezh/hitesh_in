@@ -29,4 +29,4 @@ Every few months a lab cuts its prices and someone in the room concludes that AI
 
 Both things are true. Token prices fall, and spend still rises, because cheaper work gets used for more things: agents that loop for longer, tasks nobody would have funded a year ago, and routing layers that move the cost somewhere it is harder to see. The cost of AI is set by engineering choices (caching, model choice, how much scaffolding you send with every call) far more than by the price list.
 
-The posts below cover the questions I get asked most often by CTOs and finance teams: why the bill is rising, who should own it, where a smaller model is enough, and what running models locally really costs.
+The posts below take the questions CTOs and finance teams end up asking: why the bill is rising, who should own it, where a smaller model is enough, and what running models locally really costs.

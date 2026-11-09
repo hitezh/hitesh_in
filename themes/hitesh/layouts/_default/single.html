@@ -5,6 +5,7 @@
     <header class="post-header">
       {{ if eq .Section "blog" }}
       <div class="post-meta-top">
+        <span class="post-byline">By <a href="/about/" rel="author">{{ site.Params.author }}</a></span>
         <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
           {{ .Date.Format "January 2, 2006" }}
         </time>
@@ -14,6 +15,9 @@
         </div>
         {{ end }}
       </div>
+      {{ end }}
+      {{ if and .Params.showPhoto site.Params.photo }}
+      <img class="page-portrait" src="{{ site.Params.photo | relURL }}" alt="{{ site.Params.author }}" width="112" height="112">
       {{ end }}
       <h1 class="post-title-large">{{ .Title }}</h1>
       {{ with .Params.description }}
@@ -57,9 +61,12 @@
     {{/* Visible author box: names who wrote this and why they're credible, and
          links every post to the About and Hyderabad advisor pages. */}}
     <aside class="author-box" aria-label="About the author">
+      {{ with site.Params.photo }}<img class="author-box-photo" src="{{ . | relURL }}" alt="{{ site.Params.author }}" width="64" height="64" loading="lazy">{{ end }}
+      <div class="author-box-text">
       <p class="author-box-name">Written by <a href="/about/" rel="author">{{ site.Params.author }}</a></p>
       <p class="author-box-bio">{{ site.Params.authorBio }}</p>
-      <p class="author-box-cta"><a href="/ai-advisor-hyderabad/">Work with me</a> &middot; <a href="/guides/">Guides</a> &middot; <a href="https://www.linkedin.com/in/{{ site.Params.linkedin }}" rel="me noopener" target="_blank">LinkedIn</a></p>
+      <p class="author-box-cta"><a href="/about/">About me</a> &middot; <a href="/work-with-me/">Work with me</a> &middot; <a href="https://www.linkedin.com/in/{{ site.Params.linkedin }}" rel="me noopener" target="_blank">LinkedIn</a></p>
+      </div>
     </aside>
 
     <footer class="post-footer">

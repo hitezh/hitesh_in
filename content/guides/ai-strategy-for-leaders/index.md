@@ -28,7 +28,7 @@ faq:
     a: "Rarely. Open-weight models now come close to frontier quality at a fraction of the cost, so durable advantage comes from your data, your workflows and how fast your organisation learns."
 ---
 
-The questions leadership teams bring me are rarely about which model is best. They are about whether the pilot actually worked, whether to build or buy, where to start, and what will still be an advantage in two years when everyone has the same models.
+The questions that decide whether AI pays off are rarely about which model is best. They are about whether the pilot actually worked, whether to build or buy, where to start, and what will still be an advantage in two years when everyone has the same models.
 
 My short answers: run pilots that measure the tool and not the expert using it, start where checking the output is cheap, buy before you build, and assume the model is a commodity. The posts below make each of those arguments properly, with the evidence behind them.
 

@@ -33,7 +33,7 @@
 
 {{/* Keep thin or utility pages out of the index: front-matter `noindex`, and
      tag/category pages with fewer than three posts. Links are still followed. */}}
-{{ if or .Params.noindex (and (eq .Kind "term") (lt (len .Pages) 3)) }}
+{{ if partial "noindex.html" . }}
 <meta name="robots" content="noindex, follow">
 {{ end }}
 

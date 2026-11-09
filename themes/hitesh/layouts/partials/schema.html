@@ -51,6 +51,7 @@
   "sameAs" $sameAs
 }}
 {{ with $press }}{{ $person = merge $person (dict "subjectOf" .) }}{{ end }}
+{{ with $p.photo }}{{ $person = merge $person (dict "image" (absURL .)) }}{{ end }}
 
 {{ $orgSameAs := slice }}
 {{ with $p.companyURL }}{{ $orgSameAs = $orgSameAs | append . }}{{ end }}

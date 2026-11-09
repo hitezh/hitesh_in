@@ -18,6 +18,11 @@ enableRobotsTXT = true
 
   # Structured data (themes/hitesh/layouts/partials/schema.html)
   jobTitle           = "AI Advisor"
+  photo              = "images/hitesh-sarda.jpg"
+
+  # Posts with these tags stay readable but are kept out of search indexes:
+  # the 2025 weekly news roundups are dated and generic next to the essays.
+  noindexTags        = ["weekly-roundup"]
   authorBio          = "AI advisor in Hyderabad and founder of 256 Technologies, an applied AI lab. 25+ years building production systems in banking, retail and loyalty. I help leadership teams decide what AI to build, buy or skip."
   personDescription  = "AI advisor in Hyderabad, India, and founder of 256 Technologies, an applied AI lab. Advises leadership teams on AI strategy, AI agents and AI adoption, with a focus on retail, loyalty and industrial businesses."
   company            = "256 Technologies"

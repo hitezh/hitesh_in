@@ -3,10 +3,11 @@ title: "About"
 seoTitle: "About Dr. Hitesh Sarda, AI Advisor in Hyderabad"
 description: "Dr. Hitesh Sarda is an AI advisor in Hyderabad and founder of 256 Technologies, helping leadership teams in retail, loyalty and industry decide what AI to build or buy."
 schemaType: "ProfilePage"
+showPhoto: true
 draft: false
 ---
 
-I am Dr. Hitesh Sarda, an **AI advisor based in Hyderabad, India**, and the founder of 256 Technologies, an applied AI lab. I work at the intersection of AI research, practical engineering, and business outcomes, helping leadership teams navigate AI adoption with clarity and confidence.
+I am Dr. Hitesh Sarda, an AI advisor based in Hyderabad, India, and the founder of 256 Technologies, an applied AI lab. I work at the intersection of AI research, practical engineering, and business outcomes, helping leadership teams navigate AI adoption with clarity and confidence.
 
 My focus is on **Retail, Loyalty, and Industrial domains**, where I lead the advisory for AI implementation and consulting engagements. Each engagement ends with evidence-based recommendations your leadership team can actually act on.
 
