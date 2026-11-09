@@ -188,23 +188,6 @@ a:hover { color: var(--text); }
   overflow: hidden;
 }
 
-/* Atmospheric glow — warm depth without clutter */
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -80px;
-  right: -60px;
-  width: 560px;
-  height: 560px;
-  background: radial-gradient(ellipse at 60% 40%, rgba(191, 75, 26, 0.07) 0%, transparent 65%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-[data-theme="dark"] .hero::before {
-  background: radial-gradient(ellipse at 60% 40%, rgba(232, 102, 58, 0.08) 0%, transparent 65%);
-}
-
 .hero .container { position: relative; z-index: 1; }
 
 .hero-grid {
@@ -256,7 +239,8 @@ a:hover { color: var(--text); }
 
 .hero-bio {
   font-size: var(--size-lg);
-  color: var(--text-muted);
+  color: var(--text);
+  max-width: 34em;
   line-height: 1.65;
   margin-bottom: var(--sp-8);
 }
@@ -1614,4 +1598,28 @@ a.tag:hover { color: var(--accent); }
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: var(--sp-6);
+}
+
+/* ---- Home hero portrait (replaces the old "latest post" card) ---- */
+.hero-grid { grid-template-columns: 1.25fr 1fr; }
+.hero-photo-col {
+  animation: fadeUp 0.5s 0.1s var(--ease) both;
+  justify-self: end;
+  width: 100%;
+  max-width: 400px;
+}
+.hero-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 20%;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  /* On narrow screens the photo sits above the name, as a small portrait. */
+  .hero-photo-col { order: -1; justify-self: start; max-width: 112px; }
+  .hero-photo { aspect-ratio: 1; border-radius: 50%; }
 }
