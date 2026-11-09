@@ -31,7 +31,10 @@ jobs:
   covers:
     # Don't run on forks: they lack the secrets and shouldn't push commits.
     if: github.repository == 'hitezh/hitesh_in'
-    runs-on: ubuntu-latest
+    # Pinned: ubuntu-latest moved to 26.04, which Playwright 1.55 does not
+    # support (`playwright install --with-deps` fails). Move to a newer
+    # Playwright and ubuntu-latest together.
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
         with:
