@@ -43,4 +43,4 @@ I've been writing here since 2009, across technology, entrepreneurship, and the 
 
 ## Get in touch
 
-The best way to reach me is [email](mailto:hitesh@optculture.com) or [LinkedIn](https://linkedin.com/in/hiteshs). I'm also on X as [@fullstackcto](https://twitter.com/fullstackcto). To talk through a specific problem, [book an AI advisory hour](/work-with-me/).
+The best way to reach me is [email](mailto:hitesh@256tec.com) or [LinkedIn](https://linkedin.com/in/hiteshs). I'm also on X as [@fullstackcto](https://twitter.com/fullstackcto). To talk through a specific problem, [book an AI advisory hour](/work-with-me/).
