@@ -1,5 +1,5 @@
 ---
-title: "The homegrown AI that wasn't"
+title: "Rio's homegrown AI was someone else's model"
 description: "Rio's 397B-parameter 'homegrown' model turned out to be an unattributed merge of two others. What any public body should disclose before it says 'we built it'."
 slug: "the-homegrown-ai-that-wasnt"
 date: "2026-06-15"

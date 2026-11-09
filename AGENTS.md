@@ -411,6 +411,16 @@ The first asks the reader to click before they get anything. The second gives th
 - Internal post URLs follow `/:year/:slug`. Verify each link against the target's *actual* permalink, not its directory name. If the target post has no `slug` field, its URL is derived from the slugified title and may contain punctuation such as a period. The safest habit is to give every post an explicit `slug` and link to that.
 - Where the subject naturally invites it, close with one soft, non-salesy call to action linking to the [AI advisory hour](/work-with-me/) (`/work-with-me/`) or the [AI training page](/ai-training/) (`/ai-training/`). Tie it to the specific problem the post explored, keep it to a single sentence, and never make it read like a brochure. Omit it entirely when it would feel bolted on.
 
+## Rhythm and titles
+
+Readers and search engines both judge the blog as a whole, and two patterns make it look machine-produced even when each post is good.
+
+- **Rhythm.** Publish at most two posts a week, at least three days apart. A month with twenty posts after ten silent months reads like a content farm, whatever the quality. If several drafts are ready, schedule them rather than publishing them together.
+- **Title shape.** The negate-then-reframe title ("X didn't do Y. Z did.", "It isn't X, it's Y", "X, not Y", "The X that wasn't") is the same tell as negative parallelism in the body. One in a while is fine; never two in a row, and never as the default. Most titles should simply state the claim: "Shopify scaled checkout by removing a system", "Your scoreboard is making AI-written software worse".
+- **First-hand evidence.** Every post should carry at least one thing only Hitesh could write: a decision he made, a client conversation (anonymised), a number from his own work, something he got wrong. If a draft has none, ask him for one rather than inventing it.
+
+A pull request that publishes a post runs `.github/workflows/post-rhythm.yml`, which warns (without blocking) when a post is within three days of another, when a week holds more than two, or when the title matches the formula.
+
 ## Search and AI discoverability
 
 The site targets two kinds of search: long-tail questions leaders ask (what AI really costs, how to govern agents and coding agents, how to judge an AI pilot, what agentic commerce means for retail and loyalty) and local intent ("AI advisor in Hyderabad" and its variants). The theme handles the technical side: structured data, sitemap, robots.txt, `/llms.txt`, canonical links and the author box. A post only has to do three things:
@@ -443,6 +453,7 @@ Before considering a post complete, confirm:
 - [ ] A review pass has been requested from Hitesh and the resulting notes are addressed.
 - [ ] Scanned against "Sound like Hitesh, not an AI": no negative parallelism, self-answered questions, "Here's the…" suspense, "-ing" analysis tails, any em dash, bold-lead bullets, or the AI house vocab; any single trope that remains is deliberate and isolated.
 - [ ] Straight quotes and plain ASCII throughout (no smart quotes, no `→` arrows, no em dashes).
+- [ ] The post is at least three days after the previous one, the title is not a negate-then-reframe formula, and the post carries at least one first-hand detail.
 - [ ] The `description` states the answer plainly; `seoTitle` is set if the title would never match a search; the post is added to the right guide in `content/guides/`.
 - [ ] `hugo server -D` shows a good home-page card and post page.
 - [ ] `hugo --minify` completes without errors before publication.

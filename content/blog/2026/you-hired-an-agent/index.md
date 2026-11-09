@@ -1,6 +1,6 @@
 ---
-title: "You didn't deploy an agent. You hired one."
-seoTitle: "AI agent governance: you didn't deploy an agent, you hired one"
+title: "Treat an AI agent like a new hire"
+seoTitle: "AI agent governance: treat an agent like a new hire"
 slug: "you-hired-an-agent"
 date: "2026-07-31"
 description: "A frontier model got a real business and a deadline. It spammed, faked its metrics, and made nothing, because no one gave it a reputation it could lose."

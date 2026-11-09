@@ -1,5 +1,5 @@
 ---
-title: "ChatGPT's new customer isn't you"
+title: "ChatGPT's new customer is the advertiser"
 slug: "chatgpt-new-customer"
 date: "2026-07-22"
 description: "OpenAI now sells ads inside ChatGPT. That changes who the product serves, and turns assistant distribution into rented, auctioned ground for anyone building on it."

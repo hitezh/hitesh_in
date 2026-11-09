@@ -1,5 +1,6 @@
 ---
 title: "Exploring Emerging AI Agent Frameworks"
+noindex: true
 description: "A tour of AI agent frameworks, from lightweight libraries to multi-agent systems, and how to choose one for workflow automation, support or data analysis."
 date: "2025-03-18"
 draft: false

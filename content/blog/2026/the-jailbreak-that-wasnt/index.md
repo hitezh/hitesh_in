@@ -1,5 +1,5 @@
 ---
-title: "The jailbreak that wasn't"
+title: "The 'jailbreak' that got Fable 5 suspended was bug fixing"
 description: "A US directive made Anthropic suspend Fable 5 and Mythos 5 over a 'jailbreak' that was just fixing bugs. The labs taught regulators to see weapons."
 slug: "the-jailbreak-that-wasnt"
 date: "2026-06-13"

@@ -1,5 +1,5 @@
 ---
-title: "AI got cheap enough to waste. Most teams still ration it."
+title: "Most teams still ration AI that is cheap enough to waste"
 slug: "ai-cheap-enough-to-waste"
 date: "2026-10-09"
 description: "A developer says a near-free model changed what he bothers to attempt. For leaders, the useful question is which work never got funded, and who checks the results."

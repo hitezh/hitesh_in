@@ -1,5 +1,6 @@
 ---
 title: "The Money Myths Your Favourite Finfluencer Keeps Repeating"
+noindex: true
 slug: "finfluencer-money-myths"
 date: "2026-06-29"
 draft: false

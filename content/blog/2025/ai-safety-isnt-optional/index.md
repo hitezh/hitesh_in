@@ -1,5 +1,6 @@
 ---
 title: "AI Safety Isn't Optional - It's Survival"
+noindex: true
 description: "A chatbot that goes off-script can trend on X within hours or give advice that creates legal exposure. The practical guardrails every AI product launch needs."
 date: "2025-04-09"
 draft: false

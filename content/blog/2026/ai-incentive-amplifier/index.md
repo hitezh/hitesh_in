@@ -1,5 +1,5 @@
 ---
-title: "AI didn't make your software worse. Your scoreboard did."
+title: "Your scoreboard is making AI-written software worse"
 slug: "ai-incentive-amplifier"
 date: "2026-07-25"
 description: "AI slashed the cost of shipping features but not the cost of reliability, so it amplifies whatever your organization already rewards. Most reward the wrong thing."

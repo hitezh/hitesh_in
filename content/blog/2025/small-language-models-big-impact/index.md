@@ -1,5 +1,6 @@
 ---
 title: "10 Cool Ways Small Language Models Are Making a Big Impact"
+noindex: true
 description: "Small language models are faster, cheaper and run on laptops and phones. Ten real uses, from blocking text scams onward, where a smaller model beats a frontier one."
 date: "2025-01-22"
 draft: false
