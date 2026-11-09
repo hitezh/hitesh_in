@@ -3,6 +3,8 @@ locale   = 'en-US'
 title    = 'Dr. Hitesh Sarda'
 theme    = 'hitesh'
 
+enableRobotsTXT = true
+
 [pagination]
   pagerSize = 10
 
@@ -16,6 +18,7 @@ theme    = 'hitesh'
 
   # Structured data (themes/hitesh/layouts/partials/schema.html)
   jobTitle           = "AI Advisor"
+  authorBio          = "AI advisor in Hyderabad and founder of 256 Technologies, an applied AI lab. 25+ years building production systems in banking, retail and loyalty. I help leadership teams decide what AI to build, buy or skip."
   personDescription  = "AI advisor in Hyderabad, India, and founder of 256 Technologies, an applied AI lab. Advises leadership teams on AI strategy, AI agents and AI adoption, with a focus on retail, loyalty and industrial businesses."
   company            = "256 Technologies"
   companyURL         = "https://256tec.com"
@@ -32,7 +35,16 @@ theme    = 'hitesh'
 [taxonomies]
   category = "categories"
   tag      = "tags"
-  author   = "author"
+
+# /llms.txt, a plain-text map of the site for LLMs (themes/hitesh/layouts/index.llms.txt).
+[outputFormats.llms]
+  mediaType      = "text/plain"
+  baseName       = "llms"
+  isPlainText    = true
+  notAlternative = true
+
+[outputs]
+  home = ["html", "rss", "llms"]
 
 [markup]
   [markup.goldmark]
@@ -47,21 +59,25 @@ theme    = 'hitesh'
     url    = "/blog/"
     weight = 1
   [[menu.main]]
+    name   = "Guides"
+    url    = "/guides/"
+    weight = 2
+  [[menu.main]]
     name   = "Book"
     url    = "/book/"
-    weight = 2
+    weight = 3
   [[menu.main]]
     name   = "AI Training"
     url    = "/ai-training/"
-    weight = 3
+    weight = 4
   [[menu.main]]
     name   = "About"
     url    = "/about/"
-    weight = 4
+    weight = 5
   [[menu.main]]
     name   = "Work with me"
     url    = "/work-with-me/"
-    weight = 5
+    weight = 6
 
 # Media coverage. Rendered by the {{< press >}} shortcode and listed in the
 # Person JSON-LD as `subjectOf`. Images live in static/images/press/.

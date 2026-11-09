@@ -1,0 +1,39 @@
+{{- /* /llms.txt: a plain-text map of the site for LLMs and AI answer engines
+       (https://llmstxt.org). Generated from site data so it stays current. */ -}}
+# {{ site.Title }}
+
+> {{ site.Params.personDescription }}
+
+{{ site.Params.author }} writes about AI decisions that founders, CTOs and leadership teams actually face: what AI really costs, how to deploy AI agents safely, how to lead engineering teams that code with AI, how to run AI pilots and decide build versus buy, and what AI shopping agents mean for retail and loyalty. He has written on this site since 2009 and is based in Hyderabad, India.
+
+## About and services
+
+- [About {{ site.Params.author }}]({{ "about/" | absURL }}): background, focus areas and contact details.
+- [AI advisor in Hyderabad]({{ "ai-advisor-hyderabad/" | absURL }}): AI advisory, fractional Head of AI, executive AI training and AI MVPs for companies in Hyderabad and across India, with FAQs.
+- [Book an AI advisory hour]({{ "work-with-me/" | absURL }}): how to work with {{ site.Params.author }}.
+- [AI training for leadership teams]({{ "ai-training/" | absURL }}): a six-week program that makes a leadership team AI-native.
+{{- with site.GetPage "/book" }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{- end }}
+
+## Guides
+
+{{ range (where site.RegularPages "Section" "guides").ByWeight -}}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{ end }}
+{{- with site.Params.press }}
+## Press
+
+{{ range sort . "date" "desc" -}}
+- {{ .outlet }}{{ with .edition }}, {{ . }}{{ end }}, {{ (time.AsTime .date).Format "2 January 2006" }}: "{{ .title }}". {{ .summary }}
+{{ end }}
+{{- end }}
+## Recent posts
+
+{{ range first 40 (where site.RegularPages "Section" "blog") -}}
+- [{{ .Title }}]({{ .Permalink }}) ({{ .Date.Format "2006-01-02" }}): {{ partial "description.html" . }}
+{{ end }}
+## Optional
+
+- [Full blog archive]({{ "blog/" | absURL }})
+- [RSS feed]({{ "index.xml" | absURL }})

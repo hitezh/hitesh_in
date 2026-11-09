@@ -1,0 +1,23 @@
+{{/* Returns the meta description for a page. Front-matter `description` wins.
+     Otherwise derive one so no two pages share the site-wide default:
+     regular pages use their own summary, taxonomy terms say what they list,
+     and only the home page falls back to site.Params.description. */}}
+{{ $desc := .Description }}
+{{ if not $desc }}
+  {{ if .IsPage }}
+    {{/* Old WordPress posts carry [caption ...] shortcodes in their text; drop them. */}}
+    {{ $desc = .Summary | plainify | htmlUnescape | replaceRE `\[/?[a-z_]+(\s[^\]]*)?\]` "" | replaceRE `\s+` " " | strings.TrimSpace | truncate 158 }}
+    {{/* Image-only posts (the sketches) have no text to summarise. */}}
+    {{ if lt (len $desc) 40 }}
+      {{ $kind := cond (in (.Params.categories | default slice) "sketches") "A sketch" "A post" }}
+      {{ $desc = printf "%s: %s by Dr. Hitesh Sarda, published %s.%s" .Title (lower $kind) (.Date.Format "2 January 2006") (cond (ne $desc "") (printf " %s" $desc) "") }}
+    {{ end }}
+  {{ else if eq .Kind "term" }}
+    {{ $n := len .Pages }}
+    {{ $desc = printf "%d %s %s %s by Dr. Hitesh Sarda, an AI advisor in Hyderabad, written for founders, CTOs and leadership teams." $n (cond (eq $n 1) "post" "posts") (cond (eq .Data.Singular "tag") "tagged" "on") (.Title | humanize | lower) }}
+  {{ else if eq .Kind "taxonomy" }}
+    {{ $desc = printf "Every %s used on the blog of Dr. Hitesh Sarda, an AI advisor in Hyderabad, with the posts filed under each." (.Data.Singular | default "topic") }}
+  {{ end }}
+{{ end }}
+{{ if not $desc }}{{ $desc = site.Params.description }}{{ end }}
+{{ return $desc }}

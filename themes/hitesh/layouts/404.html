@@ -1,0 +1,24 @@
+{{ define "main" }}
+<article class="post">
+  <div class="container">
+    <header class="post-header">
+      <h1 class="post-title-large">That page isn't here</h1>
+      <p class="post-subtitle">The link may be old, or the post may have moved when the blog changed platforms.</p>
+    </header>
+    <div class="post-body">
+      <p>Try one of these instead:</p>
+      <ul>
+        <li><a href="/blog/">The full blog archive</a>, newest first.</li>
+        <li><a href="/guides/">The guides</a>, which group the best posts by topic.</li>
+        <li><a href="/ai-advisor-hyderabad/">Working with me as an AI advisor in Hyderabad</a>.</li>
+      </ul>
+      {{ with first 5 (where site.RegularPages "Section" "blog") }}
+      <h2>Recent posts</h2>
+      <ul>
+        {{ range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+      </ul>
+      {{ end }}
+    </div>
+  </div>
+</article>
+{{ end }}

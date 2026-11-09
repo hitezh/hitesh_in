@@ -1,5 +1,6 @@
 ---
 title: "Your model was never your moat"
+seoTitle: "Your AI model was never your moat"
 slug: "your-model-was-never-your-moat"
 date: "2026-07-07"
 description: "Open-weight models now match frontier quality at a fifth of the cost. For anyone building on AI, that shifts where durable advantage has to come from."

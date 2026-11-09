@@ -54,6 +54,14 @@
     </div>
 
     {{ if eq .Section "blog" }}
+    {{/* Visible author box: names who wrote this and why they're credible, and
+         links every post to the About and Hyderabad advisor pages. */}}
+    <aside class="author-box" aria-label="About the author">
+      <p class="author-box-name">Written by <a href="/about/" rel="author">{{ site.Params.author }}</a></p>
+      <p class="author-box-bio">{{ site.Params.authorBio }}</p>
+      <p class="author-box-cta"><a href="/ai-advisor-hyderabad/">Work with me</a> &middot; <a href="/guides/">Guides</a> &middot; <a href="https://www.linkedin.com/in/{{ site.Params.linkedin }}" rel="me noopener" target="_blank">LinkedIn</a></p>
+    </aside>
+
     <footer class="post-footer">
       {{ with .Params.tags }}
       <div class="post-footer-tags">

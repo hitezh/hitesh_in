@@ -1,5 +1,6 @@
 ---
 title: "Your next customer might be an AI agent, not a person"
+seoTitle: "Agentic commerce: your next customer may be an AI agent"
 slug: "your-next-customer-is-an-agent"
 date: "2026-09-09"
 description: "Meta's Muse books, buys, and pays on people's behalf inside WhatsApp. The real shift is who, or what, your business now has to be legible to."

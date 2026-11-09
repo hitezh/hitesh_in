@@ -1582,3 +1582,21 @@ a.tag:hover { color: var(--accent); }
   font-size: var(--size-sm);
   color: var(--text-muted);
 }
+
+/* ---- Author box on posts ---- */
+.author-box {
+  max-width: var(--reading);
+  margin: var(--sp-12) auto 0;
+  padding: var(--sp-6);
+  background: var(--bg-alt);
+  border-radius: 8px;
+  font-size: var(--size-sm);
+}
+.author-box p { margin: 0 0 var(--sp-2); }
+.author-box p:last-child { margin-bottom: 0; }
+.author-box-name { font-weight: 600; }
+.author-box-name a, .author-box-cta a { color: var(--accent); }
+.author-box-bio { color: var(--text-muted); }
+
+/* List rows without a date column (guides on the home page and /guides/). */
+.post-item.post-item--nodate { grid-template-columns: 1fr; }

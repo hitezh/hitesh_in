@@ -1,5 +1,6 @@
 ---
 title: "Goldman limited coding agents by job title. Limit them by blast radius."
+seoTitle: "Limit AI coding agent permissions by blast radius"
 slug: "coding-agents-blast-radius-job-title"
 date: "2026-11-09"
 description: "Goldman Sachs pulled coding agents from most traders and bankers. The control that works is narrower permissions per agent, and it lets you keep the demand."

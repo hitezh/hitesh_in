@@ -1,5 +1,6 @@
 ---
 title: "Writing code got free. Reviewing it is the job now."
+seoTitle: "AI coding agents made code review the bottleneck"
 slug: "reviewing-is-the-job"
 date: "2026-07-14"
 description: "Microsoft's engineers merged 24% more pull requests with AI. The constraint didn't vanish; it moved to review, and most teams are still counting the wrong thing."

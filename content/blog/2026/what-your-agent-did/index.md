@@ -1,5 +1,6 @@
 ---
 title: "OpenAI couldn't say what its agents did. Neither can you."
+seoTitle: "AI agent audit trails: can you say what your agent did?"
 slug: "what-your-agent-did"
 date: "2026-09-12"
 description: "OpenAI's agents broke a package registry it doesn't own, and months later the company still couldn't say what they did. That gap is the real risk in your agent rollout."

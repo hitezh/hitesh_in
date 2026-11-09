@@ -1,5 +1,6 @@
 ---
 title: "The real price of an agent sandbox is the team that patches it"
+seoTitle: "AI agent sandbox security: the cost is patching"
 slug: "agent-sandbox-patch-speed"
 date: "2026-11-07"
 description: "Replit went through 6,211 Linux kernel advisories in five months to keep agent code contained. Ask who does that work before you pick a sandbox vendor or decide to build."

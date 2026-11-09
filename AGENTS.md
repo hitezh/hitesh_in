@@ -411,6 +411,16 @@ The first asks the reader to click before they get anything. The second gives th
 - Internal post URLs follow `/:year/:slug`. Verify each link against the target's *actual* permalink, not its directory name. If the target post has no `slug` field, its URL is derived from the slugified title and may contain punctuation such as a period. The safest habit is to give every post an explicit `slug` and link to that.
 - Where the subject naturally invites it, close with one soft, non-salesy call to action linking to the [AI advisory hour](/work-with-me/) (`/work-with-me/`) or the [AI training page](/ai-training/) (`/ai-training/`). Tie it to the specific problem the post explored, keep it to a single sentence, and never make it read like a brochure. Omit it entirely when it would feel bolted on.
 
+## Search and AI discoverability
+
+The site targets two kinds of search: long-tail questions leaders ask (what AI really costs, how to govern agents and coding agents, how to judge an AI pilot, what agentic commerce means for retail and loyalty) and local intent ("AI advisor in Hyderabad" and its variants). The theme handles the technical side: structured data, sitemap, robots.txt, `/llms.txt`, canonical links and the author box. A post only has to do three things:
+
+- **`description`** is the answer in one sentence. Search results and AI answer engines quote it, so it states the finding plainly rather than teasing it.
+- **`seoTitle`** (optional) replaces the title only in the browser tab and search results. The visible headline, social cards and LinkedIn post keep the claim. Use it when the claim title would never match what someone types, for example `title: "Cheaper tokens, bigger bill"` with `seoTitle: "Cheaper tokens, bigger bill: why AI costs keep rising"`. Keep the claim first and the search phrase after it, in under about 60 characters.
+- **Guides.** If the post belongs to one of the topic guides under `content/guides/`, add its `"YYYY/slug"` to that guide's `posts` list. The guide lists it, and the post links back to the guide automatically.
+
+Press coverage goes in `hugo.toml` under `params.press`, with the image in `static/images/press/`. It renders on the About and Hyderabad pages and in the structured data.
+
 ## Drafting checklist
 
 Before considering a post complete, confirm:
@@ -433,6 +443,7 @@ Before considering a post complete, confirm:
 - [ ] A review pass has been requested from Hitesh and the resulting notes are addressed.
 - [ ] Scanned against "Sound like Hitesh, not an AI": no negative parallelism, self-answered questions, "Here's the…" suspense, "-ing" analysis tails, any em dash, bold-lead bullets, or the AI house vocab; any single trope that remains is deliberate and isolated.
 - [ ] Straight quotes and plain ASCII throughout (no smart quotes, no `→` arrows, no em dashes).
+- [ ] The `description` states the answer plainly; `seoTitle` is set if the title would never match a search; the post is added to the right guide in `content/guides/`.
 - [ ] `hugo server -D` shows a good home-page card and post page.
 - [ ] `hugo --minify` completes without errors before publication.
 

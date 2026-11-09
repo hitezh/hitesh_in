@@ -1,5 +1,6 @@
 ---
 title: "The engineer who picks the model never sees the bill"
+seoTitle: "Who owns the AI bill? Why LLM spend needs a cost owner"
 slug: "who-sees-the-ai-bill"
 date: "2026-10-08"
 description: "Meta and Microsoft are reportedly cutting internal Claude use. The cut is a symptom: AI budgets run on usage counts until finance steps in, and a cap is a blunt tool."

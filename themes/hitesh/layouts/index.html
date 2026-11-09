@@ -126,6 +126,29 @@
   </div>
 </div>
 
+{{ with (where site.RegularPages "Section" "guides").ByWeight }}
+<section class="recent-writing home-guides">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Start here: guides</span>
+      <a href="/guides/" class="section-more">All guides →</a>
+    </div>
+    <div class="post-list">
+      {{ range . }}
+      <article class="post-item post-item--nodate">
+        <div class="post-item-main">
+          <div class="post-item-body">
+            <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
+            {{ with .Description }}<p class="post-excerpt">{{ . }}</p>{{ end }}
+          </div>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
 <section class="recent-writing">
   <div class="container">
     <div class="section-header">

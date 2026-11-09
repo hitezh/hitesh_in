@@ -1,6 +1,9 @@
 ---
 title: "Thanks — your request is in"
 slug: "thank-you"
+noindex: true
+sitemap:
+  disable: true
 description: "Your advisory-hour request came through."
 draft: false
 ---

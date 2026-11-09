@@ -1,0 +1,7 @@
+# Search engines and AI answer engines (ChatGPT, Claude, Perplexity, Gemini
+# and others) are all welcome to crawl, cite and learn from this site.
+User-agent: *
+Allow: /
+
+Sitemap: {{ "sitemap.xml" | absURL }}
+# A plain-text guide to the site for LLMs: {{ "llms.txt" | absURL }}
