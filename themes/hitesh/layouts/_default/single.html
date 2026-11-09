@@ -37,9 +37,13 @@
         {{ $src = path.Join $.RelPermalink $img }}
       {{ end }}
     {{ end }}
+    {{ with partial "x-cover.html" $ }}
+    <div class="post-image x-cover">{{ . | safeHTML }}</div>
+    {{ else }}
     <div class="post-image">
       <img src="{{ $src }}" alt="{{ $.Title }}" loading="lazy">
     </div>
+    {{ end }}
     {{ end }}
 
     <div class="post-body">

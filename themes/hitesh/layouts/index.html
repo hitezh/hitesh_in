@@ -115,6 +115,7 @@
     <div class="post-list">
       {{ $posts := where .Site.RegularPages "Section" "blog" }}
       {{ range first 8 $posts }}
+      {{ $p := . }}
       {{ $thumb := partial "post-thumb.html" . }}
       <article class="post-item{{ with $thumb }} post-item--has-thumb{{ end }}">
         <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
@@ -128,8 +129,8 @@
             {{ end }}
           </div>
           {{ with $thumb }}
-          <a class="post-thumb" href="{{ $.RelPermalink }}" aria-hidden="true" tabindex="-1">
-            <img src="{{ . }}" alt="" loading="lazy">
+          <a class="post-thumb" href="{{ $p.RelPermalink }}" aria-hidden="true" tabindex="-1">
+            {{ with partial "x-cover.html" $p }}<span class="x-cover">{{ . | safeHTML }}</span>{{ else }}<img src="{{ $thumb }}" alt="" loading="lazy">{{ end }}
           </a>
           {{ end }}
         </div>
