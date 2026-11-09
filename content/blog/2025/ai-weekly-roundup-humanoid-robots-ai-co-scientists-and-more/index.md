@@ -1,5 +1,6 @@
 ---
 title: "AI Weekly Roundup: Humanoid Robots, AI Co-Scientists, and More"
+description: "Meta's bet on humanoid robots, AI co-scientists tackling research problems, and the week's AI developments from India. The early March 2025 roundup."
 date: "2025-03-03"
 draft: false
 categories:

@@ -1,5 +1,6 @@
 ---
 title: "The effort signal"
+description: "A colleague forwards AI output they never read and asks you to review it. The missing piece isn't effort but accountability: say what you vouch for before sharing."
 slug: "the-effort-signal"
 date: "2026-06-12"
 categories:

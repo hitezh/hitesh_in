@@ -1,5 +1,6 @@
 ---
 title: "Buckle up, devs. OpenAI's new toys just dropped."
+description: "OpenAI's o3 scored 69.1% on SWE-Bench and o4-mini arrived alongside new agent tooling. What the April 2025 releases change for developers building with AI."
 date: "2025-04-17"
 draft: false
 categories:

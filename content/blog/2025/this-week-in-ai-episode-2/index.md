@@ -1,5 +1,6 @@
 ---
 title: "This Week in AI - Episode 2"
+description: "Nvidia's entry into personal AI computing, new AI privacy concerns and Bill Gates on the future of work: the second weekly AI digest of January 2025."
 date: "2025-01-10"
 draft: false
 categories:

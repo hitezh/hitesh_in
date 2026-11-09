@@ -11,7 +11,19 @@ theme    = 'hitesh'
 
 [params]
   author      = "Dr. Hitesh Sarda"
-  description = "Thoughts on technology, entrepreneurship, and life."
+  description = "Dr. Hitesh Sarda, an AI advisor in Hyderabad, writes on AI strategy, AI agents, AI costs and engineering leadership for founders, CTOs and leadership teams."
+  homeTitle   = "Dr. Hitesh Sarda | AI Advisor in Hyderabad, India"
+
+  # Structured data (themes/hitesh/layouts/partials/schema.html)
+  jobTitle           = "AI Advisor"
+  personDescription  = "AI advisor in Hyderabad, India, and founder of 256 Technologies, an applied AI lab. Advises leadership teams on AI strategy, AI agents and AI adoption, with a focus on retail, loyalty and industrial businesses."
+  company            = "256 Technologies"
+  companyURL         = "https://256tec.com"
+  companyDescription = "Applied AI lab in Hyderabad, India, offering AI advisory, AI executive training for leadership teams, and AI MVP development."
+  city               = "Hyderabad"
+  region             = "Telangana"
+  country            = "IN"
+  knowsAbout         = ["AI strategy", "AI agents", "Agentic AI governance", "LLM cost optimisation", "AI coding agents", "AI in retail", "Customer loyalty programs", "Engineering leadership", "AI adoption"]
   tagline     = "Building software that brings customers back."
   twitter     = "fullstackcto"
   linkedin    = "hiteshs"

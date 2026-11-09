@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="list-page">
+  <div class="container">
+    <header class="page-header">
+      <h1 class="page-title">{{ .Title }}</h1>
+      {{ with .Params.description }}
+      <p class="page-description">{{ . }}</p>
+      {{ end }}
+    </header>
+
+    {{ with .Content }}<div class="post-body">{{ . }}</div>{{ end }}
+
+    <div class="post-list post-list--full">
+      {{ range .Pages.ByWeight }}
+      <article class="post-item">
+        <div class="post-item-main">
+          <div class="post-item-body">
+            <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
+            {{ with .Params.description }}
+            <p class="post-excerpt">{{ . }}</p>
+            {{ end }}
+          </div>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

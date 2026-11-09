@@ -1,5 +1,6 @@
 ---
 title: "AI Weekly Roundup: Is Manus the Next DeepSeek?"
+description: "China's Manus AI agent drew DeepSeek comparisons while India stepped up AI investment. The March 2025 roundup, from winemaking to ferry emissions."
 date: "2025-03-12"
 draft: false
 categories:

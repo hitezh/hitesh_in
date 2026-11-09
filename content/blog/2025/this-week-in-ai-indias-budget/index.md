@@ -1,5 +1,6 @@
 ---
 title: "This Week in AI: India's Budget"
+description: "India's 2025 budget raised technology allocations by 84% to Rs 18,000 crore, with Rs 2,000 crore for the IndiaAI Mission. What it means for AI in India."
 date: "2025-02-02"
 draft: false
 categories:

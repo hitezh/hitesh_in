@@ -1,5 +1,6 @@
 ---
 title: "AI Just Got Better"
+description: "Meta's Llama 4 family, new reasoning models and real-world deployments: what stood out in AI during the first week of April 2025, and why it matters."
 date: "2025-04-07"
 draft: false
 categories:

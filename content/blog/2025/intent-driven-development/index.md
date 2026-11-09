@@ -1,5 +1,6 @@
 ---
 title: "Are you prepared for Intent Drive Development?"
+description: "AI tools now take plain-English intent and produce working systems. What intent-driven development means for engineering teams, roles and how software gets built."
 date: "2025-06-13"
 draft: false
 categories:

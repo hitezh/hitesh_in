@@ -1,5 +1,6 @@
 ---
 title: "This week in AI: xAI, Apple and Others"
+description: "Apple training models on Maps imagery, Gemini's real-time video features and xAI's latest moves. The late March 2025 roundup of AI developments."
 date: "2025-03-31"
 draft: false
 categories:

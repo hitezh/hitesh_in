@@ -40,6 +40,17 @@
 
     <div class="post-body">
       {{ .Content }}
+
+      {{/* Front-matter `faq` renders here and also feeds the FAQPage JSON-LD
+           in partials/schema.html, so the visible text and the schema match. */}}
+      {{ with .Params.faq }}
+      <h2>Common questions</h2>
+      {{ range . }}
+      <h3>{{ .q }}</h3>
+      {{ .a | markdownify | safeHTML }}
+      {{ end }}
+      {{ with $.Params.faqFooter }}{{ . | markdownify | safeHTML }}{{ end }}
+      {{ end }}
     </div>
 
     {{ if eq .Section "blog" }}
@@ -48,6 +59,13 @@
       <div class="post-footer-tags">
         {{ range . }}<a href="{{ `tags/` | relURL }}{{ . | urlize | lower }}" class="tag">{{ . }}</a>{{ end }}
       </div>
+      {{ end }}
+      {{/* Link each post to any guide that collects it (guides list posts as "YYYY/slug"). */}}
+      {{ $key := printf "%s/%s" (.Date.Format "2006") (path.Base .File.Dir) }}
+      {{ range where site.RegularPages "Section" "guides" }}
+        {{ if in .Params.posts $key }}
+        <p class="post-guide">Part of the guide: <a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+        {{ end }}
       {{ end }}
       <a href="/blog/" class="back-link">← All posts</a>
     </footer>

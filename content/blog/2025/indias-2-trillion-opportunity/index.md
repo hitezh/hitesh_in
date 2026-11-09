@@ -1,5 +1,6 @@
 ---
 title: "India's $2 Trillion Opportunity"
+description: "Every boardroom is asking how to make AI work in their company. India built its first tech empire on implementation, and AI services can be the second."
 date: "2025-06-14"
 draft: false
 categories:

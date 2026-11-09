@@ -1,5 +1,6 @@
 ---
 title: "Nvidia in news again, and more"
+description: "Nvidia's Blackwell chips started shipping, Blackwell Ultra and Rubin were announced, and India made its own AI moves. The late March 2025 AI roundup."
 date: "2025-03-24"
 draft: false
 categories:

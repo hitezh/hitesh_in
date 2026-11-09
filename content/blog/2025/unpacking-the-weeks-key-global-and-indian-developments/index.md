@@ -1,5 +1,6 @@
 ---
 title: "Unpacking the Week's Key Global and Indian Developments"
+description: "Record AI funding rounds in 2025, the global highlights and the Indian developments, distilled into the trends that matter beyond the weekly headlines."
 date: "2025-03-17"
 draft: false
 categories:

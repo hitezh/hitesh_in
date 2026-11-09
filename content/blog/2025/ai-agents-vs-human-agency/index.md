@@ -1,5 +1,6 @@
 ---
 title: "AI Agents vs Human Agency in the Age of Superintelligence"
+description: "As AI agents grow from chatbots into autonomous digital coworkers, human judgment and agency matter more, not less. How to split the work between the two."
 date: "2025-03-26"
 draft: false
 categories:

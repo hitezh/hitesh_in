@@ -832,6 +832,15 @@ a:hover { color: var(--text); }
 }
 .back-link:hover { color: var(--accent); }
 
+.post-guide {
+  font-size: var(--size-sm);
+  color: var(--text-muted);
+  margin: 0 0 var(--sp-4);
+}
+.post-guide a { color: var(--accent); font-weight: 600; }
+
+.guide-posts li { margin-bottom: var(--sp-4); }
+
 /* ---- About / Static Pages ---- */
 .post-body > p:first-of-type::first-letter {
   /* drop cap already set above, inherits */

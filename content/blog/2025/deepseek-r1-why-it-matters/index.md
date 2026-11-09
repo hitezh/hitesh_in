@@ -1,5 +1,6 @@
 ---
 title: "DeepSeek R1 - Why it matters?"
+description: "DeepSeek R1 matched frontier reasoning models at a fraction of the training cost. Why that challenges assumptions about AI moats, compute spend and open weights."
 date: "2025-01-29"
 draft: false
 categories:

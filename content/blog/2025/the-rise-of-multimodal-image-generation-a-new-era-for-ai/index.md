@@ -1,5 +1,6 @@
 ---
 title: "The Rise of Multimodal Image Generation: A New Era for AI"
+description: "Google and OpenAI shipped native multimodal image generation within two weeks. The business uses beyond Ghibli portraits: product imagery, design and editing."
 date: "2025-03-30"
 draft: false
 categories:

@@ -1,5 +1,6 @@
 ---
 title: "Shopify scaled checkout by removing a system, not adding one"
+description: "At $5.1 million a minute on Black Friday, Shopify moved inventory reservations out of Redis into MySQL. Why fewer systems often beats a faster new component."
 slug: "count-your-systems"
 date: "2026-08-09"
 categories:
