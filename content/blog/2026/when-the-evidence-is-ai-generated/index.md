@@ -1,5 +1,7 @@
 ---
 title: "When the evidence is AI-generated"
+noindex: true
+description: "A Derbyshire officer is under investigation for AI-generated evidence. The fix is chain-of-custody and disclosure rules for AI tools, not one disciplinary case."
 slug: "when-the-evidence-is-ai-generated"
 date: "2026-06-14"
 categories:

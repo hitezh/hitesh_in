@@ -1,0 +1,45 @@
+{{ define "main" }}
+{{/* A guide (pillar page): a short framing essay, then the posts it collects,
+     listed from the `posts` front matter (paths like "2026/some-slug") so each
+     entry shows the post's own title and description. */}}
+<article class="post">
+  <div class="container">
+    <header class="post-header">
+      <h1 class="post-title-large">{{ .Title }}</h1>
+      {{ with .Params.description }}
+      <p class="post-subtitle">{{ . }}</p>
+      {{ end }}
+    </header>
+
+    <div class="post-body">
+      {{ .Content }}
+
+      {{ with .Params.posts }}
+      <h2>{{ $.Params.postsHeading | default "The posts, in reading order" }}</h2>
+      <ol class="guide-posts">
+        {{ range . }}
+        {{ with site.GetPage (printf "/blog/%s" .) }}
+        <li>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{ with .Description }}<br>{{ . }}{{ end }}
+        </li>
+        {{ else }}
+        {{ warnf "guide %q lists a post that is missing, draft or future-dated: %s" $.File.Path . }}
+        {{ end }}
+        {{ end }}
+      </ol>
+      {{ end }}
+
+      {{ with .Params.faq }}
+      <h2>Common questions</h2>
+      {{ range . }}
+      <h3>{{ .q }}</h3>
+      {{ .a | markdownify | safeHTML }}
+      {{ end }}
+      {{ end }}
+
+      <p><a href="/guides/">All guides</a> &middot; <a href="/work-with-me/">Book an AI advisory hour</a></p>
+    </div>
+  </div>
+</article>
+{{ end }}

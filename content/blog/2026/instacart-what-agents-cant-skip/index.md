@@ -1,5 +1,6 @@
 ---
 title: "DoorDash is paying $17 billion for the part of Instacart an AI agent can't skip"
+seoTitle: "Instacart, DoorDash and what AI shopping agents can't skip"
 slug: "instacart-what-agents-cant-skip"
 date: "2026-10-30"
 description: "Instacart's app is the layer shoppers will hand to software. The deal prices what stays scarce, and gives any business that sells through an interface a test to run."

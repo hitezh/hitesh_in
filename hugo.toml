@@ -3,6 +3,8 @@ locale   = 'en-US'
 title    = 'Dr. Hitesh Sarda'
 theme    = 'hitesh'
 
+enableRobotsTXT = true
+
 [pagination]
   pagerSize = 10
 
@@ -11,16 +13,43 @@ theme    = 'hitesh'
 
 [params]
   author      = "Dr. Hitesh Sarda"
-  description = "Thoughts on technology, entrepreneurship, and life."
+  description = "Dr. Hitesh Sarda, an AI advisor in Hyderabad, writes on AI strategy, AI agents, AI costs and engineering leadership for founders, CTOs and leadership teams."
+  homeTitle   = "Dr. Hitesh Sarda | AI Advisor in Hyderabad, India"
+
+  # Structured data (themes/hitesh/layouts/partials/schema.html)
+  jobTitle           = "AI Advisor"
+  photo              = "images/hitesh-sarda.jpg"
+
+  # Posts with these tags stay readable but are kept out of search indexes:
+  # the 2025 weekly news roundups are dated and generic next to the essays.
+  noindexTags        = ["weekly-roundup"]
+  authorBio          = "AI advisor in Hyderabad and founder of 256 Technologies, an applied AI lab. 25+ years building production systems in banking, retail and loyalty. I help leadership teams decide what AI to build, buy or skip."
+  personDescription  = "AI advisor in Hyderabad, India, and founder of 256 Technologies, an applied AI lab. Advises leadership teams on AI strategy, AI agents and AI adoption, with a focus on retail, loyalty and industrial businesses."
+  company            = "256 Technologies"
+  companyURL         = "https://256tec.com"
+  companyDescription = "Applied AI lab in Hyderabad, India, offering AI advisory, AI executive training for leadership teams, and AI MVP development."
+  city               = "Hyderabad"
+  region             = "Telangana"
+  country            = "IN"
+  knowsAbout         = ["AI strategy", "AI agents", "Agentic AI governance", "LLM cost optimisation", "AI coding agents", "AI in retail", "Customer loyalty programs", "Engineering leadership", "AI adoption"]
   tagline     = "Building software that brings customers back."
   twitter     = "fullstackcto"
   linkedin    = "hiteshs"
-  email       = "hitesh@optculture.com"
+  email       = "hitesh@256tec.com"
 
 [taxonomies]
   category = "categories"
   tag      = "tags"
-  author   = "author"
+
+# /llms.txt, a plain-text map of the site for LLMs (themes/hitesh/layouts/index.llms.txt).
+[outputFormats.llms]
+  mediaType      = "text/plain"
+  baseName       = "llms"
+  isPlainText    = true
+  notAlternative = true
+
+[outputs]
+  home = ["html", "rss", "llms"]
 
 [markup]
   [markup.goldmark]
@@ -35,18 +64,33 @@ theme    = 'hitesh'
     url    = "/blog/"
     weight = 1
   [[menu.main]]
+    name   = "Guides"
+    url    = "/guides/"
+    weight = 2
+  [[menu.main]]
     name   = "Book"
     url    = "/book/"
-    weight = 2
+    weight = 3
   [[menu.main]]
     name   = "AI Training"
     url    = "/ai-training/"
-    weight = 3
+    weight = 4
   [[menu.main]]
     name   = "About"
     url    = "/about/"
-    weight = 4
+    weight = 5
   [[menu.main]]
     name   = "Work with me"
     url    = "/work-with-me/"
-    weight = 5
+    weight = 6
+
+# Media coverage. Rendered by the {{< press >}} shortcode and listed in the
+# Person JSON-LD as `subjectOf`. Images live in static/images/press/.
+[[params.press]]
+  title   = "Hitesh Sarda: Driving India's AI Moment from Adoption to Global Leadership"
+  outlet  = "ET Focus"
+  edition = "Hyderabad"
+  date    = "2026-01-08"
+  page    = "2"
+  image   = "images/press/et-focus-hyderabad-2026-01-08.jpg"
+  summary = "Profile of Hitesh and 256 Technologies, a boutique AI advisory helping Indian companies move from adopting AI to leading with it."

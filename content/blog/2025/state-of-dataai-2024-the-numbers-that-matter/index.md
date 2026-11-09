@@ -1,5 +1,6 @@
 ---
 title: "State of Data+AI 2024: The Numbers That Matter"
+description: "Databricks' 2024 report: 11x more ML models in production, 377% growth in vector databases, 70% of companies using RAG. The numbers an executive should know."
 date: "2025-01-06"
 draft: false
 categories:

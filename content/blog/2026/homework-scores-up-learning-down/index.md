@@ -1,5 +1,6 @@
 ---
 title: "Homework scores up. Learning down."
+noindex: true
 slug: "homework-scores-up-learning-down"
 date: "2026-06-20"
 description: "Norway just banned AI in elementary schools. The research behind that decision is more uncomfortable than the headlines suggest."

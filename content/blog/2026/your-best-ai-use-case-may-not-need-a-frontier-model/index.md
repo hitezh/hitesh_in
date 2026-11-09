@@ -1,5 +1,6 @@
 ---
 title: "Your best AI use case may not need a frontier model"
+seoTitle: "When a small AI model beats a frontier model"
 slug: "your-best-ai-use-case-may-not-need-a-frontier-model"
 date: "2026-10-26"
 description: "A ten-year-old neural network beat GPT-6 and Claude at spotting skin cancer. What the result says about where a general-purpose model belongs on your AI roadmap."

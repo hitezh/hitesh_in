@@ -1,5 +1,5 @@
 ---
-title: "AI didn't lower the cost of catching fraud. It deleted your excuse for missing it."
+title: "AI deleted your excuse for missing fraud"
 slug: "ai-killed-the-scale-excuse"
 date: "2026-09-14"
 description: "For years 'we can't catch it at scale' excused platforms from the harm they carried. When a $20 model flags it in one prompt, that defense stops working."

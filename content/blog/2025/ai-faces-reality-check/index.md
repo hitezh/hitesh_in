@@ -1,5 +1,6 @@
 ---
 title: "AI faces reality check!"
+description: "OpenAI rolled back a sycophantic GPT-4o update, Qwen3 shipped open weights and Baidu cut prices. Early May 2025 AI news for developers and product teams."
 date: "2025-05-05"
 draft: false
 categories:

@@ -1,0 +1,152 @@
+{{/* Structured data (JSON-LD) for search engines and AI answer engines.
+     Every page carries the Person and Organization nodes so a quote from any
+     page can be attributed to Dr. Hitesh Sarda and 256 Technologies. Posts add
+     a BlogPosting; pages with `faq` front matter add a FAQPage; the home page
+     adds the WebSite node. Built with dicts + jsonify so values are escaped. */}}
+{{ $p := .Site.Params }}
+{{ $base := .Site.BaseURL }}
+{{ $personID := printf "%s#person" $base }}
+{{ $orgID := printf "%s#organization" $base }}
+{{ $siteID := printf "%s#website" $base }}
+
+{{ $sameAs := slice }}
+{{ with $p.linkedin }}{{ $sameAs = $sameAs | append (printf "https://www.linkedin.com/in/%s" .) }}{{ end }}
+{{ with $p.twitter }}{{ $sameAs = $sameAs | append (printf "https://x.com/%s" .) }}{{ end }}
+
+{{ $address := dict
+  "@type" "PostalAddress"
+  "addressLocality" ($p.city | default "Hyderabad")
+  "addressRegion" ($p.region | default "Telangana")
+  "addressCountry" ($p.country | default "IN")
+}}
+
+{{ $areaServed := slice
+  (dict "@type" "City" "name" "Hyderabad")
+  (dict "@type" "Country" "name" "India")
+}}
+
+{{ $press := slice }}
+{{ range $p.press }}
+  {{ $press = $press | append (dict
+    "@type" "NewsArticle"
+    "headline" .title
+    "datePublished" .date
+    "image" (absURL .image)
+    "publisher" (dict "@type" "Organization" "name" .outlet)
+    "about" (dict "@id" $personID)
+  ) }}
+{{ end }}
+
+{{ $person := dict
+  "@type" "Person"
+  "@id" $personID
+  "name" $p.author
+  "honorificPrefix" "Dr."
+  "jobTitle" ($p.jobTitle | default "AI Advisor")
+  "description" $p.personDescription
+  "url" (absURL "about/")
+  "worksFor" (dict "@id" $orgID)
+  "address" $address
+  "knowsAbout" ($p.knowsAbout | default slice)
+  "sameAs" $sameAs
+}}
+{{ with $press }}{{ $person = merge $person (dict "subjectOf" .) }}{{ end }}
+{{ with $p.photo }}{{ $person = merge $person (dict "image" (absURL .)) }}{{ end }}
+
+{{ $orgSameAs := slice }}
+{{ with $p.companyURL }}{{ $orgSameAs = $orgSameAs | append . }}{{ end }}
+{{ $org := dict
+  "@type" (slice "Organization" "ProfessionalService")
+  "@id" $orgID
+  "name" ($p.company | default "256 Technologies")
+  "description" $p.companyDescription
+  "url" (absURL "work-with-me/")
+  "founder" (dict "@id" $personID)
+  "address" $address
+  "areaServed" $areaServed
+  "sameAs" $orgSameAs
+  "makesOffer" (slice
+    (dict "@type" "Offer" "itemOffered" (dict "@type" "Service" "name" "AI advisory and fractional Head of AI" "url" (absURL "work-with-me/")))
+    (dict "@type" "Offer" "itemOffered" (dict "@type" "Service" "name" "AI executive training for leadership teams" "url" (absURL "ai-training/")))
+    (dict "@type" "Offer" "itemOffered" (dict "@type" "Service" "name" "AI MVP and proof-of-concept development" "url" (absURL "work-with-me/")))
+  )
+}}
+
+{{ $graph := slice $person $org }}
+
+{{ if .IsHome }}
+  {{ $graph = $graph | append (dict
+    "@type" "WebSite"
+    "@id" $siteID
+    "url" $base
+    "name" .Site.Title
+    "description" $p.description
+    "inLanguage" "en"
+    "publisher" (dict "@id" $personID)
+  ) }}
+{{ end }}
+
+{{ $desc := partial "description.html" . }}
+
+{{ if and (eq .Section "blog") (eq .Kind "page") }}
+  {{ $img := absURL "images/default.jpg" }}
+  {{ with .Params.image }}
+    {{ $i := . }}
+    {{ if strings.HasSuffix $i ".svg" }}{{ $i = replace $i ".svg" ".png" }}{{ end }}
+    {{ if or (hasPrefix $i "http") (hasPrefix $i "/") }}{{ $img = $i | absURL }}{{ else }}{{ $img = (path.Join $.RelPermalink $i) | absURL }}{{ end }}
+  {{ end }}
+  {{ $post := dict
+    "@type" "BlogPosting"
+    "@id" (printf "%s#article" .Permalink)
+    "mainEntityOfPage" .Permalink
+    "url" .Permalink
+    "headline" .Title
+    "description" $desc
+    "image" $img
+    "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+    "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+    "author" (dict "@id" $personID)
+    "publisher" (dict "@id" $personID)
+    "inLanguage" "en"
+    "wordCount" .WordCount
+  }}
+  {{ with .Params.tags }}{{ $post = merge $post (dict "keywords" (delimit . ", ")) }}{{ end }}
+  {{ $graph = $graph | append $post }}
+{{ else if and (not .IsHome) (eq .Kind "page") }}
+  {{ $graph = $graph | append (dict
+    "@type" (.Params.schemaType | default "WebPage")
+    "@id" (printf "%s#webpage" .Permalink)
+    "url" .Permalink
+    "name" .Title
+    "description" $desc
+    "inLanguage" "en"
+    "author" (dict "@id" $personID)
+    "about" (cond (eq .Params.schemaType "ProfilePage") (dict "@id" $personID) (dict "@id" $orgID))
+  ) }}
+{{ end }}
+
+{{/* Breadcrumbs: Home > section (Blog or Guides) > page. */}}
+{{ if not .IsHome }}
+  {{ $crumbs := slice (dict "@type" "ListItem" "position" 1 "name" "Home" "item" $base) }}
+  {{ if and .IsPage (in (slice "blog" "guides") .Section) }}
+    {{ with site.GetPage (printf "/%s" .Section) }}
+      {{ $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 2 "name" .Title "item" .Permalink) }}
+    {{ end }}
+  {{ end }}
+  {{ $crumbs = $crumbs | append (dict "@type" "ListItem" "position" (add (len $crumbs) 1) "name" .Title "item" .Permalink) }}
+  {{ $graph = $graph | append (dict "@type" "BreadcrumbList" "@id" (printf "%s#breadcrumb" .Permalink) "itemListElement" $crumbs) }}
+{{ end }}
+
+{{ with .Params.faq }}
+  {{ $qs := slice }}
+  {{ range . }}
+    {{ $qs = $qs | append (dict
+      "@type" "Question"
+      "name" .q
+      "acceptedAnswer" (dict "@type" "Answer" "text" (.a | markdownify | plainify))
+    ) }}
+  {{ end }}
+  {{ $graph = $graph | append (dict "@type" "FAQPage" "@id" (printf "%s#faq" $.Permalink) "mainEntity" $qs) }}
+{{ end }}
+
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" $graph | jsonify | safeJS }}</script>

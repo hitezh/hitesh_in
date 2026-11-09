@@ -9,7 +9,7 @@ tags:
 
 > I am currently taking the [Human Computer Interaction class](http://hci-class.org/), and [unlike last time](https://hitesh.in/2011/machine-learning-my-notes/ "Machine Learning: My notes."), will make notes during the course and not after.
 
-# What is Human Computer Interaction?
+## What is Human Computer Interaction?
 
 HCI is the design, implementation and evaluation of user interfaces.
 

@@ -1,5 +1,6 @@
 ---
 title: "Point your AI where the checking is cheap"
+seoTitle: "Where to use AI first: where checking is cheap"
 slug: "point-ai-where-checking-is-cheap"
 date: "2026-07-29"
 description: "Claude found a novel cryptographic attack in about a week; human experts needed close to a month to trust it. That gap, not model quality, decides where AI pays off."

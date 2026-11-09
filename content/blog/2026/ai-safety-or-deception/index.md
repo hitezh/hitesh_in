@@ -1,5 +1,5 @@
 ---
-title: "I Don't Want My AI to Lie to Me. I Want It to Say No."
+title: "An AI that says no beats one that bluffs"
 slug: "ai-safety-or-deception"
 date: "2026-06-11"
 draft: false

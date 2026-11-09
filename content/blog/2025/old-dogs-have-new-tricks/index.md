@@ -1,5 +1,6 @@
 ---
 title: "Old dogs have new tricks"
+description: "Google shipped 15+ AI launches at I/O, Microsoft went all-in on agents and Anthropic released Claude 4. Why the incumbents still matter in the AI race."
 date: "2025-05-26"
 draft: false
 categories:

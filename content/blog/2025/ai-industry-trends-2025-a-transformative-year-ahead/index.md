@@ -1,5 +1,6 @@
 ---
 title: "AI Industry Trends 2025: A Transformative Year Ahead"
+description: "The AI trends shaping 2025: companies treating AI as augmentation rather than replacement, the infrastructure race, and what leadership teams should plan for."
 date: "2025-01-03"
 draft: false
 categories:

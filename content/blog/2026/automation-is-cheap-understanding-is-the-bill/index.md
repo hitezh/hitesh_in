@@ -1,5 +1,5 @@
 ---
-title: "Automation is cheap. Understanding is the bill you don't see."
+title: "The hidden bill for cheap automation is understanding"
 slug: "automation-is-cheap-understanding-is-the-bill"
 date: "2026-07-13"
 description: "AI makes producing work nearly free while draining the human judgment that catches it when it's wrong. Deciding which understanding to keep in-house is now strategic."

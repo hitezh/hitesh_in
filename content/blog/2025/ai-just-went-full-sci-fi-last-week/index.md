@@ -1,5 +1,6 @@
 ---
 title: "AI just went full sci-fi last week."
+description: "Codex arrived in ChatGPT and agents began managing PRs and hunting bugs. A May 2025 roundup on AI moving from assisting developers to acting for them."
 date: "2025-05-19"
 draft: false
 categories:

@@ -1,5 +1,6 @@
 ---
 title: "This Week in AI: Episode 1"
+description: "The first weekly AI digest of 2025: DeepSeek's rise as China's AI contender, platform shifts, Google search quality concerns and other industry moves."
 date: "2025-01-04"
 draft: false
 categories:

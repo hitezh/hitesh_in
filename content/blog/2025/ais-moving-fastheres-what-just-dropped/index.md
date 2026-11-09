@@ -1,5 +1,6 @@
 ---
 title: "🚀 AI’s Moving Fast—Here’s What Just Dropped"
+description: "DeepSeek R1-0528 matched o3 on reasoning benchmarks, Perplexity launched Labs and voice AI gained emotion. The AI releases worth knowing from early June 2025."
 date: "2025-06-02"
 draft: false
 categories:

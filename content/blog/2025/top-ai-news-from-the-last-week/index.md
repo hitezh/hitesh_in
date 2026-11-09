@@ -1,5 +1,6 @@
 ---
 title: "Top AI News from the Last Week"
+description: "Two weeks of AI news after DeepSeek: a disappointing AI Action Summit, Stargate under a cloud, and the governance and regulation moves worth tracking."
 date: "2025-02-17"
 draft: false
 categories:

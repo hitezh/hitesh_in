@@ -1,6 +1,7 @@
 ---
 title: "Book an AI advisory hour"
 slug: "work-with-me"
+seoTitle: "Book an AI advisory hour with an AI advisor in Hyderabad"
 description: "Bring a problem or an idea. We'll talk through the use case, your data readiness, and the real risks, and I'll point you to the simplest pilot or MVP that can prove value."
 draft: false
 ---
@@ -8,6 +9,8 @@ draft: false
 Most AI projects fail for boring reasons: the wrong use case, data that was not ready, or a vendor bet made before anyone validated it. An advisory hour is the cheapest way to avoid that.
 
 Bring a problem or an idea. We will talk through the use case, your data readiness, and the real risks, and I will point you to the simplest pilot or MVP that can prove value, or tell you honestly if AI is not the answer yet.
+
+I am based in Hyderabad and work with leadership teams in person across the city, and remotely with teams elsewhere in India and abroad. [More on working with me in Hyderabad](/ai-advisor-hyderabad/).
 
 ## What I can help with
 

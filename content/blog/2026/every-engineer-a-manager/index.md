@@ -1,5 +1,6 @@
 ---
 title: "AI turned every engineer into a manager. Nobody trained the managers."
+seoTitle: "AI coding agents turned every engineer into a manager"
 slug: "every-engineer-a-manager"
 date: "2026-08-16"
 description: "Working with AI feels like managing a fast junior developer. But you can only delegate what you can verify, and the agent never grows into someone who can check the work for you."

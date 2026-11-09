@@ -1,0 +1,8 @@
+{{/* True when a page should stay out of search indexes (head.html robots meta
+     and sitemap.xml): front-matter `noindex`, tag/category pages with fewer
+     than three posts, and posts carrying a tag in site.Params.noindexTags. */}}
+{{ $no := or .Params.noindex (and (eq .Kind "term") (lt (len .Pages) 3)) }}
+{{ if and (not $no) .IsPage }}
+  {{ range site.Params.noindexTags }}{{ if in ($.Params.tags | default slice) . }}{{ $no = true }}{{ end }}{{ end }}
+{{ end }}
+{{ return $no }}

@@ -1,5 +1,6 @@
 ---
 title: "Same model, ten times the bill"
+seoTitle: "Same model, ten times the bill: prompt caching and LLM costs"
 slug: "same-model-ten-times-the-bill"
 date: "2026-07-17"
 description: "A cached token costs a tenth of a fresh one, and coding agents hit cache most of the time. Your AI cost curve is an engineering choice, and most teams make it by accident."

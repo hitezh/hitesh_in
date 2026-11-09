@@ -1,5 +1,7 @@
 ---
 title: "Loyalty Challenges of Multi-channel Retailers"
+seoTitle: "Loyalty program challenges for multi-channel retailers"
+description: "After Covid, 80% of shoppers tried new brands and marketplaces sat between retailers and customers. What that means for loyalty programs across online and store channels."
 date: "2023-04-26"
 draft: false
 categories:

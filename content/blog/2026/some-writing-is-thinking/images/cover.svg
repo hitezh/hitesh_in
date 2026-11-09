@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A blog cover styled as a screenshot of an X post by Hitesh Sarda: the claim in caps reads SOME WRITING IS TRANSPORT. SOME WRITING IS THINKING., followed by the line automate the first without a second thought. guard the second., a hashtag AISTRATEGY, and a view count.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A blog cover styled as a screenshot of an X post by Hitesh Sarda: the claim in caps reads SOME WRITING IS TRANSPORT. SOME WRITING IS THINKING., followed by the line automate the first without a second thought. guard the second., a hashtag AISTRATEGY.">
   <defs>
     <linearGradient id="avatar" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#2166F3"/>
@@ -43,6 +43,6 @@
   <!-- One trailing hashtag, X-blue. -->
   <text x="64" y="528" class="sans" font-size="34" fill="#1D9BF0">#AISTRATEGY</text>
 
-  <!-- Timestamp and view count. -->
-  <text x="64" y="588" class="sans" font-size="30" fill="#71767B">9:20 AM &#183; Sep 20, 2026 &#183; <tspan font-weight="700" fill="#E7E9EA">2.1M</tspan> Views</text>
+  <!-- Timestamp: the post\'s real publish date. -->
+  <text x="64" y="588" class="sans" font-size="30" fill="#71767B">9:20 AM &#183; Sep 20, 2026</text>
 </svg>

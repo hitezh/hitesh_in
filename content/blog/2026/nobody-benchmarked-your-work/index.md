@@ -1,5 +1,6 @@
 ---
 title: "Nobody has benchmarked AI on 90% of the work your company does"
+seoTitle: "AI benchmarks miss 90% of your company's work"
 slug: "nobody-benchmarked-your-work"
 date: "2026-10-17"
 description: "Public AI benchmarks cover the work that is cheap to grade, not the work that pays your bills. Why the unmeasured majority is where private evidence becomes an advantage."

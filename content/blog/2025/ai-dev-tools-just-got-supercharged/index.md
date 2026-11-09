@@ -1,5 +1,6 @@
 ---
 title: "AI dev tools just got supercharged!"
+description: "GPT-Image-1 in the OpenAI API, new SDKs and fresh models: a developer-focused roundup of late April 2025 AI news, with sources for every item."
 date: "2025-04-28"
 draft: false
 categories:

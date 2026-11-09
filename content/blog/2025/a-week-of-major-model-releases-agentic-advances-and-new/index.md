@@ -1,5 +1,6 @@
 ---
 title: "A Week of Major Model Releases, Agentic Advances, and New Developer Tools"
+description: "A roundup for builders from April 2025: the week's major model releases, progress in agentic systems, and the new developer tools worth trying first."
 date: "2025-04-21"
 draft: false
 categories:

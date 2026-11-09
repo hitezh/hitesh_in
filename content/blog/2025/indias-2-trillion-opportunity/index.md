@@ -1,5 +1,7 @@
 ---
-title: "India's $2 Trillion Opportunity"
+title: "India's second tech boom will be AI implementation"
+slug: "indias-2-trillion-opportunity"
+description: "Most companies using AI see no bottom-line impact yet. Closing that gap is implementation work, the kind India's $282 billion tech industry was built on."
 date: "2025-06-14"
 draft: false
 categories:
@@ -11,134 +13,44 @@ tags:
   - "services"
 ---
 
-### From IT Services to AI Services
+McKinsey's [latest State of AI survey](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-how-organizations-are-rewiring-to-capture-value) found that 78% of organizations now use AI in at least one business function. The same survey found that more than 80% of respondents see no tangible impact on enterprise-level EBIT (operating profit) from their use of generative AI. Closer home, Nasscom's [Strategic Review 2025](https://nasscom.in/sites/default/files/media_pdf/Nasscom%20SR%20Press%20release.pdf) estimates that only 10 to 15% of enterprise GenAI proofs of concept make it to full-scale production.
 
-Right now, businesses worldwide have access to AI that can write, analyze, and reason better than most humans. But boardrooms across the globe are asking the same question: **"How do we actually make this work in our company?"**
+So companies have the models. What they don't have is the working system: the model wired into their data, their approvals, their legacy software and their people. Boardrooms everywhere are asking the same question: how do we actually make this work in our company?
 
-**This implementation challenge is exactly where India built its first tech empire. And it's where we can build our second. We have the trust, the playbook and the people to deliver it. It is our opportunity to get a lion's share of this over $10 trillion dollar emerging market.**
+That question is where India built its first tech empire, and I think it is where we build the second one.
 
-### The Playbook We've Seen Before
+## The hard part is the people and process work
 
-In the late 1990s, something extraordinary happened in India. The IT boom didn't just create jobs—it created an entirely new pathway to prosperity. An engineering degree became a golden ticket to the middle class. Even basic graduation with English skills could secure a respectable BPO position.
+Boston Consulting Group surveyed 1,000 executives last October and [found](https://www.bcg.com/press/24october2024-ai-adoption-in-2024-74-of-companies-struggle-to-achieve-and-scale-value) that 74% of companies had yet to show tangible value from AI. When BCG broke down where the trouble came from, about 70% was people and process issues, 20% was technology, and only 10% involved the AI algorithms themselves.
 
-This wave transformed individual lives and the very fabric of Indian society, creating wealth, spurring urbanization, and fundamentally reshaping aspirations.
+That split matters for India. The 10% is the part Google, Microsoft, OpenAI and Amazon are spending billions on. The other 90% is integration, process redesign, change management, testing and keeping things running after go-live. It is slow, specific, unglamorous work, and it doesn't come in a box.
 
-**Today, we are at a similar juncture.**
+## India has sold this work before
 
-As Google, Microsoft, OpenAI, and Amazon race to build AI infrastructure; foundational models, APIs, and cloud platforms; a vast opportunity opens up again. Because as with IT before, the hardest part isn't building the tools, **it's making them work in the messy, high-stakes reality of business.**
+In the late 1990s, global companies had computers and software but needed someone to build, integrate and run systems for them. Indian firms took that work and kept it. The industry grew along two streams. IT services belonged to engineers, who built and maintained software for global clients. ITES and BPO opened the door to commerce, arts and science graduates who could communicate well and run a process reliably.
 
-### Two Streams That Built Modern India
+Today that industry is [estimated at $282.6 billion in revenue](https://nasscom.in/sites/default/files/media_pdf/Nasscom%20SR%20Press%20release.pdf) for FY2025, with $224.4 billion of it from exports and 5.8 million people on the payroll. That scale was built on implementation and operations. India did not invent the relational database or the ERP. It made them work inside other people's businesses.
 
-The first tech revolution created two distinct paths:
+Clients are already paying for the AI version of this. Accenture reported [$1.4 billion in generative AI bookings](https://newsroom.accenture.com/content/2qfy25-earnings/accenture-reports-second-quarter-fiscal-2025-results.pdf) in a single quarter, the three months to February 2025. That money is going to the people who make AI work inside companies.
 
-**The IT Services Stream** belonged to engineers. Complex software development, system architecture, and technical infrastructure management for global clients. High-skilled, high-paying, but accessible only to those with formal engineering education.
+## This wave lets more people in
 
-**The ITES/BPO Stream** was the great democratizer. Process-driven work like customer support, data processing, transaction handling that scaled globally. Arts, commerce, and science graduates could access these opportunities with communication skills and basic computer literacy.
+The first wave split neatly. Engineers built systems, and everyone else ran processes inside them. AI blurs that line because its interface is increasingly plain language. You still need serious engineers for integration, security and data. But a lot of the value now sits with people who understand a domain well enough to decide what an AI agent should do, what it must never do, and how to check its work.
 
-For two decades, these streams ran parallel. Engineers built systems. Non-engineers executed processes within them.
+A commerce graduate who knows how loans actually get approved can design and supervise an AI-assisted credit workflow. Someone who understands brand and audience can run an AI content pipeline with judgment. That is the BPO stream moving up, from executing a process to designing and supervising one.
 
-**But AI doesn't just automate processes, it democratizes creation itself.**
+## The real risk is selling it the old way
 
-### Where Engineering Meets Everyone
+The strongest objection to my argument is a serious one. AI is very good at exactly the work Indian services firms bill for: writing code, testing it, answering support tickets, processing documents. If a client can do with ten people and an AI what used to take a hundred, a business priced on headcount shrinks.
 
-Artificial Intelligence represents something unprecedented: the convergence of technical sophistication with natural interfaces.
+I agree with that. Labor arbitrage was the first wave's pricing model, and it won't carry the second. The opportunity is for firms willing to price on outcomes, invest in domain depth, and own the result in production. Firms that try to sell AI implementation by the seat will find their own product undercutting them.
 
-**The Engineering Foundation Remains:** AI requires massive computational resources, complex algorithms, and vast datasets. The development of AI systems continues to demand specialized engineering expertise, building on India's established strengths.
+That is also why I think this is a founder's opportunity as much as an incumbent's. Large firms have the trust and the client lists, but they also have the most headcount revenue to protect.
 
-**The Revolutionary Interface:** AI's interface is increasingly natural language and visual. To leverage AI, you don't write code—you write prompts, design workflows, and configure intelligent agents. You don't need to understand neural network architectures; you need to understand your domain and how to architect solutions.
+## What "two trillion" means
 
-**The Game Changer:** AI excels at the very tasks that formed the foundation of the ITES industry—processing information, generating reports, analyzing data, managing workflows—but with contextual understanding and creative capability that transforms routine work into strategic value creation.
+I call this a two-trillion-dollar opportunity as a sense of scale, not a forecast. McKinsey [estimated in 2023](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier) that generative AI could add $2.6 trillion to $4.4 trillion a year to the global economy. None of that shows up on a company's books until someone does the implementation work. Ten percent of the low end of that range is close to the size of India's entire tech industry today.
 
-### The Great Convergence: Who Wins in the AI Economy
+India can be a buyer of AI tools made elsewhere, or it can be the place the world goes to make them work. We have done the second thing once already.
 
-AI systems use natural language as their interface. That means you don't need to write code to create value. You need domain knowledge, communication skills, and critical thinking.
-
-**That's a game-changer for millions of professionals.**
-
-**The Commerce Graduate** doesn't just process loans - they architect intelligent systems that evaluate creditworthiness, detect fraud patterns, and customize offerings in real-time, while focusing on complex cases and relationship building.
-
-**The Literature Student** doesn't moderate content - they design agents that understand brand voice, cultural context, and audience psychology to create personalized campaigns that adapt based on engagement patterns.
-
-**The History Graduate** doesn't do data entry - they create intelligent research agents that continuously scan legal databases, identify relevant precedents, and generate comprehensive case analyses, learning from each interaction.
-
-The most valuable professionals combine deep domain intelligence with systems thinking, understanding their field well enough to identify what should be automated, optimized, or enhanced through intelligent agents.
-
-### The $2 Trillion Implementation Gap
-
-There's a growing chasm between AI's availability and its real-world impact. Most companies are struggling with:
-
-**The Translation Problem:** AI capabilities are described in technical jargon that doesn't map to business value.
-
-**The Integration Nightmare:** Businesses run on legacy systems, rigid processes, and human relationships. **AI can't simply be "plugged in."**
-
-**The Risk Management Challenge:** AI mistakes can cost money, reputations, or create legal exposure.
-
-**The Velocity Problem:** What works today might break tomorrow. AI evolves too fast for static solutions.
-
-**This isn't a technology gap. It's an implementation gap.**
-
-### India's Unfair Advantage
-
-We are uniquely suited to be the world's trusted AI implementation partner:
-
-✅ **Proven Playbook:** Decades of managing complex technology rollouts for global clients
-
-✅ **Deep Service Culture:** A mindset built on long-term relationships, accountability, and adaptability
-
-✅ **Cost-Effective Specialization:** The ability to build domain-specific expertise at scale
-
-✅ **Risk-Conscious Delivery:** A grounded, cautious approach to innovation—exactly what nervous adopters need
-
-✅ **Global Fluency:** Experience working across cultures, sectors, and regulations
-
-Just as we became the operational backbone of the global IT economy, we can now become the intelligence layer that makes AI work for business.
-
-### The Market is Already Demanding New Expertise
-
-Companies worldwide are scrambling to hire:
-
-→ **AI Business Strategists** who align AI capabilities with specific business goals
-
-→ **Process Optimization Specialists** who redesign workflows around intelligent agents
-
-→ **AI Integration Engineers** who connect AI tools with legacy systems
-
-→ **AI Agent Engineers** who create swarms of AI Agents to automate processes
-
-→ **AI Risk and Compliance Experts** who ensure ethical, safe, and lawful adoption
-
-→ **AI Operations Managers** who monitor and continuously optimize AI in production
-
-Traditional consulting firms are scrambling to build these capabilities. Traditional software companies don't understand the business context.
-
-**There's a massive gap and whoever fills it first wins the market.**
-
-### The Choice Before Us
-
-We can choose to be passive consumers of AI tools made elsewhere.
-
-Or we can choose to become the world's AI enablers—the trusted partners who understand the complexity, manage the risk, and make AI real for businesses and communities everywhere.
-
-Just like electricity needed electricians, **AI needs implementers.**
-
-**And India knows implementation better than any nation on Earth.**
-
-### This is About Identity
-
-India can move from being the world's back office to its intelligence engine. From coders and call centers to creators and consultants. From services to solutions.
-
-**We've done it before. We can do it again.**
-
-The AI revolution is here. The implementation gap is real. The opportunity is massive.
-
-But recognizing the opportunity and seizing it are different things entirely.
-
-**The question isn't whether India can lead AI implementation. **
-
-**The question is: who will build the companies that make it happen?**
-
-*What do you think? Are we ready to lead the next wave, or will we watch from the sidelines?*
-
-*Drop your thoughts in the comments—I'd love to hear from founders, engineers, and business leaders about what you're seeing in the AI implementation space.*
-
-#ArtificialIntelligence #India #TechLeadership #AIImplementation #FutureOfWork #TechOpportunity
+So the question for Indian founders is a practical one: which industry do you know well enough to make AI work inside it, end to end, and be paid for the result?

@@ -1,5 +1,6 @@
 ---
 title: "Project Vend: When AI Plays Shopkeeper"
+description: "Anthropic let Claude run a small office shop for a month: pricing, stock and customer chats. It lost money. Lessons for anyone giving an AI agent real autonomy."
 date: "2025-06-28"
 draft: false
 categories:

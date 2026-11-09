@@ -1,11 +1,51 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
+{{/* Pager state for list pages that paginate (_default/list.html), so page 2+
+     gets its own title and canonical instead of duplicating page 1. */}}
+{{ $pn := 1 }}
+{{ $canonical := .Permalink }}
+{{ if and (in (slice "section" "taxonomy" "term") .Kind) (ne .Section "guides") }}
+  {{ with .Paginator }}{{ $pn = .PageNumber }}{{ if gt .PageNumber 1 }}{{ $canonical = .URL | absURL }}{{ end }}{{ end }}
+{{ end }}
+
+{{ $metaDesc := partial "description.html" . }}
+{{ if gt $pn 1 }}{{ $metaDesc = printf "Page %d. %s" $pn $metaDesc }}{{ end }}
+<meta name="description" content="{{ $metaDesc }}">
+
+{{/* Title: seoTitle (keyword-led, <title> only) or the page title. The brand
+     suffix is added only while the whole title stays short enough not to be
+     truncated in search results. */}}
+{{ $pageTitle := "" }}
+{{ if .IsHome }}
+  {{ $pageTitle = .Site.Params.homeTitle | default .Site.Title }}
+{{ else }}
+  {{ $pageTitle = .Params.seoTitle | default .Title }}
+  {{/* Tags and categories can share a name (Technology); keep their titles distinct. */}}
+  {{ if eq .Kind "term" }}
+    {{ $pageTitle = cond (eq .Data.Singular "tag") (printf "Posts tagged %s" (.Title | humanize | lower)) (printf "%s posts" (.Title | humanize)) }}
+  {{ end }}
+  {{ if gt $pn 1 }}{{ $pageTitle = printf "%s, page %d" $pageTitle $pn }}{{ end }}
+  {{ $withBrand := printf "%s — %s" $pageTitle .Site.Title }}
+  {{ if le (len $withBrand) 65 }}{{ $pageTitle = $withBrand }}{{ end }}
+{{ end }}
+<title>{{ $pageTitle }}</title>
+<link rel="canonical" href="{{ $canonical }}">
+
+{{/* Keep thin or utility pages out of the index: front-matter `noindex`, and
+     tag/category pages with fewer than three posts. Links are still followed. */}}
+{{ if partial "noindex.html" . }}
+<meta name="robots" content="noindex, follow">
+{{ end }}
+
+{{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ $.Site.Title }}">{{ end }}
+{{ if not (.OutputFormats.Get "rss") }}{{ with site.Home.OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">{{ end }}{{ end }}
+<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+<link rel="icon" href="{{ "favicon-48.png" | relURL }}" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
 
 {{/* Social cards: Open Graph + Twitter */}}
 {{ $title := cond .IsHome .Site.Title .Title }}
-{{ $desc := cond (ne .Description "") .Description .Site.Params.description }}
+{{ $desc := $metaDesc }}
 {{ $ogimg := "" }}
 {{ with .Params.image }}
   {{ $img := . }}
@@ -32,7 +72,8 @@
 <meta property="og:type" content="{{ cond (eq .Kind `page`) `article` `website` }}">
 <meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ $desc }}">
-<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:url" content="{{ $canonical }}">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="{{ $ogimg }}">
 <meta property="og:image:alt" content="{{ $title }}">
 {{ if and (eq .Kind "page") (not .Date.IsZero) }}<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
@@ -42,6 +83,8 @@
 <meta name="twitter:title" content="{{ $title }}">
 <meta name="twitter:description" content="{{ $desc }}">
 <meta name="twitter:image" content="{{ $ogimg }}">
+
+{{ partial "schema.html" . }}
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

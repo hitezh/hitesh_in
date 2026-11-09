@@ -1,5 +1,6 @@
 ---
 title: "Cheaper tokens, bigger bill"
+seoTitle: "Cheaper tokens, bigger bill: why AI costs keep rising"
 slug: "cheaper-tokens-bigger-bill"
 date: "2026-08-01"
 description: "A team ran an AI cost-routing layer for four months, then shut it off. The savings had not vanished. They had moved to a budget nobody was measuring."

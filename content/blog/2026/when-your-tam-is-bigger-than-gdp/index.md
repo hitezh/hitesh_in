@@ -1,5 +1,6 @@
 ---
 title: "When your TAM is bigger than US GDP"
+noindex: true
 slug: "when-your-tam-is-bigger-than-gdp"
 date: "2026-06-17"
 description: "SpaceX just paid $60 billion for a coding tool. The price is interesting. The justification -- a $26 trillion addressable market -- reveals more about how we price AI right now than about what it's actually worth."
