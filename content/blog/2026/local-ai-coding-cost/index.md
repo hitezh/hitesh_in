@@ -1,5 +1,6 @@
 ---
 title: "The real cost of running AI locally for coding"
+seoTitle: "The real cost of running local LLMs for coding"
 slug: "local-ai-coding-cost"
 date: "2026-06-16"
 description: "Serious developers are dropping paid AI subscriptions for local models and reporting it actually works. The 'it's free' pitch is real - but it obscures a different set of costs."

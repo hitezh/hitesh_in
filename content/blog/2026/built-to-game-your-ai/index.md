@@ -1,5 +1,6 @@
 ---
 title: "Someone built 215,000 pages to game your AI"
+seoTitle: "215,000 pages built to game AI recommendations"
 slug: "built-to-game-your-ai"
 date: "2026-09-03"
 description: "Most sources behind AI software recommendations turn out to be pages built to be cited, not read. The fix is provenance, and it reshapes how you buy and sell."

@@ -1,5 +1,6 @@
 ---
 title: "When your AI asks for a government ID"
+noindex: true
 slug: "when-your-ai-asks-for-a-government-id"
 date: "2026-06-22"
 description: "Anthropic now requires a government ID before accessing its most capable models. What looks like a safety measure is export control, and it is nudging developers toward the Chinese AI alternatives the US is trying to contain."

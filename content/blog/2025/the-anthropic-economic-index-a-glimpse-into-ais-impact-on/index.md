@@ -1,5 +1,6 @@
 ---
 title: "The Anthropic Economic Index: A Glimpse into AI's Impact on the Labor Market"
+description: "Anthropic's Economic Index uses millions of anonymised Claude conversations to show which jobs and tasks AI is actually used for, and what it means for work."
 date: "2025-03-05"
 draft: false
 categories:

@@ -1,6 +1,7 @@
 ---
 title: "AI training for leadership teams"
 slug: "ai-training"
+seoTitle: "AI training for leadership teams in Hyderabad and across India"
 description: "A six-week program that turns your leadership team AI-native: hands-on workflows on your own work, a governance framework, and a 90-day adoption roadmap."
 draft: false
 ---
@@ -8,6 +9,8 @@ draft: false
 Most AI training is an awareness day. Everyone leaves impressed, nothing changes, and a month later the tools are gathering dust. This program is built for the opposite outcome: behavior change you can measure.
 
 It is a six-week engagement for a leadership team. Your leaders do not just learn about AI, they use it on their own real work, lead their teams in adopting it, and finish with a live plan. The whole thing is run against a baseline, so the value is auditable rather than anecdotal.
+
+I run the program in person for teams in Hyderabad, and remotely or on site for leadership teams elsewhere in India and abroad.
 
 ## What to expect
 

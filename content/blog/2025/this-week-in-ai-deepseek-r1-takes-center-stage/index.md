@@ -1,5 +1,6 @@
 ---
 title: "This Week in AI: DeepSeek R1 Takes Center Stage"
+description: "OpenAI's Operator, the $500B Stargate project and the Musk-Altman feud filled the headlines, but DeepSeek R1's reasoning models were the story that mattered."
 date: "2025-01-27"
 draft: false
 categories:

@@ -1,5 +1,6 @@
 ---
 title: "AI agents are officially out of the lab."
+description: "Llama 4 Scout and Maverick, Adobe's creative copilots and Google's agent framework: April 2025 news showing AI agents moving from demos into daily work."
 date: "2025-04-12"
 draft: false
 categories:

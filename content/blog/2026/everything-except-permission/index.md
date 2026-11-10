@@ -1,5 +1,6 @@
 ---
 title: "Everything except permission"
+noindex: true
 slug: "everything-except-permission"
 date: "2026-06-19"
 description: "Google invented the transformer, paid $2.7B to buy back its co-author, and just lost him to OpenAI. The pattern says something about why large organizations keep giving away the people who built them."

@@ -1,5 +1,5 @@
 ---
-title: "Google has the best AI money can buy. Its products still feel broken."
+title: "Why Google's AI products feel broken despite its models"
 slug: "best-ai-still-feels-broken"
 date: "2026-09-28"
 description: "Google's AI-era products keep breaking an old trust contract with users, and the model isn't the reason. It previews what fast AI shipping costs any team."

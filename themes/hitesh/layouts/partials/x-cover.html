@@ -1,0 +1,32 @@
+{{- /*
+  Returns a post's X-post-style cover.svg as inline SVG markup, or "" when the
+  post has no such cover. Inlining (rather than <img>) lets the theme recolour
+  it: the file is drawn in X's dark theme, and style.css maps the tagged
+  colours to X's light theme when the site is in light mode. The social PNG
+  rendered from the same SVG for LinkedIn is untouched and stays dark.
+
+  Each dark-theme colour gets a data-xc tag the CSS targets (presentation
+  attributes lose to CSS, so no colour in the file has to change). The avatar
+  gradient id is made unique per post so several covers can share a page.
+*/ -}}
+{{- $out := "" -}}
+{{- with .Params.image -}}
+  {{- if strings.HasSuffix . ".svg" -}}
+    {{- with $.Resources.GetMatch . -}}
+      {{- $svg := .Content -}}
+      {{- if and (strings.Contains $svg "@fullstackcto") (strings.Contains $svg `fill="#000000"`) -}}
+        {{- $id := printf "avatar-%s" (substr (md5 $.RelPermalink) 0 8) -}}
+        {{- $svg = replace $svg `id="avatar"` (printf `id="%s"` $id) -}}
+        {{- $svg = replace $svg `url(#avatar)` (printf `url(#%s)` $id) -}}
+        {{- $svg = replace $svg `fill="#000000"` `fill="#000000" data-xc="bg"` -}}
+        {{- $svg = replace $svg `fill="#E7E9EA"` `fill="#E7E9EA" data-xc="text"` -}}
+        {{- $svg = replace $svg `fill="#71767B"` `fill="#71767B" data-xc="muted"` -}}
+        {{- $svg = replace $svg `fill="#EFF3F4"` `fill="#EFF3F4" data-xc="pill"` -}}
+        {{- $svg = replace $svg `fill="#0F1419"` `fill="#0F1419" data-xc="pill-text"` -}}
+        {{- $svg = replaceRE `<!--[\s\S]*?-->` "" $svg -}}
+        {{- $out = $svg -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $out -}}

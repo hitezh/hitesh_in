@@ -1,5 +1,6 @@
 ---
 title: "This week in AI"
+description: "xAI's Grok 3 and Grok 3-mini, new infrastructure investments and practical AI applications. The February 2025 developments that merit a leader's attention."
 date: "2025-02-26"
 draft: false
 categories:

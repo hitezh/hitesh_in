@@ -1,5 +1,7 @@
 ---
-title: "DeepSeek R1 - Why it matters?"
+title: "DeepSeek R1 just made reasoning a commodity"
+slug: "deepseek-r1-why-it-matters"
+description: "R1 roughly matches OpenAI o1 on math benchmarks, costs about 27x less per output token and ships as open weights. Plan your AI roadmap for falling model prices."
 date: "2025-01-29"
 draft: false
 categories:
@@ -10,100 +12,44 @@ tags:
   - "deepseek"
 ---
 
-In this week's AI newsletter, one development stood out above all others, capturing the attention of tech enthusiasts and industry professionals alike. The release of DeepSeek R1 marked such a significant milestone in AI development that it deserves a deeper dive. I feel the need to dedicate a post to explore this groundbreaking technology that's reshaping our understanding of what's possible in AI development.
+Last week DeepSeek, a Chinese AI lab, released R1, a reasoning model it says achieves "performance comparable to OpenAI-o1 across math, code, and reasoning tasks" ([GitHub](https://github.com/deepseek-ai/DeepSeek-R1)). By Monday its chat app had [overtaken ChatGPT](https://www.theguardian.com/technology/2025/jan/28/we-tried-out-deepseek-it-works-well-until-we-asked-it-about-tiananmen-square-and-taiwan) as the most popular free app in Apple's US and UK app stores, and Nvidia had [lost about $593 billion](https://www.dawn.com/news/1888233) in market value in a single day, with its shares down almost 17%. No Wall Street company had lost more in a day.
 
-In a development that has sent ripples through the tech industry, DeepSeek R1 emerges as a game-changing AI model that challenges the conventional wisdom about artificial intelligence development. Launched in last week, this innovative large language model from China demonstrates that cutting-edge AI capabilities don't require astronomical investments, potentially democratizing access to advanced artificial intelligence technologies.
+Most of the commentary since has been about chips: if a capable model can be trained cheaply, who needs all those GPUs? That is a question for investors. If your company buys AI, R1 tells you something more useful. Reasoning, the most expensive tier of AI anyone sells, just became a commodity, and your roadmap should assume model prices keep falling.
 
-### A Technological Marvel at a Fraction of the Cost
+## The $5.6 million figure measures less than it seems
 
-DeepSeek R1's most striking feature is its remarkable cost-effectiveness. **Developed for just $5.6 million using 2,000 Nvidia GPUs,** the model delivers performance that rivals or exceeds its more expensive competitors. With subscription costs at merely $0.50 per month compared to competitors' $20, and API **pricing 27 times lower** per token, DeepSeek R1 makes advanced AI accessible to a broader range of users and organizations.
+The number everyone is quoting comes from DeepSeek's [V3 technical report](https://arxiv.org/abs/2412.19437), which describes the base model R1 is [built on](https://huggingface.co/deepseek-ai/DeepSeek-R1). It works out to 2.788 million H800 GPU hours on a cluster of 2,048 GPUs, at an assumed rental price of $2 an hour, which comes to $5.576 million. The report says plainly that this covers "only the official training of DeepSeek-V3" and leaves out the earlier research and ablation experiments. It is one final run of the base model, before the reinforcement learning that produced R1.
 
-The model's architecture is equally impressive, featuring 671 billion parameters with only 37 billion active at any moment through its innovative Mixture-of-Experts (MoE) approach. This efficient design allows DeepSeek R1 to deliver exceptional performance while maintaining lower operational costs.
+The efficiency is still real. The model has 671 billion parameters but uses only 37 billion for any given token, a mixture-of-experts design that keeps serving costs down. But if you are a CTO, the training bill is someone else's problem. The number that touches your budget is the price list.
 
-### Immediate Market Impact
+## The price list is the real news
 
-The announcement of DeepSeek R1 sent shockwaves through the financial markets, particularly affecting industry giant Nvidia. The GPU manufacturer saw its **stock plummet by 17%, wiping out nearly $593 billion in market value**. This dramatic response reflects the market's recognition of DeepSeek R1's potential to disrupt the existing AI infrastructure landscape, particularly given its ability to achieve state-of-the-art results with significantly fewer computational resources.
+R1 costs $0.55 per million input tokens and $2.19 per million output tokens, against $15 and $60 for OpenAI's o1 ([DataCamp's comparison](https://www.datacamp.com/blog/deepseek-vs-openai)). On output that is about 27 times cheaper. Output is also where reasoning models spend your money, because the thinking the model does before it answers is [billed as output tokens](https://developers.openai.com/api/docs/guides/reasoning).
 
-### Benchmark-Breaking Performance
+The quality gap, on DeepSeek's [own benchmarks](https://github.com/deepseek-ai/DeepSeek-R1), is small. R1 scores 79.8% on AIME 2024 against o1's 79.2%, 97.3% on MATH-500 against 96.4%, and 90.8% on MMLU against o1's 91.8%. These are the vendor's numbers, so test them on your own work, but o1-class reasoning is no longer something only one company sells.
 
-DeepSeek R1's capabilities are not just cost-effective—they're genuinely impressive. The model has outperformed OpenAI's o1 on 5 of 11 benchmarks, with particularly strong showings in mathematical reasoning and problem-solving. Notable achievements include:
+Nature [called R1](https://www.nature.com/articles/d41586-025-00229-6) "an affordable and open rival" to o1. I would underline the word "open".
 
-- 79.8% accuracy on AIME 2024
+## Open weights change the build-versus-rent maths
 
-- 97.3% accuracy on MATH-500
+R1's weights are released under the [MIT license](https://huggingface.co/deepseek-ai/DeepSeek-R1), which allows commercial use, modification, and even distillation into other models. DeepSeek also released six smaller distilled versions, from 1.5 billion to 70 billion parameters, built on Qwen and Llama. A mid-sized company can run the 70B one in its own cloud account.
 
-- 90.8% on MMLU
+For a bank or a hospital in India that cannot send customer data to an API hosted abroad, that is a new option. Until last week, reasoning at this level meant renting it from a US lab on that lab's terms.
 
-- 92% in logical reasoning benchmarks
+## The fair objection is trust
 
-These scores represent significant improvements over existing models, with some metrics surpassing GPT-4's performance by substantial margins.
+The strongest case against R1 is where it comes from. The Guardian [found the DeepSeek app](https://www.theguardian.com/technology/2025/jan/28/we-tried-out-deepseek-it-works-well-until-we-asked-it-about-tiananmen-square-and-taiwan) refusing or deflecting questions about Tiananmen Square and Taiwan, in line with Chinese rules on what generative AI may say. For many companies, that rules out the hosted app.
 
-### Revolutionary Training Methodology
+Most of that worry, though, is about where the model runs and who sees your data. Open weights let you run it on infrastructure you control, test it on your own tasks, and drop it if it fails. Whether the censorship lives in the weights or only in the app is something to test, not assume.
 
-What sets DeepSeek R1 apart is its unique training approach, utilizing a five-stage process centered on pure reinforcement learning with Group Relative Policy Optimization (GRPO). This methodology includes:
+## What I would change in an AI roadmap this week
 
-1. Cold-start fine-tuning with minimal data points
+1. Rerun your AI business cases at a fraction of today's token prices, and prepare the projects that only work at that price.
+2. Put a thin layer between your product and any single model provider. If swapping models would take more than a week, fix that first.
+3. Build an evaluation set from your own work, a few dozen real tasks with known good answers, so you can judge a new model in a day instead of from its benchmark table.
+4. Reprice the use cases you shelved because reasoning was too expensive per call.
+5. Write down which data can go to a hosted API and which needs a self-hosted model, so the next open release is a quick decision.
 
-2. Pure reinforcement learning for reasoning enhancement
+The labs will keep competing on the model. Your advantage sits in what you build around it: your data, your workflow, and how quickly you can switch. If a model as good as the one you use today became 27 times cheaper tomorrow, which project on your list would you start first?
 
-3. Rejection sampling for synthetic data generation
-
-4. Integration of synthetic and supervised data
-
-5. Final reinforcement learning for generalization
-
-The model also incorporates innovative features like "Aha moment" tokens for self-reflection and reasoning improvement, enabling it to continuously refine its capabilities through adaptive learning.
-
-### Broad Applications Across Industries
-
-DeepSeek R1's capabilities extend across multiple domains, making it valuable for:
-
-- Healthcare: Advanced diagnostic modeling and medical data analysis
-
-- Education: Personalized learning tools and mathematical problem-solving
-
-- Software Development: Sophisticated code generation and algorithmic solutions
-
-- Financial Analysis: Predictive modeling for market trends
-
-- Research: Complex scientific and mathematical challenges
-
-### Challenges and Considerations
-
-Despite its impressive capabilities, DeepSeek R1 faces some important challenges. Security researchers have identified vulnerabilities, including potential misuse for generating malicious content. Additionally, the model's Chinese origin has raised concerns about content restrictions and potential censorship, particularly around sensitive topics.
-
-The model's censorship mechanisms have been noted to affect its handling of certain historical and political topics, which could impact its utility for some applications. However, community projects are working on more neutral, open-source variants to address these limitations.
-
-### Controversies and Ethical Concerns
-
-DeepSeek R1's impact on the AI landscape has been accompanied by significant controversies that cannot be ignored. Several critical issues have emerged:
-
-### Security Vulnerabilities
-
-Security researchers have uncovered alarming capabilities within the model, including the potential to generate detailed instructions for malicious content such as ransomware and explosive devices. These findings raise serious questions about the model's safety controls and potential misuse.
-
-### Censorship and Content Control
-
-The model's Chinese origin has led to concerns about built-in censorship mechanisms. Users have reported that DeepSeek R1 automatically suppresses or alters responses related to sensitive topics, particularly those concerning Chinese political history and current events.
-
-### Propaganda and Bias Concerns
-
-News organizations and tech experts have raised red flags about potential propaganda risks. The lack of transparency in training data and the possibility of government influence have led to questions about the model's objectivity, particularly in geopolitically sensitive topics.
-
-### Technical Limitations
-
-While the model excels in many areas, its censorship mechanisms can sometimes interfere with legitimate academic and research queries, potentially limiting its utility in certain fields of study.
-
-### Market Impact and Future Implications
-
-DeepSeek R1's introduction has already caused significant market disruption. This impact highlights the potential for fundamental changes in the AI industry, particularly in terms of pricing and accessibility.
-
-The model's success signals a significant shift in the global AI landscape, challenging the dominance of US-based tech companies and demonstrating China's growing technological capabilities. As noted by Mario Krenn from the Max Planck Institute, "The openness of DeepSeek is quite remarkable."
-
-### Looking Ahead
-
-**DeepSeek R1 represents more than just another AI model—it's a paradigm shift in how we think about AI development and accessibility.** While its technical achievements are remarkable, the controversies surrounding its deployment serve as a reminder of the complex challenges facing AI development, particularly at the intersection of technology, ethics, and geopolitics.
-
-The model's combination of cost-effectiveness, impressive performance, and innovative architecture suggests a future where advanced AI capabilities are no longer limited to tech giants with massive resources. However, this democratization of AI technology must be balanced against the need for responsible development and deployment, with careful consideration of security implications and content controls.
-
-As AI continues to evolve, DeepSeek R1's approach to balancing performance with accessibility may serve as a blueprint for future developments in the field, while its controversies highlight the importance of establishing robust ethical frameworks and security measures in AI development.
+If you are working out what falling model prices mean for your own roadmap, that is a good use of [an advisory hour](/work-with-me/).

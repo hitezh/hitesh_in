@@ -1,5 +1,6 @@
 ---
 title: "Pick the stack that catches your AI's mistakes"
+seoTitle: "Choosing a tech stack for AI coding agents"
 slug: "stack-that-catches-ai-mistakes"
 date: "2026-08-11"
 description: "A popular claim says exotic languages save tokens when AI writes your code. On real tasks that edge disappears, and the number worth optimizing is the cost of being wrong."

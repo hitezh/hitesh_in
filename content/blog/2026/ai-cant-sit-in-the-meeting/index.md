@@ -1,5 +1,5 @@
 ---
-title: "AI can write the memo. It can't sit in the meeting."
+title: "Who sits in the meeting when AI writes the memo?"
 slug: "ai-cant-sit-in-the-meeting"
 date: "2026-09-07"
 description: "The visible signs of AI writing fade as models improve. What stays is that you can't defend work you never understood, and at some point someone asks."

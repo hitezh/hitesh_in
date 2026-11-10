@@ -1,0 +1,14 @@
+{{/* Media coverage from site.Params.press (hugo.toml), newest first. */}}
+{{ range sort site.Params.press "date" "desc" }}
+{{ $date := time.AsTime .date }}
+{{ $src := .image | relURL }}
+<figure class="press-item">
+  <a href="{{ $src }}" target="_blank" rel="noopener">
+    <img src="{{ $src }}" alt="{{ .outlet }} {{ .edition }}, {{ $date.Format "2 January 2006" }}: {{ .title }}" loading="lazy">
+  </a>
+  <figcaption>
+    <strong>{{ .outlet }}{{ with .edition }}, {{ . }}{{ end }}</strong>, {{ $date.Format "2 January 2006" }}{{ with .page }}, page {{ . }}{{ end }}.
+    "{{ .title }}".{{ with .summary }} {{ . }}{{ end }}
+  </figcaption>
+</figure>
+{{ end }}

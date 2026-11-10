@@ -1,5 +1,6 @@
 ---
 title: "Your best people are the worst judges of your AI pilot"
+seoTitle: "How to evaluate an AI pilot without fooling yourself"
 slug: "best-people-worst-ai-judges"
 date: "2026-09-21"
 description: "A convincing AI demo often measures the expert running it, not the tool. Design the pilot so the model's real contribution shows, or you'll buy a demo and deploy a letdown."

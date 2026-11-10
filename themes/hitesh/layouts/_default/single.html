@@ -5,6 +5,7 @@
     <header class="post-header">
       {{ if eq .Section "blog" }}
       <div class="post-meta-top">
+        <span class="post-byline">By <a href="/about/" rel="author">{{ site.Params.author }}</a></span>
         <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
           {{ .Date.Format "January 2, 2006" }}
         </time>
@@ -14,6 +15,9 @@
         </div>
         {{ end }}
       </div>
+      {{ end }}
+      {{ if and .Params.showPhoto site.Params.photo }}
+      <img class="page-portrait" src="{{ site.Params.photo | relURL }}" alt="{{ site.Params.author }}" width="112" height="112">
       {{ end }}
       <h1 class="post-title-large">{{ .Title }}</h1>
       {{ with .Params.description }}
@@ -33,21 +37,54 @@
         {{ $src = path.Join $.RelPermalink $img }}
       {{ end }}
     {{ end }}
+    {{ with partial "x-cover.html" $ }}
+    <div class="post-image x-cover">{{ . | safeHTML }}</div>
+    {{ else }}
     <div class="post-image">
       <img src="{{ $src }}" alt="{{ $.Title }}" loading="lazy">
     </div>
     {{ end }}
+    {{ end }}
 
     <div class="post-body">
       {{ .Content }}
+
+      {{/* Front-matter `faq` renders here and also feeds the FAQPage JSON-LD
+           in partials/schema.html, so the visible text and the schema match. */}}
+      {{ with .Params.faq }}
+      <h2>Common questions</h2>
+      {{ range . }}
+      <h3>{{ .q }}</h3>
+      {{ .a | markdownify | safeHTML }}
+      {{ end }}
+      {{ with $.Params.faqFooter }}{{ . | markdownify | safeHTML }}{{ end }}
+      {{ end }}
     </div>
 
     {{ if eq .Section "blog" }}
+    {{/* Visible author box: names who wrote this and why they're credible, and
+         links every post to the About and Hyderabad advisor pages. */}}
+    <aside class="author-box" aria-label="About the author">
+      {{ with site.Params.photo }}<img class="author-box-photo" src="{{ . | relURL }}" alt="{{ site.Params.author }}" width="64" height="64" loading="lazy">{{ end }}
+      <div class="author-box-text">
+      <p class="author-box-name">Written by <a href="/about/" rel="author">{{ site.Params.author }}</a></p>
+      <p class="author-box-bio">{{ site.Params.authorBio }}</p>
+      <p class="author-box-cta"><a href="/about/">About me</a> &middot; <a href="/work-with-me/">Work with me</a> &middot; <a href="https://www.linkedin.com/in/{{ site.Params.linkedin }}" rel="me noopener" target="_blank">LinkedIn</a></p>
+      </div>
+    </aside>
+
     <footer class="post-footer">
       {{ with .Params.tags }}
       <div class="post-footer-tags">
         {{ range . }}<a href="{{ `tags/` | relURL }}{{ . | urlize | lower }}" class="tag">{{ . }}</a>{{ end }}
       </div>
+      {{ end }}
+      {{/* Link each post to any guide that collects it (guides list posts as "YYYY/slug"). */}}
+      {{ $key := printf "%s/%s" (.Date.Format "2006") (path.Base .File.Dir) }}
+      {{ range where site.RegularPages "Section" "guides" }}
+        {{ if in .Params.posts $key }}
+        <p class="post-guide">Part of the guide: <a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+        {{ end }}
       {{ end }}
       <a href="/blog/" class="back-link">← All posts</a>
     </footer>

@@ -1,5 +1,6 @@
 ---
 title: "450 million seats, 7% adoption: the real Copilot story"
+seoTitle: "450 million seats, 7% adoption: the Microsoft Copilot story"
 slug: "the-copilot-reboot"
 date: "2026-09-26"
 description: "Microsoft folded its consumer AI companion into the enterprise product. The adoption number behind that decision says more than the U-turn itself."

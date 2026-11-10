@@ -33,6 +33,8 @@ AGENTS.md              writing guide (read this for any post work)
 archetypes/            `hugo new` scaffold
 content/
   about/index.md
+  ai-advisor-hyderabad/  local-intent landing page (FAQ renders + feeds FAQ schema)
+  guides/<slug>/       pillar pages; `posts:` front matter lists the posts
   blog/<year>/<slug>/  one post per page bundle
       index.md         post + front matter
       images/          post-specific images (referenced bundle-relative)
