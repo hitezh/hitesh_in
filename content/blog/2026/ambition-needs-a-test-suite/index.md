@@ -12,6 +12,12 @@ tags:
   - "software-engineering"
   - "decision-making"
 image: images/cover.svg
+linkedin_hook: "A year of engineering can now take an afternoon with a coding agent. Proving the result is right still takes what it always did, so fund the projects you can test first."
+takeaways:
+  - "Reopen your five biggest 'not worth the engineering time' decisions and price in the cost of proving the result, not just of building it."
+  - "Before approving an AI-built replacement, ask how you will know it works without reading every line. No reference system or test suite means it is not ready to fund."
+  - "Hold part of your acceptance tests back from whoever is tuning the agent or prompts. A metric the builder can see will get gamed."
+linkedin_question: "Which project did your team reject years ago as too expensive to build, and how would you know if an agent got it right?"
 draft: false
 ---
 A few weeks ago, an engineer I respect wrote that [we should be more ambitious with the software we build](https://danluu.com/ambitious/). His evidence was personal: projects that once took a year or more, finished in a handful of hours with an AI agent doing the typing. I think the premise is right, and most leadership teams will draw the wrong conclusion from it.

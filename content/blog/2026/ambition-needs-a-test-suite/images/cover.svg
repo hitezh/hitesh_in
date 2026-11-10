@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Cover styled as a screenshot of an X post by Dr. Hitesh Sarda: AMBITION IS CHEAP NOW. PROOF IS THE NEW BUDGET LINE. The expensive part moved from writing the code to knowing it is right. #AISTRATEGY">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Cover styled as a screenshot of an X post by Dr. Hitesh Sarda: AMBITION IS CHEAP NOW. PROOF IS THE NEW BUDGET LINE. Dan Luu says projects that took a year now take hours. Writing the code got cheap, knowing it is right did not. Fund first the projects you can test, and keep some tests hidden from the builder.">
   <defs>
     <linearGradient id="avatar" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#2166F3"/>
@@ -31,24 +31,32 @@
     <circle cx="1136" cy="96" r="5"/>
   </g>
 
-  <!-- The post itself. Regular weight, full width, almost no colour: it has to read as
-       text someone typed, not as a designed headline.
+  <!-- The post itself: a claim in caps, then a short paragraph that tells the reader
+       what actually happened and why it matters. Regular weight, full width, almost no
+       colour, so it reads as text someone typed.
 
-       Open with the claim in caps (2 lines, the hook), leave a blank line, then land a
-       concrete supporting line (2 lines). Keep it to these four lines so it stays
-       legible at feed thumbnail size. -->
-  <g class="sans" font-size="52" fill="#E7E9EA">
-    <text x="64" y="244">AMBITION IS CHEAP NOW.</text>
-    <text x="64" y="310">PROOF IS THE NEW BUDGET LINE.</text>
-
-    <text x="64" y="406">The expensive part moved from writing</text>
-    <text x="64" y="472">the code to knowing it is right.</text>
+       SVG does not wrap text, so every line is its own <text>. Budget: claim in 2 lines
+       (about 30 characters each at 48px), then up to 5 body lines (about 60 characters
+       each at 31px), roughly 300 characters of body. Render it and look before you
+       commit; if a line runs past the right edge, re-break it or trim the sentence. -->
+  <g class="sans" fill="#E7E9EA">
+    <g font-size="48">
+      <text x="64" y="220">AMBITION IS CHEAP NOW.</text>
+      <text x="64" y="274">PROOF IS THE NEW BUDGET LINE.</text>
+    </g>
+    <g font-size="31">
+      <text x="64" y="336">Dan Luu says projects that took a year now take hours.</text>
+      <text x="64" y="378">Writing the code got cheap. Knowing it is right did not.</text>
+      <text x="64" y="420">Reopen your old &apos;not worth it&apos; list, but fund first the</text>
+      <text x="64" y="462">projects with a reference system or test suite to check</text>
+      <text x="64" y="504">against, and keep some tests hidden from the builder.</text>
+    </g>
   </g>
 
   <!-- One trailing hashtag, X-blue, the way a real post ends with a clickable tag.
        Replace with a hashtag version of the post's category, e.g. #AISTRATEGY. -->
-  <text x="64" y="528" class="sans" font-size="34" fill="#1D9BF0">#AISTRATEGY</text>
+  <text x="64" y="558" class="sans" font-size="31" fill="#1D9BF0">#AISTRATEGY</text>
 
-  <!-- Timestamp and view count. Use the post's real publish date; keep the count plausible. -->
-  <text x="64" y="588" class="sans" font-size="30" fill="#71767B">9:12 AM &#183; Nov 10, 2026 &#183; <tspan font-weight="700" fill="#E7E9EA">1.2M</tspan> Views</text>
+  <!-- Timestamp. Use the post's real publish date. No view count: a made-up number reads as fake social proof. -->
+  <text x="64" y="594" class="sans" font-size="28" fill="#71767B">9:12 AM &#183; Nov 10, 2026</text>
 </svg>
