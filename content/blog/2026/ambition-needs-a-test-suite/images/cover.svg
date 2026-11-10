@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Cover styled as a screenshot of an X post by Dr. Hitesh Sarda: AMBITION IS CHEAP NOW. PROOF IS THE NEW BUDGET LINE. ClickBench removed one entry after finding code written for its 43 queries. #AISTRATEGY">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Cover styled as a screenshot of an X post by Dr. Hitesh Sarda: AMBITION IS CHEAP NOW. PROOF IS THE NEW BUDGET LINE. The expensive part moved from writing the code to knowing it is right. #AISTRATEGY">
   <defs>
     <linearGradient id="avatar" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#2166F3"/>
@@ -41,8 +41,8 @@
     <text x="64" y="244">AMBITION IS CHEAP NOW.</text>
     <text x="64" y="310">PROOF IS THE NEW BUDGET LINE.</text>
 
-    <text x="64" y="406">ClickBench removed one entry after</text>
-    <text x="64" y="472">finding code written for its 43 queries.</text>
+    <text x="64" y="406">The expensive part moved from writing</text>
+    <text x="64" y="472">the code to knowing it is right.</text>
   </g>
 
   <!-- One trailing hashtag, X-blue, the way a real post ends with a clickable tag.
@@ -50,5 +50,5 @@
   <text x="64" y="528" class="sans" font-size="34" fill="#1D9BF0">#AISTRATEGY</text>
 
   <!-- Timestamp and view count. Use the post's real publish date; keep the count plausible. -->
-  <text x="64" y="588" class="sans" font-size="30" fill="#71767B">9:12 AM &#183; Oct 25, 2026 &#183; <tspan font-weight="700" fill="#E7E9EA">1.2M</tspan> Views</text>
+  <text x="64" y="588" class="sans" font-size="30" fill="#71767B">9:12 AM &#183; Nov 10, 2026 &#183; <tspan font-weight="700" fill="#E7E9EA">1.2M</tspan> Views</text>
 </svg>
