@@ -2,6 +2,7 @@
 title: "Deploying AI agents safely: autonomy, permissions and blast radius"
 seoTitle: "AI agent governance: permissions, blast radius and safe deployment"
 description: "How much autonomy to give an AI agent, how to scope its permissions by blast radius, and how to keep a record of what it actually did in production."
+cta: "Rolling out AI agents beyond a pilot?"
 weight: 2
 schemaType: "CollectionPage"
 posts:

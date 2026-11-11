@@ -2,6 +2,7 @@
 title: "AI strategy for leadership teams: pilots, build versus buy and moats"
 seoTitle: "AI strategy for leadership teams: evaluating AI pilots, build vs buy and where the moat is"
 description: "How to run an AI pilot that tells you the truth, when to build versus buy, where AI pays off first, and why the model you pick is rarely your advantage."
+cta: "Preparing an AI roadmap or a board discussion?"
 weight: 4
 schemaType: "CollectionPage"
 posts:

@@ -14,28 +14,14 @@
         </p>
         <div class="hero-cta">
           <a href="/work-with-me/" class="btn-primary">Book an AI advisory hour</a>
-          <a href="#services" class="btn-secondary">What I do</a>
+          <a href="/speaking/" class="btn-secondary">Invite me to speak</a>
         </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-value">{{ len (where .Site.RegularPages "Section" "blog") }}</span>
-            <span class="stat-label">posts</span>
-          </div>
-          <span class="stat-sep"></span>
-          <div class="stat">
-            <span class="stat-value">{{ len .Site.Taxonomies.categories }}</span>
-            <span class="stat-label">topics</span>
-          </div>
-          <span class="stat-sep"></span>
-          <div class="stat">
-            <span class="stat-value">2009</span>
-            <span class="stat-label">since</span>
-          </div>
-        </div>
-        <p class="hero-handle">
-          {{ with .Site.Params.twitter }}<a href="https://twitter.com/{{ . }}" target="_blank" rel="noopener">@{{ . }}</a>{{ end }}
-          {{ with .Site.Params.linkedin }}&nbsp;&middot;&nbsp;<a href="https://linkedin.com/in/{{ . }}" target="_blank" rel="noopener">LinkedIn</a>{{ end }}
-        </p>
+        <ul class="hero-proof">
+          <li>Twice a startup co-founder, and seven years building enterprise systems for a global bank in Frankfurt</li>
+          <li>Author of <a href="/book/">Implementing AI Agents in Your Company</a></li>
+          <li>Profiled in <a href="/about/#in-the-press">ET Focus, Hyderabad</a></li>
+          <li>Writing here since 2009{{ with .Site.Params.linkedin }}, and on <a href="https://linkedin.com/in/{{ . }}" target="_blank" rel="noopener">LinkedIn</a>{{ end }}</li>
+        </ul>
       </div>
 
       {{ with .Site.Params.photo }}
@@ -51,43 +37,50 @@
 <section class="services" id="services">
   <div class="container">
     <div class="section-header">
-      <span class="section-label">What I do</span>
+      <h2 class="section-label">How I can help</h2>
       <a href="/work-with-me/" class="section-more">Book an advisory hour →</a>
     </div>
-    <div class="services-grid">
-      <article class="service-card">
-        <h3 class="service-title">AI Advisory</h3>
-        <p class="service-desc">Acting as your fractional Head of AI: strategy, feasibility, ROI modeling, vendor assessment, and roadmaps grounded in real engineering constraints. No hype, no vendor lock-in.</p>
-      </article>
-      <article class="service-card">
-        <h3 class="service-title">AI Executive Training</h3>
-        <p class="service-desc">A six-week program that builds an AI-native leadership team: hands-on executive workflows, governance and risk, and a 90-day adoption roadmap that moves leaders from watching to leading.</p>
-      </article>
-      <article class="service-card">
-        <h3 class="service-title">MVP Development</h3>
-        <p class="service-desc">Tangible code beats theoretical roadmaps. I build the smallest prototype that answers the key technical and business questions, across agents, computer vision, and ML, before you commit to a full build.</p>
-      </article>
+    <div class="services-grid services-grid--four">
+      <a class="service-card" href="/work-with-me/">
+        <h3 class="service-title">AI advisory</h3>
+        <p class="service-desc">One AI decision at a time: is the use case worth doing, should you build or buy, and what is the smallest pilot that proves it. Starts with a single hour.</p>
+        <span class="service-link">Book an advisory hour →</span>
+      </a>
+      <a class="service-card" href="/fractional-head-of-ai/">
+        <h3 class="service-title">Fractional Head of AI</h3>
+        <p class="service-desc">Senior AI leadership a few days a month: priorities, vendor and model choices, governance, the AI bill, and reporting to the board.</p>
+        <span class="service-link">How it works →</span>
+      </a>
+      <a class="service-card" href="/ai-training/">
+        <h3 class="service-title">Leadership training</h3>
+        <p class="service-desc">A six-week program in which your leaders use AI on their own real work and finish with a governance framework and a 90-day roadmap.</p>
+        <span class="service-link">See the program →</span>
+      </a>
+      <a class="service-card" href="/speaking/">
+        <h3 class="service-title">Speaking</h3>
+        <p class="service-desc">Keynotes and workshops on what AI costs, how to deploy agents safely, and where advantage comes from when everyone has the same models.</p>
+        <span class="service-link">Talks and formats →</span>
+      </a>
     </div>
   </div>
 </section>
 
-<div class="topics-band">
+{{ with .Site.GetPage "/book" }}{{ with .Params.endorsement }}
+<section class="home-quote">
   <div class="container">
-    <span class="topics-label">Topics</span>
-    {{ range first 8 .Site.Taxonomies.categories.ByCount }}
-    <a href="{{ .Page.RelPermalink }}" class="topic-chip">
-      {{ .Page.Title | humanize }}
-      <span class="topic-count">{{ .Count }}</span>
-    </a>
-    {{ end }}
+    <blockquote class="book-quote">
+      <p>{{ . }}</p>
+      <cite>{{ with (site.GetPage "/book") }}{{ .Params.endorser }}{{ with .Params.endorser_title }}, {{ . }}{{ end }}, on <a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</cite>
+    </blockquote>
   </div>
-</div>
+</section>
+{{ end }}{{ end }}
 
 {{ with (where site.RegularPages "Section" "guides").ByWeight }}
 <section class="recent-writing home-guides">
   <div class="container">
     <div class="section-header">
-      <span class="section-label">Start here: guides</span>
+      <h2 class="section-label">Start here: guides</h2>
       <a href="/guides/" class="section-more">All guides →</a>
     </div>
     <div class="post-list">
@@ -109,7 +102,7 @@
 <section class="recent-writing">
   <div class="container">
     <div class="section-header">
-      <span class="section-label">Recent Writing</span>
+      <h2 class="section-label">Recent writing</h2>
       <a href="/blog/" class="section-more">Full archive →</a>
     </div>
     <div class="post-list">
@@ -169,4 +162,15 @@
   </div>
 </section>
 {{ end }}
+
+<section class="home-cta">
+  <div class="container">
+    <h2 class="home-cta-title">Have an AI decision to make?</h2>
+    <p class="home-cta-text">Bring the problem to an advisory hour. You leave with the simplest next step, or an honest view that AI is not the answer yet.</p>
+    <div class="hero-cta">
+      <a href="/work-with-me/" class="btn-primary">Book an AI advisory hour</a>
+      <a href="/speaking/" class="btn-secondary">Invite me to speak</a>
+    </div>
+  </div>
+</section>
 {{ end }}

@@ -51,19 +51,34 @@
 
       {{/* Front-matter `faq` renders here and also feeds the FAQPage JSON-LD
            in partials/schema.html, so the visible text and the schema match. */}}
-      {{ with .Params.faq }}
+      {{ if not (.HasShortcode "faq") }}{{ with .Params.faq }}
       <h2>Common questions</h2>
       {{ range . }}
       <h3>{{ .q }}</h3>
       {{ .a | markdownify | safeHTML }}
       {{ end }}
       {{ with $.Params.faqFooter }}{{ . | markdownify | safeHTML }}{{ end }}
-      {{ end }}
+      {{ end }}{{ end }}
     </div>
 
     {{ if eq .Section "blog" }}
     {{/* Visible author box: names who wrote this and why they're credible, and
          links every post to the About and Hyderabad advisor pages. */}}
+    {{/* Lead capture on every post: the advisory hour for readers with a live
+         decision, the free book for everyone else. The heading comes from the
+         guide the post belongs to (guide front matter `cta`), when it has one. */}}
+    {{ $ctaKey := printf "%s/%s" (.Date.Format "2006") (path.Base .File.Dir) }}
+    {{ $ctaHead := "Working through this at your company?" }}
+    {{ range where site.RegularPages "Section" "guides" }}{{ if and (in .Params.posts $ctaKey) .Params.cta }}{{ $ctaHead = .Params.cta }}{{ end }}{{ end }}
+    <aside class="post-cta" aria-label="Work with me">
+      <h2 class="post-cta-title">{{ $ctaHead }}</h2>
+      <p>I help leadership teams decide what AI to build, buy or skip. Bring the problem to an advisory hour, or start with my free book on putting AI agents to work.</p>
+      <div class="hero-cta">
+        <a href="/work-with-me/" class="btn-primary">Book an AI advisory hour</a>
+        <a href="/book/" class="btn-secondary">Get the free book</a>
+      </div>
+    </aside>
+
     <aside class="author-box" aria-label="About the author">
       {{ with site.Params.photo }}<img class="author-box-photo" src="{{ . | relURL }}" alt="{{ site.Params.author }}" width="64" height="64" loading="lazy">{{ end }}
       <div class="author-box-text">

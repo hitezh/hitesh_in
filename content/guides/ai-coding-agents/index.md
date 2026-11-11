@@ -2,6 +2,7 @@
 title: "Leading engineering teams that code with AI"
 seoTitle: "AI coding agents: code review, technical debt and governance for engineering leaders"
 description: "What changes when AI writes most of the code: review becomes the bottleneck, technical debt costs more, and someone has to decide what the agent prefers."
+cta: "Leading a team that now codes with AI?"
 weight: 3
 schemaType: "CollectionPage"
 posts:

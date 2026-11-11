@@ -31,7 +31,7 @@ enableRobotsTXT = true
   city               = "Hyderabad"
   region             = "Telangana"
   country            = "IN"
-  knowsAbout         = ["AI strategy", "AI agents", "Agentic AI governance", "LLM cost optimisation", "AI coding agents", "AI in retail", "Customer loyalty programs", "Engineering leadership", "AI adoption"]
+  knowsAbout         = ["AI strategy", "Fractional Head of AI", "AI keynote speaking", "AI agents", "Agentic AI governance", "LLM cost optimisation", "AI coding agents", "AI in retail", "Customer loyalty programs", "Engineering leadership", "AI adoption"]
   tagline     = "Building software that brings customers back."
   twitter     = "fullstackcto"
   linkedin    = "hiteshs"
@@ -72,17 +72,23 @@ enableRobotsTXT = true
     url    = "/book/"
     weight = 3
   [[menu.main]]
-    name   = "AI Training"
+    name   = "Training"
     url    = "/ai-training/"
     weight = 4
   [[menu.main]]
+    name   = "Speaking"
+    url    = "/speaking/"
+    weight = 5
+  [[menu.main]]
     name   = "About"
     url    = "/about/"
-    weight = 5
+    weight = 6
   [[menu.main]]
     name   = "Work with me"
     url    = "/work-with-me/"
-    weight = 6
+    weight = 7
+    [menu.main.params]
+      cta = true
 
 # Media coverage. Rendered by the {{< press >}} shortcode and listed in the
 # Person JSON-LD as `subjectOf`. Images live in static/images/press/.
