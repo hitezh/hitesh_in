@@ -16,6 +16,7 @@ posts:
   - "2026/your-ai-outgrew-your-rulebook"
   - "2026/rent-the-harness-own-what-it-learns"
   - "2026/ai-off-incident-drill"
+  - "2026/ai-privacy-promise-belongs-to-the-account"
 faq:
   - q: "How much autonomy should an AI agent get in production?"
     a: "Less than the demo suggests. Small error rates compound across every step an agent takes, so a workflow with many steps fails far more often than any single step does. Hand agents the workflows where a mistake is cheap to catch and cheap to undo, and widen the scope as the evidence comes in."

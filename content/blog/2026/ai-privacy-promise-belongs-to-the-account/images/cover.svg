@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Cover styled as an X post: THE PRIVACY PROMISE BELONGS TO THE ACCOUNT, NOT THE AI. Google says consumer Gemini Connected Apps data can be human reviewed while Workspace says it is not.">
+  <defs>
+    <linearGradient id="avatar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2166F3"/>
+      <stop offset="1" stop-color="#00C2A8"/>
+    </linearGradient>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Full-bleed black, like an X dark-mode screenshot. No frame, no border. -->
+  <rect width="1200" height="630" fill="#000000"/>
+
+  <!-- Author row: avatar, name with a verified check, handle underneath, Follow pill, menu. -->
+  <circle cx="104" cy="96" r="44" fill="url(#avatar)"/>
+  <text x="104" y="108" class="sans" font-size="34" font-weight="800" fill="#FFFFFF" text-anchor="middle">HS</text>
+
+  <text x="168" y="86" class="sans" font-size="35" font-weight="700" fill="#E7E9EA">Dr. Hitesh Sarda</text>
+  <g transform="translate(476 74)">
+    <circle r="15" fill="#1D9BF0"/>
+    <path d="M-7 0l5 5 9-9" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="168" y="132" class="sans" font-size="33" fill="#71767B">@fullstackcto</text>
+
+  <rect x="856" y="64" width="190" height="64" rx="32" fill="#EFF3F4"/>
+  <text x="951" y="107" class="sans" font-size="30" font-weight="700" fill="#0F1419" text-anchor="middle">Follow</text>
+  <g fill="#71767B">
+    <circle cx="1092" cy="96" r="5"/>
+    <circle cx="1114" cy="96" r="5"/>
+    <circle cx="1136" cy="96" r="5"/>
+  </g>
+
+  <!-- The post itself: a claim in caps, then a short paragraph that tells the reader
+       what actually happened and why it matters. Regular weight, full width, almost no
+       colour, so it reads as text someone typed.
+
+       SVG does not wrap text, so every line is its own <text>. Budget: claim in 2 lines
+       (about 30 characters each at 48px), then up to 5 body lines (about 60 characters
+       each at 31px), roughly 300 characters of body. Render it and look before you
+       commit; if a line runs past the right edge, re-break it or trim the sentence. -->
+  <g class="sans" fill="#E7E9EA">
+    <g font-size="48">
+      <text x="64" y="220">THE PRIVACY PROMISE BELONGS</text>
+      <text x="64" y="274">TO THE ACCOUNT, NOT THE AI.</text>
+    </g>
+    <g font-size="31">
+      <text x="64" y="336">Google says a subset of consumer Gemini Connected Apps</text>
+      <text x="64" y="378">data is reviewed by humans. Its Workspace page says the</text>
+      <text x="64" y="420">opposite. Same product, different contract, decided by the</text>
+      <text x="64" y="462">login. Do you know which account your team is signed into</text>
+      <text x="64" y="504">when it connects AI to your Drive?</text>
+    </g>
+  </g>
+  <!-- One trailing hashtag, X-blue, the way a real post ends with a clickable tag.
+       Replace with a hashtag version of the post's category, e.g. #AISTRATEGY. -->
+  <text x="64" y="558" class="sans" font-size="31" fill="#1D9BF0">#AIGOVERNANCE</text>
+
+  <!-- Timestamp. Use the post's real publish date. No view count: a made-up number reads as fake social proof. -->
+  <text x="64" y="594" class="sans" font-size="28" fill="#71767B">9:04 AM &#183; Nov 10, 2026</text>
+</svg>
