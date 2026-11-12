@@ -4,7 +4,6 @@ seoTitle: "AI readiness assessment: free template and questionnaire (PDF)"
 description: "Twenty-five questions that tell you whether one specific AI use case is ready to fund, across the business case, checking, data, ownership and risk."
 download: /downloads/ai-readiness-assessment.pdf
 format: "PDF"
-draft: true
 short: "AI readiness assessment"
 weight: 1
 faq:

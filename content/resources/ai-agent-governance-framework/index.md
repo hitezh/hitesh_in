@@ -4,7 +4,6 @@ seoTitle: "AI agent governance framework: free template (PDF)"
 description: "A fill-in template for governing AI agents: an agent register, autonomy tiers, a blast-radius worksheet, a deployment checklist and audit log requirements."
 download: /downloads/ai-agent-governance-framework.pdf
 format: "PDF"
-draft: true
 short: "agent governance framework"
 weight: 3
 faq:

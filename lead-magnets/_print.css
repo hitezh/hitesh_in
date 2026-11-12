@@ -1,7 +1,7 @@
 /* Print stylesheet for the downloadable PDFs (see .github/scripts/build-lead-magnets.cjs). */
 @page { size: A4; margin: 20mm 18mm 20mm 18mm; }
 * { box-sizing: border-box; }
-html { font-size: 10.5pt; }
+html { font-size: 10pt; }
 body { margin: 0; font-family: "Inter", "Helvetica Neue", Arial, sans-serif; color: #1A1816; line-height: 1.5; }
 h1, h2, h3 { font-family: "Bitstream Charter", "Charter", Georgia, serif; color: #1A1816; line-height: 1.2; }
 h1 { font-size: 30pt; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 8mm; }
@@ -11,8 +11,10 @@ p { margin: 0 0 3mm; }
 a { color: #BF4B1A; text-decoration: none; }
 ul, ol { margin: 0 0 4mm; padding-left: 5.5mm; }
 li { margin-bottom: 1.6mm; }
-section { margin-bottom: 9mm; }
-section.page-break { break-before: page; }
+section { margin-bottom: 7mm; }
+/* Sections flow on; a heading never sits alone at the foot of a page. */
+section.page-break { break-before: auto; }
+section { orphans: 3; widows: 3; }
 
 .cover { min-height: 245mm; display: flex; flex-direction: column; justify-content: center; break-after: page; margin: 0; }
 .cover .kicker { font-size: 9pt; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #BF4B1A; margin-bottom: 6mm; }
