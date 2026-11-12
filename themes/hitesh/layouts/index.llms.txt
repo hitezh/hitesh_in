@@ -15,6 +15,7 @@
 - [Agentic AI consulting]({{ "agentic-ai-consulting/" | absURL }}): independent advice on implementing AI agents in a business, with FAQs.
 - [Speaking]({{ "speaking/" | absURL }}): keynote and workshop topics on AI costs, AI agents, coding agents, AI strategy and retail, with a short bio for organizers.
 - [AI training for leadership teams]({{ "ai-training/" | absURL }}): a six-week program that makes a leadership team AI-native.
+- [Books]({{ "books/" | absURL }}): both free books, the AI agents playbook and the DBA dissertation on pricing AI in SaaS.
 {{- with site.GetPage "/book" }}
 - [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
 {{- end }}

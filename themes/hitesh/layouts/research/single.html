@@ -7,7 +7,10 @@
 {{ range sort (.Resources.Match "slides/*") "Name" }}{{ if eq .MediaType.MainType "image" }}{{ $slides = $slides | append . }}{{ end }}{{ end }}
 <article class="post research-page">
   <div class="container">
-    <header class="post-header">
+    {{ $bc := false }}{{ with .Params.bookCover }}{{ $bc = $.Resources.GetMatch . }}{{ end }}
+    <header class="post-header{{ if $bc }} research-header--cover{{ end }}">
+      {{ with $bc }}{{ $r := .Resize "480x webp q84" }}<img class="research-cover" src="{{ $r.RelPermalink }}" alt="Cover of {{ $.Params.shortTitle }} by {{ site.Params.author }}" width="{{ $r.Width }}" height="{{ $r.Height }}" fetchpriority="high">{{ end }}
+      <div class="research-header-body">
       <div class="post-meta-top"><a href="/research/" class="post-byline">Research</a>{{ with .Params.pubType }} &middot; <span>{{ . }}</span>{{ end }}</div>
       <h1 class="post-title-large">{{ .Title }}</h1>
       <dl class="research-facts">
@@ -22,6 +25,7 @@
         {{ if $slides }}<a href="#slides" class="btn-secondary">View the slides</a>{{ end }}
       </div>
       {{ end }}
+      </div>
     </header>
 
     <div class="post-body">

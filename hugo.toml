@@ -68,8 +68,8 @@ enableRobotsTXT = true
     url    = "/guides/"
     weight = 2
   [[menu.main]]
-    name   = "Book"
-    url    = "/book/"
+    name   = "Books"
+    url    = "/books/"
     weight = 3
   [[menu.main]]
     name   = "Training"
