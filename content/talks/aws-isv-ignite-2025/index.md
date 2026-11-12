@@ -3,6 +3,7 @@ title: "Inside the ISV journey: lessons from the front lines"
 shortTitle: "Inside the ISV journey"
 date: "2025-05-27"
 format: "Fireside chat"
+mode: "offline"
 event: "AWS ISV Ignite 2025"
 host: "AWS"
 location: "Hyderabad"
@@ -14,7 +15,7 @@ related:
 # Video: set youtube to the video ID. Online or in person: set mode to online, offline or mixed.
 ---
 
-A fireside chat at AWS ISV Ignite 2025 on how Indian independent software vendors (ISVs) can use AWS to build, scale and grow their businesses.
+A fireside chat at AWS ISV Ignite 2025, where I joined the panel as CTO of OptCulture, on how Indian independent software vendors (ISVs) can use AWS to build, scale and grow their businesses.
 
 We talked about startup journeys and why companies choose AWS, the challenges of the early stage, and the lessons that matter most for SaaS founders. The discussion covered what an AWS partnership is worth, the go-to-market opportunities it opens, and how to expand into international markets.
 
