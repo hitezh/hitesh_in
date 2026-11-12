@@ -3,10 +3,10 @@ title: "Speaking"
 seoTitle: "AI keynote speaker in India for leadership and tech events"
 slug: "speaking"
 description: "Talks and workshops on AI strategy, AI agents and what AI really costs, for leadership offsites, industry conferences and engineering teams. Based in Hyderabad."
-showPhoto: true
+layout: "speaking"
 faq:
   - q: "What do you speak about?"
-    a: "AI decisions that leaders actually have to make: what AI really costs, how much autonomy to give AI agents, how engineering teams change when AI writes the code, where the durable advantage is once everyone has the same models, and what AI shopping agents mean for retail and loyalty."
+    a: "AI decisions that leaders actually have to make: what AI really costs, how to price AI features, how much autonomy to give AI agents, how engineering teams change when AI writes the code, where the durable advantage is once everyone has the same models, and what AI shopping agents mean for retail and loyalty."
   - q: "Who are the talks for?"
     a: "Founders, CXOs, boards and leadership teams who need a clear view without the hype, and CTOs and engineering leaders who want the technical argument made properly. I adjust the depth to the room."
   - q: "Do you tailor a talk to our industry or company?"
@@ -16,64 +16,85 @@ faq:
   - q: "How do we book you?"
     a: "Use the form on this page with the event date, audience and format. I reply personally, usually within a couple of working days."
 faqFooter: "Organizing something that does not fit these formats? [Write to me](mailto:hitesh@256tec.com) and we can work it out."
-draft: false
+eyebrow: "AI keynote speaker, Hyderabad"
+headline: "Talks about AI that end with a decision, not a demo"
+lede: "I speak to leadership teams, industry events and business schools about the AI decisions they are in the middle of making. Each talk makes one argument, backs it with named companies and real numbers, and ends with what to do on Monday."
+heroPhoto:
+  page: "/talks/iim-udaipur-ai-and-your-career"
+  src: "images/02-closing.jpg"
+  caption: "Industry Captain Series, IIM Udaipur, 2025"
+spokenAt:
+  - "AWS ISV Ignite"
+  - "IIM Udaipur"
+  - "RAI Visakhapatnam Retail Summit"
+  - "Fintech Valley Vizag"
+  - "IIBM Institute"
+  - "Icfai Business School"
+credentials:
+  - label: "25+ years"
+    text: "building production software, from Citi in Frankfurt to startups in Hyderabad"
+    url: "/about/"
+  - label: "Author"
+    text: "of Implementing AI Agents in Your Company"
+    url: "/book/"
+  - label: "DBA research"
+    text: "on how 371 SaaS companies price AI features"
+    url: "/research/monetizing-ai-in-saas/"
+topics:
+  - title: "Cheaper tokens, bigger bill: what AI really costs"
+    text: "Token prices keep falling and AI bills keep rising. Why that happens, who inside a company should own the bill, and when a smaller or local model is the better choice."
+    audience: "CFOs, CTOs and anyone signing off an AI budget"
+    readLabel: "Guide to AI costs"
+    readUrl: "/guides/ai-cost/"
+  - title: "You did not deploy an agent, you hired one"
+    text: "How much autonomy an AI agent should get, how to limit what it can touch, and how to know afterwards what it did."
+    audience: "Leadership teams moving from an AI pilot to agents in production"
+    readLabel: "Guide to deploying AI agents safely"
+    readUrl: "/guides/ai-agent-governance/"
+  - title: "Writing code got free. Reviewing it is the job now."
+    text: "What changes in an engineering organization when AI writes most of the code: review becomes the bottleneck, technical debt costs more, and someone has to decide what the agent prefers."
+    audience: "CTOs and engineering leaders"
+    readLabel: "Guide to leading teams that code with AI"
+    readUrl: "/guides/ai-coding-agents/"
+  - title: "Your model was never your moat"
+    text: "How to run a pilot that tells you the truth, when to build and when to buy, and where advantage comes from once every competitor has the same models."
+    audience: "Boards, founders and strategy offsites"
+    readLabel: "Guide to AI strategy for leadership teams"
+    readUrl: "/guides/ai-strategy-for-leaders/"
+  - title: "Pricing AI: what 371 SaaS companies actually do"
+    text: "Subscription, usage, credits or outcomes: how software companies charge for AI features, drawn from my DBA research and nine executive interviews, with a five-step framework for choosing."
+    audience: "SaaS founders, product and revenue leaders"
+    readLabel: "The research"
+    readUrl: "/research/monetizing-ai-in-saas/"
+  - title: "When your next customer is an AI agent"
+    text: "What happens to retail, payments and loyalty programs when software starts shopping on the customer's behalf."
+    audience: "Retail, e-commerce and loyalty leaders"
+    readLabel: "Guide to AI in retail and loyalty"
+    readUrl: "/guides/ai-in-retail-and-loyalty/"
+  - title: "The AI revolution: navigating your career"
+    text: "Why entry-level work is moving from doing to reviewing, the frameworks for spotting where AI fits, and the skills that keep a professional relevant."
+    audience: "Business schools and early-career professionals"
+    readLabel: "As given at IIM Udaipur"
+    readUrl: "/talks/iim-udaipur-ai-and-your-career/"
+  - title: "India's second tech boom will be AI implementation"
+    text: "India built its first technology industry on implementation. AI gives it a second run, for companies willing to sell outcomes instead of headcount."
+    audience: "Industry bodies, founder communities and business schools"
+    readLabel: "Read the argument"
+    readUrl: "/2025/indias-2-trillion-opportunity/"
+formats:
+  - title: "Keynote"
+    time: "30 to 45 minutes"
+    text: "One argument, the evidence for it, and time for questions."
+  - title: "Leadership workshop"
+    time: "Half or full day"
+    text: "The team works on its own AI decisions. The longer version is my [AI training for leadership teams](/ai-training/)."
+  - title: "Fireside chat or panel"
+    time: "30 to 60 minutes"
+    text: "A conversation with a host or fellow panelists, as at AWS ISV Ignite and Fintech Valley Vizag."
+  - title: "Internal session"
+    time: "60 to 90 minutes"
+    text: "For an engineering, product or leadership team, built around a decision you are facing."
+bio: "Dr. Hitesh Sarda is an AI advisor based in Hyderabad and the founder of 256 Technologies, an applied AI lab. He has spent more than 25 years building production software, including work at Citi, Virtusa, Yash and ValueLabs, and now helps leadership teams decide what AI to build, buy or skip. He holds a Doctor of Business Administration from IIBM Institute and SIMA Switzerland, with a dissertation on how SaaS companies price AI features. He is the author of Implementing AI Agents in Your Company and has written at hitesh.in since 2009."
 ---
 
-I am an AI keynote speaker based in Hyderabad, and I speak to leadership teams and technology audiences across India about the artificial intelligence decisions they are in the middle of making. Each talk makes one argument, backs it with named companies and real numbers, and ends with what to do on Monday.
-
-The material comes from what I write here every week and from my book, [Implementing AI Agents in Your Company](/book/). You can read any of these arguments before you invite me, which is the simplest way to judge whether the talk suits your audience.
-
-## Recent talks
-
-Some of the places I have spoken recently, with summaries, slides and photos.
-
-{{< talks limit="3" >}}
-
-## Talks I can bring to your event
-
-### Cheaper tokens, bigger bill: what AI really costs
-
-Token prices keep falling and AI bills keep rising. This talk explains why, who inside a company should own the bill, and when a smaller or local model is the better choice. For CFOs, CTOs and anyone signing off an AI budget. The argument is in the [guide to AI costs](/guides/ai-cost/).
-
-### You did not deploy an agent, you hired one
-
-How much autonomy an AI agent should get, how to limit what it can touch, and how to know afterwards what it did. For leadership teams moving from an AI pilot to agents running in production. Background reading: the [guide to deploying AI agents safely](/guides/ai-agent-governance/).
-
-### Writing code got free. Reviewing it is the job now.
-
-What changes in an engineering organization when AI writes most of the code: review becomes the bottleneck, technical debt costs more, and someone has to decide what the agent prefers. For CTOs and engineering leaders. Background reading: the [guide to leading teams that code with AI](/guides/ai-coding-agents/).
-
-### Your model was never your moat
-
-AI strategy for leadership teams: how to run a pilot that tells you the truth, when to build and when to buy, and where advantage comes from once every competitor has the same models. For boards, founders and strategy offsites. Background reading: the [guide to AI strategy for leadership teams](/guides/ai-strategy-for-leaders/).
-
-### When your next customer is an AI agent
-
-What happens to retail, payments and loyalty programs when software starts shopping on the customer's behalf. For retail, e-commerce and loyalty leaders. Background reading: the [guide to AI in retail and loyalty](/guides/ai-in-retail-and-loyalty/).
-
-### India's second tech boom will be AI implementation
-
-India built its first technology industry on implementation. AI gives it a second run, for companies willing to sell outcomes instead of headcount. For industry bodies, founder communities and business schools. [Read the argument](/2025/indias-2-trillion-opportunity/).
-
-## Formats
-
-- Keynote, 30 to 45 minutes, with time for questions.
-- Leadership workshop, a half day or full day, where the team works on its own AI decisions. The longer version is my [AI training for leadership teams](/ai-training/).
-- Fireside chat or panel.
-- Internal session for an engineering or product organization.
-
-## For organizers
-
-A short bio you can use as it is:
-
-> Dr. Hitesh Sarda is an AI advisor based in Hyderabad and the founder of 256 Technologies, an applied AI lab. He has spent more than 25 years building production software, including work at Citi, Virtusa, Yash and ValueLabs, and now helps leadership teams decide what AI to build, buy or skip. He holds a Doctor of Business Administration from IIBM Institute and SIMA Switzerland, with a dissertation on how SaaS companies price AI features. He is the author of Implementing AI Agents in Your Company and has written at hitesh.in since 2009.
-
-A [high-resolution photo](/images/hitesh-sarda.jpg) is available, and my [About page](/about/) has the longer story.
-
-{{< faq >}}
-
-## Invite me to speak
-
-<form name="speaking-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/" class="cta-form"><input type="hidden" name="form-name" value="speaking-enquiry"><p class="cta-hp"><label>Do not fill this out if you are human: <input name="bot-field"></label></p><div class="cta-field"><label for="sp-name">Name</label><input id="sp-name" type="text" name="name" autocomplete="name" required></div><div class="cta-field"><label for="sp-email">Work email</label><input id="sp-email" type="email" name="email" autocomplete="email" required></div><div class="cta-field"><label for="sp-org">Organization and event</label><input id="sp-org" type="text" name="organization" required></div><div class="cta-field"><label for="sp-date">Date and city <span>(or online)</span></label><input id="sp-date" type="text" name="date_and_place"></div><div class="cta-field"><label for="sp-format">Format</label><select id="sp-format" name="format"><option>Keynote</option><option>Leadership workshop</option><option>Fireside chat or panel</option><option>Internal session</option><option>Not sure yet</option></select></div><div class="cta-field"><label for="sp-message">Who is the audience, and what should they leave with?</label><textarea id="sp-message" name="message" rows="5" required></textarea></div><button type="submit" class="btn-primary cta-submit">Send the invitation</button></form>
-
-Prefer email? Reach me at [hitesh@256tec.com](mailto:hitesh@256tec.com) or on [LinkedIn](https://linkedin.com/in/hiteshs).
+I am based in Hyderabad and speak across India, in person or online. The material comes from what I write here every week, from my book, [Implementing AI Agents in Your Company](/book/), and from [my DBA research on pricing AI](/research/monetizing-ai-in-saas/). You can read any of these arguments before you invite me, which is the simplest way to judge whether the talk suits your audience.
