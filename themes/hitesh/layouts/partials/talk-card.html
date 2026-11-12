@@ -5,7 +5,7 @@
 <a class="talk-card" href="{{ .RelPermalink }}">
   <span class="talk-card-media">
     {{ with $cover }}
-      {{ $t := .Fill "720x450 Center webp q78" }}
+      {{ $t := .Fill (printf "720x450 %s webp q78" ($.Params.cardAnchor | default "Center")) }}
       <img src="{{ $t.RelPermalink }}" alt="" width="{{ $t.Width }}" height="{{ $t.Height }}" loading="lazy" decoding="async">
     {{ else }}
       <span class="talk-card-ph" aria-hidden="true">
