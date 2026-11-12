@@ -16,6 +16,7 @@ posts:
   - "2026/when-code-gets-cheap"
   - "2026/price-on-clever-code"
   - "2026/the-code-you-cant-explain"
+  - "2026/ai-found-bugs-review-bill"
   - "2026/tools-built-for-human-speed"
   - "2026/your-backlog-is-the-benchmark"
 faq:
