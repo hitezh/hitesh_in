@@ -16,12 +16,12 @@
 <li>who owns the outcome</li>
 <li>what it costs at production volume, with the checking included</li>
 </ul>
-<p>Score tasks rather than job titles, because a role is a bundle of tasks that score very differently and the org chart will mislead you about which ones are exposed. In practice you will find automation candidates inside senior roles and stubbornly human work inside junior ones.</p>
+<p>Score tasks rather than job titles, because a role is a bundle of tasks that score very differently and the org chart will mislead you. In practice you will find automation candidates inside senior roles and stubbornly human work inside junior ones.</p>
 </section>
 
 <section>
 <h2>1. Run it as a 90-minute leadership session</h2>
-<p class="how">Invite five to eight people: the heads of the functions that proposed candidates, someone from finance, someone from engineering or IT, and one person who does the day-to-day work in each candidate area, and print parts 2 to 6 for everyone. The 1 to 3 scale, the gates and the timings in this document are a starting point, not a standard, so change them to suit your team.</p>
+<p class="how">Invite five to eight people: the heads of the functions that proposed candidates, someone from finance, someone from engineering or IT, and one person who does the day-to-day work in each candidate area, and print parts 2 to 6. The 1 to 3 scale, the gates and the timings in this document are a starting point, not a standard, so change them to suit your team.</p>
 <h3>Before the session</h3>
 <ul class="checks">
 <li>Each function head lists the workflows that consume the most hours in their function (aim for 20) and marks the three they would hand to AI first.</li>
@@ -47,7 +47,7 @@
 
 <section class="page-break">
 <h2>2. Use-case intake form</h2>
-<p class="how">One copy per candidate, filled in by the sponsor before the session. If a line cannot be answered, leave it blank and say so in the room, since the blanks show where the scoring will be hardest. Take the line about undoing a wrong output slowly. In <a href="https://hitesh.in/2026/the-autonomy-budget/">Project Vend</a>, an AI ran a small office shop for a month and slowly lost money through a hundred small, unverified decisions it could not take back.</p>
+<p class="how">One copy per candidate, filled in by the sponsor before the session. If a line cannot be answered, leave it blank and say so in the room, since blanks show where scoring will be hardest. The undo line matters. In <a href="https://hitesh.in/2026/the-autonomy-budget/">Project Vend</a>, an AI ran a small office shop for a month and slowly lost money through a hundred small, unverified decisions it could not take back.</p>
 <p class="fill"><span>Use case name</span></p>
 <p class="fill"><span>Sponsor, and function</span></p>
 <p class="fill"><span>The task in one sentence, from trigger to finished output</span></p>
@@ -70,7 +70,7 @@
 
 <section class="page-break">
 <h2>3. The scoring criteria</h2>
-<p class="how">Score each candidate 1, 2 or 3 on every criterion, where a 3 always means "favorable for a first pilot". Score the task as it runs today, before any of the changes the project would bring.</p>
+<p class="how">Score each candidate 1, 2 or 3 on every criterion, where a 3 always means "favorable for a first pilot". Score the task as it runs today.</p>
 <table>
 <thead><tr><th>Criterion</th><th>1 (low)</th><th>2 (medium)</th><th>3 (high)</th></tr></thead>
 <tbody>
@@ -88,9 +88,9 @@
 <ul>
 <li><strong>B, cheap to check.</strong> A better model does not raise this score. A weak model produces obvious garbage that is cheap to reject, while a strong one produces output that is plausible and wrong in ways that look right, which needs full scrutiny before anyone can dismiss it. Score the check you have today.</li>
 <li><strong>C, cost of being wrong.</strong> Count the steps, because errors compound: at 90% reliability per step, a five-step task finishes correctly about 59% of the time, and ten steps drops it to 35%. A long chain that ends in an irreversible action is a 1, however good the model looks.</li>
-<li><strong>D, hard, not messy.</strong> Difficulty is the wrong test. OpenAI published what it says is <a href="https://hitesh.in/2026/hardest-work-not-messiest/">a proof of the Cycle Double Cover Conjecture</a>, a problem open since the 1970s, produced by a frontier model, while the same class of model still needs a human watching every move on a mid-size company's month-end close. A problem that is hard but self-contained, with a crisp answer, suits a model; a task a new hire learns in a month can stump it when the work is soaked in unwritten context. So score how messy the task is, whatever the seniority of the person who does it.</li>
-<li><strong>F, duller tool.</strong> "Which LLM?" is the third or fourth question on a roadmap, so ask first what the decision is and how often it repeats. Capability you do not need on this task is still a cost, and you pay it on every unit.</li>
-<li><strong>H, cost at volume.</strong> Price per token is the wrong number to score here. Use the cost of one finished unit of work, and include the minutes of human judgment each unit still consumes.</li>
+<li><strong>D, hard, not messy.</strong> Difficulty is the wrong test. OpenAI published what it says is a model-produced <a href="https://hitesh.in/2026/hardest-work-not-messiest/">proof of the Cycle Double Cover Conjecture</a>, open since the 1970s, while the same class of model still needs a human watching every move on a month-end close. A problem that is hard but self-contained, with a crisp answer, suits a model; a task a new hire learns in a month can stump it when the work is soaked in unwritten context. So score how messy the task is, whatever the seniority of the person who does it.</li>
+<li><strong>F, duller tool.</strong> "Which LLM?" is the third or fourth question on a roadmap, so ask first what the decision is and how often it repeats. Capability you do not need on this task is still a cost.</li>
+<li><strong>H, cost at volume.</strong> Price per token is the wrong number. Use the cost of one finished unit of work, and include the minutes of human judgment each unit still consumes.</li>
 </ul>
 </section>
 
@@ -110,7 +110,7 @@
 <tr><td>8.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 </tbody>
 </table>
-<div class="note"><strong>Three scores act as gates.</strong> A 1 on B (checking), C (cost of being wrong) or G (owner) takes a candidate out of the running for first pilot, whatever its total, because strong scores elsewhere do nothing for an output nobody can check, a mistake nobody can undo, or a result nobody owns. Spending does not move these gates either. Meta plans to spend around $145 billion on AI infrastructure this year, and Mark Zuckerberg still <a href="https://hitesh.in/2026/the-autonomy-budget/">told his staff</a> that agentic AI development "hasn't really accelerated in the way that we expected."</div>
+<div class="note"><strong>Three scores act as gates.</strong> A 1 on B (checking), C (cost of being wrong) or G (owner) takes a candidate out of the running for first pilot, whatever its total, because strong scores elsewhere do nothing for an output nobody can check, a mistake nobody can undo, or a result nobody owns. Money does not move these gates. Meta plans to spend around $145 billion on AI infrastructure this year, and Mark Zuckerberg still <a href="https://hitesh.in/2026/the-autonomy-budget/">told his staff</a> that agentic AI development "hasn't really accelerated in the way that we expected."</div>
 <p class="fill"><span>Candidates removed as dominated before scoring</span></p>
 <p class="fill"><span>Scores the room disagreed on, and what would settle them</span></p>
 </section>
@@ -132,7 +132,7 @@
 <h3>Pilot first where checking is cheap</h3>
 <p>Your first pilot will probably be boring, something like a workflow where an invoice either matches or it doesn't, and that is fine, because a tight feedback loop can be tested in weeks and reduces uncertainty cheaply. Teams keep pointing AI at the task where it looks most impressive, which is usually the one where checking costs the most.</p>
 <h3>Buy before you build</h3>
-<p>Most companies should buy before they build, and that includes buying the boring specialist. Building the first version was never the expensive part; keeping it alive for five years is. An agent that forks an open-source tool and <a href="https://hitesh.in/2026/cheap-to-fork-costly-to-keep/">runs a nightly rebase against upstream</a> makes the writing nearly free, but fork forty tools and you have forty dependencies rebasing against forty upstreams every night, and someone still has to know whether last night's rebase broke something. Before you approve a build, answer these:</p>
+<p>Most companies should buy before they build, and that includes buying the boring specialist. Building the first version was never the expensive part; keeping it alive for five years is. An agent that forks an open-source tool and <a href="https://hitesh.in/2026/cheap-to-fork-costly-to-keep/">runs a nightly rebase against upstream</a> makes the writing nearly free, but someone still has to know whether last night's rebase broke something. Before you approve a build, answer these:</p>
 <ul class="checks">
 <li>Is there a product that already does this task for companies like yours? If yes, what exactly would your own build do that it cannot?</li>
 <li>If you build or fork, who reviews the changes every month, and is that person's time in the budget?</li>
@@ -177,12 +177,12 @@
 <p class="fill"><span>The test that decides go or no-go, written before the pilot starts</span></p>
 <p class="fill"><span>Date the decision will be made, and who makes it</span></p>
 <p class="fill"><span>What happens if it fails: what is switched off, what you keep</span></p>
-<div class="note"><strong>Name the budget the saving moves into.</strong> When a bill falls, the cost often moves into engineering time, testing effort or an expert's afternoon, where nothing measures it. A budget nobody manages tends to get cut by decree later: Microsoft had projected at least $1 billion of internal spending on Anthropic this year, and <a href="https://hitesh.in/2026/who-sees-the-ai-bill/">The Information reported</a> that the estimate has since been cut by more than a third. If you cannot say who pays for the checking, write that down as an open item before anyone signs this page.</div>
+<div class="note"><strong>Name the budget the saving moves into.</strong> When a bill falls, the cost often moves into engineering time, testing effort or an expert's afternoon, where nothing measures it. Unmanaged budgets get cut by decree: Microsoft had projected at least $1 billion of internal spending on Anthropic this year, and <a href="https://hitesh.in/2026/who-sees-the-ai-bill/">The Information reported</a> that the estimate has since been cut by more than a third. If nobody pays for the checking yet, write that down as an open item.</div>
 </section>
 
 <section class="page-break">
 <h2>7. Pilot design checklist</h2>
-<p class="how">A convincing pilot often measures the expert running it more than the tool. A 2023 essay, <a href="https://hitesh.in/2026/best-people-worst-ai-judges/">The LLMentalist Effect</a>, compares the feeling of chatting with a model to a psychic's cold reading, and the bias it describes works better on smart people, because a sharp operator corrects the drift without noticing they did it. Tick every item before the pilot starts, so the result tells you about the tool.</p>
+<p class="how">A convincing pilot often measures the expert running it more than the tool. A 2023 essay, <a href="https://hitesh.in/2026/best-people-worst-ai-judges/">The LLMentalist Effect</a>, compares chatting with a model to a psychic's cold reading, and that bias works better on smart people, who correct the drift without noticing. Tick every item before the pilot starts, so the result tells you about the tool.</p>
 <h3>Who runs it</h3>
 <ul class="checks">
 <li>The pilot is run by a competent non-expert, the kind of person who will use the tool in production. Your strongest person is not on it.</li>
@@ -219,8 +219,8 @@
 <h2>8. Common ways the exercise goes wrong</h2>
 <ul>
 <li><strong>You score job titles.</strong> "AI can do 40% of customer support" mixes exposure with evidence, so break the role into tasks and score those.</li>
-<li><strong>The most impressive candidate wins.</strong> The room falls for the demo of the strategy memo and ignores the reconciliation, so check column B again before anyone votes.</li>
-<li><strong>The model is chosen first and the task second.</strong> When dermatologist Magnus Lynch showed <a href="https://hitesh.in/2026/your-best-ai-use-case-may-not-need-a-frontier-model/">200 biopsy-proven skin lesions</a> to two frontier models and to a ten-year-old image network fine-tuned for about twenty minutes, the old network got 62% right and both frontier models got 42%. If the first slide names a model, send it back.</li>
+<li><strong>The most impressive candidate wins.</strong> The room falls for the demo of the strategy memo and ignores the reconciliation, so check column B again.</li>
+<li><strong>The model is chosen first and the task second.</strong> When dermatologist Magnus Lynch showed <a href="https://hitesh.in/2026/your-best-ai-use-case-may-not-need-a-frontier-model/">200 biopsy-proven skin lesions</a> to two frontier models and a ten-year-old image network, the old network got 62% right and both frontier models got 42%. If the first slide names a model, send it back.</li>
 <li><strong>Feasibility is taken from a public benchmark.</strong> Benchmarks exist where grading is cheap, and most of your work is not on any of them. A vendor's score tells you about the benchmark's neighborhood, and only your own cases tell you about yours.</li>
 <li><strong>Savings are budgeted before checking.</strong> A team that automates generation and forgets verification has moved the risk somewhere it cannot see, and the cost went with it.</li>
 <li><strong>The business case uses the demo's cost.</strong> One run with a cheap prompt says little about ten thousand runs with retries, long context and a reviewer. Cost it per finished unit at full volume.</li>
