@@ -5,3 +5,27 @@
 [build.environment]
   HUGO_VERSION = "0.162.0"
   NODE_VERSION = "22"
+
+# Old WordPress feed URLs still get requests from feed readers.
+[[redirects]]
+  from = "/feed/*"
+  to = "/index.xml"
+  status = 301
+
+[[redirects]]
+  from = "/rss/*"
+  to = "/index.xml"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+
+# Images, fonts and downloads rarely change; let browsers keep them.
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

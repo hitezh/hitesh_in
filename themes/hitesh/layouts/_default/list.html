@@ -25,7 +25,7 @@
             {{ end }}
             {{ with .Params.categories }}
             <div class="post-tags">
-              {{ range . }}<a href="{{ `categories/` | relURL }}{{ . | urlize | lower }}" class="tag">{{ . | humanize }}</a>{{ end }}
+              {{ range . }}<a href="{{ `categories/` | relURL }}{{ . | urlize | lower }}/" class="tag">{{ . | humanize }}</a>{{ end }}
             </div>
             {{ end }}
           </div>

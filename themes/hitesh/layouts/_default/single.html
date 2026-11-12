@@ -11,7 +11,7 @@
         </time>
         {{ with .Params.categories }}
         <div class="post-tags">
-          {{ range . }}<a href="{{ `categories/` | relURL }}{{ . | urlize | lower }}" class="tag">{{ . | humanize }}</a>{{ end }}
+          {{ range . }}<a href="{{ `categories/` | relURL }}{{ . | urlize | lower }}/" class="tag">{{ . | humanize }}</a>{{ end }}
         </div>
         {{ end }}
       </div>
@@ -28,8 +28,10 @@
     {{ with .Params.image }}
     {{ $img := . }}
     {{ $src := "" }}
+    {{ $dims := "" }}
     {{ with $.Resources.GetMatch $img }}
       {{ $src = .RelPermalink }}
+      {{ if and (eq .ResourceType "image") (ne .MediaType.SubType "svg") }}{{ $r := . }}{{ with try ($r.Width) }}{{ if not .Err }}{{ $dims = printf `width="%d" height="%d"` $r.Width $r.Height }}{{ end }}{{ end }}{{ end }}
     {{ else }}
       {{ if or (hasPrefix $img "http") (hasPrefix $img "/") }}
         {{ $src = $img | relURL }}
@@ -41,7 +43,7 @@
     <div class="post-image x-cover">{{ . | safeHTML }}</div>
     {{ else }}
     <div class="post-image">
-      <img src="{{ $src }}" alt="{{ $.Title }}" loading="lazy">
+      <img src="{{ $src }}" alt="{{ $.Title }}" {{ $dims | safeHTMLAttr }} fetchpriority="high">
     </div>
     {{ end }}
     {{ end }}
@@ -91,7 +93,7 @@
     <footer class="post-footer">
       {{ with .Params.tags }}
       <div class="post-footer-tags">
-        {{ range . }}<a href="{{ `tags/` | relURL }}{{ . | urlize | lower }}" class="tag">{{ . }}</a>{{ end }}
+        {{ range . }}<a href="{{ `tags/` | relURL }}{{ . | urlize | lower }}/" class="tag">{{ . }}</a>{{ end }}
       </div>
       {{ end }}
       {{/* Link each post to any guide that collects it (guides list posts as "YYYY/slug"). */}}

@@ -1,7 +1,7 @@
 ---
 title: "Book an AI advisory hour"
 slug: "work-with-me"
-seoTitle: "AI consulting and advisory for leadership teams in India"
+seoTitle: "AI consulting services in India: AI strategy and advisory"
 description: "Bring a problem or an idea. We'll talk through the use case, your data readiness, and the real risks, and I'll point you to the simplest pilot or MVP that can prove value."
 draft: false
 ---
@@ -15,6 +15,7 @@ I am based in Hyderabad and work with leadership teams in person across the city
 ## What I can help with
 
 - **AI advisory.** Strategy, feasibility, ROI modelling, vendor assessment and roadmaps grounded in real engineering constraints.
+- **[Agentic AI consulting](/agentic-ai-consulting/).** Where AI agents belong in your business, build or buy, permissions and a pilot that proves it.
 - **[Fractional Head of AI](/fractional-head-of-ai/).** Senior AI leadership for a few days a month, for companies not ready for a full-time hire.
 - **[AI training for leadership teams](/ai-training/).** A six-week program with hands-on workflows, governance, and a 90-day adoption roadmap.
 - **MVP development.** The smallest prototype that answers the key technical and business questions, across agents, computer vision and ML.

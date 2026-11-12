@@ -1,6 +1,6 @@
 ---
-title: "Fractional Head of AI"
-seoTitle: "Fractional Head of AI and Chief AI Officer in India"
+title: "Fractional Head of AI and Chief AI Officer"
+seoTitle: "Fractional Chief AI Officer (CAIO) and Head of AI in India"
 slug: "fractional-head-of-ai"
 description: "Senior AI leadership for a few days a month: strategy, vendor and build decisions, governance and delivery review, for companies that are not ready for a full-time hire."
 showPhoto: true
@@ -17,6 +17,10 @@ faq:
     a: "No. I am based in Hyderabad and can be on site there easily. I work remotely with companies across India and abroad, with visits when they are useful."
   - q: "How do we start?"
     a: "With an advisory hour. We talk through where you are, and you get an honest view of whether a fractional arrangement fits or whether something smaller will do."
+  - q: "What does fractional CAIO mean?"
+    a: "CAIO stands for Chief AI Officer. A fractional CAIO is the same role held part time: one experienced person owns AI strategy, governance and reporting for your company for a few days a month, usually alongside other clients. Head of AI and Chief AI Officer describe the same responsibility at different company sizes."
+  - q: "What does a fractional Chief AI Officer cost compared with a full-time hire?"
+    a: "You pay for the days you use, so the cost is a fraction of a full-time executive salary, with no notice period, equity or recruitment fee. The exact figure depends on the days per month and the scope, which we agree after the first conversation."
 draft: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "The real cost of AI: tokens, models and who pays the bill"
-seoTitle: "AI cost optimisation: why cheaper tokens still mean bigger LLM bills"
+seoTitle: "LLM cost optimization: why cheaper tokens still mean bigger AI bills"
 description: "Why AI bills keep rising as token prices fall, how caching and model choice move the cost curve, and when a smaller or local model is the better call."
 cta: "Is your AI bill growing faster than its value?"
 weight: 1

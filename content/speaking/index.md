@@ -19,7 +19,7 @@ faqFooter: "Organising something that does not fit these formats? [Write to me](
 draft: false
 ---
 
-I speak to leadership teams and technology audiences about the AI decisions they are in the middle of making. Each talk makes one argument, backs it with named companies and real numbers, and ends with what to do on Monday.
+I am an AI keynote speaker based in Hyderabad, and I speak to leadership teams and technology audiences across India about the artificial intelligence decisions they are in the middle of making. Each talk makes one argument, backs it with named companies and real numbers, and ends with what to do on Monday.
 
 The material comes from what I write here every week and from my book, [Implementing AI Agents in Your Company](/book/). You can read any of these arguments before you invite me, which is the simplest way to judge whether the talk suits your audience.
 

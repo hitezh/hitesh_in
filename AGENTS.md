@@ -429,6 +429,8 @@ The site targets two kinds of search: long-tail questions leaders ask (what AI r
 - **`seoTitle`** (optional) replaces the title only in the browser tab and search results. The visible headline, social cards and LinkedIn post keep the claim. Use it when the claim title would never match what someone types, for example `title: "Cheaper tokens, bigger bill"` with `seoTitle: "Cheaper tokens, bigger bill: why AI costs keep rising"`. Keep the claim first and the search phrase after it, in under about 60 characters.
 - **Guides.** If the post belongs to one of the topic guides under `content/guides/`, add its `"YYYY/slug"` to that guide's `posts` list. The guide lists it, and the post links back to the guide automatically.
 
+The phrase each page and guide owns is listed in [`docs/seo-keyword-map.md`](docs/seo-keyword-map.md), along with gaps worth writing for. Check it before choosing a `seoTitle`, so a new post supports a page instead of competing with it.
+
 Press coverage goes in `hugo.toml` under `params.press`, with the image in `static/images/press/`. It renders on the About and Hyderabad pages and in the structured data.
 
 ## Drafting checklist

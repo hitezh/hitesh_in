@@ -1,6 +1,6 @@
 ---
 title: "AI in retail and loyalty: when your next customer is an agent"
-seoTitle: "AI in retail and loyalty programs: agentic commerce and what retailers should do"
+seoTitle: "Agentic commerce and AI in retail and loyalty programs"
 description: "What changes for retailers and loyalty programs when AI agents start shopping for people, and which parts of the customer relationship stay worth owning."
 cta: "Working out what AI agents mean for your retail or loyalty business?"
 weight: 5
@@ -20,6 +20,9 @@ faq:
     a: "Loyalty built on app engagement weakens when software does the buying. What stays valuable is the customer relationship and data you own directly, and benefits concrete enough for an agent to weigh."
   - q: "Can AI help retail and loyalty businesses today?"
     a: "Yes, in narrower ways than the hype suggests: customer service, offer targeting and analysis of loyalty data are good places to start, provided the output is easy to check before it reaches a customer."
+
+  - q: "What is agentic commerce?"
+    a: "Agentic commerce is shopping carried out by an AI agent on a person's behalf: the agent searches, compares, chooses and pays, often inside a chat or messaging app. For a retailer it means the buyer reading your prices, policies and product data may be software."
 ---
 
 I spent years building loyalty and marketing software for retailers, and the problem has always been the same: owning the relationship with the customer when someone else sits in between. After Covid that middleman was the marketplace. Now it is starting to be an AI agent that shops on the customer's behalf.

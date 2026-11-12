@@ -1,0 +1,14 @@
+{{- /* Markdown images: lazy-load, and add width/height when the image is a
+       page-bundle resource so the page does not jump as images arrive. Some
+       old WordPress uploads are not valid images, hence the `try`. */ -}}
+{{- $src := .Destination -}}
+{{- $dims := "" -}}
+{{- with .Page.Resources.GetMatch (strings.TrimPrefix "./" .Destination) -}}
+  {{- $src = .RelPermalink -}}
+  {{- if and (eq .ResourceType "image") (ne .MediaType.SubType "svg") -}}
+    {{- $r := . -}}
+    {{- with try ($r.Width) -}}{{- if not .Err -}}{{- $dims = printf `width="%d" height="%d"` $r.Width $r.Height -}}{{- end -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+<img src="{{ $src | safeURL }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} {{ $dims | safeHTMLAttr }} loading="lazy" decoding="async">
+{{- /**/ -}}

@@ -1,6 +1,6 @@
 ---
 title: "AI advisor in Hyderabad"
-seoTitle: "AI Advisor and AI Consultant in Hyderabad"
+seoTitle: "AI Consultant and AI Advisor in Hyderabad"
 slug: "ai-advisor-hyderabad"
 description: "Strategy, executive training and small AI pilots for leadership teams in Hyderabad and across India, from someone who has built production software for 25 years."
 showPhoto: true
@@ -18,6 +18,8 @@ faq:
     a: "A fractional Head of AI gives you senior AI leadership a few days a month: setting the AI strategy, choosing vendors, reviewing what your teams build, setting up governance, and reporting progress to the leadership team, without a full-time hire."
   - q: "How do we start?"
     a: "Book an advisory hour. Bring a problem or an idea and we will talk through the use case, your data readiness and the real risks. You leave with the simplest next step, or an honest view that AI is not the answer yet."
+  - q: "Who is a good AI expert or consultant to talk to in Hyderabad?"
+    a: "It depends on what you need. If you want software built, Hyderabad has many AI development companies. If you first need to decide what is worth building or buying, talk to an independent advisor with no build team to sell. That is the work I do, after more than 25 years of building production systems myself."
 faqFooter: "[Book an AI advisory hour](/work-with-me/) or write to [hitesh@256tec.com](mailto:hitesh@256tec.com)."
 draft: false
 ---
