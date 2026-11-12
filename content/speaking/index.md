@@ -23,6 +23,12 @@ I am an AI keynote speaker based in Hyderabad, and I speak to leadership teams a
 
 The material comes from what I write here every week and from my book, [Implementing AI Agents in Your Company](/book/). You can read any of these arguments before you invite me, which is the simplest way to judge whether the talk suits your audience.
 
+## Recent talks
+
+Some of the places I have spoken recently, with summaries, slides and photos.
+
+{{< talks limit="3" >}}
+
 ## Talks I can bring to your event
 
 ### Cheaper tokens, bigger bill: what AI really costs

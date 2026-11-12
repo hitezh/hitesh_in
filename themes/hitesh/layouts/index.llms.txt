@@ -13,12 +13,17 @@
 - [Book an AI advisory hour]({{ "work-with-me/" | absURL }}): how to work with {{ site.Params.author }}.
 - [Fractional Head of AI]({{ "fractional-head-of-ai/" | absURL }}): part-time senior AI leadership, what the role covers and how an engagement works, with FAQs.
 - [Agentic AI consulting]({{ "agentic-ai-consulting/" | absURL }}): independent advice on implementing AI agents in a business, with FAQs.
-- [Speaking]({{ "speaking/" | absURL }}): keynote and workshop topics on AI costs, AI agents, coding agents, AI strategy and retail, with a short bio for organisers.
+- [Speaking]({{ "speaking/" | absURL }}): keynote and workshop topics on AI costs, AI agents, coding agents, AI strategy and retail, with a short bio for organizers.
 - [AI training for leadership teams]({{ "ai-training/" | absURL }}): a six-week program that makes a leadership team AI-native.
 {{- with site.GetPage "/book" }}
 - [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
 {{- end }}
 
+## Talks
+
+{{ range (where site.RegularPages "Section" "talks").ByDate.Reverse -}}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Params.event }}{{ with .Params.host }}, {{ . }}{{ end }}{{ with .Params.location }}, {{ . }}{{ end }}, {{ .Date.Format "2 January 2006" }}. {{ .Description }}
+{{ end }}
 ## Free resources (templates and checklists)
 
 {{ range (where site.RegularPages "Section" "resources").ByWeight -}}

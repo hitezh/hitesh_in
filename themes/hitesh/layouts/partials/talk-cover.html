@@ -1,0 +1,9 @@
+{{/* Returns the cover image resource for a talk: the `cover` param, else the
+     first image in the bundle's images/ folder (by file name), else nothing. */}}
+{{ $img := false }}
+{{ with .Params.cover }}{{ $img = $.Resources.GetMatch . }}{{ end }}
+{{ if not $img }}
+  {{ $imgs := sort (.Resources.Match "images/*") "Name" }}
+  {{ range $imgs }}{{ if and (not $img) (in (slice "image") .MediaType.MainType) }}{{ $img = . }}{{ end }}{{ end }}
+{{ end }}
+{{ return $img }}

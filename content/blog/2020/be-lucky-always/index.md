@@ -10,7 +10,7 @@ tags:
 coverImage: "LuckOpportunity.jpg"
 ---
 
-Recently, I was invited to share my experiences with my alma-mater. I chose to talk about how fresh graduates can maximize their career success.
+Recently, I was invited to share my experiences with my alma-mater ([the talk at Icfai Business School, Raipur](/talks/icfai-raipur-creating-opportunities/)). I chose to talk about how fresh graduates can maximize their career success.
 
 While several people will ascribe their success or success of others to luck; it is also silently agreed that success is much more than luck. Therefore I prefer Roman philosopher Seneca's definition of luck.
 

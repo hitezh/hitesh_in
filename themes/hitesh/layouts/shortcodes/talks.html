@@ -1,0 +1,8 @@
+{{/* Recent talks as cards: {{< talks limit="3" >}} */}}
+{{ $n := int (.Get "limit" | default 3) }}
+{{ with (where site.RegularPages "Section" "talks").ByDate.Reverse }}
+<div class="res-grid res-grid--three talk-grid talk-grid--embed">
+  {{ range first $n . }}{{ partial "talk-card.html" . }}{{ end }}
+</div>
+<p class="talk-all"><a href="/talks/">All talks and speaking engagements →</a></p>
+{{ end }}

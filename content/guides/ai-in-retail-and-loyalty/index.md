@@ -30,4 +30,6 @@ I spent years building loyalty and marketing software for retailers, and the pro
 
 That changes what a retailer has to be good at. An agent does not respond to a well-designed app screen. It reads data, compares prices and policies, and picks. The posts here look at what that means for retailers, for payments and marketplaces, and for loyalty programs, plus one older post on the multi-channel loyalty problem that started this line of thinking.
 
+I made a version of this argument at the [Visakhapatnam Retail Summit 2025](/talks/visakhapatnam-retail-summit-2025/), with a 90-day plan for store teams.
+
 If you run a retail or loyalty business in India and want to work through what this means for yours, [that is the kind of problem I advise on](/ai-advisor-hyderabad/).

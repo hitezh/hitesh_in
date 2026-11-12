@@ -1,0 +1,22 @@
+{{/* A talk as a card: photo (or a typographic placeholder), date and format,
+     title, event and place. */}}
+{{ $cover := partial "talk-cover.html" . }}
+{{ $where := delimit (complement (slice "" nil) (slice .Params.event .Params.host .Params.location)) ", " }}
+<a class="talk-card" href="{{ .RelPermalink }}">
+  <span class="talk-card-media">
+    {{ with $cover }}
+      {{ $t := .Fill "720x450 Center webp q78" }}
+      <img src="{{ $t.RelPermalink }}" alt="" width="{{ $t.Width }}" height="{{ $t.Height }}" loading="lazy" decoding="async">
+    {{ else }}
+      <span class="talk-card-ph" aria-hidden="true">
+        <span class="talk-card-ph-event">{{ .Params.label | default .Params.event | default .Params.host }}</span>
+        <span class="talk-card-ph-year">{{ .Date.Format "2006" }}</span>
+      </span>
+    {{ end }}
+  </span>
+  <span class="res-card-body">
+    <span class="res-card-meta">{{ .Date.Format "2 Jan 2006" }}{{ with .Params.format }} &middot; {{ . }}{{ end }}</span>
+    <span class="res-card-title">{{ .Params.shortTitle | default .Title }}</span>
+    {{ with $where }}<span class="res-card-desc">{{ . }}</span>{{ end }}
+  </span>
+</a>

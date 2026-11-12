@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="list-page">
+  <div class="container">
+    <header class="page-header">
+      <h1 class="page-title">{{ .Title }}</h1>
+      {{ with .Params.description }}<p class="page-description">{{ . }}</p>{{ end }}
+    </header>
+    {{ with .Content }}<div class="post-body res-intro">{{ . }}</div>{{ end }}
+    <div class="res-grid res-grid--three talk-grid">
+      {{ range .Pages.ByDate.Reverse }}{{ partial "talk-card.html" . }}{{ end }}
+    </div>
+    <div class="talk-invite">
+      <p><strong>Planning an event?</strong> I speak on AI strategy, AI agents, what AI really costs, and AI in retail and loyalty.</p>
+      <a href="/speaking/#invite-me-to-speak" class="btn-primary">Invite me to speak</a>
+    </div>
+  </div>
+</div>
+{{ end }}

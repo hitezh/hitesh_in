@@ -40,7 +40,7 @@ Most of my work is helping a leadership team settle one AI decision at a time. I
 - [AI advisory](/work-with-me/), starting with a single advisory hour.
 - [Fractional Head of AI](/fractional-head-of-ai/), for companies that need senior AI judgment a few days a month.
 - [AI training for leadership teams](/ai-training/), a six-week program built around the team's own work.
-- [Speaking](/speaking/), at leadership offsites, industry events and engineering organizations.
+- [Speaking](/speaking/), at leadership offsites, industry events and engineering organizations. Recent [talks](/talks/) include AWS ISV Ignite, IIM Udaipur and the Visakhapatnam Retail Summit.
 
 My deepest experience is in banking, retail and loyalty. I am based in Hyderabad and work in person there, and remotely with teams across India and abroad. There is more on that on the [AI advisor in Hyderabad](/ai-advisor-hyderabad/) page.
 
