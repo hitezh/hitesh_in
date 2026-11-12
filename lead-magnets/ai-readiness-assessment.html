@@ -7,7 +7,7 @@
 <section>
 <h2>How this assessment works</h2>
 <p>Most readiness assessments grade your company in general: infrastructure, "data maturity", talent. You can score well on all of that and still fund a project that stalls after the demo. I find it more useful to assess one use case at a time, because readiness belongs to the task. The same company can be ready to let AI match invoices and nowhere near ready to let it reply to customers.</p>
-<p>So this worksheet asks 25 questions about a single use case, in five areas: the business case, how cheaply the output can be checked, data and systems, people and ownership, and governance and risk. The second area carries the most weight in my own advice. Producing an answer is now cheap. Deciding whether the answer is right is the expensive part, and it decides where AI pays off.</p>
+<p>So this worksheet asks 25 questions about a single use case, in five areas: the business case, how cheaply the output can be checked, data and systems, people and ownership, and governance and risk. The second area carries the most weight in my own advice, because producing an answer is now cheap and deciding whether the answer is right is the expensive part. When Anthropic reported that its Claude Mythos Preview system had found a new weakness in HAWK, a post-quantum signature scheme, and a faster attack on a reduced version of AES, the AES run had taken roughly a week and about $100,000 in compute. <a href="https://hitesh.in/2026/point-ai-where-checking-is-cheap/">Human cryptographers then spent close to a month confirming the result was real</a>.</p>
 <p class="how">Pick one use case. Fill in the block below. Then score each question 0, 1 or 2 using the descriptions in the table, add up each area, and carry the five totals to the scoring sheet. It takes about 40 minutes, and it works best with the business owner, an engineer and a finance person in the same room.</p>
 <div class="note"><strong>Score what is true today.</strong> Give a 2 only if you could show the evidence to someone outside the project this week. A plan to do it next quarter scores 0. If two people in the room disagree on a score, write down the lower one.</div>
 
@@ -38,7 +38,7 @@
 </tbody>
 </table>
 <p class="fill"><span>Area 1 total (out of 10)</span></p>
-<p>On 1.4: a surprising amount of "we need AI here" turns out to be a workflow problem an existing tool already handles. On 1.5: price per token misleads, because a cheaper model that takes more steps can cost more per task. Count the finished unit.</p>
+<p>On 1.4: a surprising amount of "we need AI here" turns out to be a workflow problem an existing tool already handles. On 1.5: price per token misleads, because a cheaper model that takes more steps can cost more per task. When Databricks graded coding agents on more than a hundred of its own merged pull requests, <a href="https://hitesh.in/2026/your-backlog-is-the-benchmark/">Sonnet 5 was cheaper per token than Opus and yet cost more per task</a>, which is why I would count the finished unit.</p>
 </section>
 
 <section class="page-break">
@@ -57,13 +57,13 @@
 </tbody>
 </table>
 <p class="fill"><span>Area 2 total (out of 10)</span></p>
-<p>On 2.4: your best people are the worst judges of a pilot. They correct the model in one line and route around the dead ends without registering it, so the result measures them. On 2.5: a model that escalates nearly everything scores well on anything that sounds like safety and removes none of the work you bought it to remove.</p>
+<p>On 2.4: your best people are the worst judges of a pilot. They correct the model in one line and route around the dead ends without registering it, so the result measures them. On 2.5: a model that escalates nearly everything scores well on anything that sounds like safety and removes none of the work you bought it to remove. When the dermatologist Magnus Lynch showed 200 biopsy-proven skin lesions to GPT-6 and Claude, <a href="https://hitesh.in/2026/your-best-ai-use-case-may-not-need-a-frontier-model/">they kept 97 and 96 of the 100 dangerous lesions but discharged only 32 and 22 of the 100 harmless ones</a>, so people were told to see a doctor for nearly every lesion.</p>
 <div class="note"><strong>A better model raises the checking bill.</strong> A weak model produces obvious garbage, which is cheap to reject. A strong one produces output that is plausible and wrong in ways that look right, and that needs full scrutiny. Do not plan for checking time to shrink as models improve.</div>
 </section>
 
 <section class="page-break">
 <h2>Area 3: Data and systems</h2>
-<p>This area is deliberately narrow. I am asking whether this task has what it needs, and whether you are adding more new machinery than the project can carry. An AI component fails in ways you cannot fully list in advance, so everything around it should be as dull and well understood as you can make it.</p>
+<p>This area is deliberately narrow. I am asking whether this task has what it needs, and whether you are adding more new machinery than the project can carry. Dan McKinley's 2015 essay Choose Boring Technology gives a company roughly three innovation tokens to spend, and <a href="https://hitesh.in/2026/boring-technology-is-an-ai-strategy/">an AI component holds one of them permanently</a>, because it fails in ways you cannot fully list in advance. Everything around it should be as dull and well understood as you can make it.</p>
 <table class="wide">
 <thead>
 <tr><th>#</th><th>Question</th><th>Score 0</th><th>Score 1</th><th>Score 2</th><th class="score">Score</th></tr>
@@ -96,13 +96,13 @@
 </tbody>
 </table>
 <p class="fill"><span>Area 4 total (out of 10)</span></p>
-<p>On 4.2: the engineer who picks the model owns the failure if the cheap one gives a worse answer, and somebody in another department owns the invoice if the expensive one costs ten times more. Choosing the most capable model every time is the rational move in that setup. Telling people to be efficient does not fix it. Showing each team its own number does.</p>
-<p>On 4.3: if the reviewer is a senior person fixing the model's mistakes, you have bought a power tool for experts. That is a fine thing to buy. Price it and staff it as one, and take the labor saving out of the business case.</p>
+<p>On 4.2: the engineer who picks the model owns the failure if the cheap one gives a worse answer, and somebody in another department owns the invoice if the expensive one costs ten times more. Choosing the most capable model every time is the rational move in that setup, and the spend grows until finance reaches for a cap. Microsoft had projected at least $1 billion of internal spending on Anthropic for 2026, and <a href="https://hitesh.in/2026/who-sees-the-ai-bill/">according to The Information's reporting that estimate has since been cut by more than a third</a>, while internal Claude Code users at Meta reportedly fell from about 60,000 to about 30,000 (neither company confirmed the numbers). Asking people to be efficient will not prevent that. What helps is showing each team its own spend every week, where the model gets chosen.</p>
+<p>On 4.3: if the reviewer is a senior person fixing the model's mistakes, you have bought a power tool for experts. That is a fine thing to buy, as long as you price and staff it as one and take the labor saving out of the business case.</p>
 </section>
 
 <section class="page-break">
 <h2>Area 5: Governance and risk</h2>
-<p>How much the AI may do on its own depends on the task. Two properties decide it: how cheaply you can check the work, and how easily you can undo it. Drafting, summarizing, classifying, or staging a change a person approves can run with a lot of freedom. Moving money, messaging customers and touching production cannot.</p>
+<p>How much the AI may do on its own depends on the task. Two properties decide it: how cheaply you can check the work, and how easily you can undo it. Drafting, summarizing, classifying, or staging a change a person approves can run with a lot of freedom. Moving money, messaging customers and touching production cannot. Spending more on compute does not change those two properties. Meta still plans to spend around $145 billion on AI infrastructure in 2026, and Mark Zuckerberg has told staff that agentic AI development <a href="https://hitesh.in/2026/the-autonomy-budget/">"hasn't really accelerated in the way that we expected"</a>.</p>
 <table class="wide">
 <thead>
 <tr><th>#</th><th>Question</th><th>Score 0</th><th>Score 1</th><th>Score 2</th><th class="score">Score</th></tr>
@@ -116,7 +116,7 @@
 </tbody>
 </table>
 <p class="fill"><span>Area 5 total (out of 10)</span></p>
-<div class="note"><strong>Count the steps.</strong> Small error rates multiply. At 90% reliability per step, a five-step task finishes correctly about 59% of the time, and a ten-step task about 35%. The demo was one run. Production is the same chain thousands of times, so put the human checkpoint where the arithmetic says it belongs.</div>
+<div class="note"><strong>Count the steps.</strong> Small error rates multiply. At 90% reliability per step, a five-step task finishes correctly about 59% of the time, and a ten-step task about 35%. The demo was one run, while production is the same chain thousands of times, so put the human checkpoint where the arithmetic says it belongs.</div>
 </section>
 
 <section class="page-break">
