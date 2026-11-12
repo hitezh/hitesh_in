@@ -19,6 +19,11 @@
 - [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
 {{- end }}
 
+## Free resources (templates and checklists)
+
+{{ range (where site.RegularPages "Section" "resources").ByWeight -}}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{ end }}
 ## Guides
 
 {{ range (where site.RegularPages "Section" "guides").ByWeight -}}

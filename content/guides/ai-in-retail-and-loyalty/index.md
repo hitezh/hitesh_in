@@ -3,6 +3,7 @@ title: "AI in retail and loyalty: when your next customer is an agent"
 seoTitle: "Agentic commerce and AI in retail and loyalty programs"
 description: "What changes for retailers and loyalty programs when AI agents start shopping for people, and which parts of the customer relationship stay worth owning."
 cta: "Working out what AI agents mean for your retail or loyalty business?"
+resource: "ai-readiness-assessment"
 weight: 5
 schemaType: "CollectionPage"
 posts:

@@ -26,4 +26,4 @@ resources/_gen/images/blog/2021/looking-back-looking-forward/images/_hu75b76592e
 .hugo_build.lock
 
 public/
-resources/
+/resources/

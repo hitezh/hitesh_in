@@ -71,13 +71,15 @@
          guide the post belongs to (guide front matter `cta`), when it has one. */}}
     {{ $ctaKey := printf "%s/%s" (.Date.Format "2006") (path.Base .File.Dir) }}
     {{ $ctaHead := "Working through this at your company?" }}
-    {{ range where site.RegularPages "Section" "guides" }}{{ if and (in .Params.posts $ctaKey) .Params.cta }}{{ $ctaHead = .Params.cta }}{{ end }}{{ end }}
+    {{ $ctaRes := "" }}
+    {{ range where site.RegularPages "Section" "guides" }}{{ if in .Params.posts $ctaKey }}{{ with .Params.cta }}{{ $ctaHead = . }}{{ end }}{{ with .Params.resource }}{{ $ctaRes = . }}{{ end }}{{ end }}{{ end }}
     <aside class="post-cta" aria-label="Work with me">
       <h2 class="post-cta-title">{{ $ctaHead }}</h2>
-      <p>I help leadership teams decide what AI to build, buy or skip. Bring the problem to an advisory hour, or start with my free book on putting AI agents to work.</p>
+      <p>I help leadership teams decide what AI to build, buy or skip. Bring the problem to an advisory hour, or start with one of my free working documents.</p>
       <div class="hero-cta">
         <a href="/work-with-me/" class="btn-primary">Book an AI advisory hour</a>
-        <a href="/book/" class="btn-secondary">Get the free book</a>
+        {{ $res := false }}{{ if $ctaRes }}{{ $res = site.GetPage (printf "/resources/%s" $ctaRes) }}{{ end }}
+        {{ with $res }}<a href="{{ .RelPermalink }}" class="btn-secondary">Get the free {{ .Params.short }}</a>{{ else }}<a href="/book/" class="btn-secondary">Get the free book</a>{{ end }}
       </div>
     </aside>
 

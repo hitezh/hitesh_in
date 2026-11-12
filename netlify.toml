@@ -29,3 +29,10 @@
   for = "/images/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# Keep the downloadable PDFs out of search results, so people reach them
+# through their landing pages (and the form) instead of a direct link.
+[[headers]]
+  for = "/downloads/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"

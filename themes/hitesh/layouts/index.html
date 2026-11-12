@@ -99,6 +99,26 @@
 </section>
 {{ end }}
 
+{{ with (where site.RegularPages "Section" "resources").ByWeight }}
+<section class="recent-writing home-guides home-resources">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-label">Free templates and checklists</h2>
+      <a href="/resources/" class="section-more">All resources →</a>
+    </div>
+    <div class="services-grid services-grid--four">
+      {{ range . }}
+      <a class="service-card" href="{{ .RelPermalink }}">
+        <h3 class="service-title">{{ .Title }}</h3>
+        <p class="service-desc">{{ .Description }}</p>
+        <span class="service-link">Get the {{ .Params.format | default "PDF" }} →</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
 <section class="recent-writing">
   <div class="container">
     <div class="section-header">

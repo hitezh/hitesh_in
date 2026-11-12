@@ -1,0 +1,72 @@
+{{ define "main" }}
+{{/* A downloadable resource (lead magnet). The form records the lead with
+     Netlify (form name "resource-download", with the resource slug in a hidden
+     field) and then starts the download, like the book page. */}}
+{{ $dl := .Params.download | relURL }}
+<article class="post">
+  <div class="container">
+    <header class="post-header">
+      <div class="post-meta-top"><a href="/resources/" class="post-byline">Free resources</a></div>
+      <h1 class="post-title-large">{{ .Title }}</h1>
+      {{ with .Params.description }}<p class="post-subtitle">{{ . }}</p>{{ end }}
+    </header>
+
+    <div class="post-body">
+      {{ .Content }}
+
+      <section class="resource-get" id="get">
+        <h2>Get the {{ .Params.format | default "PDF" }}</h2>
+        <p>Tell me where to send it and the download starts as soon as you submit. It is free.</p>
+        <form name="resource-download" id="resource-download-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="{{ $dl }}" data-file="{{ $dl }}" class="cta-form">
+          <input type="hidden" name="form-name" value="resource-download">
+          <input type="hidden" name="resource" value="{{ .File.ContentBaseName }}">
+          <p class="cta-hp"><label>Do not fill this out if you are human: <input name="bot-field"></label></p>
+          <div class="cta-field"><label for="rd-name">Name</label><input id="rd-name" type="text" name="name" autocomplete="name" required></div>
+          <div class="cta-field"><label for="rd-email">Work email</label><input id="rd-email" type="email" name="email" autocomplete="email" required></div>
+          <div class="cta-field"><label for="rd-company">Company <span>(optional)</span></label><input id="rd-company" type="text" name="company" autocomplete="organization"></div>
+          <button type="submit" class="btn-primary cta-submit">Download the {{ .Params.format | default "PDF" }}</button>
+        </form>
+        <p class="resource-fine" id="resource-done" hidden>Your download has started. If it did not, <a href="{{ $dl }}">open the {{ .Params.format | default "PDF" }} here</a>.</p>
+        <p class="resource-fine">No spam. I send the occasional note about new writing, and you can unsubscribe anytime.</p>
+      </section>
+
+      {{ if not (.HasShortcode "faq") }}{{ with .Params.faq }}
+      <h2>Common questions</h2>
+      {{ range . }}
+      <h3>{{ .q }}</h3>
+      {{ .a | markdownify | safeHTML }}
+      {{ end }}
+      {{ end }}{{ end }}
+
+      <p><a href="/resources/">All free resources</a> &middot; <a href="/work-with-me/">Book an AI advisory hour</a></p>
+    </div>
+  </div>
+</article>
+
+<script>
+(function () {
+  var form = document.getElementById('resource-download-form');
+  if (!form) return;
+  var file = form.getAttribute('data-file');
+  form.addEventListener('submit', function (e) {
+    // Record the lead with Netlify, then start the download. The download
+    // still happens if the form post fails, so a hiccup never blocks a reader.
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    if (btn) { btn.disabled = true; btn.setAttribute('aria-busy', 'true'); }
+    var go = function () {
+      var done = document.getElementById('resource-done');
+      if (done) done.hidden = false;
+      window.location.href = file;
+    };
+    try {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      }).then(go, go);
+    } catch (err) { go(); }
+  });
+})();
+</script>
+{{ end }}
