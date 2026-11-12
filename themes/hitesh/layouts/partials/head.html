@@ -66,6 +66,7 @@
     {{ end }}
   {{ end }}
 {{ end }}
+{{ if and (not $ogimg) (eq .Section "talks") .IsPage }}{{ with partial "talk-cover.html" . }}{{ $ogimg = .Permalink }}{{ end }}{{ end }}
 {{ if not $ogimg }}{{ $ogimg = "images/default.jpg" | absURL }}{{ end }}
 
 <meta property="og:site_name" content="{{ .Site.Title }}">

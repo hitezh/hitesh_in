@@ -66,7 +66,7 @@ India built its first technology industry on implementation. AI gives it a secon
 
 A short bio you can use as it is:
 
-> Dr. Hitesh Sarda is an AI advisor based in Hyderabad and the founder of 256 Technologies, an applied AI lab. He has spent more than 25 years building production software, including work at Citi, Virtusa, Yash and ValueLabs, and now helps leadership teams decide what AI to build, buy or skip. He is the author of Implementing AI Agents in Your Company and has written at hitesh.in since 2009.
+> Dr. Hitesh Sarda is an AI advisor based in Hyderabad and the founder of 256 Technologies, an applied AI lab. He has spent more than 25 years building production software, including work at Citi, Virtusa, Yash and ValueLabs, and now helps leadership teams decide what AI to build, buy or skip. He holds a Doctor of Business Administration from IIBM Institute and SIMA Switzerland, with a dissertation on how SaaS companies price AI features. He is the author of Implementing AI Agents in Your Company and has written at hitesh.in since 2009.
 
 A [high-resolution photo](/images/hitesh-sarda.jpg) is available, and my [About page](/about/) has the longer story.
 

@@ -51,6 +51,7 @@
   "sameAs" $sameAs
 }}
 {{ with $press }}{{ $person = merge $person (dict "subjectOf" .) }}{{ end }}
+{{ $person = merge $person (dict "hasCredential" (dict "@type" "EducationalOccupationalCredential" "credentialCategory" "degree" "name" "Doctor of Business Administration" "recognizedBy" (dict "@type" "EducationalOrganization" "name" "IIBM Institute and SIMA Switzerland"))) }}
 {{ with $p.photo }}{{ $person = merge $person (dict "image" (absURL .)) }}{{ end }}
 
 {{ $orgSameAs := slice }}
@@ -133,6 +134,23 @@
   {{ with .Params.host }}{{ $ev = merge $ev (dict "organizer" (dict "@type" "Organization" "name" .)) }}{{ end }}
   {{ with partial "talk-cover.html" . }}{{ $ev = merge $ev (dict "image" .Permalink) }}{{ end }}
   {{ $graph = $graph | append $ev }}
+{{ else if and (eq .Section "research") (eq .Kind "page") }}
+  {{ $th := dict
+    "@type" "Thesis"
+    "@id" (printf "%s#thesis" .Permalink)
+    "url" .Permalink
+    "name" .Title
+    "headline" .Title
+    "description" $desc
+    "author" (dict "@id" $personID)
+    "datePublished" (.Date.Format "2006-01")
+    "inLanguage" "en"
+  }}
+  {{ with .Params.degree }}{{ $th = merge $th (dict "inSupportOf" .) }}{{ end }}
+  {{ with .Params.institution }}{{ $th = merge $th (dict "sourceOrganization" (dict "@type" "EducationalOrganization" "name" .)) }}{{ end }}
+  {{ with .Params.download }}{{ with $.Resources.GetMatch . }}{{ $th = merge $th (dict "encoding" (dict "@type" "MediaObject" "contentUrl" .Permalink "encodingFormat" "application/pdf")) }}{{ end }}{{ end }}
+  {{ with .Params.image }}{{ with $.Resources.GetMatch . }}{{ $th = merge $th (dict "image" .Permalink) }}{{ end }}{{ end }}
+  {{ $graph = $graph | append $th }}
 {{ else if and (not .IsHome) (eq .Kind "page") }}
   {{ $graph = $graph | append (dict
     "@type" (.Params.schemaType | default "WebPage")
@@ -149,7 +167,7 @@
 {{/* Breadcrumbs: Home > section (Blog or Guides) > page. */}}
 {{ if not .IsHome }}
   {{ $crumbs := slice (dict "@type" "ListItem" "position" 1 "name" "Home" "item" $base) }}
-  {{ if and .IsPage (in (slice "blog" "guides" "talks" "resources") .Section) }}
+  {{ if and .IsPage (in (slice "blog" "guides" "talks" "resources" "research") .Section) }}
     {{ with site.GetPage (printf "/%s" .Section) }}
       {{ $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 2 "name" .Title "item" .Permalink) }}
     {{ end }}

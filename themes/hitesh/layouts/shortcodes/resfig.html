@@ -1,0 +1,6 @@
+{{/* A figure from the page bundle: {{< resfig src="figures/x.jpg" caption="..." >}} */}}
+{{ with .Page.Resources.GetMatch (.Get "src") }}
+{{ $w := .Resize "1200x webp q82" }}
+<figure class="talk-figure"><img src="{{ $w.RelPermalink }}" alt="{{ $.Get "alt" | default ($.Get "caption") }}" width="{{ $w.Width }}" height="{{ $w.Height }}" loading="lazy" decoding="async"></figure>
+{{ with $.Get "caption" }}<p class="talk-figure-cap">{{ . }}</p>{{ end }}
+{{ end }}

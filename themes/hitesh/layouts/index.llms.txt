@@ -19,6 +19,11 @@
 - [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
 {{- end }}
 
+## Research
+
+{{ range (where site.RegularPages "Section" "research").ByDate.Reverse -}}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Params.pubType }}, {{ .Params.institution }}, {{ .Params.completed }}. {{ .Description }}
+{{ end }}
 ## Talks
 
 {{ range (where site.RegularPages "Section" "talks").ByDate.Reverse -}}

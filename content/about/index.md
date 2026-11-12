@@ -42,6 +42,8 @@ Most of my work is helping a leadership team settle one AI decision at a time. I
 - [AI training for leadership teams](/ai-training/), a six-week program built around the team's own work.
 - [Speaking](/speaking/), at leadership offsites, industry events and engineering organizations. Recent [talks](/talks/) include AWS ISV Ignite, IIM Udaipur and the Visakhapatnam Retail Summit.
 
+In 2026 I completed a Doctor of Business Administration at IIBM Institute and SIMA Switzerland. [My dissertation](/research/monetizing-ai-in-saas/) studied how 371 B2B SaaS companies price and package AI features, which is the question behind much of my advice on what AI really costs.
+
 My deepest experience is in banking, retail and loyalty. I am based in Hyderabad and work in person there, and remotely with teams across India and abroad. There is more on that on the [AI advisor in Hyderabad](/ai-advisor-hyderabad/) page.
 
 ## What I believe
