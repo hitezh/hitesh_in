@@ -10,12 +10,12 @@ faq:
   - q: "Who are the talks for?"
     a: "Founders, CXOs, boards and leadership teams who need a clear view without the hype, and CTOs and engineering leaders who want the technical argument made properly. I adjust the depth to the room."
   - q: "Do you tailor a talk to our industry or company?"
-    a: "Yes. Every talk is built around one argument and the evidence for it, and I rework the examples for your industry. For an internal session I prefer a short call with the organiser first, so the talk deals with the decision your team is facing."
+    a: "Yes. Every talk is built around one argument and the evidence for it, and I rework the examples for your industry. For an internal session I prefer a short call with the organizer first, so the talk deals with the decision your team is facing."
   - q: "Do you travel, and do you speak online?"
     a: "I am based in Hyderabad and speak in person across India, and abroad when the event justifies the travel. Online keynotes and workshops are fine too."
   - q: "How do we book you?"
     a: "Use the form on this page with the event date, audience and format. I reply personally, usually within a couple of working days."
-faqFooter: "Organising something that does not fit these formats? [Write to me](mailto:hitesh@256tec.com) and we can work it out."
+faqFooter: "Organizing something that does not fit these formats? [Write to me](mailto:hitesh@256tec.com) and we can work it out."
 draft: false
 ---
 
@@ -35,7 +35,7 @@ How much autonomy an AI agent should get, how to limit what it can touch, and ho
 
 ### Writing code got free. Reviewing it is the job now.
 
-What changes in an engineering organisation when AI writes most of the code: review becomes the bottleneck, technical debt costs more, and someone has to decide what the agent prefers. For CTOs and engineering leaders. Background reading: the [guide to leading teams that code with AI](/guides/ai-coding-agents/).
+What changes in an engineering organization when AI writes most of the code: review becomes the bottleneck, technical debt costs more, and someone has to decide what the agent prefers. For CTOs and engineering leaders. Background reading: the [guide to leading teams that code with AI](/guides/ai-coding-agents/).
 
 ### Your model was never your moat
 
@@ -54,9 +54,9 @@ India built its first technology industry on implementation. AI gives it a secon
 - Keynote, 30 to 45 minutes, with time for questions.
 - Leadership workshop, a half day or full day, where the team works on its own AI decisions. The longer version is my [AI training for leadership teams](/ai-training/).
 - Fireside chat or panel.
-- Internal session for an engineering or product organisation.
+- Internal session for an engineering or product organization.
 
-## For organisers
+## For organizers
 
 A short bio you can use as it is:
 
@@ -68,6 +68,6 @@ A [high-resolution photo](/images/hitesh-sarda.jpg) is available, and my [About 
 
 ## Invite me to speak
 
-<form name="speaking-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/" class="cta-form"><input type="hidden" name="form-name" value="speaking-enquiry"><p class="cta-hp"><label>Do not fill this out if you are human: <input name="bot-field"></label></p><div class="cta-field"><label for="sp-name">Name</label><input id="sp-name" type="text" name="name" autocomplete="name" required></div><div class="cta-field"><label for="sp-email">Work email</label><input id="sp-email" type="email" name="email" autocomplete="email" required></div><div class="cta-field"><label for="sp-org">Organisation and event</label><input id="sp-org" type="text" name="organisation" required></div><div class="cta-field"><label for="sp-date">Date and city <span>(or online)</span></label><input id="sp-date" type="text" name="date_and_place"></div><div class="cta-field"><label for="sp-format">Format</label><select id="sp-format" name="format"><option>Keynote</option><option>Leadership workshop</option><option>Fireside chat or panel</option><option>Internal session</option><option>Not sure yet</option></select></div><div class="cta-field"><label for="sp-message">Who is the audience, and what should they leave with?</label><textarea id="sp-message" name="message" rows="5" required></textarea></div><button type="submit" class="btn-primary cta-submit">Send the invitation</button></form>
+<form name="speaking-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/" class="cta-form"><input type="hidden" name="form-name" value="speaking-enquiry"><p class="cta-hp"><label>Do not fill this out if you are human: <input name="bot-field"></label></p><div class="cta-field"><label for="sp-name">Name</label><input id="sp-name" type="text" name="name" autocomplete="name" required></div><div class="cta-field"><label for="sp-email">Work email</label><input id="sp-email" type="email" name="email" autocomplete="email" required></div><div class="cta-field"><label for="sp-org">Organization and event</label><input id="sp-org" type="text" name="organization" required></div><div class="cta-field"><label for="sp-date">Date and city <span>(or online)</span></label><input id="sp-date" type="text" name="date_and_place"></div><div class="cta-field"><label for="sp-format">Format</label><select id="sp-format" name="format"><option>Keynote</option><option>Leadership workshop</option><option>Fireside chat or panel</option><option>Internal session</option><option>Not sure yet</option></select></div><div class="cta-field"><label for="sp-message">Who is the audience, and what should they leave with?</label><textarea id="sp-message" name="message" rows="5" required></textarea></div><button type="submit" class="btn-primary cta-submit">Send the invitation</button></form>
 
 Prefer email? Reach me at [hitesh@256tec.com](mailto:hitesh@256tec.com) or on [LinkedIn](https://linkedin.com/in/hiteshs).

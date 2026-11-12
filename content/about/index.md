@@ -40,7 +40,7 @@ Most of my work is helping a leadership team settle one AI decision at a time. I
 - [AI advisory](/work-with-me/), starting with a single advisory hour.
 - [Fractional Head of AI](/fractional-head-of-ai/), for companies that need senior AI judgment a few days a month.
 - [AI training for leadership teams](/ai-training/), a six-week program built around the team's own work.
-- [Speaking](/speaking/), at leadership offsites, industry events and engineering organisations.
+- [Speaking](/speaking/), at leadership offsites, industry events and engineering organizations.
 
 My deepest experience is in banking, retail and loyalty. I am based in Hyderabad and work in person there, and remotely with teams across India and abroad. There is more on that on the [AI advisor in Hyderabad](/ai-advisor-hyderabad/) page.
 
@@ -48,7 +48,7 @@ My deepest experience is in banking, retail and loyalty. I am based in Hyderabad
 
 A few ideas run through everything I write and every engagement:
 
-- AI adoption is mostly an organisational problem, and the technology is the easier half.
+- AI adoption is mostly an organizational problem, and the technology is the easier half.
 - Most companies should buy before they build.
 - An AI pilot exists to reduce uncertainty about the business, so design it to tell you the truth.
 - The model is a commodity. Your data, your workflow and how fast your company learns are where the advantage is.

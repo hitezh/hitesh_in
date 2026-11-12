@@ -9,7 +9,7 @@ short: "AI readiness assessment"
 weight: 1
 faq:
   - q: "What is an AI readiness assessment?"
-    a: "A structured set of questions that shows whether your organisation is prepared to get value from AI. This one assesses readiness for a single use case you have in mind, because a company is rarely ready or unready for AI in general."
+    a: "A structured set of questions that shows whether your organization is prepared to get value from AI. This one assesses readiness for a single use case you have in mind, because a company is rarely ready or unready for AI in general."
   - q: "Who should fill it in?"
     a: "The person who would own the outcome, together with whoever owns the data and the budget. It takes about an hour, and the disagreements between those people are usually the most useful result."
   - q: "Is it really free?"

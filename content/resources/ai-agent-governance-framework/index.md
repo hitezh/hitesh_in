@@ -18,7 +18,7 @@ faq:
 
 Most AI governance documents are policy essays. This is a template: tables and checklists you fill in, short enough to adopt in a week and specific enough to argue with.
 
-It is organised around four ideas I keep returning to. Limit an agent by what it can damage. Match its autonomy to how cheap a mistake is to catch and undo. Give it an owner, a scope and a review, as you would a new hire. And be able to say afterwards what it did.
+It is organized around four ideas I keep returning to. Limit an agent by what it can damage. Match its autonomy to how cheap a mistake is to catch and undo. Give it an owner, a scope and a review, as you would a new hire. And be able to say afterwards what it did.
 
 ## What is inside
 

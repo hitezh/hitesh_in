@@ -30,7 +30,7 @@ A full-time Head of AI is the obvious answer and often the wrong first step. The
 
 ## What I take responsibility for
 
-- **A short list of AI bets worth making.** Which use cases have a business case, which are theatre, and in what order to try them.
+- **A short list of AI bets worth making.** Which use cases have a business case, which are theater, and in what order to try them.
 - **Build, buy or wait.** Vendor and model selection with the trade-offs written down, including what it will cost at production volume.
 - **Pilots that tell the truth.** Each one designed with a baseline and a named owner, so the result is evidence and not a demo.
 - **Governance your teams can live with.** What agents and coding tools may touch, who approves what, and how you would know afterwards what happened.

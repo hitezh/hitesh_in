@@ -30,7 +30,7 @@ I have spent 25+ years building production systems, including work at Citi, Virt
 
 ## How I help
 
-**AI advisory and fractional Head of AI.** Strategy, feasibility, ROI modelling, vendor assessment and roadmaps grounded in real engineering constraints. For companies without a senior AI leader, I can play that role part time as a [fractional Head of AI](/fractional-head-of-ai/).
+**AI advisory and fractional Head of AI.** Strategy, feasibility, ROI modeling, vendor assessment and roadmaps grounded in real engineering constraints. For companies without a senior AI leader, I can play that role part time as a [fractional Head of AI](/fractional-head-of-ai/).
 
 **AI training for leadership teams.** A [six-week executive program](/ai-training/) that has your leaders using AI on their own real work, with a governance framework and a 90-day adoption roadmap at the end. In person in Hyderabad, or remote.
 
