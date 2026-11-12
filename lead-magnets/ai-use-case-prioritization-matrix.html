@@ -6,8 +6,8 @@
 
 <section>
 <h2>Why this matrix has more than two axes</h2>
-<p>The usual matrix plots value against feasibility. It is a fine start, and it sends most teams to the wrong first project, because "feasible" gets judged from a demo. A demo shows that a model can produce the output once, with an expert steering. It tells you nothing about what it costs to trust that output ten thousand times.</p>
-<p>Producing a candidate answer is now something you rent by the token. Deciding whether the answer is right is the constraint, and that part you have to build yourself. So this matrix keeps value and adds the criteria I find decide whether an AI project pays off:</p>
+<p>The usual matrix plots value against feasibility. That is a fine start, and it still sends most teams to the wrong first project, because "feasible" gets judged from a demo, and a demo only shows that a model can produce the output once with an expert steering. It tells you nothing about what it costs to trust that output ten thousand times.</p>
+<p>Producing a candidate answer is now something you rent by the token, while deciding whether the answer is right is the constraint, and that part you have to build yourself. When Anthropic's agentic system found a faster attack on a reduced version of AES, the run took roughly a week and about $100,000 in compute, and then human cryptographers spent <a href="https://hitesh.in/2026/point-ai-where-checking-is-cheap/">close to a month confirming the result was real</a>. So this matrix keeps value and adds the criteria I find decide whether an AI project pays off:</p>
 <ul>
 <li>how cheap the output is to check</li>
 <li>what a wrong answer costs, and whether you can undo it</li>
@@ -16,19 +16,20 @@
 <li>who owns the outcome</li>
 <li>what it costs at production volume, with the checking included</li>
 </ul>
-<p>Score tasks, never job titles. A role is a bundle of tasks that score very differently, and the org chart will mislead you. You will find automation candidates inside senior roles and stubbornly human work inside junior ones.</p>
+<p>Score tasks rather than job titles, because a role is a bundle of tasks that score very differently and the org chart will mislead you about which ones are exposed. In practice you will find automation candidates inside senior roles and stubbornly human work inside junior ones.</p>
 </section>
 
 <section>
 <h2>1. Run it as a 90-minute leadership session</h2>
-<p class="how">Invite five to eight people: the heads of the functions that proposed candidates, someone from finance, someone from engineering or IT, and one person who does the day-to-day work in each candidate area. Print parts 2 to 6. The 1 to 3 scale, the gates and the timings in this document are a starting point, not a standard. Change them to suit your team.</p>
+<p class="how">Invite five to eight people: the heads of the functions that proposed candidates, someone from finance, someone from engineering or IT, and one person who does the day-to-day work in each candidate area, and print parts 2 to 6 for everyone. The 1 to 3 scale, the gates and the timings in this document are a starting point, not a standard, so change them to suit your team.</p>
 <h3>Before the session</h3>
 <ul class="checks">
 <li>Each function head lists the workflows that consume the most hours in their function (aim for 20) and marks the three they would hand to AI first.</li>
 <li>Every candidate is written as a task with a start and an end ("match supplier invoices to purchase orders"), never as a role ("automate accounts payable").</li>
-<li>One intake form (part 2) is filled in for each candidate that will be discussed. Limit the session to eight.</li>
+<li>One intake form (part 2) is filled in for each candidate that will be discussed, up to a limit of eight.</li>
 <li>Someone brings last quarter's volume for each candidate: how many times the task was done, and roughly how long each one took.</li>
 </ul>
+<p>Take the task list seriously, because public evidence will not cover most of it. When Mercor mapped 29 public AI benchmarks onto the US Department of Labor's catalog of 18,797 tasks, <a href="https://hitesh.in/2026/nobody-benchmarked-your-work/">only 924 tasks were covered at all</a>, and it estimated that about 90% of American working hours go to tasks with little or no benchmark coverage.</p>
 <h3>Agenda</h3>
 <table>
 <thead><tr><th>Minutes</th><th>What you do</th><th>Output</th></tr></thead>
@@ -41,12 +42,12 @@
 <tr><td>80 to 90</td><td>For the pilot winner: name the owner and write the go or no-go test in one sentence.</td><td>First two lines of the business case</td></tr>
 </tbody>
 </table>
-<div class="note"><strong>The person who does the work gets a veto on two scores.</strong> Checking cost and specification are judged best by whoever handles the exceptions every week. If their score is lower than the sponsor's, use theirs.</div>
+<div class="note"><strong>The person who does the work gets a veto on two scores.</strong> Checking cost and specification are judged best by whoever handles the exceptions every week, so if their score is lower than the sponsor's, use theirs.</div>
 </section>
 
 <section class="page-break">
 <h2>2. Use-case intake form</h2>
-<p class="how">One copy per candidate, filled in by the sponsor before the session. If a line cannot be answered, leave it blank and say so in the room. A blank line is information.</p>
+<p class="how">One copy per candidate, filled in by the sponsor before the session. If a line cannot be answered, leave it blank and say so in the room, since the blanks show where the scoring will be hardest. Take the line about undoing a wrong output slowly. In <a href="https://hitesh.in/2026/the-autonomy-budget/">Project Vend</a>, an AI ran a small office shop for a month and slowly lost money through a hundred small, unverified decisions it could not take back.</p>
 <p class="fill"><span>Use case name</span></p>
 <p class="fill"><span>Sponsor, and function</span></p>
 <p class="fill"><span>The task in one sentence, from trigger to finished output</span></p>
@@ -69,7 +70,7 @@
 
 <section class="page-break">
 <h2>3. The scoring criteria</h2>
-<p class="how">Score each candidate 1, 2 or 3 on every criterion. A 3 always means "favorable for a first pilot". Score the task as it is today.</p>
+<p class="how">Score each candidate 1, 2 or 3 on every criterion, where a 3 always means "favorable for a first pilot". Score the task as it runs today, before any of the changes the project would bring.</p>
 <table>
 <thead><tr><th>Criterion</th><th>1 (low)</th><th>2 (medium)</th><th>3 (high)</th></tr></thead>
 <tbody>
@@ -85,17 +86,17 @@
 </table>
 <h3>Notes on scoring honestly</h3>
 <ul>
-<li><strong>B, cheap to check.</strong> A better model does not raise this score. A weak model produces obvious garbage that is cheap to reject. A strong one produces output that is plausible and wrong in ways that look right, which needs full scrutiny. Score the check you have today.</li>
-<li><strong>C, cost of being wrong.</strong> Count the steps. Errors compound: at 90% reliability per step, a five-step task finishes correctly about 59% of the time. A long chain that ends in an irreversible action is a 1, however good the model looks.</li>
-<li><strong>D, hard, not messy.</strong> Difficulty is the wrong test. A problem that is hard but self-contained with a crisp answer suits a model. A task a new hire learns in a month can stump it when the task is soaked in unwritten context. Score the mess, not the prestige.</li>
-<li><strong>F, duller tool.</strong> "Which LLM?" is the third or fourth question on a roadmap. Ask first what the decision is and how often it repeats. Capability you do not need on this task is a cost.</li>
-<li><strong>H, cost at volume.</strong> Price per token is the wrong number. Use the cost of one finished unit of work, and include the minutes of human judgment each unit still consumes.</li>
+<li><strong>B, cheap to check.</strong> A better model does not raise this score. A weak model produces obvious garbage that is cheap to reject, while a strong one produces output that is plausible and wrong in ways that look right, which needs full scrutiny before anyone can dismiss it. Score the check you have today.</li>
+<li><strong>C, cost of being wrong.</strong> Count the steps, because errors compound: at 90% reliability per step, a five-step task finishes correctly about 59% of the time, and ten steps drops it to 35%. A long chain that ends in an irreversible action is a 1, however good the model looks.</li>
+<li><strong>D, hard, not messy.</strong> Difficulty is the wrong test. OpenAI published what it says is <a href="https://hitesh.in/2026/hardest-work-not-messiest/">a proof of the Cycle Double Cover Conjecture</a>, a problem open since the 1970s, produced by a frontier model, while the same class of model still needs a human watching every move on a mid-size company's month-end close. A problem that is hard but self-contained, with a crisp answer, suits a model; a task a new hire learns in a month can stump it when the work is soaked in unwritten context. So score how messy the task is, whatever the seniority of the person who does it.</li>
+<li><strong>F, duller tool.</strong> "Which LLM?" is the third or fourth question on a roadmap, so ask first what the decision is and how often it repeats. Capability you do not need on this task is still a cost, and you pay it on every unit.</li>
+<li><strong>H, cost at volume.</strong> Price per token is the wrong number to score here. Use the cost of one finished unit of work, and include the minutes of human judgment each unit still consumes.</li>
 </ul>
 </section>
 
 <section class="page-break">
 <h2>4. The scoring matrix</h2>
-<p class="how">One row per candidate. Write 1, 2 or 3 in each cell, then the total out of 24. Circle any 1 in columns B, C or G before you add anything up.</p>
+<p class="how">Use one row per candidate and write 1, 2 or 3 in each cell, then the total out of 24. Before you add anything up, circle any 1 in columns B, C or G.</p>
 <table class="wide">
 <thead><tr><th>Use case</th><th class="score">A Value</th><th class="score">B Check</th><th class="score">C Wrong</th><th class="score">D Spec</th><th class="score">E Proof</th><th class="score">F Duller</th><th class="score">G Owner</th><th class="score">H Cost</th><th class="score">Total</th></tr></thead>
 <tbody>
@@ -109,14 +110,14 @@
 <tr><td>8.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 </tbody>
 </table>
-<div class="note"><strong>Three scores act as gates.</strong> A 1 on B (checking), C (cost of being wrong) or G (owner) takes a candidate out of the running for first pilot, whatever its total. A high total cannot buy back an output nobody can check, a mistake nobody can undo, or a result nobody owns.</div>
+<div class="note"><strong>Three scores act as gates.</strong> A 1 on B (checking), C (cost of being wrong) or G (owner) takes a candidate out of the running for first pilot, whatever its total, because strong scores elsewhere do nothing for an output nobody can check, a mistake nobody can undo, or a result nobody owns. Spending does not move these gates either. Meta plans to spend around $145 billion on AI infrastructure this year, and Mark Zuckerberg still <a href="https://hitesh.in/2026/the-autonomy-budget/">told his staff</a> that agentic AI development "hasn't really accelerated in the way that we expected."</div>
 <p class="fill"><span>Candidates removed as dominated before scoring</span></p>
 <p class="fill"><span>Scores the room disagreed on, and what would settle them</span></p>
 </section>
 
 <section>
 <h2>5. How to read the result</h2>
-<p>The total ranks the candidates. It does not make the decision. Read the pattern of scores in each row and sort every candidate into one of four lists.</p>
+<p>The total ranks the candidates, but it does not make the decision for you. Read the pattern of scores in each row and sort every candidate into one of four lists.</p>
 <table>
 <thead><tr><th>Pattern</th><th>Decision</th><th>What to do next</th></tr></thead>
 <tbody>
@@ -129,18 +130,18 @@
 </tbody>
 </table>
 <h3>Pilot first where checking is cheap</h3>
-<p>Your first pilot will probably be boring: a workflow where an invoice either matches or it doesn't. That is the point. A tight feedback loop can be tested in weeks and reduces uncertainty cheaply. Teams keep pointing AI at the task where it looks most impressive, and impressive and deployable are different axes.</p>
+<p>Your first pilot will probably be boring, something like a workflow where an invoice either matches or it doesn't, and that is fine, because a tight feedback loop can be tested in weeks and reduces uncertainty cheaply. Teams keep pointing AI at the task where it looks most impressive, which is usually the one where checking costs the most.</p>
 <h3>Buy before you build</h3>
-<p>Most companies should buy before they build, and that includes buying the boring specialist. Building the first version was never the expensive part. Keeping it alive for five years is. Before you approve a build, answer these:</p>
+<p>Most companies should buy before they build, and that includes buying the boring specialist. Building the first version was never the expensive part; keeping it alive for five years is. An agent that forks an open-source tool and <a href="https://hitesh.in/2026/cheap-to-fork-costly-to-keep/">runs a nightly rebase against upstream</a> makes the writing nearly free, but fork forty tools and you have forty dependencies rebasing against forty upstreams every night, and someone still has to know whether last night's rebase broke something. Before you approve a build, answer these:</p>
 <ul class="checks">
 <li>Is there a product that already does this task for companies like yours? If yes, what exactly would your own build do that it cannot?</li>
 <li>If you build or fork, who reviews the changes every month, and is that person's time in the budget?</li>
-<li>Is the thing you would own boring, slow-moving and well-scoped? Those are worth owning. Security-sensitive, fast-moving or regulated work is better bought.</li>
+<li>Is the thing you would own boring, slow-moving and well-scoped? Those are worth owning, while security-sensitive, fast-moving or regulated work is better bought.</li>
 <li>Whichever you choose, will your test cases, your corrections and your review rules be stored somewhere you control, so you can change vendor or model later?</li>
 <li>If you start with a frontier model as a fast first version, are you keeping every human correction as a labeled example? Those corrections are what later let a smaller, cheaper specialist take over the high-volume part.</li>
 <li>Does the result live inside a tool your people already open every day? A standalone assistant has to win attention on its own, and usually loses.</li>
 </ul>
-<div class="note"><strong>Name the axis you will lose on.</strong> If two candidates survive and trade against each other, stop asking which is best. Say the trade aloud: "we will be slower so we can be cheaper", or "we will spend more so it feels instant". If nobody in the room can name the axis, the decision has not been made yet.</div>
+<div class="note"><strong>Name the axis you will lose on.</strong> If two candidates survive and trade against each other, stop asking which is best and say the trade aloud: "we will be slower so we can be cheaper", or "we will spend more so it feels instant". If nobody in the room can name the axis, the decision has not been made yet.</div>
 <p class="fill"><span>Pilot first</span></p>
 <p class="fill"><span>Buy</span></p>
 <p class="fill"><span>Build the check first, or narrow</span></p>
@@ -149,7 +150,7 @@
 
 <section class="page-break">
 <h2>6. One-page business case for the winner</h2>
-<p class="how">Filled in by the owner within a week of the session. If it does not fit on this page, the scope is too wide.</p>
+<p class="how">Filled in by the owner within a week of the session. If the case does not fit on this page, the scope is too wide.</p>
 <p class="fill"><span>Use case, and owner (one name)</span></p>
 <h3>Problem</h3>
 <p class="fill"><span>The task, and what is wrong with how it runs today</span></p>
@@ -176,12 +177,12 @@
 <p class="fill"><span>The test that decides go or no-go, written before the pilot starts</span></p>
 <p class="fill"><span>Date the decision will be made, and who makes it</span></p>
 <p class="fill"><span>What happens if it fails: what is switched off, what you keep</span></p>
-<div class="note"><strong>Name the budget the saving moves into.</strong> When a bill falls, the cost often moves into engineering time, testing effort or an expert's afternoon, where nothing measures it. If you cannot say who pays for the checking, you have moved the cost, and the saving on this page is fiction.</div>
+<div class="note"><strong>Name the budget the saving moves into.</strong> When a bill falls, the cost often moves into engineering time, testing effort or an expert's afternoon, where nothing measures it. A budget nobody manages tends to get cut by decree later: Microsoft had projected at least $1 billion of internal spending on Anthropic this year, and <a href="https://hitesh.in/2026/who-sees-the-ai-bill/">The Information reported</a> that the estimate has since been cut by more than a third. If you cannot say who pays for the checking, write that down as an open item before anyone signs this page.</div>
 </section>
 
 <section class="page-break">
 <h2>7. Pilot design checklist</h2>
-<p class="how">A convincing pilot often measures the expert running it. Tick every item before the pilot starts, so the result tells you about the tool.</p>
+<p class="how">A convincing pilot often measures the expert running it more than the tool. A 2023 essay, <a href="https://hitesh.in/2026/best-people-worst-ai-judges/">The LLMentalist Effect</a>, compares the feeling of chatting with a model to a psychic's cold reading, and the bias it describes works better on smart people, because a sharp operator corrects the drift without noticing they did it. Tick every item before the pilot starts, so the result tells you about the tool.</p>
 <h3>Who runs it</h3>
 <ul class="checks">
 <li>The pilot is run by a competent non-expert, the kind of person who will use the tool in production. Your strongest person is not on it.</li>
@@ -203,12 +204,12 @@
 <li>The share of cases the model hands back to a human or refuses to decide, alongside how often it is right. A model that escalates everything looks safe and removes no work.</li>
 <li>If people or customers interact with it live: how often they interrupt, abandon or stop responding.</li>
 <li>Response time against the limit set by the person waiting, written down before the model was chosen.</li>
-<li>Seats and prompts used are not a success measure. Usage is not an outcome.</li>
+<li>Seats and prompts used are not reported as a success measure, because usage is not an outcome.</li>
 </ul>
 <h3>How it is contained</h3>
 <ul class="checks">
 <li>The steps in the workflow are counted, and a human or hard guardrail sits before the first step that is expensive or permanent.</li>
-<li>During the pilot the tool drafts, stages and recommends. It does not send, commit or execute.</li>
+<li>During the pilot the tool drafts, stages and recommends, and does not send, commit or execute.</li>
 <li>Every human correction is saved as a labeled example somewhere you control.</li>
 <li>The go or no-go test, the decision date and the decider are the ones written in the business case, unchanged.</li>
 </ul>
@@ -217,17 +218,17 @@
 <section>
 <h2>8. Common ways the exercise goes wrong</h2>
 <ul>
-<li><strong>You score job titles.</strong> "AI can do 40% of customer support" mixes exposure with evidence. Break the role into tasks and score those.</li>
-<li><strong>The most impressive candidate wins.</strong> The room falls for the demo of the strategy memo and ignores the reconciliation. Check column B again.</li>
-<li><strong>The model is chosen first and the task second.</strong> If the first slide names a model, send it back.</li>
-<li><strong>Feasibility is taken from a public benchmark.</strong> Benchmarks exist where grading is cheap, and most of your work is not on any of them. A vendor's score tells you about the benchmark's neighborhood. Only your own cases tell you about yours.</li>
-<li><strong>Savings are budgeted before checking.</strong> A team that automates generation and forgets verification has not cut cost. It has moved the risk where it cannot see it.</li>
+<li><strong>You score job titles.</strong> "AI can do 40% of customer support" mixes exposure with evidence, so break the role into tasks and score those.</li>
+<li><strong>The most impressive candidate wins.</strong> The room falls for the demo of the strategy memo and ignores the reconciliation, so check column B again before anyone votes.</li>
+<li><strong>The model is chosen first and the task second.</strong> When dermatologist Magnus Lynch showed <a href="https://hitesh.in/2026/your-best-ai-use-case-may-not-need-a-frontier-model/">200 biopsy-proven skin lesions</a> to two frontier models and to a ten-year-old image network fine-tuned for about twenty minutes, the old network got 62% right and both frontier models got 42%. If the first slide names a model, send it back.</li>
+<li><strong>Feasibility is taken from a public benchmark.</strong> Benchmarks exist where grading is cheap, and most of your work is not on any of them. A vendor's score tells you about the benchmark's neighborhood, and only your own cases tell you about yours.</li>
+<li><strong>Savings are budgeted before checking.</strong> A team that automates generation and forgets verification has moved the risk somewhere it cannot see, and the cost went with it.</li>
 <li><strong>The business case uses the demo's cost.</strong> One run with a cheap prompt says little about ten thousand runs with retries, long context and a reviewer. Cost it per finished unit at full volume.</li>
-<li><strong>"Human in the loop" is treated as a safety answer.</strong> It is a pricing question. If the loop is a senior person fixing the model's mistakes, you have bought a power tool for experts. Price and staff it as one.</li>
+<li><strong>"Human in the loop" is treated as a safety answer.</strong> It is really a pricing question: if the loop is a senior person fixing the model's mistakes, you have bought a power tool for experts, and you should price and staff it as one.</li>
 <li><strong>A dominated option gets equal airtime.</strong> It has a champion in the room, so the debate feels balanced. If it loses on every axis you care about, say so in the first five minutes.</li>
 <li><strong>Nobody owns the winner.</strong> Pilots that stall usually had no owner and no agreed test of success. Leave the room with both written down.</li>
-<li><strong>Everything on the list gets built.</strong> A fork you can generate for free is still a fork you own. Choose what to own by what you are willing to govern.</li>
-<li><strong>The session is run once.</strong> Models get cheaper and the trade-offs shift. A candidate you dropped this quarter may be worth a pilot next year, and one you built may now be worth buying. Rescore the list every six months.</li>
+<li><strong>Everything on the list gets built.</strong> A fork you can generate for free is still a fork you own and have to review, so choose what to own by what you are willing to govern.</li>
+<li><strong>The session is run once.</strong> Models get cheaper and the trade-offs shift, so a candidate you dropped this quarter may be worth a pilot next year, and one you built may now be worth buying. Rescore the list every six months.</li>
 </ul>
 <p>If you finish the session with one owned pilot, a written test for it, and a short list of things you have decided not to do, the 90 minutes were well spent.</p>
 </section>

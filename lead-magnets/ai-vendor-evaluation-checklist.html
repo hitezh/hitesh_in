@@ -6,16 +6,16 @@
 
 <section>
   <h2>How to use this checklist</h2>
-  <p>Most vendor questionnaires ask about certifications and uptime. Those matter, and your security team already has that form. This checklist covers what that form usually misses: whether the demo measured the tool or the person driving it, whether you can check and cap the bill, what happens to your keys on the day the vendor is breached, what the vendor writes into your agents, and whether you can leave with what the system learned from your people.</p>
-  <p>I sell advice, and I have no reseller arrangement with any vendor. Every question here comes from something I have watched go wrong for a buyer.</p>
+  <p>Most vendor questionnaires ask about certifications and uptime, which matter, and your security team already has that form. This checklist covers what that form usually misses: whether the demo measured the tool or the person driving it, whether you can check and cap the bill, what happens to your keys on the day the vendor is breached, what the vendor writes into your agents, and whether you can leave with what the system learned from your people.</p>
+  <p>I sell advice, and I have no reseller arrangement with any vendor. Each question here comes from an argument I have made in public on my blog, and the posts are listed at the end so you can check the reasoning behind any question before you rely on it.</p>
 
   <h3>The routine</h3>
   <ol>
-    <li><strong>Send the questions before the demo.</strong> Paste them into an email as written. A demo is a room the vendor has arranged. Written answers are harder to arrange.</li>
-    <li><strong>Ask for evidence with each answer.</strong> A document, a log, a contract clause, a screen you can look at yourself.</li>
+    <li><strong>Send the questions before the demo.</strong> Paste them into an email as written. In a demo the vendor chooses the task and the pace, while a written answer is something you can put next to the other vendors' answers later.</li>
+    <li><strong>Ask for evidence with each answer:</strong> a document, a log, a contract clause, or a screen you can look at yourself.</li>
     <li><strong>Score each answer 0 to 3</strong> in the columns marked A, B and C, one column per vendor.</li>
-    <li><strong>Compare section by section</strong> on the scoring sheet. A vendor that wins the demo and loses on exit is a different purchase from one that does the reverse.</li>
-    <li><strong>Take every 0 into the contract negotiation.</strong> The last part of this document lists the clauses.</li>
+    <li><strong>Compare section by section</strong> on the scoring sheet, because a vendor that wins the demo and loses on exit is a different purchase from one that does the reverse.</li>
+    <li><strong>Take every 0 into the contract negotiation.</strong> The clauses to ask for are listed in the last part of this document.</li>
   </ol>
 
   <h3>How to score</h3>
@@ -31,7 +31,7 @@
     </tbody>
   </table>
 
-  <div class="note"><strong>What a refusal means.</strong> A vendor may have a good reason not to share a system prompt or an incident report with a prospect. Ask whether they will share it under a non-disclosure agreement, or after signing with a right to walk away. If the answer is still no, score it 0 and assume the thing you asked about works against you. How a vendor handles a hard question before you are a customer is the best preview you will get of how they behave the day something breaks in production.</div>
+  <div class="note"><strong>What a refusal means.</strong> A vendor may have a good reason not to share a system prompt or an incident report with a prospect, so ask whether they will share it under a non-disclosure agreement, or after signing with a right to walk away. If the answer is still no, score it 0 and assume the thing you asked about works against you. How a vendor handles a hard question before you are a customer is the best preview you will get of how they behave the day something breaks in production.</div>
 
   <h3>Fill this in first</h3>
   <p class="fill"><span>The work we want this tool to do</span></p>
@@ -41,7 +41,7 @@
   <p class="fill"><span>Vendor C</span></p>
 
   <h3>Your own homework before you send anything</h3>
-  <p class="how">Four of the risks in this checklist sit on your side of the table. No vendor answer fixes them.</p>
+  <p class="how">Four of the risks in this checklist sit on your side of the table, and no vendor answer fixes them. The shortlist one is easy to underrate. When <a href="https://hitesh.in/2026/built-to-game-your-ai/">Trellner Research looked at 7,534 citations</a> behind Perplexity's software recommendations, nearly 60 percent pointed to domains ranked below the top 100,000 sites, and three websites alone had published 215,128 pages titled "best software," most of them machine-generated.</p>
   <ul class="checks">
     <li>We have a test set built from our own closed work (tickets, cases, merged changes, resolved claims) where we already know the right answer.</li>
     <li>We have run the business case at two to three times today's price and know which uses still make sense.</li>
@@ -52,10 +52,10 @@
 
 <section>
   <h2>The 40 questions</h2>
-  <p class="how">In the questions, "you" is the vendor and "we" is your company. The middle column is what a good answer sounds like. Write a score from 0 to 3 for each vendor. The 0 to 3 scale is a convenience for comparing vendors, not a published method. Use your own if you have one.</p>
+  <p class="how">In the questions, "you" is the vendor and "we" is your company, and the middle column is what a good answer sounds like. Write a score from 0 to 3 for each vendor. The scale is a starting point, not a standard: it is a convenience for comparing vendors side by side rather than a published method, so if your company already has a scoring method, use that instead.</p>
 
   <h3>1. Fit and proof</h3>
-  <p>A vendor demo is a controlled setting. The vendor picks the task, the operator and the framing, and each choice flatters the tool. These questions take the operator out of the result.</p>
+  <p>A vendor demo is a controlled setting where the vendor picks the task, the operator and the framing, and each of those choices flatters the tool. Published numbers need the same reading. When OpenAI shipped Astra for Law, it reported that the tool <a href="https://hitesh.in/2026/when-your-ai-vendor-ships-your-product/">answered 54% of a 200-question legal research benchmark correctly</a>, up from 38.7% with plain web search, and it said plainly that the test was its own. Ask every vendor for that much clarity about whose test produced a number. These questions try to take the operator, and the vendor's choice of test, out of the result.</p>
   <table class="wide">
     <thead>
       <tr><th>No.</th><th>Question</th><th>A good answer sounds like</th><th class="score">A</th><th class="score">B</th><th class="score">C</th></tr>
@@ -72,7 +72,7 @@
   </table>
 
   <h3>2. Pricing and the bill</h3>
-  <p>A metered bill is computed by the vendor, on the vendor's systems, with the vendor's counters. The party doing the counting profits from the count. The bill to worry about is the one that is wrong by five percent and looks right.</p>
+  <p>A metered bill is computed by the vendor, on the vendor's systems, with the vendor's counters, and the party doing the counting profits from the count. In July 2026 some AWS customers opened their billing console to estimates in the trillions of dollars, including <a href="https://hitesh.in/2026/the-bill-that-looks-right/">nearly $2.5 billion for an account that had spent nineteen cents in June</a>; AWS traced it to a unit-pricing defect in its estimated-billing subsystem and said actual charges were untouched. Nobody pays a bill like that, so it gets caught. The bill I would worry about is the one that is wrong by five percent in the vendor's favor and looks right, because that one gets paid.</p>
   <table class="wide">
     <thead>
       <tr><th>No.</th><th>Question</th><th>A good answer sounds like</th><th class="score">A</th><th class="score">B</th><th class="score">C</th></tr>
@@ -88,7 +88,7 @@
   </table>
 
   <h3>3. Data and security</h3>
-  <p>If the vendor can read your secret, an attacker who gets into the vendor can too. An AI provider key is the easiest credential to cash in, because whoever holds it can spend your money at once. Once a vendor has an incident, your exposure depends on how fast you can rotate and how much a key can do in the meantime.</p>
+  <p>If the vendor can read your secret, an attacker who gets into the vendor can too, and an AI provider key is the easiest credential to cash in, because whoever holds it can spend your money at once. Once a vendor has an incident, your exposure depends on how fast you can rotate and how much a key can do in the meantime. On October 30, Northflank became the third platform in thirteen days to tell customers to rotate their secrets, with a status page that read <a href="https://hitesh.in/2026/assume-vendor-loses-your-secrets/">"Assume all environment variables have been decrypted."</a> It enabled audit logs for all customers in the middle of that incident, which is why question 18 asks for logs you can read today.</p>
   <table class="wide">
     <thead>
       <tr><th>No.</th><th>Question</th><th>A good answer sounds like</th><th class="score">A</th><th class="score">B</th><th class="score">C</th></tr>
@@ -105,7 +105,7 @@
   </table>
 
   <h3>4. Reliability and operations</h3>
-  <p>A vendor measures how many of its customers use a feature. You should measure how many of your processes do. Something rare across their base can be the one thing your month-end depends on, and the vendor can be entirely reasonable in removing it.</p>
+  <p>A vendor measures how many of its customers use a feature, while you should be counting how many of your processes rely on it. Something rare across their base can be the one thing your month-end depends on, and the vendor can be entirely reasonable in removing it. Capacity has a similar weak point one layer down, because the GPU landlords many AI services run on are partly financed by their chip supplier. Nvidia agreed to buy <a href="https://hitesh.in/2026/subsidized-ai-compute/">up to $6.3 billion of unsold CoreWeave capacity through 2032</a>, while CoreWeave burned $4.7 billion in free cash flow in a single quarter against $24.9 billion in debt. If that financing slows, capacity that looks abundant today can get tight, and question 24 is how you find out who gets served first when it does.</p>
   <table class="wide">
     <thead>
       <tr><th>No.</th><th>Question</th><th>A good answer sounds like</th><th class="score">A</th><th class="score">B</th><th class="score">C</th></tr>
@@ -120,7 +120,7 @@
   </table>
 
   <h3>5. Agents and autonomy</h3>
-  <p>An agent acts on its instructions and nobody watches it happen. That makes the agent's configuration valuable to every vendor who would like to be in it. The files that steer an agent often sit outside your code repository and change when a vendor ships an update, with no review and no diff.</p>
+  <p>An agent acts on its instructions without anyone watching it happen, which makes the agent's configuration valuable to every vendor who would like to be in it. The files that steer an agent often sit outside your code repository and change when a vendor ships an update, with no review and no diff. On October 25 a developer <a href="https://hitesh.in/2026/vendors-write-your-agents-instructions/">reported</a> that an automatic Postman desktop update had installed a CLI and plugins into their Codex and Claude Code setups, along with a session-start hook telling the agent to load a Postman skill "before responding to any non-trivial API engineering task." Postman has said the bundling is disclosed and that it is reviewing the hook behavior.</p>
   <table class="wide">
     <thead>
       <tr><th>No.</th><th>Question</th><th>A good answer sounds like</th><th class="score">A</th><th class="score">B</th><th class="score">C</th></tr>
@@ -135,7 +135,7 @@
   </table>
 
   <h3>6. Lock-in and exit</h3>
-  <p>The loop that runs an agent is getting cheaper and more alike across vendors. What grows in value is what the system learns from your people: every time someone overrides a draft or rejects a change, your company has recorded a little of what "good" means here. If that record lives only inside the vendor, you have built a dependency.</p>
+  <p>The loop that runs an agent is getting cheaper and more alike across vendors. Shrivu Shankar argues that <a href="https://hitesh.in/2026/rent-the-harness-own-what-it-learns/">every SaaS business will become a harness around a model</a> that a company will no more outsource than its product team, and the discussion around his post noted that most harnesses look basically the same. I think he has the diagnosis right and the conclusion only half right. What grows in value is what the system learns from your people: every time someone overrides a draft or rejects a change, your company has recorded a little of what "good" means here. If that record lives only inside the vendor, you have built a dependency.</p>
   <table class="wide">
     <thead>
       <tr><th>No.</th><th>Question</th><th>A good answer sounds like</th><th class="score">A</th><th class="score">B</th><th class="score">C</th></tr>
@@ -150,7 +150,7 @@
   </table>
 
   <h3>7. The vendor's business</h3>
-  <p>A product works for whoever pays for it. Model providers have a standing reason to move up into applications, because that is where the margin is. Read what a platform ships and give less weight to what it says.</p>
+  <p>A product works for whoever pays for it, and model providers have a standing reason to move up into applications, because inference is a low-margin commodity and applications hold the margin. The same Astra for Law announcement that put OpenAI into legal AI <a href="https://hitesh.in/2026/when-your-ai-vendor-ships-your-product/">named Harvey and Legora</a>, the two legal-AI companies most closely tied to OpenAI, as partners who would build on top of it. That is a snapshot of a relationship, so read what a platform ships and give less weight to what it says.</p>
   <table class="wide">
     <thead>
       <tr><th>No.</th><th>Question</th><th>A good answer sounds like</th><th class="score">A</th><th class="score">B</th><th class="score">C</th></tr>
@@ -167,7 +167,7 @@
 
 <section class="page-break">
   <h2>Scoring sheet</h2>
-  <p class="how">Add up each vendor's scores by section and write the totals below. Then count the zeros. Read the rows across before you look at the bottom line.</p>
+  <p class="how">Add up each vendor's scores by section, write the totals below, and then count the zeros. Read the rows across before you look at the bottom line.</p>
   <table>
     <thead>
       <tr><th>Section</th><th>Max</th><th class="score">Vendor A</th><th class="score">Vendor B</th><th class="score">Vendor C</th></tr>
@@ -190,7 +190,7 @@
   <ul>
     <li><strong>A low score in one section is a finding, and a high total does not cancel it.</strong> A strong demo does not make up for a bill you cannot cap or an exit that does not exist.</li>
     <li><strong>Every 0 needs a decision.</strong> Either it becomes a contract clause, or you build the control yourself, or someone senior accepts the risk by name.</li>
-    <li><strong>Sections 2, 3 and 6 are where regret comes from.</strong> Problems with fit show up in the pilot. Problems with the bill, a breach or the exit show up after you depend on the product.</li>
+    <li><strong>Sections 2, 3 and 6 are where regret comes from.</strong> Problems with fit tend to show up in the pilot, while problems with the bill, a breach or the exit show up after you already depend on the product.</li>
     <li><strong>If no vendor scores well on agents, narrow the first deployment.</strong> Start with every action reviewed by a person and lower the rate task by task as the evidence earns it.</li>
   </ul>
 
@@ -201,12 +201,12 @@
   <p class="fill"><span>Controls we will build ourselves</span></p>
   <p class="fill"><span>Date we re-run this comparison</span></p>
 
-  <div class="note"><strong>Put a date on the re-run.</strong> Prices and models move fast enough that a comparison done six months ago has probably flipped. The vendor you standardized on may now be both weaker and more expensive than something newly available. Re-running is cheap if you kept your test set.</div>
+  <div class="note"><strong>Put a date on the re-run.</strong> Prices and models move fast enough that a comparison done six months ago may well have flipped. The vendor you standardized on may now be both weaker and more expensive than something newly available. Re-running is cheap if you kept your test set.</div>
 </section>
 
 <section class="page-break">
   <h2>Ten red flags</h2>
-  <p class="how">Tick any you have seen, for any vendor. One of these is a reason to slow down. Three from the same vendor is a pattern.</p>
+  <p class="how">Tick any you have seen, for any vendor. One of these is a reason to slow down, and three from the same vendor is a pattern worth raising with whoever will sign the contract.</p>
   <ul class="checks">
     <li><strong>The demo cannot leave the vendor's hands.</strong> It works with their engineer, on their data, and nobody will let your ordinary user try it on your work.</li>
     <li><strong>The praise cannot be traced.</strong> The rankings and reviews they cite sit on sites you have never heard of, or the shortlist came from an AI answer whose sources nobody opened.</li>
@@ -217,14 +217,14 @@
     <li><strong>The software writes where it was not invited.</strong> It installs plugins, hooks or instructions into other tools and agents, and the answer about asking first is vague.</li>
     <li><strong>You cannot read what the model is told.</strong> The system prompt and tool instructions are "proprietary", and they change without notice to you.</li>
     <li><strong>The exit exists only on paper.</strong> Export is "on request", or only at termination, and the corrections your people made are not part of it.</li>
-    <li><strong>They are slow before the signature.</strong> A technical question takes weeks, and the contract needs three rounds of legal to become reasonable. It will not improve once you have paid.</li>
+    <li><strong>They are slow before the signature.</strong> A technical question takes weeks, and the contract needs three rounds of legal to become reasonable, and there is little reason to expect it to improve once you have paid.</li>
   </ul>
-  <div class="note"><strong>None of these means the vendor is dishonest.</strong> Most come from a company that has not thought about your side of the arrangement yet. You are entitled to wait until it has.</div>
+  <div class="note"><strong>None of these means the vendor is dishonest.</strong> Most come from a company that has not thought about your side of the arrangement yet, and you are entitled to wait until it has.</div>
 </section>
 
 <section class="page-break">
   <h2>What to put in the contract</h2>
-  <p class="how">Hand this page to whoever negotiates. A good answer in a sales call is a preference, and preferences move with the vendor's balance sheet. Each line below turns one into an obligation. Tick the ones you have in writing.</p>
+  <p class="how">Hand this page to whoever negotiates. A good answer in a sales call is a preference, and preferences move with the vendor's balance sheet, so each line below turns one of those answers into an obligation. Tick the ones you have in writing.</p>
 
   <h3>The bill</h3>
   <ul class="checks">
@@ -256,7 +256,7 @@
     <li><strong>Use of your data.</strong> What the vendor may and may not do with your data and usage patterns, including if it launches a product in your category.</li>
   </ul>
 
-  <div class="note"><strong>A control you do not own is not a control.</strong> Where a vendor will not agree a clause, build the crude version yourself: your own request counts, a budget alarm wired to something that actually switches usage off, your own log of corrections. Assume the alarm arrives late.</div>
+  <div class="note"><strong>A control you do not own is not a control.</strong> Where a vendor will not agree a clause, build the crude version yourself: your own request counts, a budget alarm wired to something that actually switches usage off (and expect that alarm to arrive late), and your own log of corrections.</div>
 </section>
 
 <section class="reading">
