@@ -27,7 +27,7 @@ I have a habit of getting interested in a technology before it is fashionable an
 
 - 2009: started this blog, and have kept it going since.
 - 2011: finished Stanford's online machine learning class and [published my notes](/2011/machine-learning-my-notes./).
-- 2017: was delivering robotic process automation to customers, and argued that [RPA is duct tape](/2017/rpa-the-golden-duct-tape/): useful, and no substitute for fixing the process.
+- 2017: was delivering robotic process automation to customers, and argued that [RPA is duct tape](/2017/rpa-the-golden-duct-tape/): useful, and no substitute for fixing the process. Spoke on [a blockchain panel at Fintech Valley Vizag](/talks/fintech-valley-vizag-2017-blockchain-panel/) with HDFC Life, SBI and KPMG.
 - 2018 to 2020: wrote on GDPR, ISO 20022 and banking regulation, the unglamorous rules that decide what software in finance is allowed to do.
 - 2026: [profiled in ET Focus, Hyderabad](#in-the-press), on India's AI opportunity, and published [the book](/book/) on putting AI agents to work in a company.
 

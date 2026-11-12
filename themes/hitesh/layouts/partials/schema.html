@@ -27,14 +27,16 @@
 
 {{ $press := slice }}
 {{ range $p.press }}
-  {{ $press = $press | append (dict
+  {{ $a := dict
     "@type" "NewsArticle"
     "headline" .title
     "datePublished" .date
-    "image" (absURL .image)
     "publisher" (dict "@type" "Organization" "name" .outlet)
     "about" (dict "@id" $personID)
-  ) }}
+  }}
+  {{ with .image }}{{ $a = merge $a (dict "image" (absURL .)) }}{{ end }}
+  {{ with .url }}{{ $a = merge $a (dict "url" .) }}{{ end }}
+  {{ $press = $press | append $a }}
 {{ end }}
 
 {{ $person := dict

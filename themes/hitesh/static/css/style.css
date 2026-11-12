@@ -1936,3 +1936,5 @@ button.speak-copy { cursor: pointer; font: inherit; }
   .speak-kit-photo { max-width: 180px; }
 }
 @media (max-width: 560px) { .speak-formats { grid-template-columns: 1fr; } }
+.press-mention { margin: var(--sp-6) 0; padding: var(--sp-5) var(--sp-6); background: var(--bg-alt); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; font-size: var(--size-sm); line-height: 1.7; color: var(--text-muted); }
+.press-mention strong { color: var(--text); }
