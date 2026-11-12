@@ -18,7 +18,7 @@ faq:
 
 A standard vendor questionnaire asks about certifications and uptime. Those matter, and they are not where AI purchases usually go wrong.
 
-This checklist is written from the buyer's side, by someone with no product to sell. It covers the risks I write about: pricing that rests on subsidized compute, metering you cannot audit, a demo that measures the vendor's expert, a supplier who may ship your product, and what happens to your secrets when the vendor is breached.
+This checklist is written from the buyer's side. It covers the risks I write about: pricing that rests on subsidized compute, metering you cannot audit, a demo that measures the vendor's expert, a supplier who may ship your product, and what happens to your secrets when the vendor is breached.
 
 ## What is inside
 
