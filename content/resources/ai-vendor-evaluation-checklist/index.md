@@ -3,6 +3,7 @@ title: "AI Vendor Evaluation Checklist"
 seoTitle: "AI vendor evaluation checklist: questions to ask AI vendors (PDF)"
 description: "Questions to send an AI vendor before the demo, with what a good answer sounds like, a scoring sheet for three vendors, red flags and contract terms."
 download: /downloads/ai-vendor-evaluation-checklist.pdf
+image: /images/resources/ai-vendor-evaluation-checklist.jpg
 format: "PDF"
 short: "vendor evaluation checklist"
 weight: 4

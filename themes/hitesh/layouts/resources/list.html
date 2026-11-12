@@ -5,29 +5,21 @@
       <h1 class="page-title">{{ .Title }}</h1>
       {{ with .Params.description }}<p class="page-description">{{ . }}</p>{{ end }}
     </header>
-    {{ with .Content }}<div class="post-body">{{ . }}</div>{{ end }}
-    <div class="post-list post-list--full">
-      {{ range .Pages.ByWeight }}
-      <article class="post-item post-item--nodate">
-        <div class="post-item-main">
-          <div class="post-item-body">
-            <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
-            {{ with .Params.description }}<p class="post-excerpt">{{ . }}</p>{{ end }}
-          </div>
-        </div>
-      </article>
-      {{ end }}
-      {{ with site.GetPage "/book" }}
-      <article class="post-item post-item--nodate">
-        <div class="post-item-main">
-          <div class="post-item-body">
-            <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }} (free book)</a>
-            {{ with .Params.blurb }}<p class="post-excerpt">{{ . }}</p>{{ end }}
-          </div>
-        </div>
-      </article>
-      {{ end }}
+    {{ with .Content }}<div class="post-body res-intro">{{ . }}</div>{{ end }}
+    <div class="res-grid">
+      {{ range .Pages.ByWeight }}{{ partial "resource-card.html" . }}{{ end }}
     </div>
+    {{ with site.GetPage "/book" }}
+    <a class="res-book" href="{{ .RelPermalink }}">
+      {{ with .Params.cover }}<img src="{{ . | relURL }}" alt="" width="848" height="1272" loading="lazy" decoding="async">{{ end }}
+      <span class="res-card-body">
+        <span class="res-card-meta">Free book</span>
+        <span class="res-card-title">{{ .Title }}</span>
+        {{ with .Params.blurb }}<span class="res-card-desc">{{ . }}</span>{{ end }}
+        <span class="res-card-cta">Read the book <span aria-hidden="true">→</span></span>
+      </span>
+    </a>
+    {{ end }}
   </div>
 </div>
 {{ end }}

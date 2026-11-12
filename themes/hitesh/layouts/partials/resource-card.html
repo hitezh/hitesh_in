@@ -1,0 +1,16 @@
+{{/* A lead magnet as a card: cover, kicker, title, description, meta, CTA.
+     Page counts come from data/lead_magnets.json, written by the PDF build. */}}
+{{ $name := .File.ContentBaseName }}
+{{ $pages := (index (site.Data.lead_magnets | default dict) $name).pages }}
+{{ $fmt := .Params.format | default "PDF" }}
+<a class="res-card" href="{{ .RelPermalink }}">
+  {{ with .Params.image }}
+  <span class="res-card-cover"><img src="{{ . | relURL }}" alt="" width="794" height="1123" loading="lazy" decoding="async"></span>
+  {{ end }}
+  <span class="res-card-body">
+    <span class="res-card-meta">Free {{ $fmt }}{{ with $pages }} &middot; {{ . }} pages{{ end }}</span>
+    <span class="res-card-title">{{ .Title }}</span>
+    <span class="res-card-desc">{{ .Description }}</span>
+    <span class="res-card-cta">Get the {{ $fmt }} <span aria-hidden="true">→</span></span>
+  </span>
+</a>

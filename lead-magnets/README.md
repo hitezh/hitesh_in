@@ -17,3 +17,10 @@ Netlify form) records the lead and then starts the download.
 
 Content rule: every framework and claim comes from Hitesh's published posts.
 No invented numbers, clients or case studies.
+
+The build also renders the designed cover (colours and motif per document in
+`COVERS` in the script) as the PDF's first page and as
+`static/images/resources/<name>.jpg`, writes two inside-page previews
+(`<name>-page-02/03.jpg`, needs poppler's `pdftoppm`), and records page counts
+in `data/lead_magnets.json`, which the resource cards read. A new lead magnet
+needs an entry in `COVERS`.

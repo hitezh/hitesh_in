@@ -3,32 +3,57 @@
      Netlify (form name "resource-download", with the resource slug in a hidden
      field) and then starts the download, like the book page. */}}
 {{ $dl := .Params.download | relURL }}
-<article class="post">
-  <div class="container">
-    <header class="post-header">
-      <div class="post-meta-top"><a href="/resources/" class="post-byline">Free resources</a></div>
-      <h1 class="post-title-large">{{ .Title }}</h1>
-      {{ with .Params.description }}<p class="post-subtitle">{{ . }}</p>{{ end }}
-    </header>
+{{ $name := .File.ContentBaseName }}
+{{ $fmt := .Params.format | default "PDF" }}
+{{ $pages := (index (site.Data.lead_magnets | default dict) $name).pages }}
+<article class="post res-page">
+  <section class="res-hero">
+    <div class="container">
+      <div class="res-hero-grid">
+        {{ with .Params.image }}
+        <div class="res-hero-cover">
+          <img src="{{ . | relURL }}" alt="Cover of {{ $.Title }} by Dr. Hitesh Sarda" width="794" height="1123" loading="eager">
+        </div>
+        {{ end }}
+        <div class="res-hero-body">
+          <div class="post-meta-top"><a href="/resources/" class="post-byline">Free resources</a></div>
+          <h1 class="post-title-large">{{ .Title }}</h1>
+          {{ with .Params.description }}<p class="post-subtitle">{{ . }}</p>{{ end }}
+          <p class="res-facts">Free {{ $fmt }}{{ with $pages }} &middot; {{ . }} A4 pages{{ end }} &middot; Print it or fill it in on screen</p>
 
+          <section class="resource-get" id="get">
+            <h2>Get the {{ $fmt }}</h2>
+            <p>Tell me where to send it and the download starts as soon as you submit.</p>
+            <form name="resource-download" id="resource-download-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="{{ $dl }}" data-file="{{ $dl }}" class="cta-form">
+              <input type="hidden" name="form-name" value="resource-download">
+              <input type="hidden" name="resource" value="{{ $name }}">
+              <p class="cta-hp"><label>Do not fill this out if you are human: <input name="bot-field"></label></p>
+              <div class="cta-field"><label for="rd-name">Name</label><input id="rd-name" type="text" name="name" autocomplete="name" required></div>
+              <div class="cta-field"><label for="rd-email">Work email</label><input id="rd-email" type="email" name="email" autocomplete="email" required></div>
+              <div class="cta-field"><label for="rd-company">Company <span>(optional)</span></label><input id="rd-company" type="text" name="company" autocomplete="organization"></div>
+              <button type="submit" class="btn-primary cta-submit">Download the {{ $fmt }}</button>
+            </form>
+            <p class="resource-fine" id="resource-done" hidden>Your download has started. If it did not, <a href="{{ $dl }}">open the {{ $fmt }} here</a>.</p>
+            <p class="resource-fine">No spam. I send the occasional note about new writing, and you can unsubscribe anytime.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
     <div class="post-body">
       {{ .Content }}
 
-      <section class="resource-get" id="get">
-        <h2>Get the {{ .Params.format | default "PDF" }}</h2>
-        <p>Tell me where to send it and the download starts as soon as you submit. It is free.</p>
-        <form name="resource-download" id="resource-download-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="{{ $dl }}" data-file="{{ $dl }}" class="cta-form">
-          <input type="hidden" name="form-name" value="resource-download">
-          <input type="hidden" name="resource" value="{{ .File.ContentBaseName }}">
-          <p class="cta-hp"><label>Do not fill this out if you are human: <input name="bot-field"></label></p>
-          <div class="cta-field"><label for="rd-name">Name</label><input id="rd-name" type="text" name="name" autocomplete="name" required></div>
-          <div class="cta-field"><label for="rd-email">Work email</label><input id="rd-email" type="email" name="email" autocomplete="email" required></div>
-          <div class="cta-field"><label for="rd-company">Company <span>(optional)</span></label><input id="rd-company" type="text" name="company" autocomplete="organization"></div>
-          <button type="submit" class="btn-primary cta-submit">Download the {{ .Params.format | default "PDF" }}</button>
-        </form>
-        <p class="resource-fine" id="resource-done" hidden>Your download has started. If it did not, <a href="{{ $dl }}">open the {{ .Params.format | default "PDF" }} here</a>.</p>
-        <p class="resource-fine">No spam. I send the occasional note about new writing, and you can unsubscribe anytime.</p>
-      </section>
+      {{ $p2 := printf "/images/resources/%s-page-02.jpg" $name }}
+      {{ $p3 := printf "/images/resources/%s-page-03.jpg" $name }}
+      {{ if fileExists (printf "static%s" $p2) }}
+      <div class="res-preview" aria-label="Sample pages">
+        <figure><img src="{{ $p2 | relURL }}" alt="Page 2 of {{ $.Title }}" width="464" height="656" loading="lazy" decoding="async"></figure>
+        {{ if fileExists (printf "static%s" $p3) }}<figure><img src="{{ $p3 | relURL }}" alt="Page 3 of {{ $.Title }}" width="464" height="656" loading="lazy" decoding="async"></figure>{{ end }}
+      </div>
+      <p class="res-preview-cta"><a href="#get" class="btn-secondary">Get all {{ with $pages }}{{ . }} pages{{ else }}of it{{ end }}, free</a></p>
+      {{ end }}
 
       {{ if not (.HasShortcode "faq") }}{{ with .Params.faq }}
       <h2>Common questions</h2>
@@ -37,9 +62,20 @@
       {{ .a | markdownify | safeHTML }}
       {{ end }}
       {{ end }}{{ end }}
-
-      <p><a href="/resources/">All free resources</a> &middot; <a href="/work-with-me/">Book an AI advisory hour</a></p>
     </div>
+
+    {{ $others := where (where site.RegularPages "Section" "resources") "File.ContentBaseName" "ne" $name }}
+    {{ with $others.ByWeight }}
+    <section class="res-more">
+      <div class="section-header">
+        <h2 class="section-label">More free templates</h2>
+        <a href="/resources/" class="section-more">All resources →</a>
+      </div>
+      <div class="res-grid res-grid--three">
+        {{ range . }}{{ partial "resource-card.html" . }}{{ end }}
+      </div>
+    </section>
+    {{ end }}
   </div>
 </article>
 

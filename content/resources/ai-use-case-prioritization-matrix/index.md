@@ -3,6 +3,7 @@ title: "AI Use Case Prioritization Matrix"
 seoTitle: "AI use case prioritization matrix and business case template (PDF)"
 description: "Score up to eight candidate AI use cases on the criteria that decide whether AI pays off, then write a one-page business case for the winner."
 download: /downloads/ai-use-case-prioritization-matrix.pdf
+image: /images/resources/ai-use-case-prioritization-matrix.jpg
 format: "PDF"
 short: "use case prioritization matrix"
 weight: 2

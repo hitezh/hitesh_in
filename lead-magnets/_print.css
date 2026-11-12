@@ -47,3 +47,6 @@ table.wide th, table.wide td { padding: 1.6mm 1.8mm; }
 .about { break-before: page; }
 .about .cta { margin-top: 6mm; padding: 5mm 6mm; background: #F2ECE3; border-left: 2.5pt solid #BF4B1A; }
 .about .cta p:last-child { margin-bottom: 0; }
+
+/* Page two opens with the subtitle that used to sit on the plain cover. */
+p.lede { font-size: 12pt; color: #5E5750; line-height: 1.45; margin: 0 0 8mm; padding-bottom: 6mm; border-bottom: 0.5pt solid #D9CFC2; }

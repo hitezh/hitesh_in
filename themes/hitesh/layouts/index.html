@@ -106,14 +106,8 @@
       <h2 class="section-label">Free templates and checklists</h2>
       <a href="/resources/" class="section-more">All resources →</a>
     </div>
-    <div class="services-grid services-grid--four">
-      {{ range . }}
-      <a class="service-card" href="{{ .RelPermalink }}">
-        <h3 class="service-title">{{ .Title }}</h3>
-        <p class="service-desc">{{ .Description }}</p>
-        <span class="service-link">Get the {{ .Params.format | default "PDF" }} →</span>
-      </a>
-      {{ end }}
+    <div class="res-grid res-grid--four">
+      {{ range . }}{{ partial "resource-card.html" . }}{{ end }}
     </div>
   </div>
 </section>
