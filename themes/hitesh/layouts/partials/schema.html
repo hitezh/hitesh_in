@@ -150,6 +150,7 @@
   }}
   {{ with .Params.degree }}{{ $th = merge $th (dict "inSupportOf" .) }}{{ end }}
   {{ with .Params.institution }}{{ $th = merge $th (dict "sourceOrganization" (dict "@type" "EducationalOrganization" "name" .)) }}{{ end }}
+  {{ with .Params.downloadPages }}{{ $th = merge $th (dict "numberOfPages" .) }}{{ end }}
   {{ with .Params.download }}{{ with $.Resources.GetMatch . }}{{ $th = merge $th (dict "encoding" (dict "@type" "MediaObject" "contentUrl" .Permalink "encodingFormat" "application/pdf")) }}{{ end }}{{ end }}
   {{ with .Params.image }}{{ with $.Resources.GetMatch . }}{{ $th = merge $th (dict "image" .Permalink) }}{{ end }}{{ end }}
   {{ $graph = $graph | append $th }}

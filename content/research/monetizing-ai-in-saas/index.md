@@ -9,7 +9,9 @@ institution: "IIBM Institute and SIMA Switzerland"
 supervisor: "Dr. Latika V Shanbhag"
 completed: "March 2026"
 image: "cover.jpg"
-download: "monetizing-ai-in-saas-hitesh-sarda.pdf"
+download: "monetizing-ai-in-saas-dissertation-hitesh-sarda.pdf"
+downloadPages: 101
+slidesPdf: "monetizing-ai-in-saas-slides-hitesh-sarda.pdf"
 description: "My DBA research on how 371 B2B SaaS companies price and package AI features, with interviews of nine executives and a five-step framework for pricing AI."
 talk: "/talks/iibm-monetizing-ai-in-saas"
 related:
@@ -49,7 +51,7 @@ The question the research starts from is how SaaS companies can price AI feature
 
 ## How I studied it
 
-The study used two phases. First, I reviewed the public pricing pages of 371 B2B SaaS companies with $1M to $100M in annual recurring revenue (ARR), using a fixed codebook to classify the pricing model, the value metric, the number of tiers, how AI features were labeled, and overage terms. The sample split into three revenue bands: 87 companies at $1M to $10M, 207 at $10M to $50M, and 77 at $50M to $100M. Companies whose only pricing was "contact us" were excluded, as were agencies, consultancies and non-SaaS firms.
+The study used two phases. First, I reviewed the public pricing pages of 371 B2B SaaS companies with $1M to $100M in annual recurring revenue (ARR), using a fixed codebook to classify the pricing model, the value metric, the number of tiers, how AI features were labeled, and overage terms. The sample split into three revenue bands: 87 companies at $1M to $10M, 207 at $10M to $50M, and 77 at $50M to $100M. Agencies, consultancies and non-SaaS firms were excluded, and where a company hid its pricing details behind a sales form, they were recorded as unknown.
 
 Second, I interviewed nine senior executives at the CEO, CPO and CRO level, from companies in ERP, real estate, customer analytics, retail, FinOps, portfolio management and UX validation, and analyzed the interviews thematically using Braun and Clarke's six-phase method. All firms are anonymized.
 
@@ -101,7 +103,11 @@ The practical recommendations that follow are to default to a subscription with 
 
 ## Limitations
 
-The sample is not random, so the results describe these 371 companies rather than the whole market. Excluding "contact us" pricing may tilt the sample toward smaller firms, public pricing pages do not show regional differences, the study is a single snapshot rather than a trend over time, and nine interviews are too few to generalize from. Longer studies that link pricing models to retention, revenue per user and net revenue retention would be the natural next step.
+The sample is not random, so the results describe these 371 companies rather than the whole market. Companies that publish no prices are under-represented, which may tilt the sample toward smaller firms, public pricing pages do not show regional differences, the study is a single snapshot rather than a trend over time, and nine interviews are too few to generalize from. Longer studies that link pricing models to retention, revenue per user and net revenue retention would be the natural next step.
+
+## Read the full dissertation
+
+The full dissertation runs to 101 pages: the literature review, the research design, the complete results with tables for every revenue tier, the interview themes, and the theoretical and managerial implications. [Download it as a PDF](monetizing-ai-in-saas-dissertation-hitesh-sarda.pdf), or flip through [the 19 slides](#slides) I presented at IIBM.
 
 ## Citation
 

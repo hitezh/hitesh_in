@@ -2,6 +2,7 @@
 {{/* A research publication (e.g. the DBA dissertation): facts, summary with
      figures, the slides as images, a free PDF download and a citation. */}}
 {{ $pdf := false }}{{ with .Params.download }}{{ $pdf = $.Resources.GetMatch . }}{{ end }}
+{{ $deck := false }}{{ with .Params.slidesPdf }}{{ $deck = $.Resources.GetMatch . }}{{ end }}
 {{ $slides := slice }}
 {{ range sort (.Resources.Match "slides/*") "Name" }}{{ if eq .MediaType.MainType "image" }}{{ $slides = $slides | append . }}{{ end }}{{ end }}
 <article class="post research-page">
@@ -17,7 +18,7 @@
       </dl>
       {{ with $pdf }}
       <div class="hero-cta research-cta">
-        <a href="{{ .RelPermalink }}" class="btn-primary" download>Download the dissertation summary (PDF)</a>
+        <a href="{{ .RelPermalink }}" class="btn-primary" download>Download the full dissertation (PDF{{ with $.Params.downloadPages }}, {{ . }} pages{{ end }})</a>
         {{ if $slides }}<a href="#slides" class="btn-secondary">View the slides</a>{{ end }}
       </div>
       {{ end }}
@@ -33,7 +34,7 @@
         <img src="{{ $r.RelPermalink }}" alt="Slide {{ add $i 1 }} of {{ $.Params.shortTitle }}" width="{{ $r.Width }}" height="{{ $r.Height }}" loading="lazy" decoding="async">
         {{ end }}
       </div>
-      {{ with $pdf }}<p class="talk-slide-links"><a href="{{ .RelPermalink }}" download>Download the slides (PDF)</a></p>{{ end }}
+      {{ with $deck }}<p class="talk-slide-links"><a href="{{ .RelPermalink }}" download>Download the slides (PDF)</a></p>{{ end }}
       {{ end }}
 
       {{ if not (.HasShortcode "faq") }}{{ with .Params.faq }}
