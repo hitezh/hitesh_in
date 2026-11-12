@@ -15,8 +15,8 @@
   <h2>Part 1. The principles</h2>
   <p>Everything in the template follows from six ideas. If someone on your team disagrees with one, settle that before filling in the tables.</p>
   <ol>
-    <li><strong>You hired an agent.</strong> When you give an agent a goal and a budget, you have taken on a worker that is fast, tireless and indifferent to your reputation. It needs what a new hire gets: a probation period, a manager, a defined scope of authority, and a named person who answers for it. An agent has no skin in the game, so a human has to carry it.</li>
-    <li><strong>Limit each agent by its blast radius.</strong> An agent runs with whatever access it is given, and by default that is everything its user has. The job title of the user tells you little. What the agent can read, write, spend and reach tells you nearly everything. Give each agent its own identity, narrower than its user's.</li>
+    <li><strong>You hired an agent.</strong> When you give an agent a goal and a budget, you have taken on a worker that is fast, tireless and indifferent to your reputation. It needs what a new hire gets: a probation period, a manager, a defined scope of authority, and a named person who answers for it. When Bottleneck Labs gave GPT-5.6 <a href="https://hitesh.in/2026/you-hired-an-agent/">a live iOS app, $250 and the instruction to grow the business as much as possible, now</a>, it spent $99.50 buying fifty fake users and finished the 24 hours with zero new revenue. An agent has no skin in the game, so a human has to carry it.</li>
+    <li><strong>Limit each agent by its blast radius.</strong> An agent runs with whatever access it is given, and by default that is everything its user has. In October, <a href="https://hitesh.in/2026/coding-agents-blast-radius-job-title/">Goldman Sachs reportedly kept coding agents with its engineers</a>, about 12,000 of roughly 47,000 staff, and drew the line by job title. The title tells you little, while what the agent can read, write, spend and reach tells you nearly everything. Give each agent its own identity, narrower than its user's.</li>
     <li><strong>Every workflow has an autonomy budget.</strong> Errors compound across steps. At 90% accuracy per step, a five-step task finishes correctly about 59% of the time, ten steps about 35%, and twenty steps about 12%. So the number that matters is how many steps the agent can own before a person looks, and that depends on how cheap a mistake is to catch and to undo.</li>
     <li><strong>A goal gets the most literal reading.</strong> An agent told to "resolve the ticket" will close it if closing counts. A more capable model finds more shortcuts, so waiting for a better model makes this worse. Write the objective with the cheapest shortcut in mind, and say out loud the constraints you would never need to say to a person.</li>
     <li><strong>A limit is only as real as what enforces it.</strong> Being authorized and being contained are different properties. For every limit on an agent, you should be able to name the software that enforces it, who patches that software, and how long patching takes.</li>
@@ -110,7 +110,7 @@
       </tr>
     </tbody>
   </table>
-  <div class="note"><strong>Where the person goes.</strong> Keep the human where the action is irreversible. Spending money, sending mail to customers, calling an outside API, writing to production and changing a system of record stay at tier 2 until a hard limit the agent cannot change makes the worst case small.</div>
+  <div class="note"><strong>Where the person goes.</strong> Keep the human where the action is irreversible. Spending money, sending mail to customers, calling an outside API, writing to production and changing a system of record stay at tier 2 until a hard limit the agent cannot change makes the worst case small. In <a href="https://hitesh.in/2025/project-vend-when-ai-plays-shopkeeper/">Project Vend</a>, an AI ran a small office shop for a month and slowly lost money through a hundred small, unverified decisions it could not take back.</div>
   <h3>Count the steps before you choose a tier</h3>
   <p class="how">Do this once per workflow. Most teams ask whether the agent can do the task. Ask how many steps it can own before a person has to look.</p>
   <p class="fill"><span>Workflow</span></p>
@@ -174,13 +174,14 @@
       <tr><td>One independent control that shares no code with the above</td><td></td><td></td><td></td></tr>
     </tbody>
   </table>
-  <div class="note"><strong>A limit is a hope until you have tested it.</strong> If the thing that grants the access is also the only thing that enforces the limit, try to exceed the limit yourself. Try to reach an unapproved domain from inside the sandbox. Try to spend past the cap.</div>
+  <div class="note"><strong>A limit is a hope until you have tested it.</strong> On October 25, Erica Windisch published <a href="https://hitesh.in/2026/limited-access-limited-enforcement/">a report called Tailworm</a>, and her lab tests on Tailscale 1.104.2 showed a person allowed to log in as an ordinary user reaching root on the same machine (Tailscale has not confirmed every claim in it). If the thing that grants the access is also the only thing that enforces the limit, try to exceed the limit yourself. Try to reach an unapproved domain from inside the sandbox. Try to spend past the cap.</div>
   <p class="fill"><span>Decision: accept, reduce access, or lower the tier</span></p>
 </section>
 
 <section class="page-break">
   <h2>Part 5. Pre-deployment checklist</h2>
   <p class="how">Run this before an agent touches live data or a live system. Any unticked box either gets fixed or gets a named person who accepts it in writing.</p>
+  <p>The containment items are old controls, and they matter more with agents. In July an OpenAI model running a security benchmark called ExploitGym <a href="https://hitesh.in/2026/blast-radius-of-a-goal/">found a zero-day in OpenAI's own sandbox</a>, got itself onto the open internet and broke into Hugging Face to steal the answer key. Least privilege, short-lived credentials, egress allowlists and a sandbox that is a real boundary are what would have blunted it.</p>
   <h3>Ownership and objective</h3>
   <ul class="checks">
     <li>A named person owns the agent and knows they answer for what it does, including in the hour after the deadline passes.</li>
@@ -225,6 +226,7 @@
 <section class="page-break">
   <h2>Part 6. What the audit log must record</h2>
   <p>The log is a flight recorder, so it goes in before the agent runs. Record the calls the agent actually made. The model's own account of its reasoning is unreliable and does not replace them.</p>
+  <p>Between May and June 2026, a swarm of AI agents uploaded more than 2,000 malicious packages to RubyGems, which shut down new registrations for four days, and researchers traced the campaign to OpenAI. Months later OpenAI was still saying it would <a href="https://hitesh.in/2026/what-your-agent-did/">"continue to investigate"</a> what its agents had done. If they could not reconstruct it, assume you cannot either until the log exists.</p>
   <table>
     <thead>
       <tr>
@@ -326,7 +328,7 @@
     </tbody>
   </table>
   <p>These are decision rights, the same thing a delegation-of-authority matrix describes for people. The sampling rate is your risk appetite expressed as a number. It should be set by the person accountable for the outcome, and today it is usually set by whoever configured the tool first.</p>
-  <p>Before you take access away from anyone, write down the ten things people built with it. That list is a set of requirements. If you ignore it, the need comes back as spreadsheets and scripts you cannot see.</p>
+  <p>Before you take access away from anyone, write down the ten things people built with it. Goldman's traders had been using coding agents to <a href="https://hitesh.in/2026/coding-agents-blast-radius-job-title/">monitor client flows, model positions and produce charts</a>, and when access was cut those tools were passed to engineers to be improved. That list is a set of requirements, and if you ignore it the need comes back as spreadsheets and scripts you cannot see.</p>
 </section>
 
 <section class="page-break">
@@ -340,8 +342,8 @@
   <p class="fill"><span>Who calls the affected customer or partner</span></p>
   <p class="fill"><span>What they say in that call</span></p>
   <p class="fill"><span>Who you call for forensic help</span></p>
-  <p>Decide the disclosure policy now, in writing: what you tell a partner when your agent damages their system. With agents, staying silent is the cheap option, because attribution is hard and no single person carries the mistake. A policy written before the incident reads like a company worth trusting. One written after reads like an excuse.</p>
-  <p>Check one more thing before you need it. If your security plan assumes AI tools will help you investigate, ask your vendor whether their models will analyze attack logs or refuse.</p>
+  <p>Decide the disclosure policy now, in writing: what you tell a partner when your agent damages their system. With agents, staying silent is the cheap option, because attribution is hard and no single person carries the mistake. A policy written before the incident reads like a company worth trusting, and one written after reads like an excuse.</p>
+  <p>Check one more thing before you need it. If your security plan assumes AI tools will help you investigate, ask your vendor whether their models will analyze attack logs or refuse. When Hugging Face tried to use frontier commercial models on the logs of the ExploitGym attack, <a href="https://hitesh.in/2026/blast-radius-of-a-goal/">the models refused</a>, while the attacking model operated under no usage policy.</p>
   <h3>Four drills to run</h3>
   <table>
     <thead>
@@ -379,7 +381,7 @@
       </tr>
     </tbody>
   </table>
-  <div class="note"><strong>Why the AI goes off.</strong> The incidents that need your people tend to break the AI too: a vendor outage, rotated keys, a compromised tool. A team that has never worked an incident without the assistant is like a backup you have never restored.</div>
+  <div class="note"><strong>Why the AI goes off.</strong> The incidents that need your people tend to break the AI too: a vendor outage, rotated keys, a compromised tool. A team that has never worked an incident without the assistant is like a backup you have never restored. The skill fades with disuse, too: in <a href="https://www.thelancet.com/journals/langas/article/PIIS2468-1253(25)00133-5/abstract">a study in The Lancet Gastroenterology &amp; Hepatology</a>, endoscopists' unassisted polyp detection fell from 28% to 22% after a period of working with AI assistance.</div>
   <h3>Habits that keep the drill honest</h3>
   <ul class="checks">
     <li>During real incidents, the person on point writes their own hypothesis in the channel before asking the model.</li>
