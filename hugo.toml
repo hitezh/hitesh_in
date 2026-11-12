@@ -31,7 +31,7 @@ enableRobotsTXT = true
   city               = "Hyderabad"
   region             = "Telangana"
   country            = "IN"
-  knowsAbout         = ["AI strategy", "AI agents", "Agentic AI governance", "LLM cost optimisation", "AI coding agents", "AI in retail", "Customer loyalty programs", "Engineering leadership", "AI adoption"]
+  knowsAbout         = ["AI strategy", "Fractional Head of AI", "AI keynote speaking", "AI agents", "Agentic AI governance", "LLM cost optimisation", "AI coding agents", "AI in retail", "Customer loyalty programs", "Engineering leadership", "AI adoption"]
   tagline     = "Building software that brings customers back."
   twitter     = "fullstackcto"
   linkedin    = "hiteshs"
@@ -68,21 +68,27 @@ enableRobotsTXT = true
     url    = "/guides/"
     weight = 2
   [[menu.main]]
-    name   = "Book"
-    url    = "/book/"
+    name   = "Books"
+    url    = "/books/"
     weight = 3
   [[menu.main]]
-    name   = "AI Training"
+    name   = "Training"
     url    = "/ai-training/"
     weight = 4
   [[menu.main]]
+    name   = "Speaking"
+    url    = "/speaking/"
+    weight = 5
+  [[menu.main]]
     name   = "About"
     url    = "/about/"
-    weight = 5
+    weight = 6
   [[menu.main]]
     name   = "Work with me"
     url    = "/work-with-me/"
-    weight = 6
+    weight = 7
+    [menu.main.params]
+      cta = true
 
 # Media coverage. Rendered by the {{< press >}} shortcode and listed in the
 # Person JSON-LD as `subjectOf`. Images live in static/images/press/.
@@ -94,3 +100,11 @@ enableRobotsTXT = true
   page    = "2"
   image   = "images/press/et-focus-hyderabad-2026-01-08.jpg"
   summary = "Profile of Hitesh and 256 Technologies, a boutique AI advisory helping Indian companies move from adopting AI to leading with it."
+
+[[params.press]]
+  title   = "Fintech Valley Spring Conference 2017 surpasses all expectations"
+  outlet  = "The Hans India"
+  date    = "2017-03-10"
+  url     = "https://www.thehansindia.com/posts/index/andhra-pradesh/2017-03-10/fintech-valley-spring-conference-2017-surpasses-all-expectations/286043"
+  talk    = "/talks/fintech-valley-vizag-2017-blockchain-panel/"
+  summary = "Conference report naming Hitesh, then a Director at ValueLabs, on the panel on how blockchain is transforming financial services infrastructure, alongside HDFC Life, SBI, KPMG, Angel Broking and TenX."

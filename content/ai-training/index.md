@@ -1,9 +1,20 @@
 ---
 title: "AI training for leadership teams"
 slug: "ai-training"
-seoTitle: "AI training for leadership teams in Hyderabad and across India"
+seoTitle: "AI training for executives and leadership teams in India"
 description: "A six-week program that turns your leadership team AI-native: hands-on workflows on your own work, a governance framework, and a 90-day adoption roadmap."
 draft: false
+faq:
+  - q: "Who is this AI training for?"
+    a: "Senior executives and leadership teams: CEOs, CXOs, business heads and their direct reports. It is not a coding course. The aim is for leaders to use AI in their own work and to lead its adoption in their teams."
+  - q: "How is this different from an AI course for executives or a one-day AI workshop?"
+    a: "A course or a workshop teaches concepts and then ends. This program runs for six weeks around your leaders' own documents and decisions, with clinics, a showcase and a baseline, so you can see whether behaviour changed."
+  - q: "Do you run corporate AI training in Hyderabad and elsewhere in India?"
+    a: "Yes. I run the program in person for teams in Hyderabad and on site or remotely for leadership teams across India and abroad."
+  - q: "Does the training cover generative AI and AI agents?"
+    a: "Yes. Leaders work hands-on with generative AI tools on their own material, and the governance session covers AI agents: what they may be allowed to do, who approves it, and how to review what they did."
+  - q: "How many leaders can take part?"
+    a: "The program works best with one leadership team at a time, so that every leader gets hands-on time and presents at the showcase. Larger organisations run it as several cohorts."
 ---
 
 Most AI training is an awareness day. Everyone leaves impressed, nothing changes, and a month later the tools are gathering dust. This program is built for the opposite outcome: behavior change you can measure.
@@ -48,6 +59,8 @@ Any track can be extended:
 - **In-house team training** — a separate program for the builders who will deliver AI projects internally.
 - **AI Advisor retainer** — monthly strategic reviews, governance, and first-look implementation support.
 - **Additional cohorts** — extend the program to more teams on your established foundation.
+
+{{< faq >}}
 
 ## Enquire
 

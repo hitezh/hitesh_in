@@ -1,0 +1,93 @@
+{{ define "main" }}
+{{/* One talk. Photos come from the bundle's images/ folder, slides from a PDF
+     in the bundle (or slides_url), video from the youtube param. Each block
+     only renders once its material exists. */}}
+{{ $cover := partial "talk-cover.html" . }}
+{{ $photos := slice }}
+{{ range sort (.Resources.Match "images/*") "Name" }}{{ if eq .MediaType.MainType "image" }}{{ $photos = $photos | append . }}{{ end }}{{ end }}
+{{ $pdf := .Resources.GetMatch "*.pdf" }}
+{{ $where := delimit (complement (slice "" nil) (slice .Params.venue .Params.host .Params.location)) ", " }}
+<article class="post talk-page">
+  <div class="container">
+    <header class="post-header">
+      <div class="post-meta-top"><a href="/talks/" class="post-byline">Talks</a>{{ with .Params.format }} &middot; <span>{{ . }}</span>{{ end }}</div>
+      <h1 class="post-title-large">{{ .Title }}</h1>
+      <p class="talk-facts">
+        {{ with .Params.event }}<strong>{{ . }}</strong>{{ end }}{{ with $where }}{{ if $.Params.event }}, {{ end }}{{ . }}{{ end }}
+        <span class="talk-facts-sep">&middot;</span>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+      </p>
+    </header>
+  </div>
+
+  {{ with $cover }}
+  <figure class="talk-hero container">
+    {{ $h := .Fit "1600x1000 webp q80" }}
+    <img src="{{ $h.RelPermalink }}" alt="{{ $.Params.shortTitle | default $.Title }}, {{ $.Params.event }}" width="{{ $h.Width }}" height="{{ $h.Height }}" fetchpriority="high">
+  </figure>
+  {{ end }}
+
+  <div class="container">
+    <div class="post-body">
+      {{ .Content }}
+
+      {{ with .Params.youtube }}
+      <h2>Video</h2>
+      <div class="talk-video"><iframe src="https://www.youtube-nocookie.com/embed/{{ . }}" title="Video of the talk" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+      {{ end }}
+
+      {{ with .Params.figures }}
+      <h2>From the research</h2>
+      {{ range . }}{{ with $.Resources.GetMatch .src }}
+      {{ $w := .Resize "1400x webp q82" }}
+      <figure class="talk-figure"><img src="{{ $w.RelPermalink }}" alt="{{ $.Params.shortTitle }}" width="{{ $w.Width }}" height="{{ $w.Height }}" loading="lazy" decoding="async"></figure>
+      {{ end }}{{ with .caption }}<p class="talk-figure-cap">{{ . }}</p>{{ end }}{{ end }}
+      {{ end }}
+
+      {{ $slides := slice }}
+      {{ range sort (.Resources.Match "slides/*") "Name" }}{{ if eq .MediaType.MainType "image" }}{{ $slides = $slides | append . }}{{ end }}{{ end }}
+      {{ if or $slides $pdf .Params.slides_url }}
+      <h2>Slides</h2>
+      {{ with $slides }}
+      <div class="talk-slides" tabindex="0" aria-label="Slides, scroll sideways">
+        {{ range $i, $s := . }}{{ $r := $s.Resize "1200x webp q80" }}
+        <img src="{{ $r.RelPermalink }}" alt="Slide {{ add $i 1 }}" width="{{ $r.Width }}" height="{{ $r.Height }}" loading="lazy" decoding="async">
+        {{ end }}
+      </div>
+      {{ end }}
+      <p class="talk-slide-links">
+        {{ with $pdf }}<a href="{{ .RelPermalink }}" download>Download the slides (PDF)</a>{{ end }}
+        {{ with .Params.slides_url }}{{ if $pdf }} &middot; {{ end }}<a href="{{ . }}" target="_blank" rel="noopener">View the slides online</a>{{ end }}
+      </p>
+      {{ end }}
+
+      {{ $rest := $photos }}{{ with $cover }}{{ $rest = complement (slice .) $photos }}{{ end }}
+      {{ with $rest }}
+      <h2>Photos</h2>
+      <div class="talk-gallery">
+        {{ range . }}
+        {{ $t := .Fill "600x400 Center webp q76" }}{{ $f := .Fit "1800x1800 webp q82" }}
+        <a href="{{ $f.RelPermalink }}"><img src="{{ $t.RelPermalink }}" alt="{{ with .Title }}{{ . }}{{ else }}{{ $.Params.event }}{{ end }}" width="{{ $t.Width }}" height="{{ $t.Height }}" loading="lazy" decoding="async"></a>
+        {{ end }}
+      </div>
+      {{ end }}
+
+      {{ with .Params.related }}
+      <h2>Related reading</h2>
+      <ul>
+        {{ range . }}{{ with site.GetPage . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}{{ end }}
+      </ul>
+      {{ end }}
+    </div>
+
+    <aside class="post-cta">
+      <h2 class="post-cta-title">Want a talk like this at your event?</h2>
+      <p>I speak to leadership teams, industry events and business schools on AI strategy, AI agents, what AI costs, and AI in retail.</p>
+      <div class="hero-cta">
+        <a href="/speaking/#invite-me-to-speak" class="btn-primary">Invite me to speak</a>
+        <a href="/talks/" class="btn-secondary">All talks</a>
+      </div>
+    </aside>
+  </div>
+</article>
+{{ end }}

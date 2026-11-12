@@ -1,6 +1,6 @@
 ---
 title: "AI advisor in Hyderabad"
-seoTitle: "AI Advisor and AI Consultant in Hyderabad"
+seoTitle: "AI Consultant and AI Advisor in Hyderabad"
 slug: "ai-advisor-hyderabad"
 description: "Strategy, executive training and small AI pilots for leadership teams in Hyderabad and across India, from someone who has built production software for 25 years."
 showPhoto: true
@@ -18,6 +18,8 @@ faq:
     a: "A fractional Head of AI gives you senior AI leadership a few days a month: setting the AI strategy, choosing vendors, reviewing what your teams build, setting up governance, and reporting progress to the leadership team, without a full-time hire."
   - q: "How do we start?"
     a: "Book an advisory hour. Bring a problem or an idea and we will talk through the use case, your data readiness and the real risks. You leave with the simplest next step, or an honest view that AI is not the answer yet."
+  - q: "Who is a good AI expert or consultant to talk to in Hyderabad?"
+    a: "It depends on what you need. If you want software built, Hyderabad has many AI development companies. If you first need to decide what is worth building or buying, talk to an independent advisor with no build team to sell. That is the work I do, after more than 25 years of building production systems myself."
 faqFooter: "[Book an AI advisory hour](/work-with-me/) or write to [hitesh@256tec.com](mailto:hitesh@256tec.com)."
 draft: false
 ---
@@ -28,9 +30,11 @@ I have spent 25+ years building production systems, including work at Citi, Virt
 
 ## How I help
 
-**AI advisory and fractional Head of AI.** Strategy, feasibility, ROI modelling, vendor assessment and roadmaps grounded in real engineering constraints. For companies without a senior AI leader, I can play that role part time.
+**AI advisory and fractional Head of AI.** Strategy, feasibility, ROI modeling, vendor assessment and roadmaps grounded in real engineering constraints. For companies without a senior AI leader, I can play that role part time as a [fractional Head of AI](/fractional-head-of-ai/).
 
 **AI training for leadership teams.** A [six-week executive program](/ai-training/) that has your leaders using AI on their own real work, with a governance framework and a 90-day adoption roadmap at the end. In person in Hyderabad, or remote.
+
+**Speaking.** [Keynotes and workshops](/speaking/) for leadership offsites and industry events in Hyderabad and beyond.
 
 **AI MVP and proof-of-concept development.** The smallest working prototype that answers the key technical and business questions, across agents, computer vision and ML, before you commit to a full build.
 

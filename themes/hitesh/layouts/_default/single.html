@@ -11,7 +11,7 @@
         </time>
         {{ with .Params.categories }}
         <div class="post-tags">
-          {{ range . }}<a href="{{ `categories/` | relURL }}{{ . | urlize | lower }}" class="tag">{{ . | humanize }}</a>{{ end }}
+          {{ range . }}<a href="{{ `categories/` | relURL }}{{ . | urlize | lower }}/" class="tag">{{ . | humanize }}</a>{{ end }}
         </div>
         {{ end }}
       </div>
@@ -28,8 +28,10 @@
     {{ with .Params.image }}
     {{ $img := . }}
     {{ $src := "" }}
+    {{ $dims := "" }}
     {{ with $.Resources.GetMatch $img }}
       {{ $src = .RelPermalink }}
+      {{ if and (eq .ResourceType "image") (ne .MediaType.SubType "svg") }}{{ $r := . }}{{ with try ($r.Width) }}{{ if not .Err }}{{ $dims = printf `width="%d" height="%d"` $r.Width $r.Height }}{{ end }}{{ end }}{{ end }}
     {{ else }}
       {{ if or (hasPrefix $img "http") (hasPrefix $img "/") }}
         {{ $src = $img | relURL }}
@@ -41,7 +43,7 @@
     <div class="post-image x-cover">{{ . | safeHTML }}</div>
     {{ else }}
     <div class="post-image">
-      <img src="{{ $src }}" alt="{{ $.Title }}" loading="lazy">
+      <img src="{{ $src }}" alt="{{ $.Title }}" {{ $dims | safeHTMLAttr }} fetchpriority="high">
     </div>
     {{ end }}
     {{ end }}
@@ -51,19 +53,36 @@
 
       {{/* Front-matter `faq` renders here and also feeds the FAQPage JSON-LD
            in partials/schema.html, so the visible text and the schema match. */}}
-      {{ with .Params.faq }}
+      {{ if not (.HasShortcode "faq") }}{{ with .Params.faq }}
       <h2>Common questions</h2>
       {{ range . }}
       <h3>{{ .q }}</h3>
       {{ .a | markdownify | safeHTML }}
       {{ end }}
       {{ with $.Params.faqFooter }}{{ . | markdownify | safeHTML }}{{ end }}
-      {{ end }}
+      {{ end }}{{ end }}
     </div>
 
     {{ if eq .Section "blog" }}
     {{/* Visible author box: names who wrote this and why they're credible, and
          links every post to the About and Hyderabad advisor pages. */}}
+    {{/* Lead capture on every post: the advisory hour for readers with a live
+         decision, the free book for everyone else. The heading comes from the
+         guide the post belongs to (guide front matter `cta`), when it has one. */}}
+    {{ $ctaKey := printf "%s/%s" (.Date.Format "2006") (path.Base .File.Dir) }}
+    {{ $ctaHead := "Working through this at your company?" }}
+    {{ $ctaRes := "" }}
+    {{ range where site.RegularPages "Section" "guides" }}{{ if in .Params.posts $ctaKey }}{{ with .Params.cta }}{{ $ctaHead = . }}{{ end }}{{ with .Params.resource }}{{ $ctaRes = . }}{{ end }}{{ end }}{{ end }}
+    <aside class="post-cta" aria-label="Work with me">
+      <h2 class="post-cta-title">{{ $ctaHead }}</h2>
+      <p>I help leadership teams decide what AI to build, buy or skip. Bring the problem to an advisory hour, or start with one of my free working documents.</p>
+      <div class="hero-cta">
+        <a href="/work-with-me/" class="btn-primary">Book an AI advisory hour</a>
+        {{ $res := false }}{{ if $ctaRes }}{{ $res = site.GetPage (printf "/resources/%s" $ctaRes) }}{{ end }}
+        {{ with $res }}<a href="{{ .RelPermalink }}" class="btn-secondary">Get the free {{ .Params.short }}</a>{{ else }}<a href="/book/" class="btn-secondary">Get the free book</a>{{ end }}
+      </div>
+    </aside>
+
     <aside class="author-box" aria-label="About the author">
       {{ with site.Params.photo }}<img class="author-box-photo" src="{{ . | relURL }}" alt="{{ site.Params.author }}" width="64" height="64" loading="lazy">{{ end }}
       <div class="author-box-text">
@@ -76,7 +95,7 @@
     <footer class="post-footer">
       {{ with .Params.tags }}
       <div class="post-footer-tags">
-        {{ range . }}<a href="{{ `tags/` | relURL }}{{ . | urlize | lower }}" class="tag">{{ . }}</a>{{ end }}
+        {{ range . }}<a href="{{ `tags/` | relURL }}{{ . | urlize | lower }}/" class="tag">{{ . }}</a>{{ end }}
       </div>
       {{ end }}
       {{/* Link each post to any guide that collects it (guides list posts as "YYYY/slug"). */}}

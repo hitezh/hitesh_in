@@ -1,0 +1,68 @@
+{{ define "main" }}
+{{/* A research publication (e.g. the DBA dissertation): facts, summary with
+     figures, the slides as images, a free PDF download and a citation. */}}
+{{ $pdf := false }}{{ with .Params.download }}{{ $pdf = $.Resources.GetMatch . }}{{ end }}
+{{ $deck := false }}{{ with .Params.slidesPdf }}{{ $deck = $.Resources.GetMatch . }}{{ end }}
+{{ $slides := slice }}
+{{ range sort (.Resources.Match "slides/*") "Name" }}{{ if eq .MediaType.MainType "image" }}{{ $slides = $slides | append . }}{{ end }}{{ end }}
+<article class="post research-page">
+  <div class="container">
+    {{ $bc := false }}{{ with .Params.bookCover }}{{ $bc = $.Resources.GetMatch . }}{{ end }}
+    <header class="post-header{{ if $bc }} research-header--cover{{ end }}">
+      {{ with $bc }}{{ $r := .Resize "480x webp q84" }}<img class="research-cover" src="{{ $r.RelPermalink }}" alt="Cover of {{ $.Params.shortTitle }} by {{ site.Params.author }}" width="{{ $r.Width }}" height="{{ $r.Height }}" fetchpriority="high">{{ end }}
+      <div class="research-header-body">
+      <div class="post-meta-top"><a href="/research/" class="post-byline">Research</a>{{ with .Params.pubType }} &middot; <span>{{ . }}</span>{{ end }}</div>
+      <h1 class="post-title-large">{{ .Title }}</h1>
+      <dl class="research-facts">
+        {{ with .Params.degree }}<div><dt>Degree</dt><dd>{{ . }}</dd></div>{{ end }}
+        {{ with .Params.institution }}<div><dt>Institution</dt><dd>{{ . }}</dd></div>{{ end }}
+        {{ with .Params.supervisor }}<div><dt>Supervisor</dt><dd>{{ . }}</dd></div>{{ end }}
+        {{ with .Params.completed }}<div><dt>Completed</dt><dd>{{ . }}</dd></div>{{ end }}
+      </dl>
+      {{ with $pdf }}
+      <div class="hero-cta research-cta">
+        <a href="{{ .RelPermalink }}" class="btn-primary" download>Download the full dissertation (PDF{{ with $.Params.downloadPages }}, {{ . }} pages{{ end }})</a>
+        {{ if $slides }}<a href="#slides" class="btn-secondary">View the slides</a>{{ end }}
+      </div>
+      {{ end }}
+      </div>
+    </header>
+
+    <div class="post-body">
+      {{ .Content }}
+
+      {{ with $slides }}
+      <h2 id="slides">Slides</h2>
+      <div class="talk-slides" tabindex="0" aria-label="Slides, scroll sideways">
+        {{ range $i, $s := . }}{{ $r := $s.Resize "1200x webp q80" }}
+        <img src="{{ $r.RelPermalink }}" alt="Slide {{ add $i 1 }} of {{ $.Params.shortTitle }}" width="{{ $r.Width }}" height="{{ $r.Height }}" loading="lazy" decoding="async">
+        {{ end }}
+      </div>
+      {{ with $deck }}<p class="talk-slide-links"><a href="{{ .RelPermalink }}" download>Download the slides (PDF)</a></p>{{ end }}
+      {{ end }}
+
+      {{ if not (.HasShortcode "faq") }}{{ with .Params.faq }}
+      <h2>Common questions</h2>
+      {{ range . }}<h3>{{ .q }}</h3>{{ .a | markdownify | safeHTML }}{{ end }}
+      {{ end }}{{ end }}
+
+      {{ with .Params.related }}
+      <h2>Related reading</h2>
+      <ul>
+        {{ with $.Params.talk }}{{ with site.GetPage . }}<li><a href="{{ .RelPermalink }}">Talk: {{ .Params.shortTitle | default .Title }}</a></li>{{ end }}{{ end }}
+        {{ range . }}{{ with site.GetPage . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}{{ end }}
+      </ul>
+      {{ end }}
+    </div>
+
+    <aside class="post-cta">
+      <h2 class="post-cta-title">Pricing AI features in your product?</h2>
+      <p>I help SaaS leadership teams work out what their AI features cost to serve, what customers will pay for, and which pricing model fits. Bring your numbers to an advisory hour.</p>
+      <div class="hero-cta">
+        <a href="/work-with-me/" class="btn-primary">Book an AI advisory hour</a>
+        <a href="/speaking/" class="btn-secondary">Invite me to speak</a>
+      </div>
+    </aside>
+  </div>
+</article>
+{{ end }}

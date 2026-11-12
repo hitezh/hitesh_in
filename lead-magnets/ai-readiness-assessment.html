@@ -1,0 +1,239 @@
+<section class="cover">
+<p class="kicker">Worksheet for leadership teams</p>
+<h1>AI Readiness Assessment: 25 questions to answer before you fund an AI project</h1>
+<p class="sub">A scored self-assessment for founders, CTOs and business heads who have one specific AI use case in mind and need to decide whether to fix the basics first, run a small pilot, or scale.</p>
+</section>
+
+<section>
+<h2>How this assessment works</h2>
+<p>Most readiness assessments grade your company in general: infrastructure, "data maturity", talent. You can score well on all of that and still fund a project that stalls after the demo. I find it more useful to assess one use case at a time, because readiness belongs to the task. The same company can be ready to let AI match invoices and nowhere near ready to let it reply to customers.</p>
+<p>So this worksheet asks 25 questions about a single use case, in five areas: the business case, how cheaply the output can be checked, data and systems, people and ownership, and governance and risk. The second area carries the most weight in my own advice, because producing an answer is now cheap and deciding whether the answer is right is the expensive part. When Anthropic reported that its Claude Mythos Preview system had found a new weakness in HAWK, a post-quantum signature scheme, and a faster attack on a reduced version of AES, the AES run had taken roughly a week and about $100,000 in compute. <a href="https://hitesh.in/2026/point-ai-where-checking-is-cheap/">Human cryptographers then spent close to a month confirming the result was real</a>.</p>
+<p class="how">Pick one use case. Fill in the block below. Then score each question 0, 1 or 2 using the descriptions in the table, add up each area, and carry the five totals to the scoring sheet. It takes about 40 minutes, and it works best with the business owner, an engineer and a finance person in the same room.</p>
+<div class="note"><strong>Score what is true today.</strong> Give a 2 only if you could show the evidence to someone outside the project this week. A plan to do it next quarter scores 0. If two people in the room disagree on a score, write down the lower one.</div>
+
+<h3>Start here: the use case on one page</h3>
+<p>If you cannot fill in these lines, stop and work on them before you score anything. An assessment of a vague idea produces a vague number.</p>
+<p class="fill"><span>The use case in one sentence (one task, with an input and a finished output)</span></p>
+<p class="fill"><span>The decision this assessment supports (fund, pilot, buy, drop) and the date it is due</span></p>
+<p class="fill"><span>The named owner of the outcome (one person, not a team)</span></p>
+<p class="fill"><span>One finished unit of work is (a matched invoice, a resolved case, a reviewed contract)</span></p>
+<p class="fill"><span>Who pays the bill for running it</span></p>
+<p class="fill"><span>Who checks the output</span></p>
+<p class="fill"><span>Assessed by, and on what date</span></p>
+</section>
+
+<section class="page-break">
+<h2>Area 1: The use case and its business case</h2>
+<p>Planning AI by job title ("AI can do 40% of customer support") mixes up exposure with evidence. A role is a bundle of tasks, and they score very differently. This area checks that you have a task, a count, a test of success and an honest cost.</p>
+<table class="wide">
+<thead>
+<tr><th>#</th><th>Question</th><th>Score 0</th><th>Score 1</th><th>Score 2</th><th class="score">Score</th></tr>
+</thead>
+<tbody>
+<tr><td>1.1</td><td>Is the use case one task, or a job title?</td><td>A function or a role ("AI for support").</td><td>A workflow that still bundles several tasks.</td><td>One task with a defined input and a finished output.</td><td></td></tr>
+<tr><td>1.2</td><td>Do you know how often this task repeats and how many hours it takes today?</td><td>Nobody has counted.</td><td>An estimate from the people who do it.</td><td>Counted from your own records for a recent period.</td><td></td></tr>
+<tr><td>1.3</td><td>Did you agree, before any pilot, what result would justify production?</td><td>No test of success.</td><td>A general aim ("save time", "improve quality").</td><td>A written result, measured against today's baseline on real work.</td><td></td></tr>
+<tr><td>1.4</td><td>Have you checked whether a tool you already run, or a workflow fix, solves this without AI?</td><td>Nobody asked.</td><td>Discussed, nothing written.</td><td>Checked, and you can say why the existing stack cannot do it.</td><td></td></tr>
+<tr><td>1.5</td><td>Does the business case price a finished unit of work, including the human checking?</td><td>Only seats or price per token.</td><td>Cost per unit, checking time left out.</td><td>Cost per finished unit with checking time, compared with today's cost.</td><td></td></tr>
+</tbody>
+</table>
+<p class="fill"><span>Area 1 total (out of 10)</span></p>
+<p>On 1.4: a surprising amount of "we need AI here" turns out to be a workflow problem an existing tool already handles. On 1.5: price per token misleads, because a cheaper model that takes more steps can cost more per task. When Databricks graded coding agents on more than a hundred of its own merged pull requests, <a href="https://hitesh.in/2026/your-backlog-is-the-benchmark/">Sonnet 5 was cheaper per token than Opus and yet cost more per task</a>, which is why I would count the finished unit.</p>
+</section>
+
+<section class="page-break">
+<h2>Area 2: How cheaply the output can be checked</h2>
+<p>Every deployment needs something that tells you whether a given output is right. If that is a test, a reconciliation or a match against a source document, checking is close to free and you can deploy hard. If it is a scarce expert reading every output, no model quality removes that cost. Ask what one check costs and who can pay it.</p>
+<table class="wide">
+<thead>
+<tr><th>#</th><th>Question</th><th>Score 0</th><th>Score 1</th><th>Score 2</th><th class="score">Score</th></tr>
+</thead>
+<tbody>
+<tr><td>2.1</td><td>What tells you a single output is right?</td><td>An expert reads it and judges.</td><td>A partial automatic check, then a person.</td><td>An automatic check: a test, a reconciliation, a match to source.</td><td></td></tr>
+<tr><td>2.2</td><td>Do you know what one check costs?</td><td>No. Checking is left to "the team".</td><td>You know who checks, not how long it takes.</td><td>Timed: minutes per check, and whose minutes.</td><td></td></tr>
+<tr><td>2.3</td><td>What evidence do you have that AI can do this task?</td><td>A vendor demo or a public benchmark.</td><td>A handful of examples you tried yourself.</td><td>About fifty real closed cases with known answers, plus a human baseline.</td><td></td></tr>
+<tr><td>2.4</td><td>Who operated the tool when it was tested?</td><td>The vendor, or your strongest expert.</td><td>Your own team, with an expert steering.</td><td>A competent non-expert, and you noted per task who solved it.</td><td></td></tr>
+<tr><td>2.5</td><td>Do you know what the model does when it is unsure?</td><td>Nobody has looked.</td><td>You know accuracy only.</td><td>You know the share of cases it hands back to a person, and can live with it.</td><td></td></tr>
+</tbody>
+</table>
+<p class="fill"><span>Area 2 total (out of 10)</span></p>
+<p>On 2.4: your best people are the worst judges of a pilot. They correct the model in one line and route around the dead ends without registering it, so the result measures them. On 2.5: a model that escalates nearly everything scores well on anything that sounds like safety and removes none of the work you bought it to remove. When the dermatologist Magnus Lynch showed 200 biopsy-proven skin lesions to GPT-6 and Claude, <a href="https://hitesh.in/2026/your-best-ai-use-case-may-not-need-a-frontier-model/">they kept 97 and 96 of the 100 dangerous lesions but discharged only 32 and 22 of the 100 harmless ones</a>, so people were told to see a doctor for nearly every lesion.</p>
+<div class="note"><strong>A better model raises the checking bill.</strong> A weak model produces obvious garbage, which is cheap to reject. A strong one produces output that is plausible and wrong in ways that look right, and that needs full scrutiny. Do not plan for checking time to shrink as models improve.</div>
+</section>
+
+<section class="page-break">
+<h2>Area 3: Data and systems</h2>
+<p>This area is deliberately narrow. I am asking whether this task has what it needs, and whether you are adding more new machinery than the project can carry. Dan McKinley's 2015 essay Choose Boring Technology gives a company roughly three innovation tokens to spend, and <a href="https://hitesh.in/2026/boring-technology-is-an-ai-strategy/">an AI component holds one of them permanently</a>, because it fails in ways you cannot fully list in advance. Everything around it should be as dull and well understood as you can make it.</p>
+<table class="wide">
+<thead>
+<tr><th>#</th><th>Question</th><th>Score 0</th><th>Score 1</th><th>Score 2</th><th class="score">Score</th></tr>
+</thead>
+<tbody>
+<tr><td>3.1</td><td>Can you name the system that holds the source of truth for this task, and the person who can grant read access?</td><td>Neither.</td><td>The system is known, access is not arranged.</td><td>Both named, access granted.</td><td></td></tr>
+<tr><td>3.2</td><td>Is the knowledge the task needs written down?</td><td>Mostly in people's heads: exceptions nobody documented.</td><td>Partly documented, with known gaps.</td><td>A capable new hire could do the task from the written material.</td><td></td></tr>
+<tr><td>3.3</td><td>What happens to a human correction of the AI's output?</td><td>It is discarded.</td><td>It stays inside the vendor's product.</td><td>Stored with the reason, in your own storage, in a plain format.</td><td></td></tr>
+<tr><td>3.4</td><td>How many new components does this need besides the model?</td><td>Several at once: new database, framework, orchestration.</td><td>One new piece.</td><td>None. The rest runs on systems you already operate.</td><td></td></tr>
+<tr><td>3.5</td><td>Could you change the model or the vendor?</td><td>Your rules and workflow logic live in one vendor's product.</td><td>Possible, with a rewrite.</td><td>The model sits behind a wrapper, and your own test set tells you within a week whether a replacement is good.</td><td></td></tr>
+</tbody>
+</table>
+<p class="fill"><span>Area 3 total (out of 10)</span></p>
+<p>On 3.2: the work that stumps AI inside a company is often work a new hire picks up in a month. It is ambiguous, soaked in context, and comes with no answer key. If the context is not on the page, the model does not have it. On 3.3: every correction is a labeled example of what "good" means in your business. Keep them and you may later be able to hand the high-volume, stable part of the job to a smaller, cheaper model. Throw them away and you have paid for a prototype you can never graduate from.</p>
+</section>
+
+<section class="page-break">
+<h2>Area 4: People and ownership</h2>
+<p>Three seats have to be filled by named people: the one who owns the outcome, the one who sees the bill, and the one who reviews the output. Pilots that stall usually had no owner and no agreed test of success. The last two questions are about the reviewer, because "we keep a human in the loop" only helps if that human still brings doubt to the job.</p>
+<table class="wide">
+<thead>
+<tr><th>#</th><th>Question</th><th>Score 0</th><th>Score 1</th><th>Score 2</th><th class="score">Score</th></tr>
+</thead>
+<tbody>
+<tr><td>4.1</td><td>Who owns the outcome?</td><td>Nobody, or "the AI team".</td><td>A committee, or a sponsor who cannot stop it.</td><td>One named person, accountable for the result, who can stop it.</td><td></td></tr>
+<tr><td>4.2</td><td>Does the person who chooses the model see what it costs?</td><td>The spend sits in a central budget.</td><td>Finance sees a total after the fact.</td><td>The team sees its own spend weekly, with a default model for this workflow.</td><td></td></tr>
+<tr><td>4.3</td><td>Who reviews the output, and is their time in the plan?</td><td>"The team" will check.</td><td>A named reviewer, with no hours set aside.</td><td>A named reviewer who can judge the work, with hours budgeted.</td><td></td></tr>
+<tr><td>4.4</td><td>Can the reviewer catch the model being wrong?</td><td>They depend on the tool to understand the domain.</td><td>They know the domain. Nobody has tested it.</td><td>They show what they verified, and have caught real model errors in the trial.</td><td></td></tr>
+<tr><td>4.5</td><td>What happens when someone on this workflow says "I don't know"?</td><td>A confident sign-off is expected.</td><td>Doubts can be raised. Nothing is done with them.</td><td>There is a written route for it: check the source, ask the specialist, escalate.</td><td></td></tr>
+</tbody>
+</table>
+<p class="fill"><span>Area 4 total (out of 10)</span></p>
+<p>On 4.2: the engineer who picks the model owns the failure if the cheap one gives a worse answer, and somebody in another department owns the invoice if the expensive one costs ten times more. Choosing the most capable model every time is the rational move in that setup, and the spend grows until finance reaches for a cap. Microsoft had projected at least $1 billion of internal spending on Anthropic for 2026, and <a href="https://hitesh.in/2026/who-sees-the-ai-bill/">according to The Information's reporting that estimate has since been cut by more than a third</a>, while internal Claude Code users at Meta reportedly fell from about 60,000 to about 30,000 (neither company confirmed the numbers). Asking people to be efficient will not prevent that. What helps is showing each team its own spend every week, where the model gets chosen.</p>
+<p>On 4.3: if the reviewer is a senior person fixing the model's mistakes, you have bought a power tool for experts. That is a fine thing to buy, as long as you price and staff it as one and take the labor saving out of the business case.</p>
+</section>
+
+<section class="page-break">
+<h2>Area 5: Governance and risk</h2>
+<p>How much the AI may do on its own depends on the task. Two properties decide it: how cheaply you can check the work, and how easily you can undo it. Drafting, summarizing, classifying, or staging a change a person approves can run with a lot of freedom. Moving money, messaging customers and touching production cannot. Spending more on compute does not change those two properties. Meta still plans to spend around $145 billion on AI infrastructure in 2026, and Mark Zuckerberg has told staff that agentic AI development <a href="https://hitesh.in/2026/the-autonomy-budget/">"hasn't really accelerated in the way that we expected"</a>.</p>
+<table class="wide">
+<thead>
+<tr><th>#</th><th>Question</th><th>Score 0</th><th>Score 1</th><th>Score 2</th><th class="score">Score</th></tr>
+</thead>
+<tbody>
+<tr><td>5.1</td><td>What may it touch?</td><td>It runs with the full access of whoever uses it.</td><td>Limited by policy. No system enforces the limit.</td><td>Its own identity, read-only or scoped to what this task needs.</td><td></td></tr>
+<tr><td>5.2</td><td>How many steps does it take before a person looks?</td><td>Nobody has counted.</td><td>Counted. No checkpoint placed.</td><td>Counted, with a checkpoint before the first costly or permanent step.</td><td></td></tr>
+<tr><td>5.3</td><td>Can its actions be undone?</td><td>It sends, pays or changes live systems directly.</td><td>Some actions can be reversed, some cannot.</td><td>It drafts, stages or recommends. A person executes.</td><td></td></tr>
+<tr><td>5.4</td><td>Could you say afterwards what it did, in what order, with which credentials?</td><td>No record.</td><td>Only the vendor's logs.</td><td>A record you hold and can read.</td><td></td></tr>
+<tr><td>5.5</td><td>What happens when it is wrong, or switched off?</td><td>No plan.</td><td>"We would fix it."</td><td>Written: who is told, how a person reverses it, and how the work gets done without the AI.</td><td></td></tr>
+</tbody>
+</table>
+<p class="fill"><span>Area 5 total (out of 10)</span></p>
+<div class="note"><strong>Count the steps.</strong> Small error rates multiply. At 90% reliability per step, a five-step task finishes correctly about 59% of the time, and a ten-step task about 35%. The demo was one run, while production is the same chain thousands of times, so put the human checkpoint where the arithmetic says it belongs.</div>
+</section>
+
+<section class="page-break">
+<h2>Your scoring sheet</h2>
+<p class="how">Copy the five area totals here and add them up. Mark the band for each area using the key under the table, then read the next section.</p>
+<table>
+<thead>
+<tr><th>Area</th><th>Maximum</th><th class="score">Your score</th><th>Band (fix / pilot / scale)</th></tr>
+</thead>
+<tbody>
+<tr><td>1. Use case and business case</td><td>10</td><td></td><td></td></tr>
+<tr><td>2. How cheaply the output can be checked</td><td>10</td><td></td><td></td></tr>
+<tr><td>3. Data and systems</td><td>10</td><td></td><td></td></tr>
+<tr><td>4. People and ownership</td><td>10</td><td></td><td></td></tr>
+<tr><td>5. Governance and risk</td><td>10</td><td></td><td></td></tr>
+<tr><td><strong>Total</strong></td><td><strong>50</strong></td><td></td><td></td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th>Band</th><th>Each area</th><th>Total</th><th>What it means</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Fix first</strong></td><td>0 to 4</td><td>0 to 24</td><td>Do not fund a build. Fund the missing basics.</td></tr>
+<tr><td><strong>Small pilot</strong></td><td>5 to 7</td><td>25 to 37</td><td>Fund a narrow, time-boxed test designed to answer the open questions.</td></tr>
+<tr><td><strong>Scale</strong></td><td>8 to 10</td><td>38 to 50</td><td>Move to production in stages, with review rates that fall as evidence comes in.</td></tr>
+</tbody>
+</table>
+<div class="note"><strong>The lowest area sets the pace.</strong> A total of 38 with a 3 in checking or in governance is a fix-first project. Strength in one area does not pay for a gap in another, so read the five area scores before you read the total. The cut-offs are a working guide for a conversation, so treat a score one point either side of a line as on the line.</div>
+<p class="fill"><span>Lowest-scoring area</span></p>
+<p class="fill"><span>Overall band after applying the lowest-area rule</span></p>
+</section>
+
+<section>
+<h2>How to read your score</h2>
+<h3>Fix first</h3>
+<p>The use case may be a good one. What is missing is the ground it has to stand on, and a pilot run now would tell you little. Spend the next few weeks on the cheapest missing pieces, in this order:</p>
+<ol>
+<li>Name one owner for the outcome and write the use case as a single task.</li>
+<li>Write down what result would justify production, and measure today's baseline.</li>
+<li>Find or build the check. If the task has no cheap way to confirm an output, your first AI investment is that check. Skip it and you get a demo that a person babysits forever.</li>
+<li>Collect about fifty real, closed cases where you already know the right answer.</li>
+</ol>
+<p>Then score again. If the use case still sits in this band, look at your task list for one with a tighter feedback loop. An invoice either matches or it does not, and work like that can be tested in weeks.</p>
+
+<h3>Small pilot</h3>
+<p>You know enough to learn something from a test. Keep it small and design it so it cannot flatter you:</p>
+<ul class="checks">
+<li>One task, not the whole workflow.</li>
+<li>Graded on your own closed cases, against the human baseline.</li>
+<li>Operated by a competent non-expert, since that is who you will deploy to.</li>
+<li>After each task, a note on who solved it: the model, or the person's prompting and correction.</li>
+<li>Every output reviewed at the start, and every correction stored with its reason.</li>
+<li>Cost recorded per finished unit, including the reviewer's time.</li>
+<li>The AI drafts, stages or recommends. A person sends, commits or executes.</li>
+<li>A date on which the owner decides: stop, extend, or move to production.</li>
+</ul>
+<p>Use the pilot to raise your weakest area. If Area 2 scored 5, the pilot's main output is a timed, trusted check. If Area 4 scored 5, it is a reviewer who has caught the model being wrong.</p>
+
+<h3>Scale</h3>
+<p>You have a task, a check, an owner and controls. Scaling here means widening the scope a step at a time.</p>
+<ul class="checks">
+<li>Lower the review rate task by task as the evidence earns it, and put a date on the next review of those thresholds.</li>
+<li>Give the sampling rate an owner. It is a risk appetite expressed as a number, and it belongs to the person accountable for the outcome.</li>
+<li>Track cost per finished unit alongside usage, and show each team its own spend weekly.</li>
+<li>Re-run your test set when a new model arrives, on a fixed rhythm (quarterly suits most teams) instead of reacting to each launch.</li>
+<li>Split the work by difficulty once you have data: a cheaper model for the routine majority, the expensive one for the hard minority.</li>
+<li>Watch whether confidence in reviews is rising while outcomes stay flat. That is a warning sign.</li>
+</ul>
+
+<h3>What a low score in each area is telling you</h3>
+<table>
+<thead>
+<tr><th>Low area</th><th>What it usually means</th><th>First move</th></tr>
+</thead>
+<tbody>
+<tr><td>1. Use case</td><td>You are planning by job title or by tool.</td><td>List the 20 workflows that consume the most hours in the function. Pick one task from that list.</td></tr>
+<tr><td>2. Checking</td><td>The use case demos well and will be slow to trust.</td><td>Time one check. Build the test set. If no cheap check can exist, choose a different first use case.</td></tr>
+<tr><td>3. Data and systems</td><td>The context is in people's heads, or the stack has too many new parts.</td><td>Write down the exceptions. Start storing corrections. Keep everything except the AI boring.</td></tr>
+<tr><td>4. People</td><td>Nobody owns the result, the bill or the review.</td><td>Fill the three seats with names before spending anything else.</td></tr>
+<tr><td>5. Governance</td><td>The AI has more reach than the task needs.</td><td>Narrow it: read-only access, a checkpoint before the costly step, a record you hold.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section class="page-break">
+<h2>Red flags that override the score</h2>
+<p>Any one of these puts the project in "fix first", whatever the total says. I have listed them separately because each can hide behind a good score in the other four areas.</p>
+<ul class="checks">
+<li><strong>No single named owner.</strong> The outcome belongs to a committee, a vendor or "the AI team".</li>
+<li><strong>No agreed test of success.</strong> Nobody wrote down, before the pilot, what result would justify production.</li>
+<li><strong>The only evidence is a demo or a leaderboard.</strong> The vendor picked the task, the operator and the framing, and public benchmarks cover the work that is cheap to grade, which may not be yours.</li>
+<li><strong>It only works in your best person's hands.</strong> You have measured your employee, and their time is the cost you wanted to remove.</li>
+<li><strong>Nobody in the building can sign off the output.</strong> Expert-grade work produced cheaply is worth little if no one can confirm it is right.</li>
+<li><strong>An irreversible action with no checkpoint.</strong> The AI can move money, message a customer or change production before a person or a hard guardrail looks.</li>
+<li><strong>The business case counts the savings and leaves out the checking.</strong> Budget the people and tooling to verify before you budget the savings.</li>
+<li><strong>You could not say afterwards what it did.</strong> No record of its actions, their order, or the credentials it used.</li>
+<li><strong>The model was chosen before the task.</strong> "Which LLM?" is the third or fourth question on a roadmap. If it was the first, go back to Area 1.</li>
+</ul>
+<p class="fill"><span>Red flags ticked</span></p>
+<p class="fill"><span>Decision (fix first / small pilot / scale / drop)</span></p>
+<p class="fill"><span>The one thing to fix before the next review</span></p>
+<p class="fill"><span>Who will fix it, and by when</span></p>
+<p class="fill"><span>Date to re-score this use case</span></p>
+<p>One last use for this sheet. Score a second and third use case the same way and put the three side by side. The one your team is most excited about is often the one that demos best, and the one with the highest score in Area 2 is usually the better place to start.</p>
+</section>
+
+<section class="reading">
+<h2>Further reading</h2>
+<ul>
+<li><a href="https://hitesh.in/2026/point-ai-where-checking-is-cheap/">Point your AI where the checking is cheap</a>, the argument behind Area 2 and the reason a better model raises the checking bill.</li>
+<li><a href="https://hitesh.in/2026/best-people-worst-ai-judges/">Your best people are the worst judges of your AI pilot</a>, on staffing the pilot with a non-expert and tracking who solved each task.</li>
+<li><a href="https://hitesh.in/2026/nobody-benchmarked-your-work/">Nobody has benchmarked AI on 90% of the work your company does</a>, for the task inventory of 20 workflows and the test of fifty real cases with a human baseline.</li>
+<li><a href="https://hitesh.in/2026/your-backlog-is-the-benchmark/">Your backlog is the only benchmark that matters</a>, on building a test from your own closed work and measuring cost per task.</li>
+<li><a href="https://hitesh.in/2026/who-sees-the-ai-bill/">The engineer who picks the model never sees the bill</a>, on cost per finished unit, weekly showback and keeping a way out.</li>
+<li><a href="https://hitesh.in/2026/the-autonomy-budget/">The Autonomy Budget</a>, for the compounding arithmetic (59% at five steps, 35% at ten) and where to place the checkpoint.</li>
+<li><a href="https://hitesh.in/2026/boring-technology-is-an-ai-strategy/">Boring technology is an AI strategy</a>, on keeping everything around the AI dull and re-evaluating models on a schedule.</li>
+<li><a href="https://hitesh.in/2026/your-best-ai-use-case-may-not-need-a-frontier-model/">Your best AI use case may not need a frontier model</a>, on what a model does when unsure and why you keep the corrections.</li>
+</ul>
+</section>

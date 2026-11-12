@@ -1,6 +1,9 @@
-{{/* Media coverage from site.Params.press (hugo.toml), newest first. */}}
+{{/* Media coverage from site.Params.press (hugo.toml), newest first. An entry
+     with an image shows the clipping; one with only a url is a linked mention. */}}
 {{ range sort site.Params.press "date" "desc" }}
+{{ $it := . }}
 {{ $date := time.AsTime .date }}
+{{ if .image }}
 {{ $src := .image | relURL }}
 <figure class="press-item">
   <a href="{{ $src }}" target="_blank" rel="noopener">
@@ -11,4 +14,10 @@
     "{{ .title }}".{{ with .summary }} {{ . }}{{ end }}
   </figcaption>
 </figure>
+{{ else }}
+<p class="press-mention">
+  <strong>{{ .outlet }}{{ with .edition }}, {{ . }}{{ end }}</strong>, {{ $date.Format "2 January 2006" }}.
+  {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">"{{ $it.title }}"</a>{{ else }}"{{ .title }}"{{ end }}.{{ with .summary }} {{ . }}{{ end }}{{ with .talk }} <a href="{{ . }}">About the panel</a>.{{ end }}
+</p>
+{{ end }}
 {{ end }}

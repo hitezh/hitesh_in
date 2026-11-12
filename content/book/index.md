@@ -2,6 +2,7 @@
 title: "Implementing AI Agents in Your Company"
 subtitle: "A Blueprint for Innovation"
 slug: "book"
+seoTitle: "How to implement AI agents in your business: free book"
 description: "My free book for managers and leaders who need to turn AI agents into real business outcomes. No hype, no equations, just the playbook. Download the PDF."
 image: /images/book-cover.jpg
 blurb: "A practical, hype-free playbook for the managers and operators who have to turn AI agents into real business outcomes. Read it free, no signup."
@@ -48,6 +49,8 @@ This is that book, and it is free. It is written for managers and operators, not
 One idea runs through all of it. Successful adoption is rarely about the technology. It is about alignment between what is possible, what is valuable, and what your team is actually ready for.
 
 If it helps you launch even one meaningful pilot, one that delights users and proves value, it will have done its job.
+
+If you would like help applying it, that is my [agentic AI consulting](/agentic-ai-consulting/) work.
 
 ## Who it is for
 

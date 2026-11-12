@@ -1,7 +1,9 @@
 ---
 title: "AI strategy for leadership teams: pilots, build versus buy and moats"
-seoTitle: "AI strategy for leadership teams: evaluating AI pilots, build vs buy and where the moat is"
+seoTitle: "AI strategy for business leaders: why AI pilots fail, build vs buy"
 description: "How to run an AI pilot that tells you the truth, when to build versus buy, where AI pays off first, and why the model you pick is rarely your advantage."
+cta: "Preparing an AI roadmap or a board discussion?"
+resource: "ai-use-case-prioritization-matrix"
 weight: 4
 schemaType: "CollectionPage"
 posts:
@@ -25,7 +27,10 @@ faq:
   - q: "Where should a company use AI first?"
     a: "Where checking the output is cheap. AI pays off fastest on work whose results can be verified quickly, and slowest where people need weeks to trust an answer."
   - q: "Is the AI model a competitive advantage?"
-    a: "Rarely. Open-weight models now come close to frontier quality at a fraction of the cost, so durable advantage comes from your data, your workflows and how fast your organisation learns."
+    a: "Rarely. Open-weight models now come close to frontier quality at a fraction of the cost, so durable advantage comes from your data, your workflows and how fast your organization learns."
+
+  - q: "How do you take an AI pilot to production?"
+    a: "Decide before the pilot what result would justify production, measure against a baseline on real work, name one owner for the outcome, and budget for the checking and integration work the demo skipped. Pilots that stall usually had no owner and no agreed test of success."
 ---
 
 The questions that decide whether AI pays off are rarely about which model is best. They are about whether the pilot actually worked, whether to build or buy, where to start, and what will still be an advantage in two years when everyone has the same models.

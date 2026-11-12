@@ -1,0 +1,161 @@
+{{ define "main" }}
+{{/* The speaking page: a hero with a stage photo, where I have spoken, topics,
+     recent talks, formats, an organizer kit, FAQs and the enquiry form. Most
+     of it is driven by front matter in content/speaking/index.md. */}}
+{{ $hero := false }}
+{{ with .Params.heroPhoto }}{{ with site.GetPage .page }}{{ $hero = .Resources.GetMatch $.Params.heroPhoto.src }}{{ end }}{{ end }}
+<article class="speak">
+
+  <section class="speak-hero">
+    <div class="container speak-hero-grid">
+      <div class="speak-hero-body">
+        <p class="book-eyebrow"><span class="hero-dot"></span>{{ .Params.eyebrow }}</p>
+        <h1 class="speak-title">{{ .Params.headline | default .Title }}</h1>
+        {{ with .Params.lede }}<p class="speak-lede">{{ . }}</p>{{ end }}
+        <div class="hero-cta">
+          <a href="#invite-me-to-speak" class="btn-primary">Check my availability</a>
+          <a href="#topics" class="btn-secondary">See the talks</a>
+        </div>
+      </div>
+      {{ with $hero }}
+      <figure class="speak-hero-photo">
+        {{ $h := .Fill "720x900 Center webp q82" }}
+        <img src="{{ $h.RelPermalink }}" alt="{{ site.Params.author }} speaking at IIM Udaipur" width="{{ $h.Width }}" height="{{ $h.Height }}" fetchpriority="high">
+        {{ with $.Params.heroPhoto.caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+      </figure>
+      {{ end }}
+    </div>
+  </section>
+
+  {{ with .Params.spokenAt }}
+  <section class="speak-strip" aria-label="Where I have spoken">
+    <div class="container">
+      <p class="speak-strip-label">Spoken at</p>
+      <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+    </div>
+  </section>
+  {{ end }}
+
+  <div class="container">
+    {{ with .Params.credentials }}
+    <div class="speak-creds">
+      {{ range . }}<a href="{{ .url }}"><strong>{{ .label }}</strong> {{ .text }}</a>{{ end }}
+    </div>
+    {{ end }}
+
+    <div class="post-body speak-intro">{{ .Content }}</div>
+
+    {{ with .Params.topics }}
+    <section class="speak-section" id="topics">
+      <div class="section-header"><h2 class="section-label">Talks I can bring to your event</h2></div>
+      <div class="speak-topics">
+        {{ range $i, $t := . }}
+        <div class="speak-topic">
+          <span class="speak-topic-num">{{ printf "%02d" (add $i 1) }}</span>
+          <h3>{{ .title }}</h3>
+          <p>{{ .text }}</p>
+          <p class="speak-topic-for"><span>For</span> {{ .audience }}</p>
+          {{ with .readUrl }}<a class="speak-topic-link" href="{{ . }}">{{ $t.readLabel }} →</a>{{ end }}
+        </div>
+        {{ end }}
+      </div>
+      <p class="speak-note">Every talk is reworked for the room: I swap the examples for your industry and adjust the depth for the audience.</p>
+    </section>
+    {{ end }}
+
+    {{ $withPhotos := slice }}
+    {{ range (where site.RegularPages "Section" "talks").ByDate.Reverse }}{{ if partial "talk-cover.html" . }}{{ $withPhotos = $withPhotos | append . }}{{ end }}{{ end }}
+    {{ with $withPhotos }}
+    <section class="speak-section">
+      <div class="section-header">
+        <h2 class="section-label">Recent talks</h2>
+        <a href="/talks/" class="section-more">All talks →</a>
+      </div>
+      <div class="res-grid res-grid--three talk-grid">
+        {{ range first 3 . }}{{ partial "talk-card.html" . }}{{ end }}
+      </div>
+    </section>
+    {{ end }}
+
+    {{ with .Params.formats }}
+    <section class="speak-section">
+      <div class="section-header"><h2 class="section-label">Formats</h2></div>
+      <div class="speak-formats">
+        {{ range . }}
+        <div class="speak-format">
+          <h3>{{ .title }}</h3>
+          <p class="speak-format-time">{{ .time }}</p>
+          <p>{{ .text | markdownify }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </section>
+    {{ end }}
+
+    {{ with .Params.bio }}
+    <section class="speak-section speak-kit" id="for-organizers">
+      <div class="section-header"><h2 class="section-label">For organizers</h2></div>
+      <div class="speak-kit-grid">
+        {{ with site.Params.photo }}
+        <div class="speak-kit-photo">
+          <img src="{{ . | relURL }}" alt="{{ site.Params.author }}" width="800" height="800" loading="lazy">
+          <a href="{{ . | relURL }}" download>Download headshot</a>
+        </div>
+        {{ end }}
+        <div class="speak-kit-bio">
+          <p class="speak-kit-label">Short bio, ready to use</p>
+          <blockquote id="speaker-bio">{{ . }}</blockquote>
+          <button type="button" class="btn-secondary speak-copy" data-copy="speaker-bio">Copy bio</button>
+          <p class="speak-kit-more">The <a href="/about/">About page</a> has the longer story.</p>
+        </div>
+      </div>
+    </section>
+    {{ end }}
+
+    {{ with .Params.faq }}
+    <section class="speak-section">
+      <div class="section-header"><h2 class="section-label">Common questions</h2></div>
+      <div class="speak-faq">
+        {{ range . }}
+        <details>
+          <summary>{{ .q }}</summary>
+          <div>{{ .a | markdownify }}</div>
+        </details>
+        {{ end }}
+        {{ with $.Params.faqFooter }}<p class="speak-note">{{ . | markdownify }}</p>{{ end }}
+      </div>
+    </section>
+    {{ end }}
+
+    <section class="speak-invite" id="invite-me-to-speak">
+      <div class="speak-invite-text">
+        <h2>Invite me to speak</h2>
+        <p>Tell me the date, the audience and what you want them to leave with. I reply personally, usually within a couple of working days.</p>
+        <p>Prefer email? Write to <a href="mailto:{{ site.Params.email | default "hitesh@256tec.com" }}">{{ site.Params.email | default "hitesh@256tec.com" }}</a>{{ with site.Params.linkedin }} or reach me on <a href="https://linkedin.com/in/{{ . }}" target="_blank" rel="noopener">LinkedIn</a>{{ end }}.</p>
+      </div>
+      <form name="speaking-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/" class="cta-form">
+        <input type="hidden" name="form-name" value="speaking-enquiry">
+        <p class="cta-hp"><label>Do not fill this out if you are human: <input name="bot-field"></label></p>
+        <div class="cta-field"><label for="sp-name">Name</label><input id="sp-name" type="text" name="name" autocomplete="name" required></div>
+        <div class="cta-field"><label for="sp-email">Work email</label><input id="sp-email" type="email" name="email" autocomplete="email" required></div>
+        <div class="cta-field"><label for="sp-org">Organization and event</label><input id="sp-org" type="text" name="organization" required></div>
+        <div class="cta-field"><label for="sp-date">Date and city <span>(or online)</span></label><input id="sp-date" type="text" name="date_and_place"></div>
+        <div class="cta-field"><label for="sp-format">Format</label><select id="sp-format" name="format"><option>Keynote</option><option>Leadership workshop</option><option>Fireside chat or panel</option><option>Internal session</option><option>Not sure yet</option></select></div>
+        <div class="cta-field"><label for="sp-message">Who is the audience, and what should they leave with?</label><textarea id="sp-message" name="message" rows="5" required></textarea></div>
+        <button type="submit" class="btn-primary cta-submit">Send the invitation</button>
+      </form>
+    </section>
+  </div>
+</article>
+<script>
+document.querySelectorAll('.speak-copy').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var el = document.getElementById(b.getAttribute('data-copy'));
+    if (!el || !navigator.clipboard) return;
+    navigator.clipboard.writeText(el.innerText.trim()).then(function () {
+      var t = b.textContent; b.textContent = 'Copied'; setTimeout(function () { b.textContent = t; }, 1800);
+    });
+  });
+});
+</script>
+{{ end }}

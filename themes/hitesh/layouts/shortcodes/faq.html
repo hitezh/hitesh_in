@@ -1,0 +1,11 @@
+{{/* Renders the page's front-matter `faq` where the shortcode is placed, so a
+     page can put its questions above a form. Pages that do not use it get the
+     FAQ after the content (see _default/single.html). */}}
+{{ with .Page.Params.faq }}
+<h2>Common questions</h2>
+{{ range . }}
+<h3>{{ .q }}</h3>
+{{ .a | markdownify | safeHTML }}
+{{ end }}
+{{ with $.Page.Params.faqFooter }}{{ . | markdownify | safeHTML }}{{ end }}
+{{ end }}

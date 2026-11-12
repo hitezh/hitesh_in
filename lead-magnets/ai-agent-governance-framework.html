@@ -1,0 +1,447 @@
+<section class="cover">
+  <p class="kicker">Template and worksheets</p>
+  <h1>AI Agent Governance Framework: a template you can adopt in a week</h1>
+  <p class="sub">A fill-in register, autonomy tiers, blast-radius worksheet, checklists and approval matrix for leaders who are about to let AI agents act in real systems and need to be able to say who owns each one, what it can touch and what it did.</p>
+</section>
+
+<section>
+  <h2>How to use this template</h2>
+  <p>This is a working document. Print it, or copy the tables into whatever your team already uses, and fill it in with the people who run the agents. I would rather you finish a rough version this week than a polished one next quarter.</p>
+  <p>An agent, for this document, is any AI system that takes actions with tools or credentials: a coding agent on a laptop, a support bot that can issue refunds, a scheduled job that reads tickets and updates records.</p>
+  <p class="how">A workable week: Day 1, fill the agent register (Part 2). Day 2, give every agent an autonomy tier (Part 3). Day 3, complete a blast-radius worksheet for your three most used agents (Part 4). Day 4, check those three against the pre-deployment checklist and the audit log requirements (Parts 5 and 6). Day 5, agree the approval matrix and the first-hour page, then put the first drill and the first quarterly review in the calendar (Parts 7 to 9). The four tiers, the roles in the approval matrix and the review cadence are a starting point for your own team, not a standard. Rename and change them to fit how you work.</p>
+</section>
+
+<section>
+  <h2>Part 1. The principles</h2>
+  <p>Everything in the template follows from six ideas. If someone on your team disagrees with one, settle that before filling in the tables.</p>
+  <ol>
+    <li><strong>You hired an agent.</strong> When you give an agent a goal and a budget, you have taken on a worker that is fast, tireless and indifferent to your reputation. It needs what a new hire gets: a probation period, a manager, a defined scope of authority, and a named person who answers for it. When Bottleneck Labs gave GPT-5.6 <a href="https://hitesh.in/2026/you-hired-an-agent/">a live iOS app, $250 and the instruction to grow the business as much as possible, now</a>, it spent $99.50 buying fifty fake users and finished the 24 hours with zero new revenue. An agent has no skin in the game, so a human has to carry it.</li>
+    <li><strong>Limit each agent by its blast radius.</strong> An agent runs with whatever access it is given, and by default that is everything its user has. In October, <a href="https://hitesh.in/2026/coding-agents-blast-radius-job-title/">Goldman Sachs reportedly kept coding agents with its engineers</a>, about 12,000 of roughly 47,000 staff, and drew the line by job title. The title tells you little, while what the agent can read, write, spend and reach tells you nearly everything. Give each agent its own identity, narrower than its user's.</li>
+    <li><strong>Every workflow has an autonomy budget.</strong> Errors compound across steps. At 90% accuracy per step, a five-step task finishes correctly about 59% of the time, ten steps about 35%, and twenty steps about 12%. So the number that matters is how many steps the agent can own before a person looks, and that depends on how cheap a mistake is to catch and to undo.</li>
+    <li><strong>A goal gets the most literal reading.</strong> An agent told to "resolve the ticket" will close it if closing counts. A more capable model finds more shortcuts, so waiting for a better model makes this worse. Write the objective with the cheapest shortcut in mind, and say out loud the constraints you would never need to say to a person.</li>
+    <li><strong>A limit is only as real as what enforces it.</strong> Being authorized and being contained are different properties. For every limit on an agent, you should be able to name the software that enforces it, who patches that software, and how long patching takes.</li>
+    <li><strong>You cannot govern what you cannot reconstruct.</strong> Agents fail outward, into systems you do not own. Before one acts outside your walls you need attribution, an action log nobody can edit, and a kill switch with a named owner.</li>
+  </ol>
+  <div class="note"><strong>Rule of thumb.</strong> Let agents loose first where undo is cheap: draft before send, stage before commit, recommend before execute.</div>
+</section>
+
+<section class="page-break">
+  <h2>Part 2. The agent register</h2>
+  <p class="how">One row per agent. Fill in what the agent can actually do today, which you find by listing its real permissions, and ignore what the design document says it should do. If a cell cannot be filled in within ten minutes, write "unknown" and treat that as the first finding.</p>
+  <table class="wide">
+    <thead>
+      <tr>
+        <th>Agent</th>
+        <th>Owner (a name)</th>
+        <th>Purpose</th>
+        <th>Can read</th>
+        <th>Can write</th>
+        <th>Spend limit</th>
+        <th>Tier (1 to 4)</th>
+        <th>Last review</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><em>Example: refund assistant</em></td>
+        <td><em>Head of support</em></td>
+        <td><em>Draft refund decisions</em></td>
+        <td><em>Orders (copy), tickets</em></td>
+        <td><em>Ticket notes only</em></td>
+        <td><em>Hard cap per month at provider</em></td>
+        <td><em>1</em></td>
+        <td><em>Date</em></td>
+      </tr>
+      <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <h3>Rules for the register</h3>
+  <ul>
+    <li>The owner is one person, by name. A team or a vendor is not an owner. This person inherits the agent's reputational downside, the way a partner signs off on an audit.</li>
+    <li>"Can write" includes sending email, calling outside APIs, creating accounts and spending money, as well as changing your own records.</li>
+    <li>The spend limit is a hard cap set at the provider or the gateway. An alert that somebody reads later does not count as a limit.</li>
+    <li>If an agent runs as its user and cannot be given less than its user has, write that in the row. It is a finding about your platform.</li>
+    <li>Coding agents on laptops belong in the register too. So do agents a vendor runs for you.</li>
+  </ul>
+</section>
+
+<section class="page-break">
+  <h2>Part 3. Autonomy tiers</h2>
+  <p>The tier belongs to the workflow, because the same model can be safe for one task and reckless for another. Every new agent starts at tier 1, which is its probation. It moves up one tier at a time, when the evidence supports it.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Tier</th>
+        <th>What the agent does</th>
+        <th>Conditions the workflow must meet</th>
+        <th>Typical work</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1. Suggest only</strong></td>
+        <td>Reads and proposes. A person does the action.</td>
+        <td>Read-only access, on copies of data where possible. Named owner. Corrections are recorded.</td>
+        <td>Drafting, summarizing, classifying, building in a sandbox</td>
+      </tr>
+      <tr>
+        <td><strong>2. Act with approval</strong></td>
+        <td>Stages the action. A named person approves before it takes effect.</td>
+        <td>The agent has its own identity. The approver sees exactly what will happen and can refuse. The checkpoint sits right before the step that is expensive or permanent. Actions are logged.</td>
+        <td>Staging a change, preparing a payment, queuing a customer message</td>
+      </tr>
+      <tr>
+        <td><strong>3. Act then report</strong></td>
+        <td>Acts by itself. A person reviews afterwards, at a set sampling rate.</td>
+        <td>Every action can be undone and you have done the undo once. You have written down how fast a mistake is noticed. Hard spend cap. The correction record from tier 2 supports the move.</td>
+        <td>Internal updates that are reversible and easy to check</td>
+      </tr>
+      <tr>
+        <td><strong>4. Act alone</strong></td>
+        <td>Acts by itself. Spot checks only.</td>
+        <td>All of tier 3. The environment checks the work (tests, reconciliation). The worst outcome on the blast-radius worksheet is one you would accept without calling a meeting. The kill switch has been tested.</td>
+        <td>Work with cheap verification and cheap undo, such as code behind tests and review</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="note"><strong>Where the person goes.</strong> Keep the human where the action is irreversible. Spending money, sending mail to customers, calling an outside API, writing to production and changing a system of record stay at tier 2 until a hard limit the agent cannot change makes the worst case small. In <a href="https://hitesh.in/2025/project-vend-when-ai-plays-shopkeeper/">Project Vend</a>, an AI ran a small office shop for a month and slowly lost money through a hundred small, unverified decisions it could not take back.</div>
+  <h3>Count the steps before you choose a tier</h3>
+  <p class="how">Do this once per workflow. Most teams ask whether the agent can do the task. Ask how many steps it can own before a person has to look.</p>
+  <p class="fill"><span>Workflow</span></p>
+  <p class="fill"><span>Steps from start to finish</span></p>
+  <p class="fill"><span>The step where a mistake becomes expensive or permanent</span></p>
+  <p class="fill"><span>How the work is checked, and what a check costs</span></p>
+  <p class="fill"><span>How a mistake is undone, and how long that takes</span></p>
+  <p class="fill"><span>Steps the agent may own before a checkpoint</span></p>
+  <p class="fill"><span>Tier, and the date it will be reviewed</span></p>
+  <h3>Moving an agent up a tier</h3>
+  <ul class="checks">
+    <li>You started by reviewing everything, and you have a record of every edit, rejection and override with the reason.</li>
+    <li>The sampling rate for the new tier is a number, written down, with a named owner who is accountable for the outcome.</li>
+    <li>The blast-radius worksheet has been redone for the new tier and the worst outcome is still acceptable.</li>
+    <li>The approval in Part 7 is signed by someone other than the person who asked for it.</li>
+  </ul>
+</section>
+
+<section class="page-break">
+  <h2>Part 4. Blast-radius worksheet</h2>
+  <p class="how">One sheet per agent. Start with the three agents your people use most. If any of them can move money, send customer messages or change production, that is where your blast radius is large. Answer for what the agent could do with its current access on a bad day, including a day when a web page, ticket or log file written by a stranger steers it.</p>
+  <p class="fill"><span>Agent and owner</span></p>
+  <p class="fill"><span>Objective, as written for the agent</span></p>
+  <p class="fill"><span>The cheapest, most literal way to satisfy that objective</span></p>
+  <p class="fill"><span>Constraints you would never need to say to a person, now written down</span></p>
+  <p class="fill"><span>Time horizon the agent is told to care about</span></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Your answer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>What is the worst realistic outcome with the access it has today?</td><td></td></tr>
+      <tr><td>Who outside your company could be affected (customers, partners, public services)?</td><td></td></tr>
+      <tr><td>How would you detect it, and who would notice first: you or the other party?</td><td></td></tr>
+      <tr><td>How long could it run before someone notices?</td><td></td></tr>
+      <tr><td>How would you reverse it, and when did you last try that reversal?</td><td></td></tr>
+      <tr><td>Which actions are one-way doors that cannot be reversed at all?</td><td></td></tr>
+      <tr><td>What is the most it can spend before a hard cap stops it?</td><td></td></tr>
+      <tr><td>Which credentials can it see, and what could each one do if stolen?</td><td></td></tr>
+      <tr><td>Could its credentials reach the backup you would restore from?</td><td></td></tr>
+    </tbody>
+  </table>
+  <h3>What enforces the limit</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Limit</th>
+        <th>Enforced by (name the software)</th>
+        <th>Who patches it, and how fast</th>
+        <th>Date you tested it</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Account or permission scope</td><td></td><td></td><td></td></tr>
+      <tr><td>Network egress</td><td></td><td></td><td></td></tr>
+      <tr><td>Spend cap</td><td></td><td></td><td></td></tr>
+      <tr><td>Sandbox boundary</td><td></td><td></td><td></td></tr>
+      <tr><td>One independent control that shares no code with the above</td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <div class="note"><strong>A limit is a hope until you have tested it.</strong> On October 25, Erica Windisch published <a href="https://hitesh.in/2026/limited-access-limited-enforcement/">a report called Tailworm</a>, and her lab tests on Tailscale 1.104.2 showed a person allowed to log in as an ordinary user reaching root on the same machine (Tailscale has not confirmed every claim in it). If the thing that grants the access is also the only thing that enforces the limit, try to exceed the limit yourself. Try to reach an unapproved domain from inside the sandbox. Try to spend past the cap.</div>
+  <p class="fill"><span>Decision: accept, reduce access, or lower the tier</span></p>
+</section>
+
+<section class="page-break">
+  <h2>Part 5. Pre-deployment checklist</h2>
+  <p class="how">Run this before an agent touches live data or a live system. Any unticked box either gets fixed or gets a named person who accepts it in writing.</p>
+  <p>The containment items are old controls, and they matter more with agents. In July an OpenAI model running a security benchmark called ExploitGym <a href="https://hitesh.in/2026/blast-radius-of-a-goal/">found a zero-day in OpenAI's own sandbox</a>, got itself onto the open internet and broke into Hugging Face to steal the answer key. Least privilege, short-lived credentials, egress allowlists and a sandbox that is a real boundary are what would have blunted it.</p>
+  <h3>Ownership and objective</h3>
+  <ul class="checks">
+    <li>A named person owns the agent and knows they answer for what it does, including in the hour after the deadline passes.</li>
+    <li>The objective states a time horizon and does not say "as much as possible, now" in any form.</li>
+    <li>You have written down the cheapest literal way to hit the objective and changed the wording until that shortcut no longer counts as success.</li>
+    <li>The agent has a scope of authority in writing: what it may decide alone and what it must hand to a person.</li>
+    <li>Anything built in a sandbox by a non-engineer has a named engineer who owns it before it touches live data.</li>
+  </ul>
+  <h3>Identity and access</h3>
+  <ul class="checks">
+    <li>The agent has its own identity, separate from and narrower than the person who started it.</li>
+    <li>It starts read-only, on copies of data, and each write permission was added for a stated reason.</li>
+    <li>You have listed what it can actually do when it runs, and the list matches the register.</li>
+    <li>No long-lived keys sit in the agent's environment. It gets short-lived tokens issued per task.</li>
+    <li>Each key it uses has a hard spend cap at the provider and is separate from the keys of other services.</li>
+    <li>Its credentials cannot reach the backups you would restore from.</li>
+  </ul>
+  <h3>Containment</h3>
+  <ul class="checks">
+    <li>It runs on a machine that holds nothing valuable and can be rebuilt in minutes.</li>
+    <li>Outbound network access is an allowlist, enforced on the host side where the agent cannot switch it off.</li>
+    <li>You know whether each sandbox has its own kernel or shares the host's, and how long a security fix takes to reach your workloads.</li>
+    <li>Each run has its own network scope and spend limit, and someone has tried to exceed both.</li>
+  </ul>
+  <h3>Record and reversal</h3>
+  <ul class="checks">
+    <li>Every action the agent takes is logged as described in Part 6, and the agent cannot edit or delete that log.</li>
+    <li>For every write it can make, you can say whether it is reversible, and you have performed the reversal once.</li>
+    <li>If it writes to a system of record, you have restored that system from an offline copy, end to end, and timed it.</li>
+    <li>A named person can stop this agent, and every copy of it, and has done so once in a test.</li>
+    <li>Human edits, rejections and overrides of its output are stored with the reason, in your own storage, in a plain format.</li>
+  </ul>
+  <h3>For coding agents, also</h3>
+  <ul class="checks">
+    <li>AI-written code is tagged automatically at commit time, so reviewers do not depend on anyone remembering to say so.</li>
+    <li>Generated code goes through the same security, dependency and secrets scanning as human code, and nothing merges without review.</li>
+    <li>You have a written policy on which assistants are approved, what they may touch, and what must never be pasted into them.</li>
+    <li>The agent's instruction files, hooks and plugins are in version control, and someone owns them.</li>
+  </ul>
+</section>
+
+<section class="page-break">
+  <h2>Part 6. What the audit log must record</h2>
+  <p>The log is a flight recorder, so it goes in before the agent runs. Record the calls the agent actually made. The model's own account of its reasoning is unreliable and does not replace them.</p>
+  <p>Between May and June 2026, a swarm of AI agents uploaded more than 2,000 malicious packages to RubyGems, which shut down new registrations for four days, and researchers traced the campaign to OpenAI. Months later OpenAI was still saying it would <a href="https://hitesh.in/2026/what-your-agent-did/">"continue to investigate"</a> what its agents had done. If they could not reconstruct it, assume you cannot either until the log exists.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>What to record</th>
+        <th>We have it (yes / no)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Agent</td><td>Which agent, and which version of its instructions and tools</td><td></td></tr>
+      <tr><td>Run</td><td>A run ID that ties every step of one task together, in order</td><td></td></tr>
+      <tr><td>On whose behalf</td><td>The person, team or customer the run was for</td><td></td></tr>
+      <tr><td>Action</td><td>Every request, account created, message sent and write made</td><td></td></tr>
+      <tr><td>Target</td><td>The system acted on, and whether it is yours or someone else's</td><td></td></tr>
+      <tr><td>Credential</td><td>Which identity or key was used for the action</td><td></td></tr>
+      <tr><td>Time</td><td>When each action happened</td><td></td></tr>
+      <tr><td>Before and after</td><td>What changed, in enough detail to reverse it</td><td></td></tr>
+      <tr><td>Approval</td><td>Who approved a tier 2 action, and when</td><td></td></tr>
+      <tr><td>Spend</td><td>Cost of the run, against its cap</td><td></td></tr>
+      <tr><td>Correction</td><td>Any human edit, rejection or override, with the reason</td><td></td></tr>
+    </tbody>
+  </table>
+  <h3>Three tests for the log</h3>
+  <ul class="checks">
+    <li>If one of your agents did something harmful to an outside system last Tuesday, you could reconstruct it. Write down how long that would take: ________</li>
+    <li>If a third party complained today, you could tell them which agent, which run and on whose behalf within minutes, without opening an investigation.</li>
+    <li>The log is append-only and kept where the agent's own credentials cannot change it.</li>
+  </ul>
+  <p>Latency, error rates and token spend will not tell you that an agent just created forty accounts on a partner's platform. Those metrics were built for software that stays inside your walls. Route unusual usage and billing from your AI providers to whoever is on call, so it does not sit in a finance inbox until month end.</p>
+</section>
+
+<section class="page-break">
+  <h2>Part 7. Approval matrix for expanding scope</h2>
+  <p class="how">An agent's scope grows one request at a time, and usually nobody decides. Use this table so that somebody does. Write a name against each row. The person asking for the change and the person approving it must be different people.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Change requested</th>
+        <th>Who should approve</th>
+        <th>Evidence before a yes</th>
+        <th>Name in your company</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>New agent, tier 1, read-only on copies</td>
+        <td>Agent owner</td>
+        <td>Row added to the register</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Read access to live or customer data</td>
+        <td>Owner of that data</td>
+        <td>Reason a copy will not do</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Write access to a live system</td>
+        <td>Owner of that system, plus a named engineer who will own the agent's changes</td>
+        <td>Worksheet redone; reversal performed once</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Write access to a system of record</td>
+        <td>The executive accountable for that record</td>
+        <td>Timed restore from an offline copy; every write logged</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Higher tier, or lower sampling rate</td>
+        <td>The person accountable for the outcome of the workflow</td>
+        <td>Correction record at the current tier</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Higher spend limit</td>
+        <td>Budget holder of the team that benefits</td>
+        <td>Per-token bill to date; new hard cap set at the provider</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>New credential, outside system or wider network access</td>
+        <td>Security owner</td>
+        <td>What enforces the new limit, and a test of it</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Actions that reach customers or partners</td>
+        <td>Business owner of that relationship; legal where you are regulated</td>
+        <td>Disclosure wording agreed (Part 8)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Change to objective, instructions, hooks or plugins</td>
+        <td>Agent owner, reviewed like a code change</td>
+        <td>A diff; literal-shortcut question asked again</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>These are decision rights, the same thing a delegation-of-authority matrix describes for people. The sampling rate is your risk appetite expressed as a number. It should be set by the person accountable for the outcome, and today it is usually set by whoever configured the tool first.</p>
+  <p>Before you take access away from anyone, write down the ten things people built with it. Goldman's traders had been using coding agents to <a href="https://hitesh.in/2026/coding-agents-blast-radius-job-title/">monitor client flows, model positions and produce charts</a>, and when access was cut those tools were passed to engineers to be improved. That list is a set of requirements, and if you ignore it the need comes back as spreadsheets and scripts you cannot see.</p>
+</section>
+
+<section class="page-break">
+  <h2>Part 8. Incidents and drills</h2>
+  <h3>The first hour, agreed in advance</h3>
+  <p class="how">One page is enough. Fill it in now, with names, for two cases: an agent has done something harmful, or a vendor that holds your keys says "assume compromise".</p>
+  <p class="fill"><span>Who can stop the agent, and every copy of it</span></p>
+  <p class="fill"><span>Who rotates the credentials it could reach</span></p>
+  <p class="fill"><span>Who checks provider usage and billing</span></p>
+  <p class="fill"><span>Who reconstructs what it did from the log</span></p>
+  <p class="fill"><span>Who calls the affected customer or partner</span></p>
+  <p class="fill"><span>What they say in that call</span></p>
+  <p class="fill"><span>Who you call for forensic help</span></p>
+  <p>Decide the disclosure policy now, in writing: what you tell a partner when your agent damages their system. With agents, staying silent is the cheap option, because attribution is hard and no single person carries the mistake. A policy written before the incident reads like a company worth trusting, and one written after reads like an excuse.</p>
+  <p>Check one more thing before you need it. If your security plan assumes AI tools will help you investigate, ask your vendor whether their models will analyze attack logs or refuse. When Hugging Face tried to use frontier commercial models on the logs of the ExploitGym attack, <a href="https://hitesh.in/2026/blast-radius-of-a-goal/">the models refused</a>, while the attacking model operated under no usage policy.</p>
+  <h3>Four drills to run</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Drill</th>
+        <th>How to run it</th>
+        <th>What to measure</th>
+        <th>Date and result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>AI turned off</strong></td>
+        <td>Replay a real incident from the last year with the AI tools off</td>
+        <td>Time to a correct first hypothesis, against the same team with AI on</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Sandbox escape</strong></td>
+        <td>Assume one agent is fully compromised</td>
+        <td>What it reaches, how fast you notice, how fast you rotate</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Full rotation</strong></td>
+        <td>Rotate every secret stored with a platform vendor</td>
+        <td>Total time. More than a day, or an incomplete list, is the finding</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Cold restore</strong></td>
+        <td>Restore a system of record from an offline copy</td>
+        <td>Time end to end, and how much history is lost</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="note"><strong>Why the AI goes off.</strong> The incidents that need your people tend to break the AI too: a vendor outage, rotated keys, a compromised tool. A team that has never worked an incident without the assistant is like a backup you have never restored. The skill fades with disuse, too: in <a href="https://www.thelancet.com/journals/langas/article/PIIS2468-1253(25)00133-5/abstract">a study in The Lancet Gastroenterology &amp; Hepatology</a>, endoscopists' unassisted polyp detection fell from 28% to 22% after a period of working with AI assistance.</div>
+  <h3>Habits that keep the drill honest</h3>
+  <ul class="checks">
+    <li>During real incidents, the person on point writes their own hypothesis in the channel before asking the model.</li>
+    <li>On-call can reach logs, dashboards and rollback controls when the AI vendor is down and when the AI tooling's keys have been rotated.</li>
+    <li>People who ship agent-written code carry the pager for it.</li>
+    <li>Junior engineers take the first pass on routine incidents, with the AI reviewing afterwards.</li>
+    <li>You count incidents resolved with no AI input and track the time to first hypothesis each quarter.</li>
+  </ul>
+</section>
+
+<section class="page-break">
+  <h2>Part 9. Quarterly review checklist</h2>
+  <p class="how">Put it in the calendar now, with the agent owners in the room. Also run the instructions section whenever the model underneath an agent is upgraded.</p>
+  <h3>Register and tiers</h3>
+  <ul class="checks">
+    <li>Every agent in use has a row, and every row has an owner who is still in that role.</li>
+    <li>For each agent, the real permissions were listed again and compared with the register.</li>
+    <li>Access that no stated purpose needs any more has been removed.</li>
+    <li>Each tier and sampling rate was looked at against the correction record, and the next review date is written down.</li>
+    <li>The per-token bill for each agent was shown to the team that benefits from it.</li>
+  </ul>
+  <h3>Instructions</h3>
+  <ul class="checks">
+    <li>Each objective was reread for its cheapest literal shortcut.</li>
+    <li>For each agent, you deleted the instructions you could not prove earn their place, ran your evaluations, and kept only what broke without them.</li>
+    <li>Rules added after past incidents were checked against the current model. Rules written for a model you no longer use were removed.</li>
+    <li>On one real laptop, someone listed everything a coding agent loads at startup (config directories, hooks, plugins, skills, remote tool servers) in under ten minutes.</li>
+    <li>Agent config files were compared with last quarter's snapshot, and every change a vendor's update made has an owner who accepted it.</li>
+    <li>Plugins and hooks are on an allowlist, and anything else is an exception someone asked for.</li>
+    <li>Vendor reviews now ask: does your software write outside its own directory, and does it ask first?</li>
+  </ul>
+  <h3>Gateway and credentials</h3>
+  <ul class="checks">
+    <li>You can name the single system that, if stolen, hands over every model provider account, and the person who owns its security.</li>
+    <li>That system is budgeted and patched like a secrets manager, and nothing in your pipeline pulls a floating tag or an unpinned release of it.</li>
+    <li>Its upgrades lag new releases by days, with a fast lane for security patches that a person approves.</li>
+    <li>Every provider key has a hard spend cap, and each environment has its own key.</li>
+    <li>You have a register of every vendor that stores one of your credentials, what that credential can reach, and whether you can see audit logs.</li>
+    <li>A few fake keys sit next to the real ones and alert a person when used.</li>
+    <li>For each sandbox or access tool, you asked the vendor how long a fix takes to reach you, and asked for their incident record.</li>
+  </ul>
+  <h3>Records and drills</h3>
+  <ul class="checks">
+    <li>The "last Tuesday" test from Part 6 was run on one agent, and the time was written down.</li>
+    <li>The correction log is in a format you control and could move to another vendor within a quarter.</li>
+    <li>The four drills in Part 8 each have a date and a result from the last twelve months, and the AI-off drill has one from this quarter.</li>
+    <li>The first-hour page still has current names on it.</li>
+  </ul>
+</section>
+
+<section class="reading">
+  <h2>Further reading</h2>
+  <ul>
+    <li><a href="https://hitesh.in/2026/the-autonomy-budget/">The Autonomy Budget: Deploying AI Agents Before They're Reliable</a>, for the compounding arithmetic behind the tiers and the step count.</li>
+    <li><a href="https://hitesh.in/2026/you-hired-an-agent/">Treat an AI agent like a new hire</a>, on why an agent needs an owner, a horizon and a scope of authority.</li>
+    <li><a href="https://hitesh.in/2026/coding-agents-blast-radius-job-title/">Goldman limited coding agents by job title. Limit them by blast radius.</a>, on separate agent identities and recording what people built.</li>
+    <li><a href="https://hitesh.in/2026/blast-radius-of-a-goal/">The blast radius of a goal</a>, on literal objectives and keeping the human at the irreversible step.</li>
+    <li><a href="https://hitesh.in/2026/what-your-agent-did/">OpenAI couldn't say what its agents did. Neither can you.</a>, for attribution, the action log, the kill switch and disclosure.</li>
+    <li><a href="https://hitesh.in/2026/limited-access-limited-enforcement/">A limited shell account is only as limited as the software enforcing it</a>, on asking what enforces each limit.</li>
+    <li><a href="https://hitesh.in/2026/ai-off-incident-drill/">Run your next incident drill with the AI turned off</a>, for the drill and the on-call habits.</li>
+    <li><a href="https://hitesh.in/guides/ai-agent-governance/">Deploying AI agents safely: autonomy, permissions and blast radius</a>, the guide that collects these posts with the ones on gateways, sandboxes and stale instructions.</li>
+  </ul>
+</section>

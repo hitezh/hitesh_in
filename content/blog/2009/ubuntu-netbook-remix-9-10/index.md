@@ -10,7 +10,7 @@ tags:
   - "unr"
 ---
 
-If you have come here looking for a way to install **Skype**, [visit this post](https://hitesh.in/2009/installing-skype-on-eeepc-running-ubuntu-netbook-remix-9-10/) instead.
+If you have come here looking for a way to install **Skype**, [visit this post](/2009/installing-skype-on-eeepc-running-ubuntu-netbook-remix-9.10/) instead.
 
 By sheer coincidence, I got my hands on an Asus EeePC just in time for the Ubuntu 9.10 release. Given the state of Windows XP on it, I was left with no option but to do a clean install of UNR.
 

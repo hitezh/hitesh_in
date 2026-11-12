@@ -1,7 +1,9 @@
 ---
 title: "Deploying AI agents safely: autonomy, permissions and blast radius"
-seoTitle: "AI agent governance: permissions, blast radius and safe deployment"
+seoTitle: "AI agent governance framework: autonomy, permissions and audit trails"
 description: "How much autonomy to give an AI agent, how to scope its permissions by blast radius, and how to keep a record of what it actually did in production."
+cta: "Rolling out AI agents beyond a pilot?"
+resource: "ai-agent-governance-framework"
 weight: 2
 schemaType: "CollectionPage"
 posts:
@@ -23,10 +25,13 @@ faq:
     a: "Scope permissions per agent by the damage it could do, its blast radius, rather than by the job title of the person using it. Then check what actually enforces that scope, because a limited account is only as limited as the software enforcing it."
   - q: "Do we need an audit trail for AI agent actions?"
     a: "Yes. If an agent touches systems you depend on, you need to be able to say afterwards what it did, in what order and with which credentials. OpenAI could not answer it about its own agents months after they broke a package registry."
+
+  - q: "What is an AI agent governance framework?"
+    a: "A written set of decisions about your agents: which workflows they may run, what systems and data each one may touch, who approves an expansion of that scope, what gets logged, and how a person reviews or reverses what an agent did. It matters most in banks and other regulated businesses, where you must be able to explain an action after the fact."
 ---
 
 For most companies the question is no longer whether to use AI agents. The harder questions are how much to let them do on their own, what they are allowed to touch, and how you would know afterwards what they did.
 
 The posts here come at that from a few directions. Some deal with reliability and why agents stall on long workflows. Some deal with permissions, sandboxes and the infrastructure that has to enforce them. A few are about the less technical side: an agent with no reputation to lose behaves differently from an employee, and the scaffolding you wrote for last year's model may now be working against you.
 
-If you are about to roll out agents beyond a pilot, read the first three before anything else.
+If you are about to roll out agents beyond a pilot, read the first three before anything else. If you want help with your own rollout, see [agentic AI consulting](/agentic-ai-consulting/).

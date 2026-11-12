@@ -16,7 +16,7 @@ So the rest of the post is not relevant any more.
 
 Did not want to post a rant, especially when I haven't yet crystallized my thoughts.
 
-Background: My previous post was about a project I came across - [hornget](https://hitesh.in/2009/opensource-dotnet-projects/). I wanted to help because I liked their ideas. I offered to manage the [SupportedPackages](http://code.google.com/p/hornget/wiki/SupportedPackages) page for them by automating the process. Or to share the script for the same.
+Background: My previous post was about a project I came across - [hornget](/2009/opensource-.net-projects-alt.net/). I wanted to help because I liked their ideas. I offered to manage the [SupportedPackages](http://code.google.com/p/hornget/wiki/SupportedPackages) page for them by automating the process. Or to share the script for the same.
 
 Reason for rant: Guess what was the reply?
 
