@@ -1,7 +1,7 @@
 ---
-title: "Your engineering interview still tests the part AI made cheap"
+title: "Your engineering interview still tests the part AI made easy"
 seoTitle: "Engineering interviews in the AI era: test review, not code"
-slug: "interview-tests-the-cheap-part"
+slug: "interview-tests-the-easy-part"
 date: "2026-11-13"
 description: "Jane Street is trialing interview rounds that test design and code review. Most hiring loops still grade drafting, then promote the same way. Here is how to audit yours."
 categories:
@@ -13,9 +13,9 @@ tags:
   - "future-of-work"
   - "decision-making"
 image: images/cover.svg
-linkedin_hook: "Jane Street has trialed interview rounds since summer where candidates write less code and judge more of it. Most hiring loops still grade drafting, the skill AI just made cheap."
+linkedin_hook: "Jane Street has trialed interview rounds since summer where candidates write less code and judge more of it. Most hiring loops still grade drafting, the skill AI just made easy."
 takeaways:
-  - "Label every round in your loop as drafting, reviewing, deciding or communicating. If drafting is more than half, you are measuring the cheap part."
+  - "Label every round in your loop as drafting, reviewing, deciding or communicating. If drafting is more than half, you are measuring the easy part."
   - "Hand a candidate a plausible diff with two flaws, one obvious and one subtle. Run it on your best reviewer first. If they miss the subtle one, fix the exercise."
   - "Write down when your hiring loop will next be revised and what evidence would change it. An interview that never changes is a policy nobody owns."
 linkedin_question: "If you had to name the one engineer on your team who catches the flaw everyone else approved, would your interview loop have hired them?"
@@ -25,11 +25,11 @@ On November 2, Jane Street engineer Matthew Saffer [published a short note](http
 
 The vagueness drew some grumbling. I think it is the most honest part, and the rest of the note is a useful prompt for any company that hires engineers.
 
-## Your loop measures the part of the job that got cheap
+## Your loop measures the part of the job that got easy
 
 A technical interview is a measuring instrument. For decades the whiteboard or the live coding round was a decent proxy for the job, because writing correct code was slow and expensive and the people who could do it well were rare. Testing the writer made sense.
 
-Generating code is now close to free, and Saffer's note says as much: taste about what to build, choosing abstractions that last and making sure the result is correct are what matter more. A loop with four coding rounds still measures the skill that just got cheaper, with great precision. I wrote earlier that [reviewing is the job now](/2026/reviewing-is-the-job/), and the interview is where that claim is easiest to act on, because you control it completely.
+Generating code is now close to free, which makes writing it the easy part. Saffer's note says as much: taste about what to build, choosing abstractions that last and making sure the result is correct are what matter more. A loop with four coding rounds still measures the skill that just got easier, with great precision. I wrote earlier that [reviewing is the job now](/2026/reviewing-is-the-job/), and the interview is where that claim is easiest to act on, because you control it completely.
 
 There is a mechanism here that is easy to miss. You cannot test review skill with correct code. A candidate only shows they can judge code when there is something wrong with it, and the interesting flaws are the plausible ones, the diff that passes its tests and misses what the business needed. Most interview material has no flaw in it, so it cannot reveal this skill even if you wanted it to. Universities hit the same wall with [take-home exams](/2026/take-home-exam-is-over/): once the artifact is free, you have to ask the person to defend it.
 
@@ -51,7 +51,7 @@ The same applies to the experiment itself. Jane Street is treating its interview
 
 If I were advising a company redesigning its engineering loop, I would start here, in this order:
 
-1. Label every round as drafting, reviewing, deciding or communicating. If drafting is more than half, you are measuring the cheap part.
+1. Label every round as drafting, reviewing, deciding or communicating. If drafting is more than half, you are measuring the easy part.
 2. Add one review round. Use a realistic diff, AI-generated is fine, with two flaws, one obvious and one subtle. Run it on your best current reviewer first. If they miss the subtle flaw, the exercise is broken.
 3. Decide where LLMs are allowed and say so in advance. Put them in specific rounds and tell the candidate. Surprising someone with a tool policy tests nerves.
 4. Grade the questions the candidate asked and the scope they chose to cut, not only the output. If everyone's code would look the same, ask what you would still be able to score.

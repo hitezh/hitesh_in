@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Blog cover styled as an X post by Dr. Hitesh Sarda: YOUR INTERVIEW LOOP TESTS THE PART AI MADE CHEAP. Jane Street has trialed interview rounds where candidates review more code; most hiring loops still grade drafting.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Blog cover styled as an X post by Dr. Hitesh Sarda: YOUR INTERVIEW LOOP TESTS THE PART AI MADE EASY. Jane Street has trialed interview rounds where candidates review more code; most hiring loops still grade drafting.">
   <defs>
     <linearGradient id="avatar" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#2166F3"/>
@@ -27,7 +27,7 @@
   <g class="sans" fill="#E7E9EA">
     <g font-size="48">
       <text x="64" y="220">YOUR INTERVIEW LOOP TESTS THE</text>
-      <text x="64" y="274">PART AI MADE CHEAP.</text>
+      <text x="64" y="274">PART AI MADE EASY.</text>
     </g>
     <g font-size="31">
       <text x="64" y="336">Jane Street has trialed interview rounds since summer where</text>
