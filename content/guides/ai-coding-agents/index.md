@@ -19,6 +19,7 @@ posts:
   - "2026/the-code-you-cant-explain"
   - "2026/tools-built-for-human-speed"
   - "2026/your-backlog-is-the-benchmark"
+  - "2026/interview-tests-the-cheap-part"
 faq:
   - q: "What is the bottleneck when a team uses AI coding agents?"
     a: "Review. When writing code gets cheap, more pull requests arrive than people can carefully check, so throughput is limited by verification capacity. Measure review time and escaped defects, not lines or PRs produced."

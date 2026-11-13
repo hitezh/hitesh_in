@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Blog cover styled as an X post by Dr. Hitesh Sarda: YOUR INTERVIEW LOOP TESTS THE PART AI MADE CHEAP. Jane Street has trialed interview rounds where candidates review more code; most hiring loops still grade drafting.">
+  <defs>
+    <linearGradient id="avatar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2166F3"/>
+      <stop offset="1" stop-color="#00C2A8"/>
+    </linearGradient>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="#000000"/>
+  <circle cx="104" cy="96" r="44" fill="url(#avatar)"/>
+  <text x="104" y="108" class="sans" font-size="34" font-weight="800" fill="#FFFFFF" text-anchor="middle">HS</text>
+  <text x="168" y="86" class="sans" font-size="35" font-weight="700" fill="#E7E9EA">Dr. Hitesh Sarda</text>
+  <g transform="translate(476 74)">
+    <circle r="15" fill="#1D9BF0"/>
+    <path d="M-7 0l5 5 9-9" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="168" y="132" class="sans" font-size="33" fill="#71767B">@fullstackcto</text>
+  <rect x="856" y="64" width="190" height="64" rx="32" fill="#EFF3F4"/>
+  <text x="951" y="107" class="sans" font-size="30" font-weight="700" fill="#0F1419" text-anchor="middle">Follow</text>
+  <g fill="#71767B">
+    <circle cx="1092" cy="96" r="5"/>
+    <circle cx="1114" cy="96" r="5"/>
+    <circle cx="1136" cy="96" r="5"/>
+  </g>
+  <g class="sans" fill="#E7E9EA">
+    <g font-size="48">
+      <text x="64" y="220">YOUR INTERVIEW LOOP TESTS THE</text>
+      <text x="64" y="274">PART AI MADE CHEAP.</text>
+    </g>
+    <g font-size="31">
+      <text x="64" y="336">Jane Street has trialed interview rounds since summer where</text>
+      <text x="64" y="378">candidates write less code and review more. Most hiring</text>
+      <text x="64" y="420">loops still grade the drafting. Hand your next candidate a</text>
+      <text x="64" y="462">diff with two flaws and see who finds them. Then ask who</text>
+      <text x="64" y="504">you promoted for drafting rather than reviewing.</text>
+    </g>
+  </g>
+  <text x="64" y="558" class="sans" font-size="31" fill="#1D9BF0">#ENGINEERINGLEADERSHIP</text>
+  <text x="64" y="594" class="sans" font-size="28" fill="#71767B">9:04 AM &#183; Nov 13, 2026</text>
+</svg>
