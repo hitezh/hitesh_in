@@ -10,6 +10,7 @@ posts:
   - "2026/your-next-customer-is-an-agent"
   - "2026/instacart-what-agents-cant-skip"
   - "2026/stripe-won-the-merchants"
+  - "2026/ban-ai-agents-margin-statement"
   - "2026/chatgpt-new-customer"
   - "2026/built-to-game-your-ai"
   - "2026/count-your-systems"
