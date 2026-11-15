@@ -19,6 +19,7 @@ posts:
   - "2026/how-fast-your-company-learns"
   - "2026/meter-before-the-model"
   - "2026/when-your-ai-vendor-ships-your-product"
+  - "2026/ai-built-app-real-customer-data"
 faq:
   - q: "Why do AI pilots fail after a good demo?"
     a: "A convincing demo often measures the expert running it rather than the tool. If your best people run the pilot, they quietly fix the model's mistakes. Design the pilot so the model's own contribution is visible, on your real work, with someone checking the output."
