@@ -63,7 +63,7 @@
   "@id" $orgID
   "name" ($p.company | default "256 Technologies")
   "description" $p.companyDescription
-  "url" (absURL "work-with-me/")
+  "url" ($p.companyURL | default (absURL "work-with-me/"))
   "founder" (dict "@id" $personID)
   "address" $address
   "areaServed" $areaServed

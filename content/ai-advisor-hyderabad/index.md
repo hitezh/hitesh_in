@@ -24,7 +24,7 @@ faqFooter: "[Book an AI advisory hour](/work-with-me/) or write to [hitesh@256te
 draft: false
 ---
 
-I am Dr. Hitesh Sarda. I live and work in Hyderabad, where I run 256 Technologies, a small applied AI lab. Most of my work is helping a leadership team settle one AI decision at a time: whether a use case is worth doing, whether to buy or build, and how to test it cheaply before anyone commits a budget.
+I am Dr. Hitesh Sarda. I live and work in Hyderabad, where I run [256 Technologies](https://256tec.com/ai-consultant-hyderabad/), a small applied AI lab and AI consulting firm. Most of my work is helping a leadership team settle one AI decision at a time: whether a use case is worth doing, whether to buy or build, and how to test it cheaply before anyone commits a budget.
 
 I have spent 25+ years building production systems, including work at Citi, Virtusa, Yash and ValueLabs, and I have been writing about software and AI on this blog since 2009. My focus is retail, loyalty and industrial businesses.
 
@@ -37,6 +37,8 @@ I have spent 25+ years building production systems, including work at Citi, Virt
 **Speaking.** [Keynotes and workshops](/speaking/) for leadership offsites and industry events in Hyderabad and beyond.
 
 **AI MVP and proof-of-concept development.** The smallest working prototype that answers the key technical and business questions, across agents, computer vision and ML, before you commit to a full build.
+
+The services themselves, with the engagement formats and FAQs, are on the [256 Technologies site](https://256tec.com/ai-consultant-hyderabad/): [AI consulting and advisory](https://256tec.com/advisory/), [AI training](https://256tec.com/training/) and a [fractional Chief AI Officer (CAIO)](https://256tec.com/fractional-head-of-ai/).
 
 ## Who I work with
 
