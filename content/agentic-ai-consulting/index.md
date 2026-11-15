@@ -41,4 +41,4 @@ For the full argument on governing agents, read the [guide to deploying AI agent
 
 ## Talk it through
 
-[Book an AI advisory hour](/work-with-me/) or write to [hitesh@256tec.com](mailto:hitesh@256tec.com).
+The company page is [agentic AI consulting at 256 Technologies](https://256tec.com/agentic-ai/). [Book an AI advisory hour](/work-with-me/) or write to [hitesh@256tec.com](mailto:hitesh@256tec.com).

@@ -52,4 +52,4 @@ I have spent more than 25 years building production software, including work at 
 
 ## Talk it through
 
-The first step is a conversation. [Book an AI advisory hour](/work-with-me/) or write to [hitesh@256tec.com](mailto:hitesh@256tec.com).
+The company page for this service, the [fractional Chief AI Officer (CAIO) at 256 Technologies](https://256tec.com/fractional-head-of-ai/), covers how an engagement runs. The first step is a conversation. [Book an AI advisory hour](/work-with-me/) or write to [hitesh@256tec.com](mailto:hitesh@256tec.com).
