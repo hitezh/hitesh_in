@@ -84,18 +84,11 @@
       <h2 class="section-label">Start here: guides</h2>
       <a href="/guides/" class="section-more">All guides →</a>
     </div>
-    <div class="post-list">
-      {{ range . }}
-      <article class="post-item post-item--nodate">
-        <div class="post-item-main">
-          <div class="post-item-body">
-            <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
-            {{ with .Description }}<p class="post-excerpt">{{ . }}</p>{{ end }}
-          </div>
-        </div>
-      </article>
+    <ol class="guide-list">
+      {{ range $i, $g := . }}
+      <li><a href="{{ $g.RelPermalink }}"><span class="guide-n">{{ printf "%02d" (add $i 1) }}</span><span class="guide-t">{{ $g.Title }}</span>{{ with $g.Description }}<span class="guide-d">{{ . }}</span>{{ end }}<span class="guide-go">&rarr;</span></a></li>
       {{ end }}
-    </div>
+    </ol>
   </div>
 </section>
 {{ end }}
@@ -120,30 +113,15 @@
       <h2 class="section-label">Recent writing</h2>
       <a href="/blog/" class="section-more">Full archive →</a>
     </div>
-    <div class="post-list">
-      {{ $posts := where .Site.RegularPages "Section" "blog" }}
-      {{ range first 8 $posts }}
-      {{ $p := . }}
-      {{ $thumb := partial "post-thumb.html" . }}
-      <article class="post-item{{ with $thumb }} post-item--has-thumb{{ end }}">
-        <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
-          {{ .Date.Format "Jan 2006" }}
-        </time>
-        <div class="post-item-main">
-          <div class="post-item-body">
-            <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
-            {{ with .Params.description }}
-            <p class="post-excerpt">{{ . }}</p>
-            {{ end }}
-          </div>
-          {{ with $thumb }}
-          <a class="post-thumb" href="{{ $p.RelPermalink }}" aria-hidden="true" tabindex="-1">
-            {{ with partial "x-cover.html" $p }}<span class="x-cover">{{ . | safeHTML }}</span>{{ else }}<img src="{{ $thumb }}" alt="" loading="lazy">{{ end }}
-          </a>
-          {{ end }}
-        </div>
-      </article>
-      {{ end }}
+    {{ $posts := first 7 (where .Site.RegularPages "Section" "blog") }}
+    {{ with index $posts 0 }}{{ partial "story-lead.html" . }}{{ end }}
+    <div class="ix">
+{{ $last := "" }}
+{{ range $i, $p := (after 1 $posts) }}
+  {{ $y := $p.Date.Format "2006" }}
+  {{ $show := "" }}{{ if ne $y $last }}{{ $show = $y }}{{ $last = $y }}{{ end }}
+  {{ partial "story-row.html" (dict "p" $p "year" $show) }}
+{{ end }}
     </div>
     <div class="recent-more">
       <a href="/blog/" class="btn-secondary">View all posts &rarr;</a>

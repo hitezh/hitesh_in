@@ -1,0 +1,8 @@
+{{ $p := . }}
+{{ $cat := "" }}{{ with $p.Params.categories }}{{ $cat = index . 0 | humanize }}{{ end }}
+<article class="ix-lead">
+  <div class="ix-lead-kicker"><b>Latest</b>{{ with $cat }}<span>{{ . }}</span>{{ end }}<time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "2 January 2006" }}</time>{{ if gt $p.ReadingTime 0 }}<span>{{ $p.ReadingTime }} min read</span>{{ end }}</div>
+  <h2 class="ix-lead-title"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h2>
+  {{ with $p.Params.description }}<p class="ix-lead-desc">{{ . }}</p>{{ end }}
+  <a class="ix-lead-go" href="{{ $p.RelPermalink }}">Read the essay &rarr;</a>
+</article>

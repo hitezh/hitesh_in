@@ -1,0 +1,11 @@
+{{/* Editorial index row. Args: dict "p" page, "year" string (shown only on first row of a year). */}}
+{{ $p := .p }}
+{{ $cat := "" }}{{ with $p.Params.categories }}{{ $cat = index . 0 | humanize }}{{ end }}
+<article class="ix-row{{ if .year }} ix-row--year{{ end }}">
+  <div class="ix-year">{{ .year }}</div>
+  <div class="ix-main">
+    <h2 class="ix-title"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h2>
+    {{ with $p.Params.description }}<p class="ix-desc">{{ . }}</p>{{ end }}
+  </div>
+  <div class="ix-meta"><time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "2 Jan" }}</time>{{ with $cat }}<span>{{ . }}</span>{{ end }}</div>
+</article>
