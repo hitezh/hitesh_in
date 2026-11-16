@@ -10,20 +10,11 @@
 
     {{ with .Content }}<div class="post-body">{{ . }}</div>{{ end }}
 
-    <div class="post-list post-list--full">
-      {{ range .Pages.ByWeight }}
-      <article class="post-item post-item--nodate">
-        <div class="post-item-main">
-          <div class="post-item-body">
-            <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
-            {{ with .Params.description }}
-            <p class="post-excerpt">{{ . }}</p>
-            {{ end }}
-          </div>
-        </div>
-      </article>
+    <ol class="guide-list">
+      {{ range $i, $g := .Pages.ByWeight }}
+      <li><a href="{{ $g.RelPermalink }}"><span class="guide-n">{{ printf "%02d" (add $i 1) }}</span><span class="guide-t">{{ $g.Title }}</span>{{ with $g.Params.description }}<span class="guide-d">{{ . }}</span>{{ end }}<span class="guide-go">&rarr;</span></a></li>
       {{ end }}
-    </div>
+    </ol>
   </div>
 </div>
 {{ end }}

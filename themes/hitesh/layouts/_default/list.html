@@ -8,35 +8,19 @@
       {{ end }}
     </header>
 
-    <div class="post-list post-list--full">
-      {{ $paginator := .Paginate .Pages }}
-      {{ range $paginator.Pages }}
-      {{ $p := . }}
-      {{ $thumb := partial "post-thumb.html" . }}
-      <article class="post-item{{ with $thumb }} post-item--has-thumb{{ end }}">
-        <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
-          {{ .Date.Format "Jan 2, 2006" }}
-        </time>
-        <div class="post-item-main">
-          <div class="post-item-body">
-            <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
-            {{ with .Params.description }}
-            <p class="post-excerpt">{{ . }}</p>
-            {{ end }}
-            {{ with .Params.categories }}
-            <div class="post-tags">
-              {{ range . }}<a href="{{ `categories/` | relURL }}{{ . | urlize | lower }}/" class="tag">{{ . | humanize }}</a>{{ end }}
-            </div>
-            {{ end }}
-          </div>
-          {{ with $thumb }}
-          <a class="post-thumb" href="{{ $p.RelPermalink }}" aria-hidden="true" tabindex="-1">
-            {{ with partial "x-cover.html" $p }}<span class="x-cover">{{ . | safeHTML }}</span>{{ else }}<img src="{{ $thumb }}" alt="" loading="lazy">{{ end }}
-          </a>
-          {{ end }}
-        </div>
-      </article>
-      {{ end }}
+    {{ $paginator := .Paginate .Pages }}
+    {{ $items := $paginator.Pages }}
+    {{ if eq $paginator.PageNumber 1 }}
+      {{ with index $items 0 }}{{ partial "story-lead.html" . }}{{ end }}
+      {{ $items = after 1 $items }}
+    {{ end }}
+    <div class="ix">
+{{ $last := "" }}
+{{ range $i, $p := $items }}
+  {{ $y := $p.Date.Format "2006" }}
+  {{ $show := "" }}{{ if ne $y $last }}{{ $show = $y }}{{ $last = $y }}{{ end }}
+  {{ partial "story-row.html" (dict "p" $p "year" $show) }}
+{{ end }}
     </div>
 
     {{ template "_internal/pagination.html" . }}
