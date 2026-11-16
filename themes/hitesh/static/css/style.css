@@ -2,7 +2,7 @@
    hitesh.in — Personal Site Theme
    Aesthetic: trusted advisor, shared with 256tec.com.
    Source Serif 4 + Inter. Palette: white and cool grey paper,
-   deep navy ink, steel-blue accent, gold eyebrows.
+   deep navy ink, steel-blue accent.
    ============================================================ */
 
 /* ---- Custom Properties ---- */
@@ -14,7 +14,7 @@
   --text-muted:   #3B4757;
   --text-faint:   #5B687A;
   --accent:       #1D5FA8;
-  --accent-2:     #8A6629;
+  --accent-2:     #1D5FA8;
   --border:       #C9D1DC;
   --sel-bg:       #0A2240;
   --sel-text:     #FFFFFF;
@@ -63,9 +63,10 @@
   --text:       #F1F4F8;
   --text-muted: #C3CEDC;
   --text-faint: #8FA2BD;
-  --accent:     #D4B06A;
+  --accent:     #7FB0E6;
+  --accent-2:   #7FB0E6;
   --border:     rgba(255, 255, 255, 0.14);
-  --sel-bg:     #D4B06A;
+  --sel-bg:     #7FB0E6;
   --sel-text:   #0A2240;
   --code-bg:    #0D2A4D;
 }
@@ -1801,10 +1802,10 @@ a.service-card .service-desc { flex: 1 1 auto; font-size: var(--size-sm); }
 .talk-card:hover .talk-card-media img { transform: scale(1.03); }
 .talk-card-ph {
   height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: var(--sp-5) var(--sp-6);
-  background: radial-gradient(120% 90% at 100% 0%, rgba(212, 176, 106, 0.22), transparent 60%), #0A2240; color: #fff;
+  background: radial-gradient(120% 90% at 100% 0%, rgba(127, 176, 230, 0.22), transparent 60%), #0A2240; color: #fff;
 }
 .talk-card-ph-event { font-family: var(--font-display); font-size: var(--size-lg); line-height: 1.2; max-width: 85%; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.talk-card-ph-year { font-family: var(--font-display); font-size: var(--size-3xl); line-height: 1; color: #D4B06A; align-self: flex-end; }
+.talk-card-ph-year { font-family: var(--font-display); font-size: var(--size-3xl); line-height: 1; color: #7FB0E6; align-self: flex-end; }
 .talk-grid .res-card-body { padding: var(--sp-5); }
 .talk-grid .res-card-title { font-size: var(--size-lg); }
 .talk-grid--embed { margin: var(--sp-6) 0 var(--sp-3); }
@@ -1972,7 +1973,7 @@ body { line-height: 1.65; }
 .stat-value { font-weight: 500; }
 .site-footer { background: #0A2240; color: #A9B6C8; border-top: 0; }
 .site-footer a, .site-footer .footer-copy { color: #A9B6C8; }
-.site-footer a:hover { color: #D4B06A; }
+.site-footer a:hover { color: #7FB0E6; }
 [data-theme="dark"] .site-footer { background: #071a31; }
 
 /* ============================================================
