@@ -18,6 +18,7 @@ posts:
   - "2026/local-models-stopped-being-toys"
   - "2026/subsidized-ai-compute"
   - "2026/the-bill-that-looks-right"
+  - "2026/agent-bill-pays-for-failed-runs"
 faq:
   - q: "Why is our LLM bill going up when token prices keep falling?"
     a: "Because cheaper tokens get spent on more work. Agents run longer loops, teams try tasks they would never have funded, and routing layers move savings to budgets nobody measures. Price per token is the wrong number to watch; cost per finished task is the useful one."
