@@ -11,6 +11,7 @@ posts:
   - "2026/nobody-benchmarked-your-work"
   - "2026/your-backlog-is-the-benchmark"
   - "2026/point-ai-where-checking-is-cheap"
+  - "2026/sampling-was-a-budget-decision"
   - "2026/boring-technology-is-an-ai-strategy"
   - "2026/cheap-to-fork-costly-to-keep"
   - "2026/your-model-was-never-your-moat"
